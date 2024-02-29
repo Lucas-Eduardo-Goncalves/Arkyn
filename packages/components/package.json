@@ -1,17 +1,14 @@
 {
   "name": "@arkyn/components",
-  "type": "module",
-  "module": "./src/index.ts",
-  "main": "./dist/bundle.js",
-  "types": "./dist/index.d.ts",
   "version": "1.0.0",
+  "main": "./dist/bundle.js",
+  "module": "./src/index.ts",
+  "type": "module",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "bunx vite build",
     "types": "bunx tsc",
     "version": "bunx version patch"
-  },
-  "dependencies": {
-    "@arkyn/types": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.60",

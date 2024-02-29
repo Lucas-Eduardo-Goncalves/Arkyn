@@ -5,6 +5,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "dev": "cd packages/documentation && bun run dev"
+  },
   "devDependencies": {
     "@arkyn/components": "workspace:*",
     "@arkyn/types": "workspace:*"
