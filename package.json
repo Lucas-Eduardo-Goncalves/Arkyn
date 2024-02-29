@@ -1,0 +1,12 @@
+{
+  "name": "arkyn",
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@arkyn/components": "workspace:*",
+    "@arkyn/types": "workspace:*"
+  }
+}
