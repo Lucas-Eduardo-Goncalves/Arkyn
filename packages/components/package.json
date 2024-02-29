@@ -1,0 +1,28 @@
+{
+  "name": "@arkyn/components",
+  "type": "module",
+  "module": "./src/index.ts",
+  "main": "./dist/bundle.js",
+  "types": "./dist/index.d.ts",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "bunx vite build",
+    "types": "bunx tsc",
+    "version": "bunx version patch"
+  },
+  "dependencies": {
+    "@arkyn/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.60",
+    "@types/react-dom": "^18.2.19",
+    "bun-types": "latest",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.341.0"
+  }
+}
