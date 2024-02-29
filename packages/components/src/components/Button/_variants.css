@@ -1,0 +1,11 @@
+.arkyn_button_solid {
+  color: #fff;
+  background-color: var(--primary-500);
+}
+.arkyn_button_solid:hover {
+  background-color: var(--primary-400);
+}
+.arkyn_button_solid:disabled {
+  background-color: var(--primary-400);
+  opacity: 0.4;
+}
