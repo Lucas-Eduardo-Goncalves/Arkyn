@@ -1,54 +1,31 @@
-import { Button } from "@arkyn/components";
-import { CircleDashed } from "lucide-react";
-import { Box } from "~/components/Box";
+import { GenerateButtonList } from "~/components";
 
 export default function () {
   return (
-    <main className="sub-main">
-      <Box>
-        <Button size="lg" leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="md" leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="sm" leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="xs" leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-      </Box>
+    <>
+      <h2>Primary Buttons</h2>
+      <GenerateButtonList scheme="primary" variant="solid" />
+      <GenerateButtonList scheme="primary" variant="outline" />
+      <GenerateButtonList scheme="primary" variant="ghost" />
+      <GenerateButtonList scheme="primary" variant="invisible" />
 
-      <Box>
-        <Button size="lg" disabled leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="md" disabled leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="sm" disabled leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="xs" disabled leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-      </Box>
+      <h2>Danger Buttons</h2>
+      <GenerateButtonList scheme="danger" variant="solid" />
+      <GenerateButtonList scheme="danger" variant="outline" />
+      <GenerateButtonList scheme="danger" variant="ghost" />
+      <GenerateButtonList scheme="danger" variant="invisible" />
 
-      <Box>
-        <Button size="lg" isLoading leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="md" isLoading leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="sm" isLoading leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-        <Button size="xs" isLoading leftIcon={CircleDashed}>
-          Hello Word
-        </Button>
-      </Box>
-    </main>
+      <h2>Success Buttons</h2>
+      <GenerateButtonList scheme="success" variant="solid" />
+      <GenerateButtonList scheme="success" variant="outline" />
+      <GenerateButtonList scheme="success" variant="ghost" />
+      <GenerateButtonList scheme="success" variant="invisible" />
+
+      <h2>Warning Buttons</h2>
+      <GenerateButtonList scheme="warning" variant="solid" />
+      <GenerateButtonList scheme="warning" variant="outline" />
+      <GenerateButtonList scheme="warning" variant="ghost" />
+      <GenerateButtonList scheme="warning" variant="invisible" />
+    </>
   );
 }
