@@ -5,8 +5,8 @@ import "./styles.css";
 import { useRef, useState } from "react";
 
 const iconSize = {
-  md: 20,
-  lg: 24,
+  md: 14,
+  lg: 16,
 };
 
 const defaultSize = "md";
@@ -18,8 +18,8 @@ function Input(args: InputDTO) {
     size = defaultSize,
     className: baseClassName = "",
     variant = "solid",
-    prefix: BasePrefix,
-    sufix: BaseSufix,
+    prefix: Prefix,
+    sufix: Sufix,
     leftIcon: LeftIcon,
     rightIcon: RightIcon,
     disabled,
@@ -41,11 +41,13 @@ function Input(args: InputDTO) {
     if (ref?.current) ref.current.focus();
   }
 
+  const hasPrefix = !!Prefix ? "hasPrefix" : "";
+  const hasSufix = !!Sufix ? "hasSufix" : "";
   const errored = inError ? "errored" : "";
   const opacity = disabled || readOnly || isLoading ? "opacity" : "";
   const focused = isFocused ? "focused" : "";
 
-  const className = `arkyn_input ${variant} ${size} ${opacity} ${errored} ${focused} ${baseClassName}`;
+  const className = `arkyn_input ${hasPrefix} ${hasSufix} ${variant} ${size} ${opacity} ${errored} ${focused} ${baseClassName}`;
 
   return (
     <section
@@ -54,6 +56,20 @@ function Input(args: InputDTO) {
       onClick={handleFocus}
       className={className.trim()}
     >
+      {Prefix && (
+        <p className="prefix">
+          {typeof Prefix === "string" ? (
+            Prefix
+          ) : (
+            <Prefix
+              color="var(--secondary-600)"
+              size={iconSize[size]}
+              strokeWidth={2.5}
+            />
+          )}
+        </p>
+      )}
+
       {LeftIcon &&
         (isLoading ? (
           <Loader2
@@ -90,6 +106,20 @@ function Input(args: InputDTO) {
         ) : (
           <RightIcon size={iconSize[size]} strokeWidth={2.5} />
         ))}
+
+      {Sufix && (
+        <p className="sufix">
+          {typeof Sufix === "string" ? (
+            Sufix
+          ) : (
+            <Sufix
+              color="var(--secondary-600)"
+              size={iconSize[size]}
+              strokeWidth={2.5}
+            />
+          )}
+        </p>
+      )}
     </section>
   );
 }

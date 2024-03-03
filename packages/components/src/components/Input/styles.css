@@ -28,6 +28,35 @@
   color: var(--secondary-900);
 }
 
+.arkyn_input .prefix,
+.arkyn_input .sufix {
+  color: var(--secondary-600);
+  background: var(--secondary-200);
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+}
+
+.arkyn_input .prefix {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 6px 0 0 6px;
+  border-right: 1px solid var(--secondary-300);
+}
+
+.arkyn_input .sufix {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 6px 6px 0;
+  border-left: 1px solid var(--secondary-300);
+}
+
 .arkyn_input input::placeholder {
   color: var(--secondary-400);
 }
@@ -127,6 +156,21 @@
   line-height: 14px;
 }
 
+.arkyn_input.md.hasPrefix {
+  padding-left: 60px;
+}
+
+.arkyn_input.md.hasSufix {
+  padding-right: 60px;
+}
+
+.arkyn_input.md .prefix,
+.arkyn_input.md .sufix {
+  height: 38px;
+  width: 44px;
+  font-size: 14px;
+}
+
 .arkyn_input.lg {
   height: 44px;
   font-size: 16px;
@@ -137,6 +181,21 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+}
+
+.arkyn_input.lg .prefix,
+.arkyn_input.lg .sufix {
+  height: 42px;
+  width: 48px;
+  font-size: 16px;
+}
+
+.arkyn_input.lg.hasPrefix {
+  padding-left: 64;
+}
+
+.arkyn_input.lg.hasSufix {
+  padding-right: 64px;
 }
 
 /* SPIN */
