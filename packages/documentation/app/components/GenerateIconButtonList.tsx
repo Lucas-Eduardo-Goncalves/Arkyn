@@ -21,6 +21,7 @@ function GenerateIconButtonList(props: GenerateButtonListProps) {
           <IconButton
             key={size}
             size={size}
+            title="Normal Button"
             aria-label="example-button"
             icon={CircleDashed}
             {...props}
@@ -33,6 +34,7 @@ function GenerateIconButtonList(props: GenerateButtonListProps) {
             key={size}
             size={size}
             disabled
+            title="Disabled Button"
             aria-label="example-disabled-button"
             icon={CircleDashed}
             {...props}
@@ -45,6 +47,7 @@ function GenerateIconButtonList(props: GenerateButtonListProps) {
             key={size}
             size={size}
             isLoading
+            title="Loading Button"
             aria-label="example-isLoading-button"
             icon={CircleDashed}
             {...props}

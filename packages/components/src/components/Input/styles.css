@@ -1,0 +1,155 @@
+/* BASE */
+.arkyn_input {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+  gap: 8px;
+  border-radius: 6px;
+
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+}
+
+.arkyn_input:hover {
+  cursor: text;
+}
+
+.arkyn_input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+.arkyn_input input {
+  color: var(--secondary-900);
+}
+
+.arkyn_input input::placeholder {
+  color: var(--secondary-400);
+}
+
+.arkyn_input svg {
+  color: var(--secondary-400);
+}
+
+.arkyn_input.errored svg {
+  color: var(--danger-600);
+}
+
+.arkyn_input:not(.opacity).focused svg {
+  color: var(--primary-500);
+}
+
+.arkyn_input.opacity {
+  opacity: 0.5;
+}
+
+/* VARIANTS */
+.arkyn_input.solid {
+  border-color: var(--secondary-300);
+  background-color: var(--secondary-50);
+}
+
+.arkyn_input.solid.errored {
+  border-color: var(--danger-600);
+  outline-color: var(--danger-600);
+}
+
+.arkyn_input:not(.opacity).solid.focused {
+  border-color: var(--primary-500);
+  outline-color: var(--primary-500);
+}
+
+.arkyn_input.outline {
+  border-color: var(--secondary-300);
+}
+
+.arkyn_input.outline.errored {
+  border-color: var(--danger-600);
+  outline-color: var(--danger-600);
+}
+
+.arkyn_input:not(.opacity).outline.focused {
+  border-color: var(--primary-500);
+  outline-color: var(--primary-500);
+}
+
+.arkyn_input.underline {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  border-color: var(--secondary-300);
+}
+
+.arkyn_input.underline::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: transparent;
+}
+
+.arkyn_input.underline.errored {
+  border-color: var(--danger-600);
+}
+
+.arkyn_input.underline.errored::before {
+  background: var(--danger-600);
+}
+
+.arkyn_input:not(.opacity).underline.focused {
+  border-color: var(--primary-500);
+}
+
+.arkyn_input:not(.opacity).underline.focused::before {
+  background: var(--primary-500);
+}
+
+/* SIZE */
+
+.arkyn_input.md {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.arkyn_input.md input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.arkyn_input.lg {
+  height: 44px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.arkyn_input.lg input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* SPIN */
+
+.arkyn_input .spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

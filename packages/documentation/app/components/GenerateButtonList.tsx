@@ -17,21 +17,34 @@ function GenerateButtonList(props: GenerateButtonListProps) {
     <main className="sub-main">
       <Box>
         {buttonSizes.map((size) => (
-          <Button key={size} size={size} {...props}>
+          <Button title="Normal Button" key={size} size={size} {...props}>
+            Hello Word
+          </Button>
+        ))}
+      </Box>
+
+      <Box>
+        {buttonSizes.map((size) => (
+          <Button
+            title="Disabled Button"
+            key={size}
+            disabled
+            size={size}
+            {...props}
+          >
             Hello Word
           </Button>
         ))}
       </Box>
       <Box>
         {buttonSizes.map((size) => (
-          <Button key={size} disabled size={size} {...props}>
-            Hello Word
-          </Button>
-        ))}
-      </Box>
-      <Box>
-        {buttonSizes.map((size) => (
-          <Button key={size} isLoading size={size} {...props}>
+          <Button
+            title="Loading Button"
+            key={size}
+            isLoading
+            size={size}
+            {...props}
+          >
             Hello Word
           </Button>
         ))}

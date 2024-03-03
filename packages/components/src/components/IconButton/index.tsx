@@ -1,5 +1,5 @@
 import { IconButtonDTO } from "@arkyn/types";
-import { Loader } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 import "./styles.css";
 
@@ -18,18 +18,20 @@ function IconButton(args: IconButtonDTO) {
     size = "md",
     icon: Icon,
     disabled,
-    className,
+    className: baseClassName = "",
     ...rest
   } = args;
+
+  const className = `arkyn_icon_button ${variant} ${scheme} ${size} loading_${isLoading} ${baseClassName}`;
 
   return (
     <button
       disabled={disabled || isLoading}
-      className={`arkyn_icon_button ${variant} ${scheme} ${size} loading_${isLoading} ${className}`}
+      className={className.trim()}
       {...rest}
     >
       <div className="spinner">
-        <Loader size={iconSize[size]} strokeWidth={2.5} />
+        <Loader2 size={iconSize[size]} strokeWidth={2.5} />
       </div>
 
       <div className={"content " + size}>

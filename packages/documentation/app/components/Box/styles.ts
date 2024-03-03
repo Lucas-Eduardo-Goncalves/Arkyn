@@ -2,7 +2,7 @@ import { styled } from "@linaria/react";
 
 const BoxContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 8px;
 `;
 

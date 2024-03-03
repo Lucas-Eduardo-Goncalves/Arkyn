@@ -82,15 +82,15 @@
 }
 
 .arkyn_button.outline {
-  border-color: var(--line-color);
+  border-color: var(--secondary-300);
 }
 
 .arkyn_button.outline:hover {
-  border-color: var(--line-color-hover);
+  border-color: var(--secondary-200);
 }
 
 .arkyn_button.outline:disabled {
-  border-color: var(--line-color-hover);
+  border-color: var(--secondary-200);
 }
 
 .arkyn_button.outline.primary {
