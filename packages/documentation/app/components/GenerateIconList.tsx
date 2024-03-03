@@ -41,14 +41,28 @@ function GenerateIconList({ variant }: GenerateIconListProps) {
           leftIcon={CircleDashed}
         />
       </Box>
-      <Box>
-        <Input title="Prefix Input" variant={variant} prefix="%" size="lg" />
-        <Input title="Prefix Input" variant={variant} prefix="%" size="md" />
-      </Box>
-      <Box>
-        <Input title="Sufix Input" variant={variant} sufix="%" size="lg" />
-        <Input title="Sufix Input" variant={variant} sufix="%" size="md" />
-      </Box>
+      {variant !== "underline" && (
+        <>
+          <Box>
+            <Input
+              title="Prefix Input"
+              variant={variant}
+              prefix="%"
+              size="lg"
+            />
+            <Input
+              title="Prefix Input"
+              variant={variant}
+              prefix="%"
+              size="md"
+            />
+          </Box>
+          <Box>
+            <Input title="Sufix Input" variant={variant} sufix="%" size="lg" />
+            <Input title="Sufix Input" variant={variant} sufix="%" size="md" />
+          </Box>
+        </>
+      )}
       <Box>
         <Input
           title="Error Input"

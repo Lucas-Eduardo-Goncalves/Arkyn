@@ -11,6 +11,8 @@
 
   border: 1px solid transparent;
   outline: 1px solid transparent;
+
+  overflow: hidden;
 }
 
 .arkyn_input:hover {
@@ -45,7 +47,6 @@
   left: 0;
   top: 0;
   bottom: 0;
-  border-radius: 6px 0 0 6px;
   border-right: 1px solid var(--secondary-300);
 }
 
@@ -53,7 +54,6 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border-radius: 0 6px 6px 0;
   border-left: 1px solid var(--secondary-300);
 }
 
@@ -114,6 +114,11 @@
   border-right: none;
   outline: none;
   border-color: var(--secondary-300);
+}
+
+.arkyn_input.underline .sufix,
+.arkyn_input.underline .prefix {
+  display: none;
 }
 
 .arkyn_input.underline::before {
@@ -191,7 +196,7 @@
 }
 
 .arkyn_input.lg.hasPrefix {
-  padding-left: 64;
+  padding-left: 64px;
 }
 
 .arkyn_input.lg.hasSufix {
