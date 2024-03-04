@@ -21,7 +21,7 @@ function GenerateBadgeList(props: GenerateBadgeListProps) {
   return (
     <main className="sub-main">
       {schemes.map((scheme) => (
-        <Box>
+        <Box key={scheme}>
           <Box>
             <Badge
               size="lg"

@@ -5,3 +5,4 @@ export { Button } from "./components/Button";
 export { Divider } from "./components/Divider";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
+export { Tooltip } from "./components/Tooltip";

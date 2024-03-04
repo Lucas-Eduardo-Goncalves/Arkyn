@@ -12,6 +12,10 @@ export default function () {
       <Link to="/components/input">Input</Link>
       <br />
 
+      <h2>Overlay</h2>
+      <Link to="/components/tooltip">Tooltip</Link>
+      <br />
+
       <h2>Data Display</h2>
       <Link to="/components/badge">Badge</Link>
       <Link to="/components/divider">Divider</Link>
