@@ -1,0 +1,17 @@
+.arkyn_divider {
+  display: block;
+  flex: 1;
+  background-color: var(--secondary-300);
+}
+
+.arkyn_divider.horizontal {
+  width: 100%;
+  min-height: 1px;
+  max-height: 1px;
+}
+
+.arkyn_divider.vertical {
+  height: 100%;
+  min-width: 1px;
+  max-width: 1px;
+}
