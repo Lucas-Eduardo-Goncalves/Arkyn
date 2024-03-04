@@ -13,6 +13,7 @@ export default function () {
       <br />
 
       <h2>Data Display</h2>
+      <Link to="/components/badge">Badge</Link>
       <Link to="/components/divider">Divider</Link>
     </main>
   );
