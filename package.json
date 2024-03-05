@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@arkyn/components": "workspace:*",
-    "@arkyn/types": "workspace:*"
+    "@arkyn/types": "workspace:*",
+    "remix-development-tools": "^3.7.4"
   }
 }

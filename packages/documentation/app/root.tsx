@@ -6,7 +6,14 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { json } from "@remix-run/node";
+
 import "./global/styles.css";
+import "remix-development-tools/index.css";
+
+export function loader() {
+  return json({ hello: "word" });
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

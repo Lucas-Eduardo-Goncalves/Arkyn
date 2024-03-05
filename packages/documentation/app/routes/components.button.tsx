@@ -1,5 +1,9 @@
 import { GenerateButtonList, Group } from "~/components";
 
+export function loader() {
+  return { component: "road" };
+}
+
 export default () => (
   <>
     <h4>Primary Buttons</h4>

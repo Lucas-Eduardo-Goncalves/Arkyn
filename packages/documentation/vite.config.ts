@@ -1,11 +1,17 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { installGlobals } from "@remix-run/node";
-import { defineConfig } from "vite";
 import wyw from "@wyw-in-js/vite";
+import { remixDevTools } from "remix-development-tools/vite";
+import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 installGlobals();
 
 export default defineConfig({
-  plugins: [remix(), tsconfigPaths(), wyw()],
+  plugins: [
+    process.env.NODE_ENV === "development" && remixDevTools(),
+    remix(),
+    tsconfigPaths(),
+    wyw(),
+  ],
 });
