@@ -1,7 +1,3 @@
-:root {
-  --primary-500: #10b981;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -17,15 +13,4 @@ button {
 
 body {
   background-color: #ffffff;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px;
-}
-
-.sub-main {
-  padding: 16px 0;
 }
