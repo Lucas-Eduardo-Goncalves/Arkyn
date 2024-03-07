@@ -5,8 +5,14 @@ export default defineConfig({
   build: {
     outDir: "./dist",
     rollupOptions: {
-      external: ["@arkyn/types", "react", "react-dom", "lucide-react"],
       output: { format: "esm" },
+      external: [
+        "@arkyn/types",
+        "framer-motion",
+        "lucide-react",
+        "react",
+        "react-dom",
+      ],
     },
     lib: {
       entry: resolve(__dirname, "src/index.ts"),

@@ -5,7 +5,7 @@
   border: 1px solid transparent;
   outline: 1px solid transparent;
   position: relative;
-  transition: 0.2s all;
+  transition: 0.15s all ease-out;
 }
 
 .arkyn_icon_button:hover {

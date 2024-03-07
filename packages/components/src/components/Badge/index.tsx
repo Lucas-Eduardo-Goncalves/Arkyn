@@ -20,6 +20,8 @@ function Badge(args: BadgeDTO) {
 
   const className = `arkyn_badge ${variant} ${scheme} ${size} ${baseClassName}`;
 
+  <aside></aside>;
+
   return (
     <div className={className.trim()} {...rest}>
       {LeftIcon && <LeftIcon size={iconSize[size]} strokeWidth={2.5} />}

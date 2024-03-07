@@ -10,7 +10,7 @@
   position: absolute;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  transition: 0.2s all;
+  transition: 0.15s all ease-out;
 
   border-radius: 4px;
 

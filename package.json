@@ -9,10 +9,5 @@
     "dev:types": "cd packages/types && bun run build && bun run types && clear",
     "dev:components": "cd packages/components && bun run build && bun run types && clear",
     "dev:documentation": "cd packages/documentation && bun run dev"
-  },
-  "devDependencies": {
-    "@arkyn/components": "workspace:*",
-    "@arkyn/types": "workspace:*",
-    "remix-development-tools": "^3.7.4"
   }
 }

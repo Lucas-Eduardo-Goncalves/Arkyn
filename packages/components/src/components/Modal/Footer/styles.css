@@ -1,0 +1,27 @@
+.arkyn_modal_footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-top: 1px solid var(--secondary-200);
+}
+
+.arkyn_modal_footer.left {
+  justify-content: flex-start;
+}
+
+.arkyn_modal_footer.right {
+  justify-content: flex-end;
+}
+
+.arkyn_modal_footer.center {
+  justify-content: center;
+}
+
+.arkyn_modal_footer.between {
+  justify-content: space-between;
+}
+
+.arkyn_modal_footer.around {
+  justify-content: space-around;
+}
