@@ -9,9 +9,9 @@ installGlobals();
 
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     process.env.NODE_ENV === "development" && remixDevTools(),
     remix(),
-    tsconfigPaths(),
     wyw(),
   ],
 });

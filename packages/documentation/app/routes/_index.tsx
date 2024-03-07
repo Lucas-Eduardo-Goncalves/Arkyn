@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-export default function () {
+export default function Index() {
   return (
     <main>
       <h1>Arkyn</h1>
@@ -13,6 +13,7 @@ export default function () {
       <br />
 
       <h2>Overlay</h2>
+      <Link to="/components/modal">Modal</Link>
       <Link to="/components/tooltip">Tooltip</Link>
       <br />
 

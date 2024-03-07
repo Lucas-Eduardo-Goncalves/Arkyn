@@ -1,7 +1,7 @@
 import { Divider } from "@arkyn/components";
 import { Link, Outlet } from "@remix-run/react";
 
-export default function () {
+export default function ComponentsLayout() {
   return (
     <main>
       <h2>Components</h2>

@@ -1,7 +1,7 @@
 import { Button, Modal } from "@arkyn/components";
 import { useState } from "react";
 
-export default () => {
+export default function ModalRoute() {
   const [isVisibled, setIsVisibled] = useState(false);
 
   const handleOpenModal = () => setIsVisibled(true);
@@ -16,38 +16,9 @@ export default () => {
 
       <Modal.Container isVisibled={isVisibled} makeInvisible={handleCloseModal}>
         <Modal.Header>Titulo</Modal.Header>
-        Um conteudo muito grande, mt mt mt grande
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
+        <div style={{ padding: "16px 32px" }}>Conteúdo do modal</div>
+
         <Modal.Footer>
           <Button scheme="danger" variant="outline" onClick={handleCloseModal}>
             Close Modal
@@ -57,4 +28,4 @@ export default () => {
       </Modal.Container>
     </>
   );
-};
+}

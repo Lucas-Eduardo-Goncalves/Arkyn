@@ -34,9 +34,6 @@ module.exports = {
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
       ],
-      rules: {
-        "react/display-name": "off",
-      },
       settings: {
         react: {
           version: "detect",
@@ -73,6 +70,9 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
       ],
+      rules: {
+        "import/no-unresolved": "off",
+      },
     },
 
     // Node
