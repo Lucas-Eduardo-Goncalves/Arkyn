@@ -1,9 +1,9 @@
-import { BoxContainer } from "./styles";
+import { Container } from "./styles";
 
 type BoxProps = {
   children: React.ReactNode;
 };
 
 export function Box(props: BoxProps) {
-  return <BoxContainer>{props.children}</BoxContainer>;
+  return <Container>{props.children}</Container>;
 }

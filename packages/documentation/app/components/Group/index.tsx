@@ -1,9 +1,9 @@
-import { GroupContainer } from "./styles";
+import { Container } from "./styles";
 
 type GroupProps = {
   children: React.ReactNode;
 };
 
 export function Group(props: GroupProps) {
-  return <GroupContainer>{props.children}</GroupContainer>;
+  return <Container>{props.children}</Container>;
 }
