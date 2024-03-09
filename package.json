@@ -13,5 +13,9 @@
   "devDependencies": {
     "@arkyn/components": "workspace:*",
     "@arkyn/types": "workspace:*"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@wyw-in-js/babel-preset": "^0.5.0"
   }
 }

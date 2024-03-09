@@ -9,8 +9,13 @@ installGlobals();
 
 export default defineConfig({
   plugins: [
-    wyw(),
     process.env.NODE_ENV === "development" && remixDevTools(),
+    wyw({
+      include: ["**/*.{ts,tsx}"],
+      babelOptions: {
+        presets: ["@babel/preset-typescript", "@babel/preset-react"],
+      },
+    }),
     remix(),
     tsconfigPaths(),
   ],
