@@ -11,15 +11,16 @@ const Container = styled(Link)`
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
-  color: var(--secondary-600);
+  color: var(--secondary-500);
 
   &:hover {
-    background: var(--secondary-50);
+    background: var(--secondary-100);
+    color: var(--secondary-800);
   }
 
   &.active {
-    font-weight: 500;
-    background: var(--primary-50);
+    font-weight: 600;
+    background: var(--primary-100);
     color: var(--primary-500);
   }
 `;

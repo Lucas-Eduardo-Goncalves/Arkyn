@@ -1,7 +1,4 @@
-import { LayoutClient, LayoutServer } from "~/modules/Layout";
-
-export const action = LayoutServer.action;
-export const loader = LayoutServer.loader;
+import { LayoutClient } from "~/modules/Layout";
 
 export default function LayoutRoute() {
   return <LayoutClient.View />;

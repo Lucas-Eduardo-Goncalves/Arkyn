@@ -13,10 +13,10 @@ export function View() {
 
       <LayoutContent>
         <NavigationMenu>
-          <NavigationTitle label="Introduction" />
-          <NavigationLink to="/v1/doc/get-started" label="Get Started" />
+          <NavigationLink to="/v1/doc/introduction" label="Introdução" />
+          <NavigationLink to="/v1/doc/get-started" label="Iniciar" />
 
-          <NavigationTitle label="Components" />
+          <NavigationTitle label="Componentes" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
           <NavigationLink to="/v1/components/button" label="Button" />
           <NavigationLink to="/v1/components/divider" label="Divider" />

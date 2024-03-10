@@ -1,9 +1,9 @@
 import { styled } from "@linaria/react";
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
-  align-items: end;
-  gap: 8px;
+  flex-direction: column;
+  gap: 24px;
 `;
 
 export { Container };

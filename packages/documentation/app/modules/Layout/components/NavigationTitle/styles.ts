@@ -4,11 +4,11 @@ const Container = styled.h3`
   display: flex;
   align-items: center;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
 
-  padding: 16px 8px;
+  padding: 24px 8px 16px 8px;
 
   color: var(--secondary-900);
 `;
