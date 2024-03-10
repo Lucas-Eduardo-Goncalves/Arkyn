@@ -44,10 +44,10 @@ export default function IntroductionRoute() {
 
       <Paragraph>
         Instale os pacotes:
-        <pre>
+        <code className="area">
           bun i @arkyn/components @arkyn/utils @arkyn/types @arkyn/api
           @arkyn/hooks
-        </pre>
+        </code>
       </Paragraph>
 
       <Paragraph>
@@ -61,22 +61,26 @@ export default function IntroductionRoute() {
 
       <Paragraph>
         <code>@arkyn/api</code>
-        <pre>bun i @remix-run/node @remix-run/server-runtime</pre>
+        <code className="area">
+          bun i @remix-run/node @remix-run/server-runtime
+        </code>
       </Paragraph>
 
       <Paragraph>
         <code>@arkyn/components</code>
-        <pre>bun i lucide-react framer-motion react react-dom</pre>
+        <code className="area">
+          bun i lucide-react framer-motion react react-dom
+        </code>
       </Paragraph>
 
       <Paragraph>
         <code>@arkyn/hooks</code>
-        <pre>bun i react</pre>
+        <code className="area">bun i react</code>
       </Paragraph>
 
       <Paragraph>
         <code>@arkyn/types</code>
-        <pre>bun i lucide-react react react-dom</pre>
+        <code className="area">bun i lucide-react react react-dom</code>
       </Paragraph>
     </Container>
   );

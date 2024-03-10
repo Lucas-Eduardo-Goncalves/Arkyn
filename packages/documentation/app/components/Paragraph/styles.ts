@@ -5,18 +5,18 @@ const Container = styled.p`
   line-height: 1.75rem;
   color: var(--secondary-600);
 
-  code,
-  pre {
+  code {
     font-family: monospace;
     font-weight: 500;
     color: var(--secondary-700);
     padding: 2px 6px;
     border-radius: 4px;
     background: var(--secondary-100);
-  }
 
-  pre {
-    padding: 12px 20px;
+    &.area {
+      display: block;
+      padding: 12px 20px;
+    }
   }
 `;
 

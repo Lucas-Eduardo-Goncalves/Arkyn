@@ -8,13 +8,12 @@ import { NavigationTitle } from "./components/NavigationTitle";
 
 export function View() {
   return (
-    <div>
+    <>
       <LayoutHeader />
 
       <LayoutContent>
         <NavigationMenu>
           <NavigationLink to="/v1/doc/introduction" label="Introdução" />
-          <NavigationLink to="/v1/doc/get-started" label="Iniciar" />
 
           <NavigationTitle label="Componentes" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
@@ -26,10 +25,8 @@ export function View() {
           <NavigationLink to="/v1/components/tooltip" label="Tooltip" />
         </NavigationMenu>
 
-        <div>
-          <Outlet />
-        </div>
+        <Outlet />
       </LayoutContent>
-    </div>
+    </>
   );
 }
