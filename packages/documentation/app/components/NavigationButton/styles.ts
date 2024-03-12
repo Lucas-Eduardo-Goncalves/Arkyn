@@ -28,10 +28,10 @@ const Container = styled(Link)`
   }
 
   &:hover {
-    background: var(--secondary-100);
+    background: var(--secondary-50);
     border-color: var(--secondary-300);
 
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.05);
   }
 `;
 
