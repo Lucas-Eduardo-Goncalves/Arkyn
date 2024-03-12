@@ -1,4 +1,5 @@
 export * from "./components/BadgeDTO";
+export * from "./components/BreadcrumbProps";
 export * from "./components/ButtonDTO";
 export * from "./components/DividerDTO";
 export * from "./components/IconButtonDTO";

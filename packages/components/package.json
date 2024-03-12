@@ -19,6 +19,7 @@
   },
   "peerDependencies": {
     "@arkyn/types": "workspace:*",
+    "@remix-run/react": "^2.8.0",
     "lucide-react": "^0.349.0",
     "framer-motion": "^11.0.8",
     "react": "^18.2.0",

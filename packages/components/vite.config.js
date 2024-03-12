@@ -8,6 +8,7 @@ export default defineConfig({
       output: { format: "esm" },
       external: [
         "@arkyn/types",
+        "@remix-run/react",
         "framer-motion",
         "lucide-react",
         "react",

@@ -1,3 +1,4 @@
+import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
 import { Package, Sparkles } from "lucide-react";
 
 import { Container } from "~/components/Container";
@@ -9,6 +10,11 @@ import { Title } from "~/components/Title";
 function View() {
   return (
     <Container>
+      <Breadcrumb>
+        <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+        <BreadcrumbLink to="/v1/doc/introduction">Introdução</BreadcrumbLink>
+      </Breadcrumb>
+
       <Title as="h1">Arkyn</Title>
 
       <Paragraph>

@@ -1,3 +1,5 @@
+import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
+
 import { Container } from "~/components/Container";
 import { Fence } from "~/components/Fence";
 import { Paragraph } from "~/components/Paragraph";
@@ -6,6 +8,11 @@ import { Title } from "~/components/Title";
 function View() {
   return (
     <Container>
+      <Breadcrumb>
+        <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+        <BreadcrumbLink to="/v1/doc/get-started">Começo Rápido</BreadcrumbLink>
+      </Breadcrumb>
+
       <Title as="h1">Começo Rápido</Title>
 
       <Paragraph>

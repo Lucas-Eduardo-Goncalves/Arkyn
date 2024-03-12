@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     outDir: "./dist",
     rollupOptions: {
-      external: ["react", "react-dom", "lucide-react"],
+      external: ["@remix-run/react", "react", "react-dom", "lucide-react"],
       output: { format: "esm" },
     },
     lib: {
