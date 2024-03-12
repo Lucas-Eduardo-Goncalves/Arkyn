@@ -1,9 +1,10 @@
 import { Outlet } from "@remix-run/react";
 
-import { LayoutHeader } from "./components/LayoutHeader";
 import { LayoutContent } from "./components/LayoutContent";
-import { NavigationMenu } from "./components/NavigationMenu";
+import { LayoutFooter } from "./components/LayoutFooter";
+import { LayoutHeader } from "./components/LayoutHeader";
 import { NavigationLink } from "./components/NavigationLink";
+import { NavigationMenu } from "./components/NavigationMenu";
 import { NavigationTitle } from "./components/NavigationTitle";
 
 export function View() {
@@ -14,6 +15,7 @@ export function View() {
       <LayoutContent>
         <NavigationMenu>
           <NavigationLink to="/v1/doc/introduction" label="Introdução" />
+          <NavigationLink to="/v1/doc/get-started" label="Começo Rápido" />
 
           <NavigationTitle label="Componentes" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
@@ -27,6 +29,8 @@ export function View() {
 
         <Outlet />
       </LayoutContent>
+
+      <LayoutFooter />
     </>
   );
 }
