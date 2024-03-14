@@ -8,10 +8,9 @@ const Container = styled(Link)`
   gap: 1rem;
 
   flex: 1;
-  min-width: 250px;
 
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
 
   text-decoration: none;
   color: var(--secondary-800);
@@ -24,14 +23,18 @@ const Container = styled(Link)`
 
   svg {
     transition: all 0.15s ease-in-out;
-    color: var(--secondary-800);
+    color: var(--secondary-400);
   }
 
   &:hover {
     background: var(--secondary-50);
     border-color: var(--secondary-300);
-
+    color: var(--secondary-900);
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.05);
+
+    svg {
+      color: var(--secondary-900);
+    }
   }
 `;
 

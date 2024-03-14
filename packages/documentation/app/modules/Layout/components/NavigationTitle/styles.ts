@@ -8,7 +8,7 @@ const Container = styled.h3`
   font-weight: 600;
   text-decoration: none;
 
-  padding: 24px 8px 16px 8px;
+  padding: 24px 8px 4px 8px;
 
   color: var(--secondary-900);
 `;
