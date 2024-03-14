@@ -8,10 +8,12 @@
   "scripts": {
     "dev:types": "cd packages/types && bun run build && bun run types && clear",
     "dev:components": "cd packages/components && bun run build && bun run types && clear",
-    "dev:documentation": "cd packages/documentation && bun run dev"
+    "dev:documentation": "cd packages/documentation && bun run dev",
+    "prod:documentation": "cd packages/documentation && bun run build && bun run start"
   },
   "devDependencies": {
     "@arkyn/components": "workspace:*",
-    "@arkyn/types": "workspace:*"
+    "@arkyn/types": "workspace:*",
+    "@flydotio/dockerfile": "latest"
   }
 }
