@@ -1,18 +1,14 @@
 import { useLocation, useNavigate } from "@remix-run/react";
-import { ReactNode, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
+import { NavigationLink } from "../NavigationLink";
 import { Container, OptionsContainer } from "./styles";
 
 type NavigationAccordionProps = {
   to: string;
   label: string;
-  children: ReactNode;
-};
-
-const baseIcon = {
-  true: ChevronDown,
-  false: ChevronUp,
+  options: { to: string; label: string }[];
 };
 
 function NavigationAccordion(args: NavigationAccordionProps) {
@@ -27,6 +23,7 @@ function NavigationAccordion(args: NavigationAccordionProps) {
     if (!inOptionEnter) navigate(args.to);
   }
 
+  const baseIcon = { true: ChevronDown, false: ChevronUp };
   const Icon = baseIcon[isOpen ? "true" : "false"];
 
   return (
@@ -42,7 +39,17 @@ function NavigationAccordion(args: NavigationAccordionProps) {
         />
       </Container>
 
-      {isOpen && <OptionsContainer>{args.children}</OptionsContainer>}
+      {isOpen && (
+        <OptionsContainer>
+          {args.options.map((option) => (
+            <NavigationLink
+              key={option.to}
+              to={option.to}
+              label={option.label}
+            />
+          ))}
+        </OptionsContainer>
+      )}
     </>
   );
 }
