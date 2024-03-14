@@ -1,0 +1,9 @@
+import { HTMLAttributes } from "react";
+
+type BaseDividerProps = HTMLAttributes<HTMLDivElement>;
+
+type DividerProps = BaseDividerProps & {
+  orientation?: "horizontal" | "vertical";
+};
+
+export type { DividerProps };

@@ -1,4 +1,4 @@
-import { BadgeDTO } from "@arkyn/types";
+import { BadgeProps } from "@arkyn/types";
 import "./styles.css";
 
 const iconSize = {
@@ -6,7 +6,7 @@ const iconSize = {
   lg: 14,
 };
 
-function Badge(args: BadgeDTO) {
+function Badge(args: BadgeProps) {
   const {
     variant = "ghost",
     scheme = "primary",

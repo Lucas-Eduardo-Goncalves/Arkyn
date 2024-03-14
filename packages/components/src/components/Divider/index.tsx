@@ -1,7 +1,7 @@
-import { DividerDTO } from "@arkyn/types";
+import { DividerProps } from "@arkyn/types";
 import "./styles.css";
 
-function Divider(args: DividerDTO) {
+function Divider(args: DividerProps) {
   const {
     className: baseClassName,
     orientation = "horizontal",

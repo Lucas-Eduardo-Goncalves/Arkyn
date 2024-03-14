@@ -1,13 +1,13 @@
-import { ModalContainerDTO } from "@arkyn/types";
-import { createContext } from "react";
+import { ModalContainerProps } from "@arkyn/types";
 import { AnimatePresence, motion } from "framer-motion";
+import { createContext } from "react";
 
 import "./styles.css";
 
 type ModalContext = { makeInvisible: () => void };
 const modalContext = createContext({} as ModalContext);
 
-function Container(args: ModalContainerDTO) {
+function Container(args: ModalContainerProps) {
   const {
     isVisibled,
     makeInvisible,

@@ -1,4 +1,4 @@
-import { InputDTO } from "@arkyn/types";
+import { InputProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
 
 import "./styles.css";
@@ -11,7 +11,7 @@ const iconSize = {
 
 const defaultSize = "md";
 
-function Input(args: InputDTO) {
+function Input(args: InputProps) {
   const {
     isLoading,
     inError,

@@ -1,7 +1,7 @@
-import { TooltipDTO } from "@arkyn/types";
+import { TooltipProps } from "@arkyn/types";
 import "./styles.css";
 
-function Tooltip(args: TooltipDTO) {
+function Tooltip(args: TooltipProps) {
   const {
     text,
     size = "lg",

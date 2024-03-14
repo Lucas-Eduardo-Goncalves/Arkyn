@@ -1,14 +1,19 @@
 import { LucideIcon } from "lucide-react";
 import { ButtonHTMLAttributes } from "react";
 
-type ButtonDTO = ButtonHTMLAttributes<HTMLButtonElement> & {
+type BaseIconButtonProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "children" | "aria-label"
+>;
+
+type IconButtonProps = BaseIconButtonProps & {
+  icon: LucideIcon;
+  "aria-label": string;
+
   isLoading?: boolean;
   size?: "xs" | "sm" | "md" | "lg";
   variant?: "solid" | "outline" | "ghost" | "invisible";
   scheme?: "primary" | "success" | "warning" | "danger";
-
-  leftIcon?: LucideIcon;
-  rightIcon?: LucideIcon;
 };
 
-export type { ButtonDTO };
+export type { IconButtonProps };

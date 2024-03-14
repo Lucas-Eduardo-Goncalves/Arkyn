@@ -1,10 +1,12 @@
 import { LucideIcon } from "lucide-react";
 import { InputHTMLAttributes } from "react";
 
-type InputDTO = Omit<
+type BaseInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   "size" | "prefix"
-> & {
+>;
+
+type InputProps = BaseInputProps & {
   isLoading?: boolean;
   inError?: boolean;
 
@@ -18,4 +20,4 @@ type InputDTO = Omit<
   rightIcon?: LucideIcon;
 };
 
-export type { InputDTO };
+export type { InputProps };

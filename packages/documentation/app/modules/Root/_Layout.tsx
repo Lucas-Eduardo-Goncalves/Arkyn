@@ -1,6 +1,6 @@
 import { Links, Meta, Scripts, ScrollRestoration } from "@remix-run/react";
 
-import "remix-development-tools/index.css";
+import "remix-development-tools/client.css";
 import "~/global/styles.css";
 
 type LayoutProps = {

@@ -1,4 +1,4 @@
-import { ButtonDTO } from "@arkyn/types";
+import { ButtonProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
 
 import "./styles.css";
@@ -10,7 +10,7 @@ const iconSize = {
   lg: 24,
 };
 
-function Button(args: ButtonDTO) {
+function Button(args: ButtonProps) {
   const {
     isLoading = false,
     scheme = "primary",

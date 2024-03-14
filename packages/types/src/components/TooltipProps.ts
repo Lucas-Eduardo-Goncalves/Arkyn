@@ -1,10 +1,12 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-type TooltipDTO = Omit<HTMLAttributes<HTMLDivElement>, "children"> & {
+type BaseTooltipProps = Omit<HTMLAttributes<HTMLDivElement>, "children">;
+
+type TooltipProps = BaseTooltipProps & {
   text: string;
   children: ReactNode;
   orientation?: "top" | "right" | "bottom" | "left";
   size?: "md" | "lg";
 };
 
-export type { TooltipDTO };
+export type { TooltipProps };

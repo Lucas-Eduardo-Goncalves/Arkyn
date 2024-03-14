@@ -1,8 +1,9 @@
-export * from "./components/BadgeDTO";
+// Components
+export * from "./components/BadgeProps";
 export * from "./components/BreadcrumbProps";
-export * from "./components/ButtonDTO";
-export * from "./components/DividerDTO";
-export * from "./components/IconButtonDTO";
-export * from "./components/InputDTO";
-export * from "./components/TooltipDTO";
-export * from "./components/ModalDTO";
+export * from "./components/ButtonProps";
+export * from "./components/DividerProps";
+export * from "./components/IconButtonProps";
+export * from "./components/InputProps";
+export * from "./components/TooltipProps";
+export * from "./components/ModalProps";

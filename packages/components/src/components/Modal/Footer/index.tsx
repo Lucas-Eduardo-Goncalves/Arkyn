@@ -1,8 +1,8 @@
-import { ModalFooterDTO } from "@arkyn/types";
+import { ModalFooterProps } from "@arkyn/types";
 
 import "./styles.css";
 
-function Footer(args: ModalFooterDTO) {
+function Footer(args: ModalFooterProps) {
   const { alignment = "right", className: baseClassName, ...rest } = args;
   const className = `arkyn_modal_footer ${alignment} ${baseClassName}`;
 
