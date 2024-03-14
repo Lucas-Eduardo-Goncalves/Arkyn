@@ -3,13 +3,12 @@ import { Outlet } from "@remix-run/react";
 import { LayoutContent } from "./components/LayoutContent";
 import { LayoutFooter } from "./components/LayoutFooter";
 import { LayoutHeader } from "./components/LayoutHeader";
+import { NavigationAccordion } from "./components/NavigationAccordion";
 import { NavigationLink } from "./components/NavigationLink";
 import { NavigationMenu } from "./components/NavigationMenu";
-import { NavigationAccordion } from "./components/NavigationAccordion";
 import { NavigationTitle } from "./components/NavigationTitle";
 
-import { route_components } from "./config/route-components";
-import { route_types } from "./config/route-types";
+import { route_components, route_types } from "./config/route-list";
 
 export function View() {
   return (
