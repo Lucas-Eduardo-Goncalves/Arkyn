@@ -1,5 +1,5 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { LayoutGrid, ScanLine } from "lucide-react";
+import { Badge, ScanLine } from "lucide-react";
 
 import { Container } from "~/components/Container";
 import { NavigationButton } from "~/components/NavigationButton";
@@ -18,7 +18,7 @@ function View() {
         <BreadcrumbLink to="/v1/components/button">Button</BreadcrumbLink>
       </Breadcrumb>
 
-      <Title as="h1">Botão</Title>
+      <Title as="h1">Button</Title>
 
       <Paragraph>
         Os botões podem ser configurados com diferentes tamanhos, variantes de
@@ -53,9 +53,9 @@ function View() {
 
       <NavigationContainer>
         <NavigationButton
-          icon={LayoutGrid}
-          label="@arkyn/components"
-          to="/v1/components"
+          icon={Badge}
+          label="Badge"
+          to="/v1/components/badge"
         />
         <NavigationButton
           icon={ScanLine}

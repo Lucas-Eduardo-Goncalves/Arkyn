@@ -1,3 +1,7 @@
+import { BadgeClient } from "~/doc/Badge";
+
+export const meta = BadgeClient.meta;
+
 export default function BadgeRoute() {
-  return <h4>Badges</h4>;
+  return <BadgeClient.View />;
 }
