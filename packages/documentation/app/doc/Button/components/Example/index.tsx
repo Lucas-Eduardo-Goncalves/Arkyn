@@ -23,16 +23,14 @@ function Example() {
         <SchemeSelect scheme={scheme} setScheme={setScheme} />
       </header>
 
-      <div>
-        <Button
-          isLoading={isLoading}
-          size={size}
-          variant={variant}
-          scheme={scheme}
-        >
-          Button
-        </Button>
-      </div>
+      <Button
+        isLoading={isLoading}
+        size={size}
+        variant={variant}
+        scheme={scheme}
+      >
+        Button
+      </Button>
     </Container>
   );
 }
