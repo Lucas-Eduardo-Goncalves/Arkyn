@@ -5,7 +5,6 @@ const Container = styled.footer`
   flex-direction: column;
   justify-content: flex-start;
   padding: 3rem 1.5rem;
-  max-width: 90rem;
   gap: 16px;
 
   flex: 1;
