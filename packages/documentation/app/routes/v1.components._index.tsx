@@ -1,3 +1,7 @@
+import { ArkynComponentsClient } from "~/doc/@arkyn-components";
+
+export const meta = ArkynComponentsClient.meta;
+
 export default function ArkynComponentsRoute() {
-  return <h4>Arkyn</h4>;
+  return <ArkynComponentsClient.View />;
 }

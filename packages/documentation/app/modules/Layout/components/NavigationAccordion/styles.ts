@@ -49,7 +49,6 @@ const OptionsContainer = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex: 1;
 
   padding-left: 8px;
   margin-left: 6px;

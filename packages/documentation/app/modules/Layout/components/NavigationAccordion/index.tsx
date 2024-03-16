@@ -23,7 +23,7 @@ function NavigationAccordion(args: NavigationAccordionProps) {
     if (!inOptionEnter) navigate(args.to);
   }
 
-  const baseIcon = { true: ChevronDown, false: ChevronUp };
+  const baseIcon = { true: ChevronUp, false: ChevronDown };
   const Icon = baseIcon[isOpen ? "true" : "false"];
 
   return (

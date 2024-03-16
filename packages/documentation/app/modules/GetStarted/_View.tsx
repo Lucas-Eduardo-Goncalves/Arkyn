@@ -6,7 +6,7 @@ import { NavigationContainer } from "~/components/NavigationContainer";
 import { Paragraph } from "~/components/Paragraph";
 import { Title } from "~/components/Title";
 
-import { Archive, LayoutGrid, Rss, Webhook } from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 
 function View() {
   return (
@@ -35,9 +35,9 @@ function View() {
           label="@arkyn/components"
           to="/v1/components"
         />
-        <NavigationButton icon={Rss} label="@arkyn/api" to="/v1/api" />
+        {/* <NavigationButton icon={Rss} label="@arkyn/api" to="/v1/api" />
         <NavigationButton icon={Webhook} label="@arkyn/hooks" to="/v1/hooks" />
-        <NavigationButton icon={Archive} label="@arkyn/utils" to="/v1/utils" />
+        <NavigationButton icon={Archive} label="@arkyn/utils" to="/v1/utils" /> */}
       </NavigationContainer>
     </Container>
   );

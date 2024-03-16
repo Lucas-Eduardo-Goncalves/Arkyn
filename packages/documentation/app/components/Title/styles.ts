@@ -16,9 +16,9 @@ const H2 = styled.h2`
   margin-top: 16px;
 
   color: var(--secondary-900);
-
   flex: 1;
-  padding-bottom: 8px;
+
+  padding-top: 32px;
   border-bottom: 1px solid var(--secondary-200);
 
   svg {
@@ -37,6 +37,7 @@ const H3 = styled.h3`
   font-size: 1.5rem;
   font-weight: 600;
 
+  padding-top: 32px;
   color: var(--secondary-900);
 
   svg {
