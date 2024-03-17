@@ -1,3 +1,7 @@
+import { IconButtonClient } from "~/doc/IconButton";
+
+export const meta = IconButtonClient.meta;
+
 export default function IconButtonRoute() {
-  return <h4>Primary Icon Buttons</h4>;
+  return <IconButtonClient.View />;
 }

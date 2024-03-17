@@ -1,5 +1,5 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Badge, SquareMousePointer } from "lucide-react";
+import { SquareMousePointer, TextCursorInput } from "lucide-react";
 
 import { Container } from "~/components/Container";
 import { NavigationButton } from "~/components/NavigationButton";
@@ -15,16 +15,19 @@ function View() {
       <Breadcrumb>
         <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
         <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
-        <BreadcrumbLink to="/v1/components/button">Button</BreadcrumbLink>
+        <BreadcrumbLink to="/v1/components/icon-button">
+          IconButton
+        </BreadcrumbLink>
       </Breadcrumb>
 
-      <Title as="h1">Button</Title>
+      <Title as="h1">IconButton</Title>
 
       <Paragraph>
-        Os botões podem ser configurados com diferentes tamanhos, variantes de
-        estilo e esquemas de cores. Além disso, oferece a opção de incluir
-        ícones à esquerda e à direita do texto do botão. Assim como uma opção
-        que colocará o botão em estado de carregamento.
+        Os botões de icones podem ser configurados com diferentes tamanhos,
+        variantes de estilo e esquemas de cores. Porém ao contrario de botões
+        comuns eles não podem receber filhos. Recebem uma prop <code>icon</code>{" "}
+        que faz referencia ao ícone a ser exibido. Também é necessário adicionar
+        uma propriedade <code>aria-label</code> para auxiliar na acessibilidade.
       </Paragraph>
 
       <Paragraph>
@@ -37,10 +40,6 @@ function View() {
         opções como sólido, contorno, sombra e invisível. <br />
         <strong>scheme:</strong> Define o esquema de cores do botão, permitindo
         destacar diferentes ações ou estados. <br />
-        <strong>leftIcon:</strong> Permite adicionar um ícone à esquerda do
-        texto do botão, utilizando a biblioteca de ícones LucideIcon. <br />
-        <strong>rightIcon:</strong> Similar ao leftIcon, mas permite adicionar
-        um ícone à direita do texto do botão.
       </Paragraph>
 
       <Paragraph>
@@ -53,14 +52,14 @@ function View() {
 
       <NavigationContainer>
         <NavigationButton
-          icon={Badge}
-          label="Badge"
-          to="/v1/components/badge"
+          icon={SquareMousePointer}
+          label="Button"
+          to="/v1/components/button"
         />
         <NavigationButton
-          icon={SquareMousePointer}
-          label="IconButton"
-          to="/v1/components/icon-button"
+          icon={TextCursorInput}
+          label="Input"
+          to="/v1/components/input"
         />
       </NavigationContainer>
     </Container>
