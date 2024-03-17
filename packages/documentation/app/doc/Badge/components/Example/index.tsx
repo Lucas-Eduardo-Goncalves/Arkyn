@@ -6,6 +6,8 @@ import { SchemeSelect } from "../SchemeSelect";
 import { SizeSelect } from "../SizeSelect";
 import { VariantSelect } from "../VariantSelect";
 import { Container } from "./styles";
+import { Fence } from "~/components/Fence";
+import { Title } from "~/components/Title";
 
 function Example() {
   const [size, setSize] = useState<SizeProps>("md");
@@ -13,17 +15,35 @@ function Example() {
   const [scheme, setScheme] = useState<SchemeProps>("primary");
 
   return (
-    <Container>
-      <header>
-        <SizeSelect size={size} setSize={setSize} />
-        <VariantSelect variant={variant} setVariant={setVariant} />
-        <SchemeSelect scheme={scheme} setScheme={setScheme} />
-      </header>
+    <>
+      <Title as="h3">Exemplo</Title>
 
-      <Badge size={size} variant={variant} scheme={scheme}>
-        Badge
-      </Badge>
-    </Container>
+      <Container>
+        <header>
+          <SizeSelect size={size} setSize={setSize} />
+          <VariantSelect variant={variant} setVariant={setVariant} />
+          <SchemeSelect scheme={scheme} setScheme={setScheme} />
+        </header>
+
+        <Badge size={size} variant={variant} scheme={scheme}>
+          Badge
+        </Badge>
+      </Container>
+
+      <Fence type="typescript">
+        {`import { Badge } from "@arkyn/components";
+      
+
+function MyComponent() {
+  return (
+    <Badge size="${size}" variant="${variant}" scheme="${scheme}">
+      Badge
+    </Badge>
+  )
+}
+      `}
+      </Fence>
+    </>
   );
 }
 
