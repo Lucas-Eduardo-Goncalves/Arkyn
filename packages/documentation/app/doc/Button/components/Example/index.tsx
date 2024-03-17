@@ -38,7 +38,7 @@ function Example() {
           Button
         </Button>
       </Container>
-      <Fence type="typescript">
+      <Fence type="tsx">
         {`import { Button } from "@arkyn/components";
       
 

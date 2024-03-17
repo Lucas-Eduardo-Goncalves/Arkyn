@@ -30,7 +30,7 @@ function Example() {
         </Badge>
       </Container>
 
-      <Fence type="typescript">
+      <Fence type="tsx">
         {`import { Badge } from "@arkyn/components";
       
 

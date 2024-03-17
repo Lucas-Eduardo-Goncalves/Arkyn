@@ -36,7 +36,7 @@ function Example() {
         />
       </Container>
 
-      <Fence>
+      <Fence type="tsx">
         {`import { IconButton } from "@arkyn/components";
 import { CircleDashed } from "lucide-react";
       
