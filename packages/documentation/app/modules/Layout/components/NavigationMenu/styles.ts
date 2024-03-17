@@ -5,6 +5,9 @@ const Container = styled.nav`
   flex-direction: column;
   gap: 4px;
 
+  position: sticky;
+  top: 16px;
+
   min-width: 200px;
   max-width: 200px;
 `;

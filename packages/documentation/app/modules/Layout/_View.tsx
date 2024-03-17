@@ -18,7 +18,6 @@ export function View() {
         <NavigationMenu>
           <NavigationLink to="/v1/doc/introduction" label="Introdução" />
           <NavigationLink to="/v1/doc/get-started" label="Começo Rápido" />
-
           <NavigationTitle label="Pacotes" />
           <NavigationAccordion
             options={route_components}
@@ -26,7 +25,6 @@ export function View() {
             to="/v1/components"
           />
         </NavigationMenu>
-
         <Outlet />
       </LayoutContent>
       <LayoutFooter />

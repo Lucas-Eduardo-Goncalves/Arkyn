@@ -36,19 +36,19 @@ function View() {
       <Paragraph>
         Certifique-se de ter os seguintes pacotes instalados em seu projeto:{" "}
         <br />
-        <strong>lucide-react:</strong> Fornece ícones escaláveis e
-        personalizáveis para seus componentes.
+        <code>lucide-react</code>: Fornece ícones escaláveis e personalizáveis
+        para seus componentes.
         <br />
-        <strong>framer-motion:</strong> Biblioteca para adicionar animações
-        fluidas e interativas.
+        <code>framer-motion</code>: Biblioteca para adicionar animações fluidas
+        e interativas.
         <br />
-        <strong>react e react-dom:</strong> Bibliotecas essenciais para
+        <code>react e react-dom</code>: Bibliotecas essenciais para
         desenvolvimento React.
         <br />
-        <strong>@arkyn/types:</strong> Tipos TypeScript para os componentes da
+        <code>@arkyn/types</code>: Tipos TypeScript para os componentes da
         biblioteca.
         <br />
-        <strong>@remix-run/react:</strong> Se estiver usando RemixJS para
+        <code>@remix-run/react</code>: Se estiver usando RemixJS para
         renderização do lado do servidor.
         <br />
       </Paragraph>
