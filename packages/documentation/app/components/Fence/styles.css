@@ -2,7 +2,6 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: var(--secondary-500);
   background: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: monospace;
   font-size: 1em;
   text-align: left;
