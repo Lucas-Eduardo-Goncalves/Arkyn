@@ -1,13 +1,15 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
 import { LayoutGrid, Power } from "lucide-react";
 
-import { Container } from "~/components/Container";
-import { NavigationButton } from "~/components/NavigationButton";
-import { NavigationContainer } from "~/components/NavigationContainer";
-import { Paragraph } from "~/components/Paragraph";
-import { Title } from "~/components/Title";
+import {
+  Container,
+  NavigationButton,
+  NavigationContainer,
+  Paragraph,
+  Title,
+} from "~/components";
 
-import { Example } from "./components/Example";
+import { Example } from "./components";
 
 function View() {
   return (

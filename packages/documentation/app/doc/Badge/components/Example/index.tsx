@@ -1,13 +1,11 @@
 import { Badge } from "@arkyn/components";
 import { useState } from "react";
 
+import { Fence, Title } from "~/components";
+
 import { SchemeProps, SizeProps, VariantProps } from "../../_types";
-import { SchemeSelect } from "../SchemeSelect";
-import { SizeSelect } from "../SizeSelect";
-import { VariantSelect } from "../VariantSelect";
+import { SchemeSelect, SizeSelect, VariantSelect } from "../Selects";
 import { Container } from "./styles";
-import { Fence } from "~/components/Fence";
-import { Title } from "~/components/Title";
 
 function Example() {
   const [size, setSize] = useState<SizeProps>("md");
@@ -30,18 +28,10 @@ function Example() {
         </Badge>
       </Container>
 
-      <Fence type="tsx">
-        {`import { Badge } from "@arkyn/components";
-      
-
-function MyComponent() {
-  return (
-    <Badge size="${size}" variant="${variant}" scheme="${scheme}">
-      Badge
-    </Badge>
-  )
-}
-      `}
+      <Fence type="tsx" language="html">
+        {`<Badge size="${size}" variant="${variant}" scheme="${scheme}">
+  Badge
+</Badge>`}
       </Fence>
     </>
   );

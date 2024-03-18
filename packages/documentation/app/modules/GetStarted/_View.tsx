@@ -1,12 +1,13 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-
-import { Container } from "~/components/Container";
-import { NavigationButton } from "~/components/NavigationButton";
-import { NavigationContainer } from "~/components/NavigationContainer";
-import { Paragraph } from "~/components/Paragraph";
-import { Title } from "~/components/Title";
-
 import { LayoutGrid } from "lucide-react";
+
+import {
+  Container,
+  NavigationButton,
+  NavigationContainer,
+  Paragraph,
+  Title,
+} from "~/components";
 
 function View() {
   return (
@@ -35,9 +36,6 @@ function View() {
           label="@arkyn/components"
           to="/v1/components"
         />
-        {/* <NavigationButton icon={Rss} label="@arkyn/api" to="/v1/api" />
-        <NavigationButton icon={Webhook} label="@arkyn/hooks" to="/v1/hooks" />
-        <NavigationButton icon={Archive} label="@arkyn/utils" to="/v1/utils" /> */}
       </NavigationContainer>
     </Container>
   );

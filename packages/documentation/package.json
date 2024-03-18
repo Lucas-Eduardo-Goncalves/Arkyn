@@ -3,6 +3,7 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "module": "ESM",
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
@@ -20,6 +21,7 @@
     "@remix-run/serve": "^2.8.1",
     "isbot": "^5.1.1",
     "lucide-react": "^0.357.0",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -35,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "@types/prismjs": "^1.26.3",
     "remix-development-tools": "^4.0.5",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",

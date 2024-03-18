@@ -1,12 +1,14 @@
 import { Outlet } from "@remix-run/react";
 
-import { LayoutContent } from "./components/LayoutContent";
-import { LayoutFooter } from "./components/LayoutFooter";
-import { LayoutHeader } from "./components/LayoutHeader";
-import { NavigationAccordion } from "./components/NavigationAccordion";
-import { NavigationLink } from "./components/NavigationLink";
-import { NavigationMenu } from "./components/NavigationMenu";
-import { NavigationTitle } from "./components/NavigationTitle";
+import {
+  LayoutContent,
+  LayoutFooter,
+  LayoutHeader,
+  NavigationAccordion,
+  NavigationLink,
+  NavigationMenu,
+  NavigationTitle,
+} from "./components";
 
 import { route_components } from "./config/route-list";
 

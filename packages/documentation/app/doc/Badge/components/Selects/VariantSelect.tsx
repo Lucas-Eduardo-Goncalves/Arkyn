@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { VariantProps } from "../_types";
+import { VariantProps } from "../../_types";
 
 type VariantSelectProps = {
   variant: VariantProps;

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { SizeProps } from "../_types";
+import { SizeProps } from "../../_types";
 
 type SizeSelectProps = {
   size: SizeProps;

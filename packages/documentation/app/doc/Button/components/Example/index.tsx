@@ -1,15 +1,16 @@
 import { Button } from "@arkyn/components";
 import { useState } from "react";
 
-import { SchemeProps, SizeProps, VariantProps } from "../../_types";
-import { LoadingSelect } from "../LoadingSelect";
-import { SchemeSelect } from "../SchemeSelect";
-import { SizeSelect } from "../SizeSelect";
-import { VariantSelect } from "../VariantSelect";
-import { Container } from "./styles";
+import { Fence, Title } from "~/components";
 
-import { Fence } from "~/components/Fence";
-import { Title } from "~/components/Title";
+import { SchemeProps, SizeProps, VariantProps } from "../../_types";
+import {
+  LoadingSelect,
+  SchemeSelect,
+  SizeSelect,
+  VariantSelect,
+} from "../Selects";
+import { Container } from "./styles";
 
 function Example() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -38,18 +39,10 @@ function Example() {
           Button
         </Button>
       </Container>
-      <Fence type="tsx">
-        {`import { Button } from "@arkyn/components";
-      
-
-function MyComponent() {
-  return (
-    <Button isLoading={${isLoading}} size="${size}" variant="${variant}" scheme="${scheme}">
-      Button
-    </Button>
-  )
-}
-      `}
+      <Fence type="tsx" language="html">
+        {`<Button isLoading={${isLoading}} size="${size}" variant="${variant}" scheme="${scheme}">
+  Button
+</Button>`}
       </Fence>
     </>
   );

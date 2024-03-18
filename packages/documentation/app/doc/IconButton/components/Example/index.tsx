@@ -1,14 +1,17 @@
 import { IconButton } from "@arkyn/components";
-import { useState } from "react";
 import { CircleDashed } from "lucide-react";
+import { useState } from "react";
+
+import { Fence } from "~/components";
 
 import { SchemeProps, SizeProps, VariantProps } from "../../_types";
-import { LoadingSelect } from "../LoadingSelect";
-import { SchemeSelect } from "../SchemeSelect";
-import { SizeSelect } from "../SizeSelect";
-import { VariantSelect } from "../VariantSelect";
+import {
+  LoadingSelect,
+  SchemeSelect,
+  SizeSelect,
+  VariantSelect,
+} from "../Selects";
 import { Container } from "./styles";
-import { Fence } from "~/components/Fence";
 
 function Example() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -36,23 +39,15 @@ function Example() {
         />
       </Container>
 
-      <Fence type="tsx">
-        {`import { IconButton } from "@arkyn/components";
-import { CircleDashed } from "lucide-react";
-      
-function MyComponent() {
-  return (
-    <IconButton 
-      icon={CircleDashed}
-      aria-label="Icon button example"
-      isLoading={${isLoading}} 
-      size="${size}" 
-      variant="${variant}" 
-      scheme="${scheme}"
-    />
-  );
-}
-    `}
+      <Fence type="tsx" language="html">
+        {`<IconButton 
+  icon={CircleDashed}
+  aria-label="Icon button example"
+  isLoading={${isLoading}} 
+  size="${size}" 
+  variant="${variant}" 
+  scheme="${scheme}"
+/>`}
       </Fence>
     </>
   );

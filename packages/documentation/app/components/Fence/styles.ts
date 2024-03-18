@@ -1,8 +1,7 @@
 import { styled } from "@linaria/react";
 
-const Container = styled.pre`
+const Container = styled.div`
   font-family: monospace;
-  padding: 20px;
 
   font-size: 14px;
   font-weight: 500;
@@ -10,13 +9,7 @@ const Container = styled.pre`
   border-radius: 8px;
   background: var(--secondary-50);
 
-  &.has-type {
-    position: relative;
-    padding-top: 50px;
-  }
-
   > header {
-    position: absolute;
     left: 0;
     top: 0;
     right: 0;

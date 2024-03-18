@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { SchemeProps } from "../_types";
+import { SchemeProps } from "../../_types";
 
 type SchemeSelectProps = {
   scheme: SchemeProps;
