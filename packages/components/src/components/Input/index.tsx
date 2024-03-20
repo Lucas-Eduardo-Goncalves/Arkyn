@@ -9,13 +9,11 @@ const iconSize = {
   lg: 16,
 };
 
-const defaultSize = "md";
-
 function Input(args: InputProps) {
   const {
     isLoading,
-    inError,
-    size = defaultSize,
+    isError,
+    size = "md",
     className: baseClassName = "",
     variant = "solid",
     prefix: Prefix,
@@ -41,9 +39,11 @@ function Input(args: InputProps) {
     if (ref?.current) ref.current.focus();
   }
 
+  const loadingPosition = RightIcon ? "right" : "left";
+
   const hasPrefix = !!Prefix ? "hasPrefix" : "";
   const hasSufix = !!Sufix ? "hasSufix" : "";
-  const errored = inError ? "errored" : "";
+  const errored = isError ? "errored" : "";
   const opacity = disabled || readOnly || isLoading ? "opacity" : "";
   const focused = isFocused ? "focused" : "";
 
@@ -70,16 +70,13 @@ function Input(args: InputProps) {
         </p>
       )}
 
-      {LeftIcon &&
-        (isLoading ? (
-          <Loader2
-            className="spinner"
-            size={iconSize[size]}
-            strokeWidth={2.5}
-          />
-        ) : (
-          <LeftIcon size={iconSize[size]} strokeWidth={2.5} />
-        ))}
+      {loadingPosition === "left" && isLoading && (
+        <Loader2 className="spinner" size={iconSize[size]} strokeWidth={2.5} />
+      )}
+
+      {LeftIcon && !isLoading && (
+        <LeftIcon size={iconSize[size]} strokeWidth={2.5} />
+      )}
 
       <input
         onFocus={(e) => {
@@ -96,16 +93,13 @@ function Input(args: InputProps) {
         {...rest}
       />
 
-      {RightIcon &&
-        (isLoading ? (
-          <Loader2
-            className="spinner"
-            size={iconSize[size]}
-            strokeWidth={2.5}
-          />
-        ) : (
-          <RightIcon size={iconSize[size]} strokeWidth={2.5} />
-        ))}
+      {loadingPosition === "right" && isLoading && (
+        <Loader2 className="spinner" size={iconSize[size]} strokeWidth={2.5} />
+      )}
+
+      {RightIcon && !isLoading && (
+        <RightIcon size={iconSize[size]} strokeWidth={2.5} />
+      )}
 
       {Sufix && (
         <p className="sufix">

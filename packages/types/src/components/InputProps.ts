@@ -8,7 +8,7 @@ type BaseInputProps = Omit<
 
 type InputProps = BaseInputProps & {
   isLoading?: boolean;
-  inError?: boolean;
+  isError?: boolean;
 
   size?: "md" | "lg";
   variant?: "solid" | "outline" | "underline";

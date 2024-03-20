@@ -149,8 +149,9 @@
 
 /* SIZE */
 
-.arkyn_input.md {
-  height: 40px;
+.arkyn_input.md input {
+  min-height: 40px;
+  max-height: 40px;
   font-size: 14px;
   font-weight: 400;
 }
@@ -176,8 +177,9 @@
   font-size: 14px;
 }
 
-.arkyn_input.lg {
-  height: 44px;
+.arkyn_input.lg input {
+  min-height: 44px;
+  max-height: 44px;
   font-size: 16px;
   font-weight: 400;
 }

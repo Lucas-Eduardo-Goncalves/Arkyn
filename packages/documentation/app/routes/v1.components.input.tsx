@@ -1,3 +1,7 @@
+import { InputClient } from "~/doc/Input";
+
+export const meta = InputClient.meta;
+
 export default function InputRoute() {
-  return <h4>Input</h4>;
+  return <InputClient.View />;
 }
