@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "all:update-packages": "cd packages/types && ncu -u && cd ../components && ncu -u && cd ../documentation && ncu -u && bun i",
     "dev:types": "cd packages/types && bun run build && bun run types && clear",
     "dev:components": "cd packages/components && bun run build && bun run types && clear",
     "dev:documentation": "cd packages/documentation && bun run dev",
