@@ -53,6 +53,7 @@ function Example() {
         </header>
 
         <Input
+          type="currency"
           leftIcon={isLeftIcon ? CircleDashed : undefined}
           rightIcon={isRightIcon ? CircleDashed : undefined}
           prefix={isPrefix ? "$" : ""}

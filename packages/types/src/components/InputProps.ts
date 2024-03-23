@@ -1,12 +1,7 @@
 import { LucideIcon } from "lucide-react";
 import { InputHTMLAttributes } from "react";
 
-type BaseInputProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  "size" | "prefix"
->;
-
-type InputProps = BaseInputProps & {
+type BaseInputProps = {
   isLoading?: boolean;
   isError?: boolean;
 
@@ -18,6 +13,20 @@ type InputProps = BaseInputProps & {
 
   leftIcon?: LucideIcon;
   rightIcon?: LucideIcon;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix">;
+
+type CurrencyInputProps = Omit<
+  BaseInputProps,
+  "max" | "defaultValue" | "value" | "onChange"
+> & {
+  defaultValue?: number;
+  onChange?: (value: number) => void;
+  value?: number;
+  type: "currency";
+  max?: number;
+  showCents?: boolean;
 };
 
-export type { InputProps };
+type InputProps = BaseInputProps | CurrencyInputProps;
+
+export type { BaseInputProps, CurrencyInputProps, InputProps };
