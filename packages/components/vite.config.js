@@ -13,6 +13,7 @@ export default defineConfig({
         "lucide-react",
         "react",
         "react-dom",
+        "react-input-mask",
       ],
     },
     lib: {

@@ -49,12 +49,19 @@ type CurrencyInputProps = Omit<
   showCents?: boolean;
 };
 
+type MaskedInputProps = BaseInputProps<"masked"> & {
+  mask: string | (string | RegExp)[];
+  alwaysShowMask?: boolean;
+  maskChar?: string | null | undefined;
+};
+
 type SimpleInputProps = BaseInputProps<InputBaseTypes>;
-type InputProps = CurrencyInputProps | SimpleInputProps;
+type InputProps = CurrencyInputProps | SimpleInputProps | MaskedInputProps;
 
 export type {
   BaseInputProps,
   CurrencyInputProps,
-  SimpleInputProps,
   InputProps,
+  MaskedInputProps,
+  SimpleInputProps,
 };
