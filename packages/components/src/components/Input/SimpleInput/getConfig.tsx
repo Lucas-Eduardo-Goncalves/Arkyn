@@ -1,8 +1,8 @@
-import { BaseInputProps } from "@arkyn/types";
+import { SimpleInputProps } from "@arkyn/types";
 import { morpheme } from "../utils/morpheme";
 import { Loader2 } from "lucide-react";
 
-function getConfig(props: BaseInputProps, isFocused: boolean) {
+function getConfig(props: SimpleInputProps, isFocused: boolean) {
   const {
     isLoading,
     isError,

@@ -1,9 +1,9 @@
-import { BaseInputProps } from "@arkyn/types";
+import { SimpleInputProps } from "@arkyn/types";
 import { useRef, useState, FocusEvent } from "react";
 
 import { getConfig } from "./getConfig";
 
-function SimpleInput(props: BaseInputProps) {
+function SimpleInput(props: SimpleInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
 

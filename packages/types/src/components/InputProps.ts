@@ -1,7 +1,29 @@
 import { LucideIcon } from "lucide-react";
 import { InputHTMLAttributes } from "react";
 
-type BaseInputProps = {
+type InputBaseTypes =
+  | "button"
+  | "color"
+  | "date"
+  | "datetime-local"
+  | "email"
+  | "file"
+  | "hidden"
+  | "image"
+  | "month"
+  | "number"
+  | "password"
+  | "range"
+  | "reset"
+  | "search"
+  | "submit"
+  | "tel"
+  | "text"
+  | "time"
+  | "url"
+  | "week";
+
+type BaseInputProps<T extends string> = {
   isLoading?: boolean;
   isError?: boolean;
 
@@ -13,20 +35,26 @@ type BaseInputProps = {
 
   leftIcon?: LucideIcon;
   rightIcon?: LucideIcon;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix">;
+  type: T;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix" | "type">;
 
 type CurrencyInputProps = Omit<
-  BaseInputProps,
+  BaseInputProps<"currency">,
   "max" | "defaultValue" | "value" | "onChange"
 > & {
   defaultValue?: number;
   onChange?: (value: number) => void;
   value?: number;
-  type: "currency";
   max?: number;
   showCents?: boolean;
 };
 
-type InputProps = BaseInputProps | CurrencyInputProps;
+type SimpleInputProps = BaseInputProps<InputBaseTypes>;
+type InputProps = CurrencyInputProps | SimpleInputProps;
 
-export type { BaseInputProps, CurrencyInputProps, InputProps };
+export type {
+  BaseInputProps,
+  CurrencyInputProps,
+  SimpleInputProps,
+  InputProps,
+};
