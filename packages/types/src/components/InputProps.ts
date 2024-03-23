@@ -55,11 +55,25 @@ type MaskedInputProps = BaseInputProps<"masked"> & {
   maskChar?: string | null | undefined;
 };
 
+type CpfCnpjInputProps = Omit<
+  BaseInputProps<"cpf-cpnj">,
+  "value" | "defaultValue"
+> & {
+  defaultValue?: string;
+  value?: string;
+};
+
 type SimpleInputProps = BaseInputProps<InputBaseTypes>;
-type InputProps = CurrencyInputProps | SimpleInputProps | MaskedInputProps;
+
+type InputProps =
+  | CurrencyInputProps
+  | SimpleInputProps
+  | MaskedInputProps
+  | CpfCnpjInputProps;
 
 export type {
   BaseInputProps,
+  CpfCnpjInputProps,
   CurrencyInputProps,
   InputProps,
   MaskedInputProps,

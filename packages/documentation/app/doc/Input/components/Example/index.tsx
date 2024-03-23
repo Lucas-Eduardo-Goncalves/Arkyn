@@ -53,7 +53,7 @@ function Example() {
         </header>
 
         <Input
-          type="text"
+          type="cpf-cpnj"
           leftIcon={isLeftIcon ? CircleDashed : undefined}
           rightIcon={isRightIcon ? CircleDashed : undefined}
           prefix={isPrefix ? "$" : ""}
