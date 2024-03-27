@@ -1,5 +1,4 @@
 /* BASE */
-
 .arkyn_badge {
   display: flex;
   align-items: center;
@@ -99,7 +98,6 @@
 }
 
 /* SIZE */
-
 .arkyn_badge.lg {
   font-weight: 400;
   font-size: 12px;
