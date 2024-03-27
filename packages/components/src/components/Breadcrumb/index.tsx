@@ -1,5 +1,5 @@
 import { BreadcrumbLinkProps, BreadcrumbProps } from "@arkyn/types";
-import { Link, useLocation } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { ChevronRight } from "lucide-react";
 
 import { buildBreadcrumbConfig } from "../../config/buildBreadcrumbConfig";
