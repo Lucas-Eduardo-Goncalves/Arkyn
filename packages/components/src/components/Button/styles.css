@@ -1,5 +1,4 @@
 /* BASE */
-
 .arkyn_button {
   background: transparent;
   border: 1px solid transparent;
@@ -258,7 +257,6 @@
 }
 
 /* SIZE */
-
 .arkyn_button.lg {
   font-weight: 600;
   font-size: 14px;
@@ -317,7 +315,6 @@
 }
 
 /* SPIN */
-
 .arkyn_button .spinner {
   display: flex;
   align-items: center;
@@ -330,7 +327,7 @@
   opacity: 0;
 }
 
-.arkyn_button .spinner svg {
+.arkyn_button .spinner > svg {
   animation: spin 2s linear infinite;
 }
 

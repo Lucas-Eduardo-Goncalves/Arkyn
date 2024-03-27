@@ -1,11 +1,9 @@
 import { BadgeProps } from "@arkyn/types";
 import { GenerateIcon } from "../utils/generateIcon";
 
-type BuildBadgeConfigProps = {
-  args: BadgeProps;
-};
+type BuildBadgeConfigProps = BadgeProps;
 
-function buildBadgeConfig({ args }: BuildBadgeConfigProps) {
+function buildBadgeConfig(args: BuildBadgeConfigProps) {
   const {
     variant = "ghost",
     scheme = "primary",
@@ -23,10 +21,10 @@ function buildBadgeConfig({ args }: BuildBadgeConfigProps) {
   const className = `arkyn_badge ${variant} ${scheme} ${size} ${baseClassName}`;
 
   return {
-    className,
+    className: className.trim(),
+    children,
     leftIcon: GenerateIcon(iconSize, leftIcon),
     rightIcon: GenerateIcon(iconSize, rightIcon),
-    children,
     ...rest,
   };
 }
