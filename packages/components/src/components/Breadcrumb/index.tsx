@@ -2,32 +2,22 @@ import { BreadcrumbLinkProps, BreadcrumbProps } from "@arkyn/types";
 import { Link, useLocation } from "@remix-run/react";
 import { ChevronRight } from "lucide-react";
 
+import { buildBreadcrumbConfig } from "../../config/buildBreadcrumbConfig";
+import { buildBreadcrumbLinkConfig } from "../../config/buildBreadcrumLinkConfig";
 import "./styles.css";
 
 function Breadcrumb(args: BreadcrumbProps) {
-  const { className: baseClassName, ...rest } = args;
-  const className = `arkyn_breadcrumb ${baseClassName}`;
-
-  return <nav className={className.trim()} {...rest} />;
+  const { className, ...rest } = buildBreadcrumbConfig(args);
+  return <nav className={className} {...rest} />;
 }
 
 function BreadcrumbLink(args: BreadcrumbLinkProps) {
-  const {
-    children,
-    to,
-    className: baseClassName,
-    disabled = false,
-    ...rest
-  } = args;
+  const { children, className, disabled, ...rest } =
+    buildBreadcrumbLinkConfig(args);
 
-  const { pathname } = useLocation();
-
-  const active = pathname === to ? "active" : "";
-  const className = `arkyn_breadcrumb_link ${active} ${baseClassName}`;
-
-  if (disabled || active) {
+  if (disabled) {
     return (
-      <p className={className.trim()}>
+      <p className={className}>
         <ChevronRight size={14} strokeWidth={2.5} />
         {children}
       </p>
@@ -35,7 +25,7 @@ function BreadcrumbLink(args: BreadcrumbLinkProps) {
   }
 
   return (
-    <Link to={to} className={className.trim()} {...rest}>
+    <Link className={className} {...rest}>
       <ChevronRight size={14} strokeWidth={2.5} />
       {children}
     </Link>
