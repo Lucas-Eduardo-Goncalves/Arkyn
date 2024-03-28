@@ -5,6 +5,8 @@ type BaseButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 type ButtonProps = BaseButtonProps & {
   isLoading?: boolean;
+  loadingText?: string;
+
   size?: "xs" | "sm" | "md" | "lg";
   variant?: "solid" | "outline" | "ghost" | "invisible";
   scheme?: "primary" | "success" | "warning" | "danger";

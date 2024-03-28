@@ -8,6 +8,7 @@ function buildButtonConfig(args: BuildButtonConfigProps) {
     isLoading = false,
     scheme = "primary",
     variant = "solid",
+    loadingText,
     size = "md",
     leftIcon,
     rightIcon,
@@ -20,13 +21,13 @@ function buildButtonConfig(args: BuildButtonConfigProps) {
   const iconSizes = { xs: 12, sm: 16, md: 20, lg: 24 };
   const iconSize = iconSizes[size];
 
-  const className = `arkyn_button ${variant} ${scheme} ${size} loading_${isLoading} ${baseClassName}`;
+  const className = `arkyn_button loading_text_${!!loadingText} ${variant} ${scheme} ${size} loading_${isLoading} ${baseClassName}`;
 
   return {
     className: className.trim(),
+    loadingText,
     children,
     iconSize,
-    size,
     disabled: disabled || isLoading,
     leftIcon: GenerateIcon(iconSize, leftIcon),
     rightIcon: GenerateIcon(iconSize, rightIcon),

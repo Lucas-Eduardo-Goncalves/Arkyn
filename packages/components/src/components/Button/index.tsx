@@ -5,16 +5,17 @@ import { buildButtonConfig } from "../../config/buildButtonConfig";
 import "./styles.css";
 
 function Button(args: ButtonProps) {
-  const { size, leftIcon, rightIcon, iconSize, children, ...rest } =
+  const { leftIcon, rightIcon, iconSize, children, loadingText, ...rest } =
     buildButtonConfig(args);
 
   return (
     <button {...rest}>
       <div className="spinner">
         <Loader2 size={iconSize} strokeWidth={2.5} />
+        {loadingText && loadingText}
       </div>
 
-      <div className={`content ${size}`}>
+      <div className="content">
         {leftIcon}
         {children}
         {rightIcon}

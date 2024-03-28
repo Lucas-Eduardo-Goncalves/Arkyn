@@ -267,7 +267,8 @@
   height: 44px;
 }
 
-.arkyn_button .content.lg {
+.arkyn_button.lg .content,
+.arkyn_button.lg .spinner {
   gap: 16px;
 }
 
@@ -282,8 +283,9 @@
   height: 40px;
 }
 
-.arkyn_button .content.md {
-  gap: 16px;
+.arkyn_button.md .content,
+.arkyn_button.md .spinner {
+  gap: 14px;
 }
 
 .arkyn_button.sm {
@@ -296,7 +298,8 @@
   height: 32px;
 }
 
-.arkyn_button .content.sm {
+.arkyn_button.sm .content,
+.arkyn_button.sm .spinner {
   gap: 12px;
 }
 
@@ -310,7 +313,8 @@
   height: 24px;
 }
 
-.arkyn_button .content.xs {
+.arkyn_button.xs .content,
+.arkyn_button.xs .spinner {
   gap: 8px;
 }
 
@@ -320,10 +324,7 @@
   align-items: center;
   justify-content: center;
 
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  white-space: nowrap;
   opacity: 0;
 }
 
@@ -331,12 +332,25 @@
   animation: spin 2s linear infinite;
 }
 
+.arkyn_button.loading_text_false .spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arkyn_button.loading_text_true .spinner {
+  max-height: 0px;
+}
+
 .arkyn_button.loading_true .content {
   opacity: 0;
+  max-height: 0px;
 }
 
 .arkyn_button.loading_true .spinner {
   opacity: 1;
+  max-height: unset;
 }
 
 @keyframes spin {

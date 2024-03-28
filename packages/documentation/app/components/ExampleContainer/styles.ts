@@ -4,7 +4,6 @@ const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 
   gap: 24px;
   padding: 32px;
@@ -13,11 +12,6 @@ const Container = styled.section`
   border-radius: 8px;
 
   transition: all 0.15s ease-in-out;
-
-  &:hover {
-    border-color: var(--secondary-300);
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.05);
-  }
 
   > header {
     display: flex;
