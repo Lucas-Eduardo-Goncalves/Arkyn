@@ -21,9 +21,9 @@ const Container = styled.header`
     gap: 16px;
 
     a {
-      font-size: 16px;
+      font-size: 14px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--secondary-600);
 
       &:hover {

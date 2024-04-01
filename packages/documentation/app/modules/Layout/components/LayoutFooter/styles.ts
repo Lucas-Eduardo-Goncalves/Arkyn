@@ -11,17 +11,17 @@ const Container = styled.footer`
   background: var(--secondary-100);
   border-top: 1px solid var(--secondary-200);
 
-  h2 {
+  > h2 {
     color: var(--secondary-700);
     font-size: 16px;
     font-weight: 400;
 
-    strong {
+    > strong {
       font-weight: 700;
     }
   }
 
-  p {
+  > p {
     color: var(--secondary-600);
     font-size: 12px;
     font-weight: 400;
