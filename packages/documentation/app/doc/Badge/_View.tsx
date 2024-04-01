@@ -1,63 +1,73 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { LayoutGrid, Power } from "lucide-react";
+import { Component, SquareMousePointer } from "lucide-react";
 
 import {
   Container,
   NavigationButton,
   NavigationContainer,
-  Paragraph,
-  Title,
+  SubMenu,
+  SubMenuLink,
 } from "~/components";
 
-import { Example } from "./components";
+import {
+  BadgeWithIcon,
+  ImportComponent,
+  ImportType,
+  Introduction,
+  Schemes,
+  Size,
+  Use,
+  Variant,
+} from "./components";
 
 function View() {
   return (
-    <Container>
-      <Breadcrumb>
-        <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
-        <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
-        <BreadcrumbLink to="/v1/components/badge">Badge</BreadcrumbLink>
-      </Breadcrumb>
+    <>
+      <Container>
+        <Breadcrumb>
+          <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+          <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
+          <BreadcrumbLink to="/v1/components/badge">Badge</BreadcrumbLink>
+        </Breadcrumb>
 
-      <Title as="h1">Badge</Title>
+        <Introduction />
+        <ImportComponent />
+        <ImportType />
 
-      <Paragraph>
-        Os badges podem ser configurados com diferentes tamanhos, variantes de
-        estilo e esquemas de cores.
-      </Paragraph>
+        <Use />
+        <Size />
+        <Variant />
+        <Schemes />
+        <BadgeWithIcon />
 
-      <Paragraph>
-        Principais características do componente: <br />
-        <strong>size:</strong> Define o tamanho do badge, podendo ser médio ou
-        grande. <br />
-        <strong>variant:</strong> Especifica o estilo visual do badge, incluindo
-        opções como sólido, contorno, e sombra. <br />
-        <strong>scheme:</strong> Define o esquema de cores do badge, permitindo
-        destacar diferentes ações ou estados. <br />
-      </Paragraph>
+        <NavigationContainer>
+          <NavigationButton
+            icon={Component}
+            label="@arkyn/components"
+            to="/v1/doc/get-started"
+          />
+          <NavigationButton
+            icon={SquareMousePointer}
+            label="Button"
+            to="/v1/components/button"
+          />
+        </NavigationContainer>
+      </Container>
 
-      <Paragraph>
-        Essas propriedades fornecem uma flexibilidade significativa para criar
-        badges que se adequam tanto ao estilo visual quanto à funcionalidade
-        desejada em qualquer aplicação.
-      </Paragraph>
+      <SubMenu>
+        <SubMenuLink id="badge">Badge</SubMenuLink>
+        <SubMenuLink id="importar">Importar</SubMenuLink>
+        <SubMenuLink id="tipos">Tipos</SubMenuLink>
+        <SubMenuLink id="uso">Uso</SubMenuLink>
 
-      <Example />
-
-      <NavigationContainer>
-        <NavigationButton
-          icon={LayoutGrid}
-          label="@arkyn/components"
-          to="/v1/components"
-        />
-        <NavigationButton
-          icon={Power}
-          label="Button"
-          to="/v1/components/button"
-        />
-      </NavigationContainer>
-    </Container>
+        <SubMenu>
+          <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
+          <SubMenuLink id="variantes">Variantes</SubMenuLink>
+          <SubMenuLink id="esquema-de-cores">Esquema de cores</SubMenuLink>
+          <SubMenuLink id="badge-com-icone">Badge com icone</SubMenuLink>
+        </SubMenu>
+      </SubMenu>
+    </>
   );
 }
 
