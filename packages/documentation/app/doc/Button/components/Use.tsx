@@ -4,7 +4,7 @@ import { ExampleContainer, Fence, Title } from "~/components";
 function Use() {
   return (
     <>
-      <Title as="h3">Uso</Title>
+      <Title as="h2">Uso</Title>
 
       <ExampleContainer>
         <Button>Some Text</Button>

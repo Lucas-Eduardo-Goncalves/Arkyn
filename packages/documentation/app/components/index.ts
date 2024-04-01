@@ -5,4 +5,5 @@ export { NavigationButton } from "./NavigationButton";
 export { NavigationContainer } from "./NavigationContainer";
 export { Note } from "./Note";
 export { Paragraph } from "./Paragraph";
+export { SubMenu, SubMenuLink } from "./SubMenu";
 export { Title } from "./Title";
