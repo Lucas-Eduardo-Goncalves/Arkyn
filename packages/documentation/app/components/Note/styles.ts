@@ -4,7 +4,7 @@ const Container = styled.p`
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 400;
-  color: var(--secondary-800);
+  color: var(--secondary-600);
 
   padding: 1rem;
   border-left: 4px solid transparent;

@@ -10,9 +10,9 @@ import {
 } from "~/components";
 
 import {
+  Api,
   BadgeWithIcon,
   ImportComponent,
-  ImportType,
   Introduction,
   Schemes,
   Size,
@@ -32,13 +32,14 @@ function View() {
 
         <Introduction />
         <ImportComponent />
-        <ImportType />
 
         <Use />
         <Size />
         <Variant />
         <Schemes />
         <BadgeWithIcon />
+
+        <Api />
 
         <NavigationContainer>
           <NavigationButton
@@ -57,15 +58,14 @@ function View() {
       <SubMenu>
         <SubMenuLink id="badge">Badge</SubMenuLink>
         <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="tipos">Tipos</SubMenuLink>
         <SubMenuLink id="uso">Uso</SubMenuLink>
-
         <SubMenu>
           <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
           <SubMenuLink id="variantes">Variantes</SubMenuLink>
           <SubMenuLink id="esquema-de-cores">Esquema de cores</SubMenuLink>
           <SubMenuLink id="badge-com-icone">Badge com icone</SubMenuLink>
         </SubMenu>
+        <SubMenuLink id="api">Api</SubMenuLink>
       </SubMenu>
     </>
   );

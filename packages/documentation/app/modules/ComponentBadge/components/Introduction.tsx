@@ -1,5 +1,4 @@
-import { Badge } from "@arkyn/components";
-import { ExampleContainer, Paragraph, Title } from "~/components";
+import { Paragraph, Title } from "~/components";
 
 function Introduction() {
   return (
@@ -7,13 +6,9 @@ function Introduction() {
       <Title as="h1">Badge</Title>
 
       <Paragraph>
-        Os emblemas são usados para destacar o status de um item para
-        reconhecimento rápido.
+        Pequeno valor numérico ou descritor de status para reconhecimento
+        rápido.
       </Paragraph>
-
-      <ExampleContainer>
-        <Badge>My Badge</Badge>
-      </ExampleContainer>
     </>
   );
 }

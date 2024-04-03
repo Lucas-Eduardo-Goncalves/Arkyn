@@ -7,9 +7,9 @@ function Variant() {
       <Title as="h3">Variantes</Title>
 
       <Paragraph>
-        Use a <code>variante</code> para alterar o estilo visual do badge. Você
-        pode definir o valor como <code>solid</code>, <code>outline</code> ou{" "}
-        <code>ghost</code>.
+        Use o suporte <code>variant</code> para alterar o estilo visual do
+        emblema. Você pode definir o valor como <code>solid</code>,{" "}
+        <code>outline</code> ou <code>ghost</code>.
       </Paragraph>
 
       <ExampleContainer>
@@ -19,11 +19,9 @@ function Variant() {
       </ExampleContainer>
 
       <Fence language="html" type="typescript">
-        {`<div className="flex-div">
-  <Badge variant="solid">Some Text</Badge>
-  <Badge variant="outline">Some Text</Badge>
-  <Badge variant="ghost">Some Text</Badge>
-</div>`}
+        {`<Badge variant="solid">Some Text</Badge>
+<Badge variant="outline">Some Text</Badge>
+<Badge variant="ghost">Some Text</Badge>`}
       </Fence>
     </>
   );

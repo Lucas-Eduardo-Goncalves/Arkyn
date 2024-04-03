@@ -4,7 +4,7 @@ import { Container } from "./styles";
 import "./styles.css";
 
 type FenceProps = {
-  children: string;
+  children: string | string;
   type?: string;
   language?:
     | "markup"

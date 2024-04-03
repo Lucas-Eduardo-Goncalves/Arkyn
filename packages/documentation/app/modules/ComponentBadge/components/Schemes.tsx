@@ -1,5 +1,5 @@
 import { Badge } from "@arkyn/components";
-import { ExampleContainer, Fence, Paragraph, Title } from "~/components";
+import { ExampleContainer, Fence, Note, Paragraph, Title } from "~/components";
 
 function Schemes() {
   return (
@@ -7,12 +7,16 @@ function Schemes() {
       <Title as="h3">Esquema de cores</Title>
 
       <Paragraph>
-        Use a propriedade <code>scheme</code> para alterar o esquema de cores do
-        badge. Você pode definir o valor para qualquer uma das escalas de cores
-        do seu sistema de design, como <code>danger</code>, <code>info</code>,{" "}
-        <code>primary</code>, <code>secondary</code>, <code>success</code> e{" "}
-        <code>warning</code>.
+        Use o suporte <code>scheme</code> para alterar o esquema de cores do
+        emblema. Você pode definir o valor para <code>danger</code>,{" "}
+        <code>info</code>, <code>primary</code>, <code>secondary</code>,{" "}
+        <code>success</code> ou <code>warning</code>.
       </Paragraph>
+
+      <Note type="info">
+        Lembrando que as cores são configuradas de acordo com a palheta de cores
+        que foi importada na configuração da biblioteca.
+      </Note>
 
       <ExampleContainer>
         <Badge scheme="danger">Some Text</Badge>
@@ -24,14 +28,13 @@ function Schemes() {
       </ExampleContainer>
 
       <Fence language="html" type="typescript">
-        {`<div className="flex-div">
-  <Badge scheme="danger">Some Text</Badge>
-  <Badge scheme="info">Some Text</Badge>
-  <Badge scheme="primary">Some Text</Badge>
-  <Badge scheme="secondary">Some Text</Badge>
-  <Badge scheme="success">Some Text</Badge>
-  <Badge scheme="warning">Some Text</Badge>
-</div>`}
+        {`<Badge scheme="danger">Some Text</Badge>
+<Badge scheme="info">Some Text</Badge>
+<Badge scheme="primary">Some Text</Badge>
+<Badge scheme="secondary">Some Text</Badge>
+<Badge scheme="success">Some Text</Badge>
+<Badge scheme="warning">Some Text</Badge>
+`}
       </Fence>
     </>
   );
