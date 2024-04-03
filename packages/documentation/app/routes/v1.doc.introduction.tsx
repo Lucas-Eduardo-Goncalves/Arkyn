@@ -1,4 +1,4 @@
-import { IntroductionClient } from "~/modules/Introduction";
+import { IntroductionClient } from "~/modules/Introduction/client";
 
 export const meta = IntroductionClient.meta;
 

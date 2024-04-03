@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Container, LinkContainer } from "./styles";
+import { NavContainer, LinkContainer } from "./styles";
 
 type SubMenuProps = {
   children: ReactNode;
@@ -13,10 +13,10 @@ type SubMenuLinkProps = {
 
 function SubMenu({ children, title = "Nesta página" }: SubMenuProps) {
   return (
-    <Container>
+    <NavContainer>
       <strong>{title}</strong>
       {children}
-    </Container>
+    </NavContainer>
   );
 }
 

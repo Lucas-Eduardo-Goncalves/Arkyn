@@ -1,4 +1,4 @@
-import { GetStartedClient } from "~/modules/GetStarted";
+import { GetStartedClient } from "~/modules/GetStarted/client";
 
 export const meta = GetStartedClient.meta;
 

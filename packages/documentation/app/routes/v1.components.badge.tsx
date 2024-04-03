@@ -1,7 +1,7 @@
-import { BadgeClient } from "~/doc/Badge";
+import { ComponentBadgeClient } from "~/modules/ComponentBadge/client";
 
-export const meta = BadgeClient.meta;
+export const meta = ComponentBadgeClient.meta;
 
 export default function BadgeRoute() {
-  return <BadgeClient.View />;
+  return <ComponentBadgeClient.View />;
 }

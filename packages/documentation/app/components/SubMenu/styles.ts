@@ -1,7 +1,7 @@
 import { styled } from "@linaria/react";
 import { Link } from "react-scroll";
 
-const Container = styled.nav`
+const NavContainer = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -40,4 +40,4 @@ const LinkContainer = styled(Link)`
   }
 `;
 
-export { Container, LinkContainer };
+export { NavContainer, LinkContainer };

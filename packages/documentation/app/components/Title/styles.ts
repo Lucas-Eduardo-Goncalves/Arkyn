@@ -1,6 +1,6 @@
 import { styled } from "@linaria/react";
 
-const H1 = styled.h2`
+const H1 = styled.h1`
   letter-spacing: -0.015em;
   font-size: 2.25rem;
   font-weight: 700;
@@ -13,13 +13,9 @@ const H2 = styled.h2`
   letter-spacing: -0.015em;
   font-size: 1.875rem;
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
 
   color: var(--secondary-900);
-  flex: 1;
-
-  padding-top: 32px;
-  border-bottom: 1px solid var(--secondary-200);
 
   svg {
     display: none;
@@ -36,8 +32,8 @@ const H3 = styled.h3`
   letter-spacing: -0.015em;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-top: 24px;
 
-  padding-top: 32px;
   color: var(--secondary-900);
 
   svg {

@@ -11,11 +11,11 @@
     "version": "bunx version patch"
   },
   "devDependencies": {
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.23",
     "bun-types": "latest",
     "typescript": "^5.4.3",
-    "vite": "^5.2.6"
+    "vite": "^5.2.7"
   },
   "peerDependencies": {
     "@remix-run/react": "^2.8.0",

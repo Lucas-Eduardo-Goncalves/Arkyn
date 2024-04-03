@@ -1,7 +1,7 @@
-import { InputClient } from "~/doc/Input";
+import { ComponentInputClient } from "~/modules/ComponentInput/client";
 
-export const meta = InputClient.meta;
+export const meta = ComponentInputClient.meta;
 
 export default function InputRoute() {
-  return <InputClient.View />;
+  return <ComponentInputClient.View />;
 }

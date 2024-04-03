@@ -2,9 +2,11 @@
   "name": "arkyn",
   "version": "1.0.0",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
+  "devDependencies": {
+    "@arkyn/components": "workspace:*",
+    "@arkyn/types": "workspace:*",
+    "@flydotio/dockerfile": "latest"
+  },
   "scripts": {
     "all:update-packages": "cd packages/types && ncu -u && cd ../components && ncu -u && cd ../documentation && ncu -u && bun i",
     "dev:types": "cd packages/types && bun run build && bun run types && clear",
@@ -12,9 +14,7 @@
     "dev:documentation": "cd packages/documentation && bun run dev",
     "prod:documentation": "cd packages/documentation && bun run build && bun run start"
   },
-  "devDependencies": {
-    "@arkyn/components": "workspace:*",
-    "@arkyn/types": "workspace:*",
-    "@flydotio/dockerfile": "latest"
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }

@@ -1,7 +1,7 @@
-import { IconButtonClient } from "~/doc/IconButton";
+import { ComponentIconButtonClient } from "~/modules/ComponentIconButton/client";
 
-export const meta = IconButtonClient.meta;
+export const meta = ComponentIconButtonClient.meta;
 
 export default function IconButtonRoute() {
-  return <IconButtonClient.View />;
+  return <ComponentIconButtonClient.View />;
 }

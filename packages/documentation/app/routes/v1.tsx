@@ -1,7 +1,7 @@
-import { LayoutClient } from "~/modules/Layout";
+import { V1Client } from "~/modules/V1/client";
 
-export const meta = LayoutClient.meta;
+export const meta = V1Client.meta;
 
 export default function LayoutRoute() {
-  return <LayoutClient.View />;
+  return <V1Client.View />;
 }

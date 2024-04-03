@@ -1,7 +1,7 @@
-import { ButtonClient } from "~/doc/Button";
+import { ComponentButtonClient } from "~/modules/ComponentButton/client";
 
-export const meta = ButtonClient.meta;
+export const meta = ComponentButtonClient.meta;
 
 export default function ButtonRoute() {
-  return <ButtonClient.View />;
+  return <ComponentButtonClient.View />;
 }

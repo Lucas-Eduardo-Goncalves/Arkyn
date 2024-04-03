@@ -1,4 +1,4 @@
-import { ArkynComponentsClient } from "~/doc/@arkyn-components";
+import { ArkynComponentsClient } from "~/modules/@arkyn-components/client";
 
 export const meta = ArkynComponentsClient.meta;
 

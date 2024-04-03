@@ -72,6 +72,7 @@ module.exports = {
       ],
       rules: {
         "import/no-unresolved": "off",
+        "import/no-named-as-default-member": "off",
       },
     },
 
