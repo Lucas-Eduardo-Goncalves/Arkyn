@@ -14,8 +14,8 @@ function Schemes() {
       </Paragraph>
 
       <Note type="info">
-        Lembrando que as cores são configuradas de acordo com a palheta de cores
-        que foi importada na configuração da biblioteca.
+        As cores são respectivas com a palheta de cores importada na
+        configuração da biblioteca.
       </Note>
 
       <ExampleContainer>

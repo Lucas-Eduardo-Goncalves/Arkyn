@@ -16,12 +16,13 @@ const TableContainer = styled.div`
     border-collapse: collapse;
 
     thead tr th {
-      background: var(--secondary-100);
       padding: 8px 16px;
       text-align: start;
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--secondary-600);
+
+      color: var(--secondary-500);
+      background: var(--secondary-100);
     }
 
     tbody tr {
@@ -36,7 +37,9 @@ const TableContainer = styled.div`
       font-size: 0.9rem;
       line-height: 1.5rem;
       font-weight: 400;
+
       color: var(--secondary-800);
+      border-top: 1px solid var(--secondary-200);
 
       code {
         font-size: 0.9rem;

@@ -1,7 +1,7 @@
 import { styled } from "@linaria/react";
 
 const Container = styled.p`
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.25rem;
   font-weight: 400;
   color: var(--secondary-600);

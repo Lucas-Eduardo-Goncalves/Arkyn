@@ -1,4 +1,4 @@
-import { Paragraph, Title } from "~/components";
+import { Note, Paragraph, Title } from "~/components";
 import { ApiTable } from "~/components/ApiTable";
 
 const columns = [
@@ -42,9 +42,12 @@ function Api() {
   return (
     <>
       <Title as="h2">Api</Title>
-      <Paragraph>
-        Referência de adereços (além de todos os adereços de uma div comum).
-      </Paragraph>
+      <Paragraph>Referência de adereços.</Paragraph>
+
+      <Note type="info">
+        Além dos adereços a seguir, o emblema também possuí todos os adereços de
+        uma <code>div</code> comum.
+      </Note>
 
       <ApiTable>
         <thead>
