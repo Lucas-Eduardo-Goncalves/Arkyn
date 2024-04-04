@@ -1,6 +1,6 @@
 import { IconButton } from "@arkyn/components";
 import { Banana } from "lucide-react";
-import { ExampleContainer, Fence, Paragraph, Title } from "~/components";
+import { ExampleContainer, Fence, Note, Paragraph, Title } from "~/components";
 
 function Schemes() {
   return (
@@ -12,6 +12,11 @@ function Schemes() {
         botão. Você pode definir o valor para <code>danger</code>,{" "}
         <code>primary</code>, <code>success</code> e <code>warning</code>.
       </Paragraph>
+
+      <Note type="info">
+        As cores são respectivas com a palheta de cores importada na
+        configuração da biblioteca.
+      </Note>
 
       <ExampleContainer>
         <IconButton scheme="danger" icon={Banana} aria-label="Demo Button" />

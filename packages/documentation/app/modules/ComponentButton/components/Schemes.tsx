@@ -1,5 +1,5 @@
 import { Button } from "@arkyn/components";
-import { ExampleContainer, Fence, Paragraph, Title } from "~/components";
+import { ExampleContainer, Fence, Note, Paragraph, Title } from "~/components";
 
 function Schemes() {
   return (
@@ -11,6 +11,11 @@ function Schemes() {
         botão. Você pode definir o valor para <code>danger</code>,{" "}
         <code>primary</code>, <code>success</code> e <code>warning</code>.
       </Paragraph>
+
+      <Note type="info">
+        As cores são respectivas com a palheta de cores importada na
+        configuração da biblioteca.
+      </Note>
 
       <ExampleContainer>
         <Button scheme="danger">Some Text</Button>
