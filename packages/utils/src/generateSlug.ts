@@ -1,4 +1,4 @@
-function createSlug(string: string) {
+function generateSlug(string: string) {
   let slug = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
   slug = slug
@@ -13,4 +13,4 @@ function createSlug(string: string) {
   return slug;
 }
 
-export { createSlug };
+export { generateSlug };

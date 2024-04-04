@@ -13,7 +13,7 @@
     "dev:types": "cd packages/types && bun run build && bun run types && clear",
     "dev:components": "cd packages/components && bun run build && bun run types && clear",
     "dev:documentation": "cd packages/documentation && bun run dev",
-    "dev:utils": "cd packages/utils && bun run build && bun run types",
+    "dev:utils": "cd packages/utils && bun run build && bun run types && clear",
     "prod:documentation": "cd packages/documentation && bun run build && bun run start"
   },
   "workspaces": [

@@ -1,4 +1,4 @@
-function createRandomColor(string: string) {
+function generateColorByString(string: string) {
   var hash = 0;
 
   for (var i = 0; i < string.length; i++) {
@@ -16,4 +16,4 @@ function createRandomColor(string: string) {
   return "#" + redHex + greenHex + blueHex;
 }
 
-export { createRandomColor };
+export { generateColorByString };
