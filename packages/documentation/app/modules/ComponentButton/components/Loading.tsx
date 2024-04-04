@@ -7,11 +7,11 @@ function Loading() {
       <Title as="h3">Carregamento</Title>
 
       <Paragraph>
-        Passe a propriedade <code>isLoading</code> para mostrar seu estado de
+        Utilize o suporte <code>isLoading</code> para mostrar seu estado de
         carregamento. Por padrão, o botão mostrará um controle giratório e
         deixará a largura do botão inalterada. <br />
         Você também pode passar a propriedade <code>loadingText</code> para
-        mostrar um botão giratório e o texto de carregamento.
+        adicionar texto durante o carregamento.
       </Paragraph>
 
       <Note type="warning">
@@ -27,13 +27,11 @@ function Loading() {
         </Button>
       </ExampleContainer>
 
-      <Fence language="html" type="typescript">
-        {`<div className="flex-div">
-  <Button isLoading>Some Text</Button>
-  <Button isLoading loadingText="Loading...">
-    Some Text 
-  </Button>
-</div>`}
+      <Fence language="html" type="tsx">
+        {`<Button isLoading>Some Text</Button>
+<Button isLoading loadingText="Loading...">
+  Some Text 
+</Button>`}
       </Fence>
     </>
   );

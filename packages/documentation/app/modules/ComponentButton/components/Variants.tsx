@@ -7,9 +7,9 @@ function Variant() {
       <Title as="h3">Variantes</Title>
 
       <Paragraph>
-        Use a <code>variante</code> para alterar o estilo visual do botão. Você
-        pode definir o valor como <code>solid</code>, <code>outline</code>,
-        <code>ghost</code> ou <code>invisible</code>.
+        Use o suporte <code>variant</code> para alterar o estilo visual do
+        botão. Você pode definir o valor como <code>solid</code>,{" "}
+        <code>outline</code>,<code>ghost</code> ou <code>invisible</code>.
       </Paragraph>
 
       <ExampleContainer>
@@ -19,13 +19,11 @@ function Variant() {
         <Button variant="invisible">Some Text</Button>
       </ExampleContainer>
 
-      <Fence language="html" type="typescript">
-        {`<div className="flex-div">
-  <Button variant="solid">Some Text</Button>
-  <Button variant="outline">Some Text</Button>
-  <Button variant="ghost">Some Text</Button>
-  <Button variant="invisible">Some Text</Button>
-</div>`}
+      <Fence language="html" type="tsx">
+        {`<Button variant="solid">Some Text</Button>
+<Button variant="outline">Some Text</Button>
+<Button variant="ghost">Some Text</Button>
+<Button variant="invisible">Some Text</Button>`}
       </Fence>
     </>
   );

@@ -8,15 +8,13 @@ function ButtonWithIcon() {
       <Title as="h3">Botão com icone</Title>
 
       <Paragraph>
-        Você pode adicionar ícones esquerdo e direito ao componente Button
-        usando os adereços <code>leftIcon</code> e <code>rightIcon</code>{" "}
-        respectivamente.
+        Você pode adicionar ícones esquerdo e direito ao botão usando os
+        adereços <code>leftIcon</code> e <code>rightIcon</code> respectivamente.
       </Paragraph>
 
       <Note type="warning">
-        Os valores da propriedade <code>leftIcon</code> e <code>rightIcon</code>{" "}
-        devem ser elementos de react de tipo <code>LucideIcon</code>, NÃO
-        strings.
+        Os valores devem ser elementos de tipo <code>LucideIcon</code>,{" "}
+        <strong>não</strong> strings e <strong>não</strong> jsx.
       </Note>
 
       <ExampleContainer>
@@ -27,10 +25,8 @@ function ButtonWithIcon() {
       </ExampleContainer>
 
       <Fence language="html" type="typescript">
-        {`<div className="flex-div">
-  <Button leftIcon={CarFront}>Look the car</Button>
-  <Button rightIcon={Calculator} variant="outline">Calculate</Button>
-</div>`}
+        {`<Button leftIcon={CarFront}>Look the car</Button>
+<Button rightIcon={Calculator} variant="outline">Calculate</Button>`}
       </Fence>
     </>
   );

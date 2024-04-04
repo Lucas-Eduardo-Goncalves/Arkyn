@@ -10,9 +10,9 @@ import {
 } from "~/components";
 
 import {
+  Api,
   ButtonWithIcon,
   ImportComponent,
-  ImportType,
   Introduction,
   Loading,
   Schemes,
@@ -33,7 +33,6 @@ function View() {
 
         <Introduction />
         <ImportComponent />
-        <ImportType />
 
         <Use />
         <Size />
@@ -41,6 +40,8 @@ function View() {
         <Schemes />
         <ButtonWithIcon />
         <Loading />
+
+        <Api />
 
         <NavigationContainer>
           <NavigationButton
@@ -59,9 +60,7 @@ function View() {
       <SubMenu>
         <SubMenuLink id="button">Botão</SubMenuLink>
         <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="tipos">Tipos</SubMenuLink>
         <SubMenuLink id="uso">Uso</SubMenuLink>
-
         <SubMenu>
           <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
           <SubMenuLink id="variantes">Variantes</SubMenuLink>
@@ -69,6 +68,7 @@ function View() {
           <SubMenuLink id="botão-com-icone">Botão com icone</SubMenuLink>
           <SubMenuLink id="carregamento">Carregamento</SubMenuLink>
         </SubMenu>
+        <SubMenuLink id="api">Api</SubMenuLink>
       </SubMenu>
     </>
   );

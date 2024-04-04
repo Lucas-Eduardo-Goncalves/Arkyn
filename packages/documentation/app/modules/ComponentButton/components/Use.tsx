@@ -10,7 +10,7 @@ function Use() {
         <Button>Some Text</Button>
       </ExampleContainer>
 
-      <Fence language="html" type="typescript">
+      <Fence language="html" type="tsx">
         {`<Button>Some Text</Button>`}
       </Fence>
     </>

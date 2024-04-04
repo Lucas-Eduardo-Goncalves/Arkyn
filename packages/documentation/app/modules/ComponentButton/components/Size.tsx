@@ -19,13 +19,11 @@ function Size() {
         <Button size="xs">Some Text</Button>
       </ExampleContainer>
 
-      <Fence language="html" type="typescript">
-        {`<div className="flex-div">
-  <Button size="lg">Some Text</Button>
-  <Button size="md">Some Text</Button>
-  <Button size="sm">Some Text</Button>
-  <Button size="xs">Some Text</Button>
-</div>`}
+      <Fence language="html" type="tsx">
+        {`<Button size="lg">Some Text</Button>
+<Button size="md">Some Text</Button>
+<Button size="sm">Some Text</Button>
+<Button size="xs">Some Text</Button>`}
       </Fence>
     </>
   );

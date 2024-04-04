@@ -1,5 +1,4 @@
-import { Button } from "@arkyn/components";
-import { ExampleContainer, Paragraph, Title } from "~/components";
+import { Paragraph, Title } from "~/components";
 
 function Introduction() {
   return (
@@ -7,13 +6,9 @@ function Introduction() {
       <Title as="h1">Button</Title>
 
       <Paragraph>
-        Os botões podem ser configurados com diferentes tamanhos, variantes de
-        estilo, esquemas de cores, icones e um estado de carregamento.
+        Um botão significa uma operação (ou uma série de operações). Clicar em
+        um botão acionará a lógica de negócios correspondente.
       </Paragraph>
-
-      <ExampleContainer>
-        <Button>My Button</Button>
-      </ExampleContainer>
     </>
   );
 }
