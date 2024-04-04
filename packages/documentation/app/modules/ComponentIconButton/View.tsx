@@ -13,6 +13,7 @@ import {
   Api,
   ImportComponent,
   Introduction,
+  Label,
   Loading,
   Schemes,
   Size,
@@ -34,6 +35,7 @@ function View() {
 
         <Introduction />
         <ImportComponent />
+        <Label />
 
         <Use />
         <Size />

@@ -7,7 +7,7 @@ function Introduction() {
 
       <Paragraph>
         Um ícone é uma representação gráfica de significado. Os ícones podem ser
-        usados oara expressar ações, estados e até mesmo para categorizar dados.
+        usados para expressar ações, estados e até mesmo para categorizar dados.
       </Paragraph>
     </>
   );

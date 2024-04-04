@@ -6,3 +6,4 @@ export { Schemes } from "./Schemes";
 export { Size } from "./Size";
 export { Use } from "./Use";
 export { Variant } from "./Variants";
+export { Label } from "./Label";
