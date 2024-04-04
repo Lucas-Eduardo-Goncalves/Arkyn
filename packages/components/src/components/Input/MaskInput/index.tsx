@@ -1,5 +1,7 @@
-import { MaskedInputProps } from "@arkyn/types";
-import { FocusEvent, useRef, useState } from "react";
+import type { MaskedInputProps } from "@arkyn/types";
+import type { FocusEvent } from "react";
+
+import { useRef, useState } from "react";
 import ReactMaskInput from "react-input-mask";
 
 import { getConfig } from "./getConfig";

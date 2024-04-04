@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 function GenerateIcon(iconSize: number, Icon?: LucideIcon) {
   if (!Icon) return <></>;

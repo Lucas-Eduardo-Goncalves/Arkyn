@@ -1,6 +1,7 @@
-import { CurrencyInputProps } from "@arkyn/types";
-import { morpheme } from "../utils/morpheme";
+import type { CurrencyInputProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
+
+import { morpheme } from "../utils/morpheme";
 
 function getConfig(props: CurrencyInputProps, isFocused: boolean) {
   const {

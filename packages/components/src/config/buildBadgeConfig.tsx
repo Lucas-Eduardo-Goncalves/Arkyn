@@ -1,4 +1,4 @@
-import { BadgeProps } from "@arkyn/types";
+import type { BadgeProps } from "@arkyn/types";
 import { GenerateIcon } from "../utils/generateIcon";
 
 type BuildBadgeConfigProps = BadgeProps;

@@ -1,4 +1,4 @@
-import { ButtonProps } from "@arkyn/types";
+import type { ButtonProps } from "@arkyn/types";
 import { GenerateIcon } from "../utils/generateIcon";
 
 type BuildButtonConfigProps = ButtonProps;

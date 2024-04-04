@@ -1,5 +1,7 @@
-import { CurrencyInputProps } from "@arkyn/types";
-import { useRef, useState, FocusEvent, KeyboardEvent } from "react";
+import type { CurrencyInputProps } from "@arkyn/types";
+import type { FocusEvent, KeyboardEvent } from "react";
+
+import { useRef, useState } from "react";
 
 import { getConfig } from "./getConfig";
 import { currencyInputKeyDown, valueDisplay } from "./utils";

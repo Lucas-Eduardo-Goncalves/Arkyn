@@ -1,4 +1,4 @@
-import { DividerProps } from "@arkyn/types";
+import type { DividerProps } from "@arkyn/types";
 import "./styles.css";
 
 function Divider(args: DividerProps) {

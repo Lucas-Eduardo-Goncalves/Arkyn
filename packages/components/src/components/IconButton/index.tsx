@@ -1,4 +1,4 @@
-import { IconButtonProps } from "@arkyn/types";
+import type { IconButtonProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
 
 import "./styles.css";

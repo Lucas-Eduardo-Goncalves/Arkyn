@@ -1,4 +1,5 @@
-import { ModalContainerProps } from "@arkyn/types";
+import type { ModalContainerProps } from "@arkyn/types";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { createContext } from "react";
 

@@ -1,4 +1,5 @@
-import { ModalHeaderProps } from "@arkyn/types";
+import type { ModalHeaderProps } from "@arkyn/types";
+
 import { X } from "lucide-react";
 import { useContext } from "react";
 

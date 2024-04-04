@@ -1,5 +1,5 @@
-import { LucideIcon } from "lucide-react";
-import { InputHTMLAttributes } from "react";
+import type { LucideIcon } from "lucide-react";
+import type { InputHTMLAttributes } from "react";
 
 type InputBaseTypes =
   | "button"

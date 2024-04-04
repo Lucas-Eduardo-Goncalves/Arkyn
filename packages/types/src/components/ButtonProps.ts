@@ -1,5 +1,5 @@
-import { LucideIcon } from "lucide-react";
-import { ButtonHTMLAttributes } from "react";
+import type { LucideIcon } from "lucide-react";
+import type { ButtonHTMLAttributes } from "react";
 
 type BaseButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 

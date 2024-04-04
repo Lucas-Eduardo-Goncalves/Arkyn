@@ -1,4 +1,4 @@
-import { ModalFooterProps } from "@arkyn/types";
+import type { ModalFooterProps } from "@arkyn/types";
 
 import "./styles.css";
 

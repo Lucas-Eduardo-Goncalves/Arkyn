@@ -1,6 +1,7 @@
 {
   "exclude": ["dist"], // Exclui o diretório "dist" da compilação do TypeScript
   "compilerOptions": {
+    "verbatimModuleSyntax": true, // Habilita a sintaxe de módulo "verbatim"
     "lib": ["dom", "ESNext"], // Bibliotecas padrão incluídas durante a compilação
     "module": "ESNext", // Define o sistema de módulos a ser usado
     "target": "ESNext", // Versão do ECMAScript para a qual o código será compilado

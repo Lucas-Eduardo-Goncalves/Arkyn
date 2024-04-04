@@ -1,5 +1,7 @@
-import { CpfCnpjInputProps } from "@arkyn/types";
-import { useRef, useState, FocusEvent, ChangeEvent } from "react";
+import type { CpfCnpjInputProps } from "@arkyn/types";
+import type { ChangeEvent, FocusEvent } from "react";
+
+import { useRef, useState } from "react";
 
 import { getConfig } from "./getConfig";
 import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";

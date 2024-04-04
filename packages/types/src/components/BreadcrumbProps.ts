@@ -1,5 +1,5 @@
-import { LinkProps } from "@remix-run/react";
-import { HTMLAttributes } from "react";
+import type { LinkProps } from "@remix-run/react";
+import type { HTMLAttributes } from "react";
 
 type BreadcrumbLinkProps = LinkProps & {
   disabled?: boolean;

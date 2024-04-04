@@ -1,5 +1,7 @@
-import { SimpleInputProps } from "@arkyn/types";
-import { useRef, useState, FocusEvent } from "react";
+import type { SimpleInputProps } from "@arkyn/types";
+import type { FocusEvent } from "react";
+
+import { useRef, useState } from "react";
 
 import { getConfig } from "./getConfig";
 

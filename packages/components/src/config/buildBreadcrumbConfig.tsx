@@ -1,4 +1,4 @@
-import { BreadcrumbProps } from "@arkyn/types";
+import type { BreadcrumbProps } from "@arkyn/types";
 
 type BuildBreadcrumbConfigProps = BreadcrumbProps;
 

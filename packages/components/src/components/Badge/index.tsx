@@ -1,4 +1,4 @@
-import { BadgeProps } from "@arkyn/types";
+import type { BadgeProps } from "@arkyn/types";
 
 import { buildBadgeConfig } from "../../config/buildBadgeConfig";
 import "./styles.css";

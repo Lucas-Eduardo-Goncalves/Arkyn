@@ -7,3 +7,6 @@ export * from "./components/IconButtonProps";
 export * from "./components/InputProps";
 export * from "./components/TooltipProps";
 export * from "./components/ModalProps";
+
+// Utils
+export * from "./utils/CalculateCardInstallmentProps";

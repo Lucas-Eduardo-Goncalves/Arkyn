@@ -1,4 +1,4 @@
-import { InputProps } from "@arkyn/types";
+import type { InputProps } from "@arkyn/types";
 
 import { CpfCnpjInput } from "./CpfCpnjInput";
 import { CurrencyInput } from "./CurrencyInput";

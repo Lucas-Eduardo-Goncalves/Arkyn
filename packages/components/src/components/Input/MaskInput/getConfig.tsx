@@ -1,6 +1,7 @@
-import { MaskedInputProps } from "@arkyn/types";
-import { morpheme } from "../utils/morpheme";
+import type { MaskedInputProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
+
+import { morpheme } from "../utils/morpheme";
 
 function getConfig(props: MaskedInputProps, isFocused: boolean) {
   const {

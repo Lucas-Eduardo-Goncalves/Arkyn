@@ -1,4 +1,4 @@
-import { ButtonProps } from "@arkyn/types";
+import type { ButtonProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
 
 import { buildButtonConfig } from "../../config/buildButtonConfig";

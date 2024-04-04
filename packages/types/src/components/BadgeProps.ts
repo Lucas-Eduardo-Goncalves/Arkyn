@@ -1,5 +1,5 @@
-import { LucideIcon } from "lucide-react";
-import { HTMLAttributes } from "react";
+import type { LucideIcon } from "lucide-react";
+import type { HTMLAttributes } from "react";
 
 type BaseBadgeProps = HTMLAttributes<HTMLDivElement>;
 

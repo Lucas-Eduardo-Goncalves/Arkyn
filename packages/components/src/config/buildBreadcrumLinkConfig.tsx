@@ -1,4 +1,4 @@
-import { BreadcrumbLinkProps } from "@arkyn/types";
+import type { BreadcrumbLinkProps } from "@arkyn/types";
 import { useLocation } from "@remix-run/react";
 
 type BuildBreadcrumbLinkConfigProps = BreadcrumbLinkProps & {};

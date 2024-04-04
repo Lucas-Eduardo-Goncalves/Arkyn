@@ -1,6 +1,7 @@
-import { CpfCnpjInputProps } from "@arkyn/types";
-import { morpheme } from "../utils/morpheme";
+import type { CpfCnpjInputProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
+
+import { morpheme } from "../utils/morpheme";
 
 function getConfig(props: CpfCnpjInputProps, isFocused: boolean) {
   const {

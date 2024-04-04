@@ -1,4 +1,4 @@
-import { BreadcrumbLinkProps, BreadcrumbProps } from "@arkyn/types";
+import type { BreadcrumbLinkProps, BreadcrumbProps } from "@arkyn/types";
 import { Link } from "@remix-run/react";
 import { ChevronRight } from "lucide-react";
 

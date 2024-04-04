@@ -1,4 +1,4 @@
-import { TooltipProps } from "@arkyn/types";
+import type { TooltipProps } from "@arkyn/types";
 import "./styles.css";
 
 function Tooltip(args: TooltipProps) {
