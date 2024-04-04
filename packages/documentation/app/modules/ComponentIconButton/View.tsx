@@ -5,66 +5,72 @@ import {
   Container,
   NavigationButton,
   NavigationContainer,
-  Paragraph,
-  Title,
+  SubMenu,
+  SubMenuLink,
 } from "~/components";
 
-import { Example } from "./components/Example";
+import {
+  Api,
+  ImportComponent,
+  Introduction,
+  Loading,
+  Schemes,
+  Size,
+  Use,
+  Variant,
+} from "./components";
 
 function View() {
   return (
-    <Container>
-      <Breadcrumb>
-        <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
-        <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
-        <BreadcrumbLink to="/v1/components/icon-button">
-          IconButton
-        </BreadcrumbLink>
-      </Breadcrumb>
+    <>
+      <Container>
+        <Breadcrumb>
+          <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+          <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
+          <BreadcrumbLink to="/v1/components/icon-button">
+            IconButton
+          </BreadcrumbLink>
+        </Breadcrumb>
 
-      <Title as="h1">IconButton</Title>
+        <Introduction />
+        <ImportComponent />
 
-      <Paragraph>
-        Os botões de icones podem ser configurados com diferentes tamanhos,
-        variantes de estilo e esquemas de cores. Porém ao contrario de botões
-        comuns eles não podem receber filhos. Recebem uma prop <code>icon</code>{" "}
-        que faz referencia ao ícone a ser exibido. Também é necessário adicionar
-        uma propriedade <code>aria-label</code> para auxiliar na acessibilidade.
-      </Paragraph>
+        <Use />
+        <Size />
+        <Variant />
+        <Schemes />
+        <Loading />
 
-      <Paragraph>
-        Principais características do componente: <br />
-        <strong>isLoading:</strong> Permite indicar se o botão está em um estado
-        de carregamento. <br />
-        <strong>size:</strong> Define o tamanho do botão, podendo ser extra
-        pequeno, pequeno, médio ou grande. <br />
-        <strong>variant:</strong> Especifica o estilo visual do botão, incluindo
-        opções como sólido, contorno, sombra e invisível. <br />
-        <strong>scheme:</strong> Define o esquema de cores do botão, permitindo
-        destacar diferentes ações ou estados. <br />
-      </Paragraph>
+        <Api />
 
-      <Paragraph>
-        Essas propriedades fornecem uma flexibilidade significativa para criar
-        botões que se adequam tanto ao estilo visual quanto à funcionalidade
-        desejada em qualquer aplicação.
-      </Paragraph>
+        <NavigationContainer>
+          <NavigationButton
+            icon={SquareMousePointer}
+            label="Button"
+            to="/v1/components/button"
+          />
+          <NavigationButton
+            icon={TextCursorInput}
+            label="Input"
+            to="/v1/components/input"
+          />
+        </NavigationContainer>
+      </Container>
 
-      <Example />
-
-      <NavigationContainer>
-        <NavigationButton
-          icon={SquareMousePointer}
-          label="Button"
-          to="/v1/components/button"
-        />
-        <NavigationButton
-          icon={TextCursorInput}
-          label="Input"
-          to="/v1/components/input"
-        />
-      </NavigationContainer>
-    </Container>
+      <SubMenu>
+        <SubMenuLink id="button">Botão</SubMenuLink>
+        <SubMenuLink id="importar">Importar</SubMenuLink>
+        <SubMenuLink id="etiqueta">Etiqueta</SubMenuLink>
+        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenu>
+          <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
+          <SubMenuLink id="variantes">Variantes</SubMenuLink>
+          <SubMenuLink id="esquema-de-cores">Esquema de cores</SubMenuLink>
+          <SubMenuLink id="carregamento">Carregamento</SubMenuLink>
+        </SubMenu>
+        <SubMenuLink id="api">Api</SubMenuLink>
+      </SubMenu>
+    </>
   );
 }
 
