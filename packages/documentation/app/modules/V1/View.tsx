@@ -17,23 +17,24 @@ function View() {
         <NavigationMenu>
           <NavigationLink to="/v1/doc/introduction" label="Introdução" />
           <NavigationLink to="/v1/doc/get-started" label="Começo Rápido" />
+
           <NavigationTitle label="Components" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
           <NavigationLink to="/v1/components/button" label="Button" />
           <NavigationLink to="/v1/components/icon-button" label="IconButton" />
           <NavigationLink to="/v1/components/input" label="Input" />
 
-          <NavigationTitle label="Utils" />
+          <NavigationTitle label="Utilidades" />
           <NavigationLink to="/v1/utils/bad-request" label="badRequest" />
           <NavigationLink
             to="/v1/utils/calculate-card-installment"
             label="calculateCardInstallment"
           />
           <NavigationLink
-            to="/v1/utils/create-random-color"
-            label="createRandomColor"
+            to="/v1/utils/generate-color-by-string"
+            label="generateColorByString"
           />
-          <NavigationLink to="/v1/utils/create-slug" label="createSlug" />
+          <NavigationLink to="/v1/utils/generate-slug" label="generateSlug" />
           <NavigationLink
             to="/v1/utils/get-scoped-params"
             label="getScopedParams"
