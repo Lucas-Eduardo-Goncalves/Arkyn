@@ -1,7 +1,7 @@
 import { MetaFunction } from "@remix-run/node";
 
 const meta: MetaFunction = () => [
-  { title: "Arkyn | Button" },
+  { title: "Components | Button" },
   {
     name: "description",
     content:
