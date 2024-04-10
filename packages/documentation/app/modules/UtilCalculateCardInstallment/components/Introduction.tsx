@@ -6,20 +6,21 @@ function Introduction() {
       <Title as="h1">calculateCardInstallment</Title>
 
       <Paragraph>
-        É uma utilidade que oferece uma maneira eficiente de calcular o preço
-        total e o preço da parcela para uma transação de compra parcelada com
-        cartão de crédito.
+        Esta função, foi criada para calcular o valor das parcelas e o preço
+        total de uma compra parcelada no cartão de crédito. Ela recebe um objeto
+        contendo informações sobre a compra.
       </Paragraph>
 
       <Paragraph>
-        Esta função é projetada para ser utilizada em projetos que seguem as
-        definições de tipos fornecidas pelo pacote <code>@arkyn/types</code>. Ao
-        receber os argumentos necessários para o cálculo, como o preço à vista,
-        o número de parcelas desejadas e as taxas aplicáveis (opcional), a
-        função executa os cálculos apropriados, levando em consideração as taxas
-        de juros compostas. Essa abordagem ajuda a simplificar o processo de
-        implementação de cálculos complexos relacionados a transações
-        financeiras, mantendo a clareza e a precisão nos resultados obtidos.
+        Utilizando a fórmula do juros composto, a função calcula o valor de cada
+        parcela (installment_price) e o preço total da compra parcelada
+        (total_price).
+      </Paragraph>
+
+      <Paragraph>
+        Essa função é ideal para ser usada em aplicações de e-commerce ou
+        simuladores de financiamento, permitindo aos usuários visualizar o
+        impacto do parcelamento no valor final da compra.
       </Paragraph>
     </>
   );

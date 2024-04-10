@@ -1,5 +1,5 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Ambulance, CreditCard } from "lucide-react";
+import { Ambulance, CreditCard, Link } from "lucide-react";
 
 import {
   Container,
@@ -30,14 +30,14 @@ function View() {
 
         <NavigationContainer>
           <NavigationButton
-            icon={Ambulance}
-            label="@arkyn/utils"
-            to="/v1/utils"
-          />
-          <NavigationButton
             icon={CreditCard}
             label="calculateCardInstallment"
             to="/v1/utils/calculate-card-installment"
+          />
+          <NavigationButton
+            icon={Link}
+            label="generateSlug"
+            to="/v1/utils/generate-slug"
           />
         </NavigationContainer>
       </Container>
