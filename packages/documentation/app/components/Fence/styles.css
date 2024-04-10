@@ -2,7 +2,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: var(--secondary-500);
   background: none;
-  font-family: monospace;
+  /* font-family: monospace; */
   font-size: 0.9rem;
   text-align: left;
   white-space: pre;
@@ -44,11 +44,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: red;
+  color: var(--secondary-300);
 }
 
 .token.punctuation {
-  color: var(--secondary-500);
+  color: var(--secondary-600);
 }
 
 .token.namespace {
@@ -61,7 +61,7 @@ pre[class*="language-"] {
 .token.symbol,
 .token.deleted {
   color: var(--primary-400);
-  font-family: monospace;
+  /* font-family: monospace; */
 }
 
 .token.boolean,
@@ -76,7 +76,7 @@ pre[class*="language-"] {
 .token.builtin,
 .token.inserted {
   color: var(--primary-500);
-  font-family: monospace;
+  /* font-family: monospace; */
 }
 
 .token.operator,

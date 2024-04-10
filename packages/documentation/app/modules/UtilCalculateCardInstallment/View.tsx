@@ -1,5 +1,5 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Ambulance, CreditCard } from "lucide-react";
+import { PaintRoller, ThumbsDown } from "lucide-react";
 
 import {
   Container,
@@ -9,7 +9,7 @@ import {
   SubMenuLink,
 } from "~/components";
 
-import { Introduction, ImportUtil, Use, Props } from "./components";
+import { ImportUtil, Introduction, Props, Use } from "./components";
 
 function View() {
   return (
@@ -18,7 +18,9 @@ function View() {
         <Breadcrumb>
           <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
           <BreadcrumbLink to="/v1/utils">@arkyn/utils</BreadcrumbLink>
-          <BreadcrumbLink to="/v1/utils/bad-request">badRequest</BreadcrumbLink>
+          <BreadcrumbLink to="/v1/utils/calculate-card-installment">
+            calculateCardInstallment
+          </BreadcrumbLink>
         </Breadcrumb>
 
         <Introduction />
@@ -28,20 +30,20 @@ function View() {
 
         <NavigationContainer>
           <NavigationButton
-            icon={Ambulance}
-            label="@arkyn/utils"
-            to="/v1/utils"
+            icon={ThumbsDown}
+            label="badRequest"
+            to="/v1/utils/bad-request"
           />
           <NavigationButton
-            icon={CreditCard}
-            label="calculateCardInstallment"
-            to="/v1/utils/calculate-card-installment"
+            icon={PaintRoller}
+            label="generateColorByString"
+            to="/v1/utils/generate-color-by-string"
           />
         </NavigationContainer>
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="badrequest">Introdução</SubMenuLink>
+        <SubMenuLink id="calculatecardinstallment">Introdução</SubMenuLink>
         <SubMenuLink id="importar">Importar</SubMenuLink>
         <SubMenuLink id="propriedades">Propriedades</SubMenuLink>
         <SubMenuLink id="uso">Uso</SubMenuLink>

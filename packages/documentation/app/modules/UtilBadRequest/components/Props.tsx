@@ -1,4 +1,4 @@
-import { Fence, Paragraph, Title } from "~/components";
+import { Paragraph, Title } from "~/components";
 
 function Props() {
   return (
@@ -10,11 +10,6 @@ function Props() {
         retornado ao usuário. A segunda será o status de resposta HTTP que é
         opcional e por padrão será <code>400</code>.
       </Paragraph>
-
-      <Fence
-        type="typescript"
-        language="js"
-      >{`badRequest(argumentoARetornar, statusHTTPOpcional)}`}</Fence>
     </>
   );
 }

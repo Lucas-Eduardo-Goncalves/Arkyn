@@ -56,7 +56,7 @@ function View() {
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="badge">Badge</SubMenuLink>
+        <SubMenuLink id="badge">Introdução</SubMenuLink>
         <SubMenuLink id="importar">Importar</SubMenuLink>
         <SubMenuLink id="uso">Uso</SubMenuLink>
         <SubMenu>
