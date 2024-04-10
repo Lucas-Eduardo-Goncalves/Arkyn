@@ -1,7 +1,7 @@
-import { UtilsBadRequestClient } from "~/modules/UtilsBadRequest/client";
+import { UtilBadRequestClient } from "~/modules/UtilBadRequest/client";
 
-export const meta = UtilsBadRequestClient.meta;
+export const meta = UtilBadRequestClient.meta;
 
 export default function IconButtonRoute() {
-  return <UtilsBadRequestClient.View />;
+  return <UtilBadRequestClient.View />;
 }
