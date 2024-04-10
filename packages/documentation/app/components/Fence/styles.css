@@ -3,7 +3,7 @@ pre[class*="language-"] {
   color: var(--secondary-500);
   background: none;
   font-family: monospace;
-  font-size: 1em;
+  font-size: 0.9rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;

@@ -6,7 +6,7 @@ const NavContainer = styled.nav`
   flex-direction: column;
   gap: 12px;
 
-  width: 200px;
+  min-width: 200px;
   position: sticky;
   top: 16px;
 
