@@ -9,7 +9,7 @@ import {
   SubMenuLink,
 } from "~/components";
 
-import { Introduction, ImportUtil, Use, Props } from "./components";
+import { Introduction, ImportUtil, Use } from "./components";
 
 function View() {
   return (
@@ -23,7 +23,6 @@ function View() {
 
         <Introduction />
         <ImportUtil />
-        <Props />
         <Use />
 
         <NavigationContainer>
@@ -43,8 +42,7 @@ function View() {
       <SubMenu>
         <SubMenuLink id="badrequest">Introdução</SubMenuLink>
         <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="propriedades">Propriedades</SubMenuLink>
-        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenuLink id="modo-de-uso">Modo de uso</SubMenuLink>
       </SubMenu>
     </>
   );
