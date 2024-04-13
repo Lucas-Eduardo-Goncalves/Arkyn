@@ -12,7 +12,10 @@ function calculateCardInstallment(args: CalculateCardInstallmentProps) {
   installment_price = cash_price * (numerator / denominator);
   total_price = number_installments * installment_price;
 
-  return { total_price, installment_price };
+  return {
+    total_price: +total_price.toFixed(2),
+    installment_price: +installment_price.toFixed(2),
+  };
 }
 
 export { calculateCardInstallment };

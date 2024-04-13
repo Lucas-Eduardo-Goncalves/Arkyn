@@ -1,5 +1,8 @@
-export * from "./badRequest";
-export * from "./calculateCardInstallment";
-export * from "./generateColorByString";
-export * from "./generateSlug";
-export * from "./getScopedParams";
+// SERVER
+export { badRequest } from "./badRequest";
+export { getScopedParams } from "./getScopedParams";
+
+// SHARED
+export { calculateCardInstallment } from "./calculateCardInstallment";
+export { generateColorByString } from "./generateColorByString";
+export { generateSlug } from "./generateSlug";
