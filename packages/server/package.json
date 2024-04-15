@@ -1,0 +1,19 @@
+{
+  "name": "@arkyn/server",
+  "version": "1.0.0",
+  "main": "./dist/bundle.js",
+  "module": "./src/index.ts",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "bunx tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^2.8.1",
+    "typescript": "^5.0.0"
+  }
+}

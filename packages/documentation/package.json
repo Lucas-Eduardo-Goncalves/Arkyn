@@ -15,7 +15,8 @@
   "dependencies": {
     "@arkyn/components": "workspace:*",
     "@arkyn/types": "workspace:*",
-    "@arkyn/utils": "workspace:*",
+    "@arkyn/server": "workspace:*",
+    "@arkyn/shared": "workspace:*",
     "@linaria/core": "^6.1.0",
     "@linaria/react": "^6.1.0",
     "@remix-run/node": "^2.8.1",

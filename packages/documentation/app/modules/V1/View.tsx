@@ -15,8 +15,8 @@ function View() {
       <LayoutHeader />
       <LayoutContent>
         <NavigationMenu>
-          <NavigationLink to="/v1/doc/introduction" label="Introdução" />
-          <NavigationLink to="/v1/doc/get-started" label="Começo Rápido" />
+          <NavigationLink to="/v1/doc/introduction" label="Introduction" />
+          <NavigationLink to="/v1/doc/get-started" label="Get Started" />
 
           <NavigationTitle label="Components" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
@@ -24,21 +24,23 @@ function View() {
           <NavigationLink to="/v1/components/icon-button" label="IconButton" />
           <NavigationLink to="/v1/components/input" label="Input" />
 
-          <NavigationTitle label="Utilidades" />
-          <NavigationLink to="/v1/utils/bad-request" label="badRequest" />
+          <NavigationTitle label="Server" />
+          <NavigationLink to="/v1/server/bad-request" label="badRequest" />
           <NavigationLink
-            to="/v1/utils/calculate-card-installment"
+            to="/v1/server/get-scoped-params"
+            label="getScopedParams"
+          />
+
+          <NavigationTitle label="Shared" />
+          <NavigationLink
+            to="/v1/shared/calculate-card-installment"
             label="calculateCardInstallment"
           />
           <NavigationLink
-            to="/v1/utils/generate-color-by-string"
+            to="/v1/shared/generate-color-by-string"
             label="generateColorByString"
           />
-          <NavigationLink to="/v1/utils/generate-slug" label="generateSlug" />
-          <NavigationLink
-            to="/v1/utils/get-scoped-params"
-            label="getScopedParams"
-          />
+          <NavigationLink to="/v1/shared/generate-slug" label="generateSlug" />
         </NavigationMenu>
         <Outlet />
       </LayoutContent>

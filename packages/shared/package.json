@@ -1,5 +1,5 @@
 {
-  "name": "@arkyn/components",
+  "name": "@arkyn/shared",
   "version": "1.0.0",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
@@ -9,18 +9,11 @@
     "build": "bunx tsc --project tsconfig.json"
   },
   "devDependencies": {
-    "@types/react": "^18.2.75",
-    "@types/react-dom": "^18.2.24",
     "bun-types": "latest",
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "@arkyn/types": "workspace:*",
-    "@remix-run/react": "^2.8.0",
-    "framer-motion": "^11.0.8",
-    "lucide-react": "^0.349.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-input-mask": "^2.0.4"
+    "typescript": "^5.0.0"
   }
 }

@@ -5,15 +5,17 @@
   "devDependencies": {
     "@arkyn/components": "workspace:*",
     "@arkyn/types": "workspace:*",
-    "@arkyn/utils": "workspace:*",
+    "@arkyn/server": "workspace:*",
+    "@arkyn/shared": "workspace:*",
     "@flydotio/dockerfile": "latest"
   },
   "scripts": {
     "all:update-packages": "cd packages/types && ncu -u && cd ../components && ncu -u && cd ../documentation && ncu -u && cd ../utils && ncu -u",
-    "dev:types": "cd packages/types && bun run build && bun run types && clear",
-    "dev:components": "cd packages/components && bun run build && bun run types && clear",
+    "dev:components": "cd packages/components && bun run build",
     "dev:documentation": "cd packages/documentation && bun run dev",
-    "dev:utils": "cd packages/utils && bun run build && bun run types && clear",
+    "dev:server": "cd packages/server && bun run build",
+    "dev:shared": "cd packages/shared && bun run build",
+    "dev:types": "cd packages/types && bun run build",
     "prod:documentation": "cd packages/documentation && bun run build && bun run start"
   },
   "workspaces": [
