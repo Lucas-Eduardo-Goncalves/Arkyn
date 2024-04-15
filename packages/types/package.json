@@ -6,9 +6,8 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "bunx vite build",
-    "types": "bunx tsc",
-    "version": "bunx version patch"
+    "build": "bunx tsc --project tsconfig.json",
+    "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
     "@types/react": "^18.2.75",

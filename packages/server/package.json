@@ -6,7 +6,8 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "bunx tsc --project tsconfig.json"
+    "build": "bunx tsc --project tsconfig.json",
+    "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
     "bun-types": "latest",
