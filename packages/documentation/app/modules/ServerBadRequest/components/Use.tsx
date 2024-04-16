@@ -12,7 +12,7 @@ function Use() {
       </Paragraph>
 
       <Fence language="js" type="typescript">
-        {`import { badRequest } from "@arkyn/utils";
+        {`import { badRequest } from "@arkyn/server";
 
 function someFunction() {
   return badRequest({ message: "This is a server error" }, 500)

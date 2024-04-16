@@ -11,7 +11,7 @@ function ImportUtil() {
       </Paragraph>
 
       <Fence language="js" type="typescript">
-        {`import { badRequest } from "@arkyn/server";`}
+        {`import { getScopedParams } from "@arkyn/server";`}
       </Fence>
     </>
   );
