@@ -3,12 +3,12 @@ import { Fence, Paragraph, Title } from "~/components";
 function Use() {
   return (
     <>
-      <Title as="h3">Modo de uso</Title>
+      <Title as="h3">How to use</Title>
 
       <Paragraph>
-        A função recebe dois argumentos; Sendo o primeiro um objeto de retorno
-        ao cliente; O segunda sendo o status de resposta HTTP. É opcional, seu
-        valor default é <code>400</code>.
+        The function takes two arguments; The first being a return object to the
+        client; The second being the HTTP response status. It&apos;s optional,
+        your default value is <code>400</code>.
       </Paragraph>
 
       <Fence language="js" type="typescript">

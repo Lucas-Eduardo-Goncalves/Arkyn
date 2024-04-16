@@ -11,7 +11,7 @@ type SubMenuLinkProps = {
   children: string;
 };
 
-function SubMenu({ children, title = "Nesta página" }: SubMenuProps) {
+function SubMenu({ children, title = "This page" }: SubMenuProps) {
   return (
     <NavContainer>
       <strong>{title}</strong>

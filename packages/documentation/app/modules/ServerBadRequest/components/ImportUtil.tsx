@@ -3,11 +3,11 @@ import { Fence, Paragraph, Title } from "~/components";
 function ImportUtil() {
   return (
     <>
-      <Title as="h3">Importar</Title>
+      <Title as="h3">Import</Title>
 
       <Paragraph>
-        Para o uso desta função é <strong>obrigatório</strong> a instalação do
-        pacote <code>@remix/node</code>.
+        To use this function, the <code>@remix/node</code> package dependency is{" "}
+        <strong>necessary</strong>.
       </Paragraph>
 
       <Fence language="js" type="typescript">
