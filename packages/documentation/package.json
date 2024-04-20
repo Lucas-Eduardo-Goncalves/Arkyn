@@ -13,6 +13,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@arkyn/api": "workspace:*",
     "@arkyn/components": "workspace:*",
     "@arkyn/types": "workspace:*",
     "@arkyn/server": "workspace:*",

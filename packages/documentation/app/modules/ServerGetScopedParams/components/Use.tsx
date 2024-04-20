@@ -30,6 +30,7 @@ import type { LoaderFunctionArgs } from "@remix-run/node";
 function loader(args: LoaderFunctionArgs) {
   // this is a Remix URL: 
   // http://localhost:3000/users?users_table:search=SomeUser&accounts_table:search=SomeAccount
+  
   const usersParams = getScopedParams(args.request, "users_table");
   const accountsParams = getScopedParams(args.request, "accounts_table");
 
