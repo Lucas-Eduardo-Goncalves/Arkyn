@@ -2,12 +2,16 @@ import type {
   InboxFlowDTO,
   InstanceConstructorProps,
   InstanceGetDTO,
+  InstancePatchDTO,
   InstancePostDTO,
+  InstancePutDTO,
   RedisDTO,
 } from "@arkyn/types";
 
 import { get } from "./functions/get";
 import { post } from "./functions/post";
+import { put } from "./functions/put";
+import { patch } from "./functions/patch";
 
 class Instance {
   private base_url?: string;
@@ -38,8 +42,22 @@ class Instance {
     });
   };
 
+  PATCH: InstancePatchDTO = async (url, data, config) => {
+    return await patch(this.generateURL(url), data, {
+      inbox_flow: this.inbox_flow,
+      ...config,
+    });
+  };
+
   POST: InstancePostDTO = async (url, data, config) => {
     return await post(this.generateURL(url), data, {
+      inbox_flow: this.inbox_flow,
+      ...config,
+    });
+  };
+
+  PUT: InstancePutDTO = async (url, data, config) => {
+    return await put(this.generateURL(url), data, {
       inbox_flow: this.inbox_flow,
       ...config,
     });
