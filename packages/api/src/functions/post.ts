@@ -1,7 +1,7 @@
-import type { GetDTO, ResponseDTO } from "@arkyn/types";
+import type { PostDTO, ResponseDTO } from "@arkyn/types";
 import { sendInboxFlow } from "../sendInboxFlow";
 
-const get: GetDTO = async (url, config) => {
+const post: PostDTO = async (url, data, config) => {
   const { headers, inbox_flow, token } = config;
 
   let responseConfig: Response | Object = {};
@@ -14,8 +14,11 @@ const get: GetDTO = async (url, config) => {
   };
 
   const fetchHeaders: FetchRequestInit = {
-    method: "GET",
-    headers: headers || undefined,
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { ...headers, "Content-Type": "application/json" } || {
+      "Content-Type": "application/json",
+    },
   };
 
   await fetch(url, fetchHeaders)
@@ -53,7 +56,7 @@ const get: GetDTO = async (url, config) => {
     sendInboxFlow({
       channel_id: inbox_flow.channel_id,
       user_token: inbox_flow.user_token,
-      method: "GET",
+      method: "POST",
       request: JSON.stringify({ ...responseConfig, ...fetchHeaders, url }),
       response: JSON.stringify(responseData.response),
       token: token || "User token not found",
@@ -63,4 +66,4 @@ const get: GetDTO = async (url, config) => {
   return responseData;
 };
 
-export { get };
+export { post };

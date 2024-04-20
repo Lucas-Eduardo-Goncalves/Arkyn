@@ -1,11 +1,13 @@
 import type {
-  InstanceGetDTO,
   InboxFlowDTO,
   InstanceConstructorProps,
+  InstanceGetDTO,
+  InstancePostDTO,
   RedisDTO,
 } from "@arkyn/types";
 
 import { get } from "./functions/get";
+import { post } from "./functions/post";
 
 class Instance {
   private base_url?: string;
@@ -22,12 +24,23 @@ class Instance {
     this.redis_config = props?.redis_config;
   }
 
+  private generateURL(url: string) {
+    return this.base_url ? this.base_url + url : url;
+  }
+
   GET: InstanceGetDTO = async (url, config) => {
-    return await get(this.base_url ? this.base_url + url : url, {
+    return await get(this.generateURL(url), {
       cached: this.cached,
       cached_type: this.cached_type,
       inbox_flow: this.inbox_flow,
       redis_config: this.redis_config,
+      ...config,
+    });
+  };
+
+  POST: InstancePostDTO = async (url, data, config) => {
+    return await post(this.generateURL(url), data, {
+      inbox_flow: this.inbox_flow,
       ...config,
     });
   };

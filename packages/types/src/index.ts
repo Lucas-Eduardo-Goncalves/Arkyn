@@ -1,6 +1,7 @@
 // Api
 export * from "./api/GetDTO";
 export * from "./api/InstanceConstructorProps";
+export * from "./api/PostDTO";
 export * from "./api/config/InboxFlowDTO";
 export * from "./api/config/RedisDTO";
 export * from "./api/config/ResponseDTO";
