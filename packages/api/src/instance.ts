@@ -1,6 +1,7 @@
 import type {
   InboxFlowDTO,
   InstanceConstructorProps,
+  InstanceDeleteDTO,
   InstanceGetDTO,
   InstancePatchDTO,
   InstancePostDTO,
@@ -8,10 +9,11 @@ import type {
   RedisDTO,
 } from "@arkyn/types";
 
+import { deleteF } from "./functions/delete";
 import { get } from "./functions/get";
+import { patch } from "./functions/patch";
 import { post } from "./functions/post";
 import { put } from "./functions/put";
-import { patch } from "./functions/patch";
 
 class Instance {
   private base_url?: string;
@@ -31,6 +33,13 @@ class Instance {
   private generateURL(url: string) {
     return this.base_url ? this.base_url + url : url;
   }
+
+  DELETE: InstanceDeleteDTO = async (url, config) => {
+    return await deleteF(this.generateURL(url), {
+      inbox_flow: this.inbox_flow,
+      ...config,
+    });
+  };
 
   GET: InstanceGetDTO = async (url, config) => {
     return await get(this.generateURL(url), {

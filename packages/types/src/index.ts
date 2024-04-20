@@ -1,4 +1,5 @@
 // Api
+export * from "./api/DeleteDTO";
 export * from "./api/GetDTO";
 export * from "./api/InstanceConstructorProps";
 export * from "./api/PatchDTO";
