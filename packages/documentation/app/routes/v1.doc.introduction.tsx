@@ -3,7 +3,7 @@ import { IntroductionClient } from "~/modules/Introduction/client";
 import { api } from "~/services/api";
 
 export async function loader() {
-  const apiResponse = await api.POST("/users", { name: "user-name" });
+  const apiResponse = await api.GET("/users");
   return apiResponse;
 }
 

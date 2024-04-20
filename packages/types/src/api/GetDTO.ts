@@ -17,7 +17,7 @@ type GetDTO = (url: string, config: ConfigProps) => Promise<ResponseDTO>;
 
 type InstanceGetDTO = (
   url: string,
-  config?: ConfigProps
+  config?: Omit<ConfigProps, "inbox_flow" | "redis_config">
 ) => Promise<ResponseDTO>;
 
 export type { GetDTO, InstanceGetDTO };
