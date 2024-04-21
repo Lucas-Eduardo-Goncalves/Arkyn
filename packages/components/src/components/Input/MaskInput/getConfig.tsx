@@ -21,6 +21,7 @@ function getConfig(props: MaskedInputProps, isFocused: boolean) {
     title,
     style,
     onChange,
+    showMask = true,
     ...rest
   } = props;
 
@@ -52,6 +53,7 @@ function getConfig(props: MaskedInputProps, isFocused: boolean) {
     onChange,
     loadingPosition,
     iconSize: iconSize,
+    showMask,
     Spinner: <Loader2 className="spinner" size={iconSize} strokeWidth={2.5} />,
     ...rest,
   };

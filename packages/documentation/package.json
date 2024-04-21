@@ -20,6 +20,7 @@
     "@arkyn/shared": "workspace:*",
     "@linaria/core": "^6.1.0",
     "@linaria/react": "^6.1.0",
+    "@react-input/mask": "^1.1.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",

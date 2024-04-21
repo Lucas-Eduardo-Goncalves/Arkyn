@@ -1,0 +1,5 @@
+.arkyn_form_controller {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

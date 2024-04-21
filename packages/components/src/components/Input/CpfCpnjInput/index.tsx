@@ -3,6 +3,7 @@ import type { ChangeEvent, FocusEvent } from "react";
 
 import { useRef, useState } from "react";
 
+import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
 import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";
 
@@ -11,7 +12,12 @@ function CpfCnpjInput(props: CpfCnpjInputProps) {
   const [inputValue, setInputValue] = useState(
     clear(props?.defaultValue || "")
   );
-  const ref = useRef<HTMLInputElement>(null);
+
+  const baseRef = useRef<HTMLInputElement>(null);
+  const { inputRef, error } = useFormController();
+
+  const ref = inputRef || baseRef;
+  const isError = props.isError || !!error;
 
   const {
     disabled,
@@ -33,7 +39,7 @@ function CpfCnpjInput(props: CpfCnpjInputProps) {
     value,
     defaultValue = "",
     ...rest
-  } = getConfig(props, isFocused);
+  } = getConfig({ ...props, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;

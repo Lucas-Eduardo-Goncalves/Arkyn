@@ -3,13 +3,19 @@ import type { FocusEvent, KeyboardEvent } from "react";
 
 import { useRef, useState } from "react";
 
+import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
 import { currencyInputKeyDown, valueDisplay } from "./utils";
 
 function CurrencyInput(props: CurrencyInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [currencyValue, setCurrencyValue] = useState(props.defaultValue || 0);
-  const ref = useRef<HTMLInputElement>(null);
+
+  const baseRef = useRef<HTMLInputElement>(null);
+  const { inputRef, error } = useFormController();
+
+  const ref = inputRef || baseRef;
+  const isError = props.isError || !!error;
 
   const {
     disabled,
@@ -33,7 +39,7 @@ function CurrencyInput(props: CurrencyInputProps) {
     onChange,
     showCents,
     ...rest
-  } = getConfig(props, isFocused);
+  } = getConfig({ ...props, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;

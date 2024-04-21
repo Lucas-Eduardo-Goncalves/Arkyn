@@ -6,6 +6,7 @@ export { Divider } from "./components/Divider";
 export { Button } from "./components/Button";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
+export { FormController, FormError } from "./components/Form";
 
 // Navigation
 export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";

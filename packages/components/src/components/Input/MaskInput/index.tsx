@@ -2,13 +2,19 @@ import type { MaskedInputProps } from "@arkyn/types";
 import type { FocusEvent } from "react";
 
 import { useRef, useState } from "react";
-import ReactMaskInput from "react-input-mask";
+import { InputMask } from "@react-input/mask";
 
 import { getConfig } from "./getConfig";
+import { useFormController } from "../../Form/FormController";
 
 function MaskedInput(props: MaskedInputProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const ref = useRef<any>(null);
+
+  const baseRef = useRef<any>(null);
+  const { inputRef, error } = useFormController();
+
+  const ref = inputRef || baseRef;
+  const isError = props.isError || !!error;
 
   const {
     disabled,
@@ -27,7 +33,7 @@ function MaskedInput(props: MaskedInputProps) {
     RightIcon,
     Spinner,
     ...rest
-  } = getConfig(props, isFocused);
+  } = getConfig({ ...props, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;
@@ -39,11 +45,6 @@ function MaskedInput(props: MaskedInputProps) {
     if (disabled || !ref?.current) return;
     setIsFocused(true);
     ref.current.focus();
-  }
-
-  function setInputRef(element: HTMLInputElement | null) {
-    if (!element) return;
-    if (!ref.current) ref.current = element;
   }
 
   function handleFocus(e: FocusEvent<HTMLInputElement>) {
@@ -67,10 +68,10 @@ function MaskedInput(props: MaskedInputProps) {
       {showLeftSpinner && Spinner}
       {showLeftIcon && <LeftIcon size={iconSize} strokeWidth={2.5} />}
 
-      <ReactMaskInput
+      <InputMask
         disabled={disabled || isLoading}
         readOnly={readOnly}
-        inputRef={(el) => setInputRef(el)}
+        ref={ref}
         onFocus={handleFocus}
         onBlur={handleBlur}
         {...rest}

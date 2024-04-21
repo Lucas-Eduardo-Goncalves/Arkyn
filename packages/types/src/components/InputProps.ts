@@ -1,3 +1,4 @@
+import type { Replacement } from "@react-input/mask";
 import type { LucideIcon } from "lucide-react";
 import type { InputHTMLAttributes } from "react";
 
@@ -36,7 +37,12 @@ type BaseInputProps<T extends string> = {
   leftIcon?: LucideIcon;
   rightIcon?: LucideIcon;
   type: T;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix" | "type">;
+
+  name: string;
+} & Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "size" | "prefix" | "type" | "name"
+>;
 
 type CurrencyInputProps = Omit<
   BaseInputProps<"currency">,
@@ -50,9 +56,10 @@ type CurrencyInputProps = Omit<
 };
 
 type MaskedInputProps = BaseInputProps<"masked"> & {
-  mask: string | (string | RegExp)[];
-  alwaysShowMask?: boolean;
-  maskChar?: string | null | undefined;
+  mask: string;
+  separate?: boolean;
+  replacement?: string | Replacement;
+  showMask?: boolean;
 };
 
 type CpfCnpjInputProps = Omit<

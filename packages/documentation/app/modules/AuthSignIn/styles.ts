@@ -11,13 +11,13 @@ const Container = styled.main`
   height: 100vh;
   width: 100vw;
 
-  h1 {
+  > h1 {
     font-size: 20px;
     color: var(--secondary-700);
     width: 236px;
   }
 
-  form {
+  > form {
     width: 300px;
 
     display: flex;
