@@ -6,8 +6,8 @@ function LayoutHeader() {
     <Container>
       <h1>Arkyn</h1>
       <nav>
-        <Link to="/v1/about">About</Link>
         <Link to="/v1/contact">Contact</Link>
+        <Link to="/auth/sign-in?redirectURL=/v2/channels">Inbox API</Link>
       </nav>
     </Container>
   );
