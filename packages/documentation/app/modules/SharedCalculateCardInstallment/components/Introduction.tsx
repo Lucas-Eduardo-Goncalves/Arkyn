@@ -6,15 +6,15 @@ function Introduction() {
       <Title as="h1">calculateCardInstallment</Title>
 
       <Paragraph>
-        Uma função para um nicho bem específico, é utilizada para calcular o
-        valor das parcelas e o preço total de uma compra parcelada no cartão de
-        crédito utilizando uma fórmula do juros compostos.
+        A function for a very specific niche is used to calculate the value of
+        the installments and the total price of a purchase in installments on
+        the credit card credit using a compound interest formula.
       </Paragraph>
 
       <Paragraph>
-        È ideal para ser usada em aplicações de e-commerce ou simuladores de
-        financiamento, permitindo aos usuários visualizar o impacto do
-        parcelamento no valor final da compra.
+        It is ideal for use in e-commerce applications or business simulators.
+        financing, allowing users to visualize the impact of payment in
+        installments on the final purchase price.
       </Paragraph>
     </>
   );
