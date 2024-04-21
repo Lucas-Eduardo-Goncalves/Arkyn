@@ -23,7 +23,7 @@ function View() {
       <SubMenu>
         <SubMenuLink id="generateslug">Introduction</SubMenuLink>
         <SubMenuLink id="import">Import</SubMenuLink>
-        <SubMenuLink id="howtouse">How to use</SubMenuLink>
+        <SubMenuLink id="how-to-use">How to use</SubMenuLink>
       </SubMenu>
     </>
   );

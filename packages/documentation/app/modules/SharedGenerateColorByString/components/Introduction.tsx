@@ -6,21 +6,21 @@ function Introduction() {
       <Title as="h1">generateColorByString</Title>
 
       <Paragraph>
-        Esta função, foi criada para gerar cores únicas baseadas em uma string
-        de entrada. Ela converte cada caractere da string em um valor numérico e
-        utiliza esses valores para calcular valores para os canais vermelho,
-        verde e azul (RGB).
+        This function was created to generate unique colors based on a string
+        input. It converts each character in the string into a numeric value and
+        uses these values ​​to calculate values ​​for the red channels, green
+        and blue (RGB).
       </Paragraph>
 
       <Paragraph>
-        Com base nesses valores de canal, a função gera um código de cor
-        hexadecimal que representa a cor final.
+        Based on these channel values, the function generates a color code
+        hexadecimal that represents the final color.
       </Paragraph>
 
       <Paragraph>
-        Essa abordagem permite que strings diferentes gerem cores diferentes,
-        tornando-a útil para situações onde você queira associar cores a
-        elementos específicos com base em seu nome ou identificador.
+        This approach allows different strings to generate different colors,
+        making it useful for situations where you want to associate colors with
+        specific elements based on their name or identifier.
       </Paragraph>
     </>
   );

@@ -1,9 +1,11 @@
-import { Fence, Title } from "~/components";
+import { Fence, Paragraph, Title } from "~/components";
 
 function ImportUtil() {
   return (
     <>
-      <Title as="h3">Importar</Title>
+      <Title as="h3">Import</Title>
+
+      <Paragraph>To use this function, you do not need a dependency.</Paragraph>
 
       <Fence language="js" type="typescript">
         {`import { generateColorByString } from "@arkyn/shared";`}

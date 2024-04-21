@@ -1,22 +1,15 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Ambulance, CreditCard, Link } from "lucide-react";
 
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  SubMenu,
-  SubMenuLink,
-} from "~/components";
+import { Container, SubMenu, SubMenuLink } from "~/components";
 
-import { Introduction, ImportUtil, Use, Props } from "./components";
+import { ImportUtil, Introduction, Use } from "./components";
 
 function View() {
   return (
     <>
       <Container>
         <Breadcrumb>
-          <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+          <BreadcrumbLink to="/">Documentation</BreadcrumbLink>
           <BreadcrumbLink to="/v1/shared">@arkyn/shared</BreadcrumbLink>
           <BreadcrumbLink to="/v1/shared/generate-color-by-string">
             generateColorByString
@@ -25,28 +18,13 @@ function View() {
 
         <Introduction />
         <ImportUtil />
-        <Props />
         <Use />
-
-        <NavigationContainer>
-          <NavigationButton
-            icon={CreditCard}
-            label="calculateCardInstallment"
-            to="/v1/shared/calculate-card-installment"
-          />
-          <NavigationButton
-            icon={Link}
-            label="generateSlug"
-            to="/v1/shared/generate-slug"
-          />
-        </NavigationContainer>
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="generatecolorbystring">Introdução</SubMenuLink>
-        <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="propriedades">Propriedades</SubMenuLink>
-        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenuLink id="generatecolorbystring">Introduction</SubMenuLink>
+        <SubMenuLink id="import">Import</SubMenuLink>
+        <SubMenuLink id="how-to-use">How to use</SubMenuLink>
       </SubMenu>
     </>
   );
