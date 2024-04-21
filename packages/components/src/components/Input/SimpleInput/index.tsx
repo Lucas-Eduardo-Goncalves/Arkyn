@@ -3,14 +3,15 @@ import type { FocusEvent } from "react";
 
 import { useRef, useState } from "react";
 
-import { getConfig } from "./getConfig";
 import { useFormController } from "../../Form/FormController";
+import { getConfig } from "./getConfig";
 
 function SimpleInput(props: SimpleInputProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   const baseRef = useRef<HTMLInputElement>(null);
-  const { inputRef, error } = useFormController();
+
+  const { inputRef, id, error } = useFormController();
 
   const ref = inputRef || baseRef;
   const isError = props.isError || !!error;
@@ -32,7 +33,7 @@ function SimpleInput(props: SimpleInputProps) {
     RightIcon,
     Spinner,
     ...rest
-  } = getConfig({ ...props, isError }, isFocused);
+  } = getConfig({ ...props, id, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;

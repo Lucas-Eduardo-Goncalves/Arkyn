@@ -14,7 +14,8 @@ function CpfCnpjInput(props: CpfCnpjInputProps) {
   );
 
   const baseRef = useRef<HTMLInputElement>(null);
-  const { inputRef, error } = useFormController();
+
+  const { inputRef, id, error } = useFormController();
 
   const ref = inputRef || baseRef;
   const isError = props.isError || !!error;
@@ -39,7 +40,7 @@ function CpfCnpjInput(props: CpfCnpjInputProps) {
     value,
     defaultValue = "",
     ...rest
-  } = getConfig({ ...props, isError }, isFocused);
+  } = getConfig({ ...props, id, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;

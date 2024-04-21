@@ -14,6 +14,7 @@ export * from "./components/BadgeProps";
 export * from "./components/BreadcrumbProps";
 export * from "./components/ButtonProps";
 export * from "./components/DividerProps";
+export * from "./components/FormProps";
 export * from "./components/IconButtonProps";
 export * from "./components/InputProps";
 export * from "./components/ModalProps";

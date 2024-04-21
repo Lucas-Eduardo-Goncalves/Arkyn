@@ -4,9 +4,9 @@ export { Divider } from "./components/Divider";
 
 // Form
 export { Button } from "./components/Button";
+export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
-export { FormController, FormError } from "./components/Form";
 
 // Navigation
 export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";

@@ -1,0 +1,15 @@
+.arkyn_form_label {
+  color: var(--secondary-700);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.07px;
+}
+
+.arkyn_form_label.show-asterisk::before {
+  content: "* ";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16.34px;
+  text-align: left;
+  color: var(--danger-600);
+}

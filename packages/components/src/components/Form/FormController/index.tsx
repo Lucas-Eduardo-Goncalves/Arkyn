@@ -1,21 +1,16 @@
-import type { ReactNode, RefObject } from "react";
-import { createContext, useContext, useRef } from "react";
+import type {
+  FormControllerContextProps,
+  FormControllerProps,
+} from "@arkyn/types";
+
+import { useActionData } from "@remix-run/react";
+import { createContext, useContext, useId, useRef } from "react";
 
 import "./styles.css";
-import { useActionData } from "@remix-run/react";
-
-type FormControllerContextProps = {
-  error?: string;
-  inputRef: RefObject<HTMLInputElement>;
-};
-
-type FormControllerProps = {
-  children: ReactNode;
-};
 
 const FormControllerContext = createContext({} as FormControllerContextProps);
 
-function FormController({ children }: FormControllerProps) {
+function FormController({ children, ...rest }: FormControllerProps) {
   const actionData = useActionData<any>();
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -23,9 +18,13 @@ function FormController({ children }: FormControllerProps) {
   const name = inputRef.current?.name || "";
   const error = actionData?.fieldErrors?.[name] || null;
 
+  const id = useId();
+
   return (
-    <FormControllerContext.Provider value={{ error, inputRef }}>
-      <section className="arkyn_form_controller">{children}</section>
+    <FormControllerContext.Provider value={{ error, id, inputRef }}>
+      <section className="arkyn_form_controller" {...rest}>
+        {children}
+      </section>
     </FormControllerContext.Provider>
   );
 }

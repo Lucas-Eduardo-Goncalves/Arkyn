@@ -1,17 +1,18 @@
 import type { MaskedInputProps } from "@arkyn/types";
 import type { FocusEvent } from "react";
 
-import { useRef, useState } from "react";
 import { InputMask } from "@react-input/mask";
+import { useRef, useState } from "react";
 
-import { getConfig } from "./getConfig";
 import { useFormController } from "../../Form/FormController";
+import { getConfig } from "./getConfig";
 
 function MaskedInput(props: MaskedInputProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   const baseRef = useRef<any>(null);
-  const { inputRef, error } = useFormController();
+
+  const { inputRef, id, error } = useFormController();
 
   const ref = inputRef || baseRef;
   const isError = props.isError || !!error;
@@ -33,7 +34,7 @@ function MaskedInput(props: MaskedInputProps) {
     RightIcon,
     Spinner,
     ...rest
-  } = getConfig({ ...props, isError }, isFocused);
+  } = getConfig({ ...props, id, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;

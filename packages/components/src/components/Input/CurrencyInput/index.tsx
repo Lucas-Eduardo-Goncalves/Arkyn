@@ -12,7 +12,8 @@ function CurrencyInput(props: CurrencyInputProps) {
   const [currencyValue, setCurrencyValue] = useState(props.defaultValue || 0);
 
   const baseRef = useRef<HTMLInputElement>(null);
-  const { inputRef, error } = useFormController();
+
+  const { inputRef, id, error } = useFormController();
 
   const ref = inputRef || baseRef;
   const isError = props.isError || !!error;
@@ -39,7 +40,7 @@ function CurrencyInput(props: CurrencyInputProps) {
     onChange,
     showCents,
     ...rest
-  } = getConfig({ ...props, isError }, isFocused);
+  } = getConfig({ ...props, id, isError }, isFocused);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;
