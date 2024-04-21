@@ -1,22 +1,14 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Ambulance, CreditCard, Link, PaintRoller } from "lucide-react";
 
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  SubMenu,
-  SubMenuLink,
-} from "~/components";
-
-import { Introduction, ImportUtil, Use, Props } from "./components";
+import { Container, SubMenu, SubMenuLink } from "~/components";
+import { ImportUtil, Introduction, Use } from "./components";
 
 function View() {
   return (
     <>
       <Container>
         <Breadcrumb>
-          <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+          <BreadcrumbLink to="/">Documentation</BreadcrumbLink>
           <BreadcrumbLink to="/v1/shared">@arkyn/shared</BreadcrumbLink>
           <BreadcrumbLink to="/v1/shared/generate-slug">
             generateSlug
@@ -25,23 +17,13 @@ function View() {
 
         <Introduction />
         <ImportUtil />
-        <Props />
         <Use />
-
-        <NavigationContainer>
-          <NavigationButton
-            icon={PaintRoller}
-            label="generateColorByString"
-            to="/v1/shared/generate-color-by-string"
-          />
-        </NavigationContainer>
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="generateslug">Introdução</SubMenuLink>
-        <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="propriedades">Propriedades</SubMenuLink>
-        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenuLink id="generateslug">Introduction</SubMenuLink>
+        <SubMenuLink id="import">Import</SubMenuLink>
+        <SubMenuLink id="howtouse">How to use</SubMenuLink>
       </SubMenu>
     </>
   );

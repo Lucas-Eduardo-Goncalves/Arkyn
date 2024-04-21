@@ -1,10 +1,4 @@
-import {
-  Button,
-  FormController,
-  FormError,
-  FormLabel,
-  Input,
-} from "@arkyn/components";
+import { Button, FormController, FormError, Input } from "@arkyn/components";
 import { Form, useNavigation } from "@remix-run/react";
 
 import { Container } from "./styles";
@@ -18,7 +12,6 @@ function View() {
 
       <Form method="POST">
         <FormController>
-          <FormLabel showAsterisk>Hello, i love macarrão</FormLabel>
           <Input type="text" name="mail" placeholder="Mail" />
           <FormError />
         </FormController>
