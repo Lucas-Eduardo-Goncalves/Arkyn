@@ -15,7 +15,7 @@ function Use() {
 
 function someFunction() {
   const slug = generateSlug("I love my cat");
-  return slug; "i-love-my-cat"
+  return slug; // "i-love-my-cat"
 }`}
       </Fence>
 
