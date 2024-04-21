@@ -13,7 +13,10 @@ function Use() {
       <Fence language="js" type="typescript">
         {`import { generateSlug } from "@arkyn/shared";
 
-generateSlug("Lucas Gonçalves"); // "lucas-goncalves"`}
+function someFunction() {
+  const slug = generateSlug("I love my cat");
+  return slug; "i-love-my-cat"
+}`}
       </Fence>
 
       <Paragraph>She follows a detailed process to ensure slugs are:</Paragraph>
