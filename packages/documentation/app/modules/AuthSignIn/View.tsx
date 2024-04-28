@@ -5,7 +5,6 @@ import { Container } from "./styles";
 
 function View() {
   const { state } = useNavigation();
-
   return (
     <Container>
       <h1>Sign In</h1>

@@ -11,7 +11,7 @@ function LayoutHeader() {
           <Link to="/v1/contact">Contact</Link>
         </Tooltip>
         <Tooltip text="Access your flow control" orientation="left">
-          <Link to="/auth/sign-in?redirectURL=/v2/channels">Inbox API</Link>
+          <Link to="/v2/channels">Inbox API</Link>
         </Tooltip>
       </nav>
     </Container>

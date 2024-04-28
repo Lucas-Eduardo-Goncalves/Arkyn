@@ -16,24 +16,25 @@ const TableContainer = styled.div`
     border-collapse: collapse;
 
     thead tr th {
-      padding: 8px 16px;
+      padding: 16px 8px 16px 16px;
       text-align: start;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 600;
 
-      color: var(--secondary-500);
+      color: var(--secondary-800);
       background: var(--secondary-100);
     }
 
     tbody tr {
       transition: all 0.15s ease-in-out;
+
       &:hover {
         background: var(--secondary-50);
       }
     }
 
     tbody tr td {
-      padding: 8px 16px;
+      padding: 16px 8px 16px 16px;
       font-size: 0.9rem;
       line-height: 1.5rem;
       font-weight: 400;

@@ -1,4 +1,13 @@
-import { ActionFunctionArgs } from "@remix-run/node";
+import { badRequest } from "@arkyn/server";
+import { ActionFunctionArgs, redirect } from "@remix-run/node";
+
+import { api, authSession } from "~/services";
+import { UserProps } from "~/types/AuthTypes";
+
+type OtimisticResponse = {
+  user: UserProps;
+  token: string;
+};
 
 async function action({ request }: ActionFunctionArgs) {
   const formData = Object.fromEntries(await request.formData());
@@ -8,7 +17,28 @@ async function action({ request }: ActionFunctionArgs) {
     password: formData?.password ? null : "Password is required",
   };
 
-  return { fieldErrors };
+  if (Object.values(fieldErrors).some(Boolean)) {
+    return badRequest({ success: false, fieldErrors, message: "Bad request" });
+  }
+
+  const { success, response, message } = await api.POST("/auth", {
+    mail: formData.mail,
+    password: formData.password,
+  });
+
+  if (!success) {
+    return badRequest({ success: false, fieldErrors, message });
+  }
+
+  const apiData = response.data as OtimisticResponse;
+  const session = await authSession.getSession(request.headers.get("Cookie"));
+
+  session.set("token", apiData.token);
+  session.set("user", apiData.user);
+
+  return redirect("/v2/channels", {
+    headers: { "Set-Cookie": await authSession.commitSession(session) },
+  });
 }
 
 export { action };

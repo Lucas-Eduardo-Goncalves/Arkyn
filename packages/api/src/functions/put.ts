@@ -13,13 +13,26 @@ const put: PutDTO = async (url, data, config) => {
     message: "",
   };
 
-  const fetchHeaders: FetchRequestInit = {
+  let fetchHeaders: FetchRequestInit = {
     method: "PUT",
     body: JSON.stringify(data),
-    headers: { ...headers, "Content-Type": "application/json" } || {
-      "Content-Type": "application/json",
-    },
   };
+
+  if (token) {
+    fetchHeaders = {
+      ...fetchHeaders,
+      headers: {
+        ...headers,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    };
+  } else {
+    fetchHeaders = {
+      ...fetchHeaders,
+      headers: { ...headers, "Content-Type": "application/json" },
+    };
+  }
 
   await fetch(url, fetchHeaders)
     .then(async (response) => {

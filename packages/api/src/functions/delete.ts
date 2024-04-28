@@ -13,10 +13,16 @@ const deleteF: DeleteDTO = async (url, config) => {
     message: "",
   };
 
-  const fetchHeaders: FetchRequestInit = {
-    method: "DELETE",
-    headers: headers || undefined,
-  };
+  let fetchHeaders: FetchRequestInit = { method: "DELETE" };
+
+  if (token) {
+    fetchHeaders = {
+      ...fetchHeaders,
+      headers: { ...headers, Authorization: `Bearer ${token}` },
+    };
+  } else {
+    fetchHeaders = { ...fetchHeaders, headers };
+  }
 
   await fetch(url, fetchHeaders)
     .then(async (response) => {
