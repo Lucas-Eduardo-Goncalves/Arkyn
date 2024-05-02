@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
@@ -16,10 +16,10 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@react-input/mask": "^1.1.1",
-    "@remix-run/react": "^2.8.0",
-    "lucide-react": "^0.349.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@react-input/mask": ">=1.1.1",
+    "@remix-run/react": ">=2.8.0",
+    "lucide-react": ">=0.349.0",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   }
 }

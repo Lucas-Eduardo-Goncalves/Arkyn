@@ -24,7 +24,12 @@
     "typecheck:server": "cd packages/server && bun run typecheck",
     "typecheck:shared": "cd packages/shared && bun run typecheck",
     "typecheck:types": "cd packages/types && bun run typecheck",
-    "prod:documentation": "cd packages/documentation && bun run build && bun run start"
+    "prod:api": "cd packages/api && npm publish",
+    "prod:components": "cd packages/components && npm publish",
+    "prod:documentation": "cd packages/documentation && bun run build && bun run start",
+    "prod:server": "cd packages/server && npm publish",
+    "prod:shared": "cd packages/shared && npm publish",
+    "prod:types": "cd packages/types && npm publish"
   },
   "workspaces": [
     "packages/*"
