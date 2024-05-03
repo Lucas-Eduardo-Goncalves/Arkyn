@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "typescript": "^5.4.5"
+    "typescript": ">=5.4.5"
   },
   "peerDependencies": {
-    "redis": "^4.6.13",
-    "typescript": "^5.0.0"
+    "redis": ">=4.6.13",
+    "typescript": ">=5.0.0"
   }
 }
