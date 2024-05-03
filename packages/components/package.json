@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
@@ -16,7 +16,6 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@arkyn/types": "workspace:*",
     "@react-input/mask": "^1.1.1",
     "@remix-run/react": "^2.8.0",
     "framer-motion": "^11.0.8",
