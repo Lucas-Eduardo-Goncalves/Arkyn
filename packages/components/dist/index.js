@@ -1,4 +1,3 @@
-import React from "react";
 // Data Display
 export { Badge } from "./components/Badge";
 export { Divider } from "./components/Divider";
