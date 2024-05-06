@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
@@ -14,7 +14,6 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@arkyn/types": "workspace:*",
     "typescript": "^5.0.0"
   }
 }
