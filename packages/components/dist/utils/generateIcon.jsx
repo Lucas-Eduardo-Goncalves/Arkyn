@@ -1,3 +1,4 @@
+import * as React from "react";
 function GenerateIcon(iconSize, Icon) {
     if (!Icon)
         return <></>;
