@@ -1,4 +1,5 @@
+/// <reference types="react" />
 import "./styles.css";
-declare function FormError(): import("react/jsx-runtime").JSX.Element;
+declare function FormError(): import("react").JSX.Element;
 export { FormError };
 //# sourceMappingURL=index.d.ts.map

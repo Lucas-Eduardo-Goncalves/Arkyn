@@ -48,7 +48,7 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     results?: number | undefined;
     security?: string | undefined;
     unselectable?: "on" | "off" | undefined;
-    inputMode?: "search" | "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
+    inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
     is?: string | undefined;
     "aria-activedescendant"?: string | undefined;
     "aria-atomic"?: (boolean | "true" | "false") | undefined;
@@ -62,7 +62,7 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     "aria-colindextext"?: string | undefined;
     "aria-colspan"?: number | undefined;
     "aria-controls"?: string | undefined;
-    "aria-current"?: boolean | "true" | "false" | "page" | "step" | "location" | "date" | "time" | undefined;
+    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | undefined;
     "aria-describedby"?: string | undefined;
     "aria-description"?: string | undefined;
     "aria-details"?: string | undefined;
@@ -72,7 +72,7 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     "aria-expanded"?: (boolean | "true" | "false") | undefined;
     "aria-flowto"?: string | undefined;
     "aria-grabbed"?: (boolean | "true" | "false") | undefined;
-    "aria-haspopup"?: boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree" | undefined;
+    "aria-haspopup"?: boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | undefined;
     "aria-hidden"?: (boolean | "true" | "false") | undefined;
     "aria-invalid"?: boolean | "true" | "false" | "grammar" | "spelling" | undefined;
     "aria-keyshortcuts"?: string | undefined;
@@ -268,8 +268,8 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLDivElement> | undefined;
     className: string;
     children: import("react").ReactNode;
-    leftIcon: import("react/jsx-runtime").JSX.Element;
-    rightIcon: import("react/jsx-runtime").JSX.Element;
+    leftIcon: import("react").JSX.Element;
+    rightIcon: import("react").JSX.Element;
 };
 export { buildBadgeConfig };
 //# sourceMappingURL=buildBadgeConfig.d.ts.map

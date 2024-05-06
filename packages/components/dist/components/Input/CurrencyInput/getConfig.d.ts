@@ -25,7 +25,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     "aria-colindextext"?: string | undefined;
     "aria-colspan"?: number | undefined;
     "aria-controls"?: string | undefined;
-    "aria-current"?: boolean | "true" | "false" | "page" | "step" | "location" | "date" | "time" | undefined;
+    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | undefined;
     "aria-describedby"?: string | undefined;
     "aria-description"?: string | undefined;
     "aria-details"?: string | undefined;
@@ -35,7 +35,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     "aria-expanded"?: (boolean | "true" | "false") | undefined;
     "aria-flowto"?: string | undefined;
     "aria-grabbed"?: (boolean | "true" | "false") | undefined;
-    "aria-haspopup"?: boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree" | undefined;
+    "aria-haspopup"?: boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | undefined;
     "aria-hidden"?: (boolean | "true" | "false") | undefined;
     "aria-invalid"?: boolean | "true" | "false" | "grammar" | "spelling" | undefined;
     "aria-keyshortcuts"?: string | undefined;
@@ -227,6 +227,9 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     onAnimationIterationCapture?: import("react").AnimationEventHandler<HTMLInputElement> | undefined;
     onTransitionEnd?: import("react").TransitionEventHandler<HTMLInputElement> | undefined;
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLInputElement> | undefined;
+    form?: string | undefined;
+    slot?: string | undefined;
+    pattern?: string | undefined;
     defaultChecked?: boolean | undefined;
     suppressContentEditableWarning?: boolean | undefined;
     accessKey?: string | undefined;
@@ -237,7 +240,6 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     draggable?: (boolean | "true" | "false") | undefined;
     hidden?: boolean | undefined;
     nonce?: string | undefined;
-    slot?: string | undefined;
     spellCheck?: (boolean | "true" | "false") | undefined;
     translate?: "yes" | "no" | undefined;
     radioGroup?: string | undefined;
@@ -262,9 +264,8 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     results?: number | undefined;
     security?: string | undefined;
     unselectable?: "on" | "off" | undefined;
-    inputMode?: "search" | "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
+    inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
     is?: string | undefined;
-    form?: string | undefined;
     list?: string | undefined;
     step?: string | number | undefined;
     formAction?: string | undefined;
@@ -281,7 +282,6 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     maxLength?: number | undefined;
     minLength?: number | undefined;
     multiple?: boolean | undefined;
-    pattern?: string | undefined;
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
@@ -289,8 +289,8 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     value?: number | undefined;
     isLoading: boolean | undefined;
     className: string;
-    prefix: import("react/jsx-runtime").JSX.Element;
-    sufix: import("react/jsx-runtime").JSX.Element;
+    prefix: import("react").JSX.Element;
+    sufix: import("react").JSX.Element;
     LeftIcon: import("lucide-react").LucideIcon | undefined;
     RightIcon: import("lucide-react").LucideIcon | undefined;
     disabled: boolean | undefined;
@@ -304,7 +304,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     showCents: boolean;
     loadingPosition: string;
     iconSize: number;
-    Spinner: import("react/jsx-runtime").JSX.Element;
+    Spinner: import("react").JSX.Element;
 };
 export { getConfig };
 //# sourceMappingURL=getConfig.d.ts.map
