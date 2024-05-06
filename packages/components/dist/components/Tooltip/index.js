@@ -1,3 +1,4 @@
+import * as React from "react";
 import "./styles.css";
 function Tooltip(args) {
     const { text, size = "lg", children, orientation = "top", className, ...rest } = args;

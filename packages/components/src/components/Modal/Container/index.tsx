@@ -2,6 +2,7 @@ import type { ModalContainerProps } from "@arkyn/types";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { createContext } from "react";
+import * as React from "react";
 
 import "./styles.css";
 

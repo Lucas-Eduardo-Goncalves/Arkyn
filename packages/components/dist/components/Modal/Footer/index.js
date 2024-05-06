@@ -1,3 +1,4 @@
+import * as React from "react";
 import "./styles.css";
 function Footer(args) {
     const { alignment = "right", className: baseClassName, ...rest } = args;

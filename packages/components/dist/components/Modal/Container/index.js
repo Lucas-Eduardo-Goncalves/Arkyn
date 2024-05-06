@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { createContext } from "react";
+import * as React from "react";
 import "./styles.css";
 const modalContext = createContext({});
 function Container(args) {

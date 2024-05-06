@@ -1,5 +1,5 @@
-/// <reference types="react" />
 import type { SimpleInputProps } from "@arkyn/types";
-declare function SimpleInput(props: SimpleInputProps): import("react").JSX.Element;
+import * as React from "react";
+declare function SimpleInput(props: SimpleInputProps): React.JSX.Element;
 export { SimpleInput };
 //# sourceMappingURL=index.d.ts.map

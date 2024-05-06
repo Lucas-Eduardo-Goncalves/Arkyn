@@ -1,4 +1,6 @@
 import type { DividerProps } from "@arkyn/types";
+import * as React from "react";
+
 import "./styles.css";
 
 function Divider(args: DividerProps) {

@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CpfCnpjInput } from "./CpfCpnjInput";
 import { CurrencyInput } from "./CurrencyInput";
 import { MaskedInput } from "./MaskInput";

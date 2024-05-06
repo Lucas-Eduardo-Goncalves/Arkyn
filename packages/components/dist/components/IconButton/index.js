@@ -1,4 +1,5 @@
 import { Loader2 } from "lucide-react";
+import * as React from "react";
 import "./styles.css";
 const iconSize = {
     xs: 12,

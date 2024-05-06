@@ -1,3 +1,4 @@
+import * as React from "react";
 import "./styles.css";
 function Divider(args) {
     const { className: baseClassName, orientation = "horizontal", ...rest } = args;

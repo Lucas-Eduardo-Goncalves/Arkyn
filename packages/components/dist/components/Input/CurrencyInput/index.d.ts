@@ -1,5 +1,5 @@
-/// <reference types="react" />
 import type { CurrencyInputProps } from "@arkyn/types";
-declare function CurrencyInput(props: CurrencyInputProps): import("react").JSX.Element;
+import * as React from "react";
+declare function CurrencyInput(props: CurrencyInputProps): React.JSX.Element;
 export { CurrencyInput };
 //# sourceMappingURL=index.d.ts.map

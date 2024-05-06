@@ -2,6 +2,7 @@ import type { CpfCnpjInputProps } from "@arkyn/types";
 import type { ChangeEvent, FocusEvent } from "react";
 
 import { useRef, useState } from "react";
+import * as React from "react";
 
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";

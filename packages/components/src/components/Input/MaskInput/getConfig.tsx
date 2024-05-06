@@ -1,5 +1,6 @@
 import type { MaskedInputProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
+import * as React from "react";
 
 import { morpheme } from "../utils/morpheme";
 

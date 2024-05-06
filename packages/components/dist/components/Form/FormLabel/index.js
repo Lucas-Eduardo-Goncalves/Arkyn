@@ -1,3 +1,4 @@
+import * as React from "react";
 import { buildFormLabelConfig } from "../../../config/buildFormLabelConfig";
 import { useFormController } from "../FormController";
 import "./styles.css";

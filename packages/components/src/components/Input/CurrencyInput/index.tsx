@@ -2,6 +2,7 @@ import type { CurrencyInputProps } from "@arkyn/types";
 import type { FocusEvent, KeyboardEvent } from "react";
 
 import { useRef, useState } from "react";
+import * as React from "react";
 
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";

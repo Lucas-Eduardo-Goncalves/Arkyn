@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import { useContext } from "react";
+import * as React from "react";
 import { modalContext } from "../Container";
 import "./styles.css";
 function Header(args) {

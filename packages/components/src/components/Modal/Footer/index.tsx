@@ -1,4 +1,5 @@
 import type { ModalFooterProps } from "@arkyn/types";
+import * as React from "react";
 
 import "./styles.css";
 

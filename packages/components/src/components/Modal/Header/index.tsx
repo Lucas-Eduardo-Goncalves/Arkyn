@@ -2,6 +2,7 @@ import type { ModalHeaderProps } from "@arkyn/types";
 
 import { X } from "lucide-react";
 import { useContext } from "react";
+import * as React from "react";
 
 import { modalContext } from "../Container";
 import "./styles.css";

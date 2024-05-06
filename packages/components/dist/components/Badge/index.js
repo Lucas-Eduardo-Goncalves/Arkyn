@@ -1,3 +1,4 @@
+import * as React from "react";
 import { buildBadgeConfig } from "../../config/buildBadgeConfig";
 import "./styles.css";
 function Badge(args) {

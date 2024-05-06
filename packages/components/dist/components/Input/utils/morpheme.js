@@ -1,3 +1,4 @@
+import * as React from "react";
 function morpheme(data, iconSize, type) {
     if (!data)
         return React.createElement(React.Fragment, null);

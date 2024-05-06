@@ -1,4 +1,5 @@
 import { Loader2 } from "lucide-react";
+import * as React from "react";
 import { buildButtonConfig } from "../../config/buildButtonConfig";
 import "./styles.css";
 function Button(args) {
