@@ -1,22 +1,35 @@
+// {
+//   "compilerOptions": {
+//     "jsx": "preserve",
+//     "moduleResolution": "",
+//
+//
+//
+//
+//   },
+//   "exclude": ["node_modules"],
+//   "include": ["src/**/*.ts", "src/**/*.tsx"]
+// }
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist",
-    "declarationMap": true,
-    "isolatedModules": true,
-    "jsx": "react",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "declarationMap": true,
     "outDir": "./dist",
     "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
+    "isolatedModules": true,
+    "declarationDir": "./dist",
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
     "target": "ESNext",
-    "types": ["bun-types"],
+    "allowSyntheticDefaultImports": true,
     "verbatimModuleSyntax": true,
-    "allowSyntheticDefaultImports": true
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "jsx": "react",
+    "types": ["bun-types"]
   },
-  "exclude": ["dist", "node_modules"],
+  "exclude": ["node_modules"],
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
