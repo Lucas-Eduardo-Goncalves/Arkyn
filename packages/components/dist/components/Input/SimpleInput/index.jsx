@@ -1,9 +1,7 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { InputMask } from "@react-input/mask";
 import { useRef, useState } from "react";
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
-function MaskedInput(props) {
+function SimpleInput(props) {
     const [isFocused, setIsFocused] = useState(false);
     const baseRef = useRef(null);
     const { inputRef, id, error } = useFormController();
@@ -30,13 +28,16 @@ function MaskedInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx(InputMask
-            // disabled={disabled || isLoading}
-            // readOnly={readOnly}
-            // ref={ref}
-            // onFocus={handleFocus}
-            // onBlur={handleBlur}
-            // {...rest}
-            , {}), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
+    return (<section title={title} style={style} onClick={handleSectionClick} className={className}>
+      {prefix}
+      {showLeftSpinner && Spinner}
+      {showLeftIcon && <LeftIcon size={iconSize} strokeWidth={2.5}/>}
+
+      <input disabled={disabled || isLoading} readOnly={readOnly} ref={ref} onFocus={handleFocus} onBlur={handleBlur} {...rest}/>
+
+      {showRightIcon && <RightIcon size={iconSize} strokeWidth={2.5}/>}
+      {showRightSpinner && Spinner}
+      {sufix}
+    </section>);
 }
-export { MaskedInput };
+export { SimpleInput };

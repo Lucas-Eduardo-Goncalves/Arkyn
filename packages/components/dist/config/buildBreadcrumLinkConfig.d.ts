@@ -31,7 +31,7 @@ declare function buildBreadcrumbLinkConfig(args: BuildBreadcrumbLinkConfigProps)
     "aria-colindextext"?: string;
     "aria-colspan"?: number;
     "aria-controls"?: string;
-    "aria-current"?: boolean | "true" | "false" | "page" | "step" | "location" | "date" | "time";
+    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date";
     "aria-describedby"?: string;
     "aria-description"?: string;
     "aria-details"?: string;
@@ -41,7 +41,7 @@ declare function buildBreadcrumbLinkConfig(args: BuildBreadcrumbLinkConfigProps)
     "aria-expanded"?: boolean | "true" | "false";
     "aria-flowto"?: string;
     "aria-grabbed"?: boolean | "true" | "false";
-    "aria-haspopup"?: boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree";
+    "aria-haspopup"?: boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree";
     "aria-hidden"?: boolean | "true" | "false";
     "aria-invalid"?: boolean | "true" | "false" | "grammar" | "spelling";
     "aria-keyshortcuts"?: string;
@@ -236,6 +236,8 @@ declare function buildBreadcrumbLinkConfig(args: BuildBreadcrumbLinkConfigProps)
     onAnimationIterationCapture?: import("react").AnimationEventHandler<HTMLAnchorElement>;
     onTransitionEnd?: import("react").TransitionEventHandler<HTMLAnchorElement>;
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLAnchorElement>;
+    slot?: string;
+    title?: string;
     defaultChecked?: boolean;
     defaultValue?: string | number | readonly string[];
     suppressContentEditableWarning?: boolean;
@@ -247,9 +249,7 @@ declare function buildBreadcrumbLinkConfig(args: BuildBreadcrumbLinkConfigProps)
     draggable?: boolean | "true" | "false";
     hidden?: boolean;
     nonce?: string;
-    slot?: string;
     spellCheck?: boolean | "true" | "false";
-    title?: string;
     translate?: "yes" | "no";
     radioGroup?: string;
     about?: string;
@@ -274,7 +274,7 @@ declare function buildBreadcrumbLinkConfig(args: BuildBreadcrumbLinkConfigProps)
     results?: number;
     security?: string;
     unselectable?: "on" | "off";
-    inputMode?: "search" | "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal";
+    inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal";
     is?: string;
     download?: any;
     hrefLang?: string;

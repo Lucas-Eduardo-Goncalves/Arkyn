@@ -1,4 +1,3 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Loader2 } from "lucide-react";
 import "./styles.css";
 const iconSize = {
@@ -10,6 +9,14 @@ const iconSize = {
 function IconButton(args) {
     const { isLoading = false, scheme = "primary", variant = "solid", size = "md", icon: Icon, disabled, className: baseClassName = "", ...rest } = args;
     const className = `arkyn_icon_button ${variant} ${scheme} ${size} loading_${isLoading} ${baseClassName}`;
-    return (_jsxs("button", { disabled: disabled || isLoading, className: className.trim(), ...rest, children: [_jsx("div", { className: "spinner", children: _jsx(Loader2, { size: iconSize[size], strokeWidth: 2.5 }) }), _jsx("div", { className: "content " + size, children: _jsx(Icon, { size: iconSize[size], strokeWidth: 2.5 }) })] }));
+    return (<button disabled={disabled || isLoading} className={className.trim()} {...rest}>
+      <div className="spinner">
+        <Loader2 size={iconSize[size]} strokeWidth={2.5}/>
+      </div>
+
+      <div className={"content " + size}>
+        <Icon size={iconSize[size]} strokeWidth={2.5}/>
+      </div>
+    </button>);
 }
 export { IconButton };

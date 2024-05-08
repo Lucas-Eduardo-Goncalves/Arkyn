@@ -47,7 +47,7 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     results?: number;
     security?: string;
     unselectable?: "on" | "off";
-    inputMode?: "search" | "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal";
+    inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal";
     is?: string;
     "aria-activedescendant"?: string;
     "aria-atomic"?: boolean | "true" | "false";
@@ -61,7 +61,7 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     "aria-colindextext"?: string;
     "aria-colspan"?: number;
     "aria-controls"?: string;
-    "aria-current"?: boolean | "true" | "false" | "page" | "step" | "location" | "date" | "time";
+    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date";
     "aria-describedby"?: string;
     "aria-description"?: string;
     "aria-details"?: string;
@@ -71,7 +71,7 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     "aria-expanded"?: boolean | "true" | "false";
     "aria-flowto"?: string;
     "aria-grabbed"?: boolean | "true" | "false";
-    "aria-haspopup"?: boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree";
+    "aria-haspopup"?: boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree";
     "aria-hidden"?: boolean | "true" | "false";
     "aria-invalid"?: boolean | "true" | "false" | "grammar" | "spelling";
     "aria-keyshortcuts"?: string;
@@ -267,8 +267,8 @@ declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLDivElement>;
     className: string;
     children: import("react").ReactNode;
-    leftIcon: import("react/jsx-runtime").JSX.Element;
-    rightIcon: import("react/jsx-runtime").JSX.Element;
+    leftIcon: import("react").JSX.Element;
+    rightIcon: import("react").JSX.Element;
 };
 export { buildBadgeConfig };
 //# sourceMappingURL=buildBadgeConfig.d.ts.map
