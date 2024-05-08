@@ -1,6 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { InputMask } from "@react-input/mask";
 import { useRef, useState } from "react";
-import * as React from "react";
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
 function MaskedInput(props) {
@@ -30,13 +30,13 @@ function MaskedInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (React.createElement("section", { title: title, style: style, onClick: handleSectionClick, className: className },
-        prefix,
-        showLeftSpinner && Spinner,
-        showLeftIcon && React.createElement(LeftIcon, { size: iconSize, strokeWidth: 2.5 }),
-        React.createElement(InputMask, { disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onBlur: handleBlur, ...rest }),
-        showRightIcon && React.createElement(RightIcon, { size: iconSize, strokeWidth: 2.5 }),
-        showRightSpinner && Spinner,
-        sufix));
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx(InputMask
+            // disabled={disabled || isLoading}
+            // readOnly={readOnly}
+            // ref={ref}
+            // onFocus={handleFocus}
+            // onBlur={handleBlur}
+            // {...rest}
+            , {}), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
 }
 export { MaskedInput };

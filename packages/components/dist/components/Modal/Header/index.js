@@ -1,6 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { X } from "lucide-react";
 import { useContext } from "react";
-import * as React from "react";
 import { modalContext } from "../Container";
 import "./styles.css";
 function Header(args) {
@@ -8,9 +8,6 @@ function Header(args) {
     const { makeInvisible } = useContext(modalContext);
     const show = showCloseButton ? "show-close" : "";
     const className = `arkyn_modal_header ${show} ${baseClassName}`;
-    return (React.createElement("header", { className: className.trim(), ...rest },
-        children,
-        React.createElement("button", { type: "button", onClick: makeInvisible },
-            React.createElement(X, { size: 24 }))));
+    return (_jsxs("header", { className: className.trim(), ...rest, children: [children, _jsx("button", { type: "button", onClick: makeInvisible, children: _jsx(X, { size: 24 }) })] }));
 }
 export { Header };

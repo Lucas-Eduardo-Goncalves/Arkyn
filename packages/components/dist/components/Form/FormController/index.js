@@ -1,6 +1,6 @@
+import { jsx as _jsx } from "react/jsx-runtime";
 import { useActionData } from "@remix-run/react";
 import { createContext, useContext, useId, useRef } from "react";
-import * as React from "react";
 import "./styles.css";
 const FormControllerContext = createContext({});
 function FormController({ children, ...rest }) {
@@ -9,8 +9,7 @@ function FormController({ children, ...rest }) {
     const name = inputRef.current?.name || "";
     const error = actionData?.fieldErrors?.[name] || null;
     const id = useId();
-    return (React.createElement(FormControllerContext.Provider, { value: { error, id, inputRef } },
-        React.createElement("section", { className: "arkyn_form_controller", ...rest }, children)));
+    return (_jsx(FormControllerContext.Provider, { value: { error, id, inputRef }, children: _jsx("section", { className: "arkyn_form_controller", ...rest, children: children }) }));
 }
 function useFormController() {
     return useContext(FormControllerContext);

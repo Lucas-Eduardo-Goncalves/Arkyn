@@ -3,7 +3,6 @@ import type { FocusEvent } from "react";
 
 import { InputMask } from "@react-input/mask";
 import { useRef, useState } from "react";
-import * as React from "react";
 
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
@@ -71,12 +70,13 @@ function MaskedInput(props: MaskedInputProps) {
       {showLeftIcon && <LeftIcon size={iconSize} strokeWidth={2.5} />}
 
       <InputMask
-        disabled={disabled || isLoading}
-        readOnly={readOnly}
-        ref={ref}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        {...rest}
+
+      // disabled={disabled || isLoading}
+      // readOnly={readOnly}
+      // ref={ref}
+      // onFocus={handleFocus}
+      // onBlur={handleBlur}
+      // {...rest}
       />
 
       {showRightIcon && <RightIcon size={iconSize} strokeWidth={2.5} />}

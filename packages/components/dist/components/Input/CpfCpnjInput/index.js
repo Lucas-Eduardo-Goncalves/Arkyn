@@ -1,5 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useRef, useState } from "react";
-import * as React from "react";
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
 import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";
@@ -42,13 +42,6 @@ function CpfCnpjInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (React.createElement("section", { title: title, style: style, onClick: handleSectionClick, className: className },
-        prefix,
-        showLeftSpinner && Spinner,
-        showLeftIcon && React.createElement(LeftIcon, { size: iconSize, strokeWidth: 2.5 }),
-        React.createElement("input", { disabled: disabled || isLoading, readOnly: readOnly, ref: ref, value: value || inputValue, onFocus: handleFocus, onChange: handleChange, onBlur: handleBlur, ...rest }),
-        showRightIcon && React.createElement(RightIcon, { size: iconSize, strokeWidth: 2.5 }),
-        showRightSpinner && Spinner,
-        sufix));
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: readOnly, ref: ref, value: value || inputValue, onFocus: handleFocus, onChange: handleChange, onBlur: handleBlur, ...rest }), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
 }
 export { CpfCnpjInput };

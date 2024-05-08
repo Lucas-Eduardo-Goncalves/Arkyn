@@ -1,5 +1,4 @@
 import type { CpfCnpjInputProps } from "@arkyn/types";
-import * as React from "react";
-declare function CpfCnpjInput(props: CpfCnpjInputProps): React.JSX.Element;
+declare function CpfCnpjInput(props: CpfCnpjInputProps): import("react/jsx-runtime").JSX.Element;
 export { CpfCnpjInput };
 //# sourceMappingURL=index.d.ts.map

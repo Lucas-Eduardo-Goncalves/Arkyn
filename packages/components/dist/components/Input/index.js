@@ -1,4 +1,4 @@
-import * as React from "react";
+import { jsx as _jsx } from "react/jsx-runtime";
 import { CpfCnpjInput } from "./CpfCpnjInput";
 import { CurrencyInput } from "./CurrencyInput";
 import { MaskedInput } from "./MaskInput";
@@ -6,11 +6,11 @@ import { SimpleInput } from "./SimpleInput";
 import "./styles.css";
 function Input(props) {
     if (props.type === "currency")
-        return React.createElement(CurrencyInput, { ...props });
+        return _jsx(CurrencyInput, { ...props });
     if (props.type === "masked")
-        return React.createElement(MaskedInput, { ...props });
+        return _jsx(MaskedInput, { ...props });
     if (props.type === "cpf-cpnj")
-        return React.createElement(CpfCnpjInput, { ...props });
-    return React.createElement(SimpleInput, { ...props });
+        return _jsx(CpfCnpjInput, { ...props });
+    return _jsx(SimpleInput, { ...props });
 }
 export { Input };

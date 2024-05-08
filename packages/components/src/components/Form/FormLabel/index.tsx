@@ -1,5 +1,4 @@
 import type { FormLabelProps } from "@arkyn/types";
-import * as React from "react";
 
 import { buildFormLabelConfig } from "../../../config/buildFormLabelConfig";
 import { useFormController } from "../FormController";

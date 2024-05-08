@@ -1,11 +1,10 @@
-import * as React from "react";
+import { Fragment as _Fragment, jsx as _jsx } from "react/jsx-runtime";
 function morpheme(data, iconSize, type) {
     if (!data)
-        return React.createElement(React.Fragment, null);
+        return _jsx(_Fragment, {});
     if (typeof data === "string")
-        return React.createElement("p", { className: type }, data);
+        return _jsx("p", { className: type, children: data });
     const Data = data;
-    return (React.createElement("p", { className: type },
-        React.createElement(Data, { color: "var(--secondary-600)", size: iconSize, strokeWidth: 2.5 })));
+    return (_jsx("p", { className: type, children: _jsx(Data, { color: "var(--secondary-600)", size: iconSize, strokeWidth: 2.5 }) }));
 }
 export { morpheme };

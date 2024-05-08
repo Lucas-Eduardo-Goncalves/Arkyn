@@ -1,5 +1,5 @@
 import type { TooltipProps } from "@arkyn/types";
-import * as React from "react";
+
 import "./styles.css";
 
 function Tooltip(args: TooltipProps) {

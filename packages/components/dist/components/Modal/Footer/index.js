@@ -1,8 +1,8 @@
-import * as React from "react";
+import { jsx as _jsx } from "react/jsx-runtime";
 import "./styles.css";
 function Footer(args) {
     const { alignment = "right", className: baseClassName, ...rest } = args;
     const className = `arkyn_modal_footer ${alignment} ${baseClassName}`;
-    return React.createElement("footer", { className: className.trim(), ...rest });
+    return _jsx("footer", { className: className.trim(), ...rest });
 }
 export { Footer };

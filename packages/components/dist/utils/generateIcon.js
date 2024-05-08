@@ -1,7 +1,7 @@
-import * as React from "react";
+import { Fragment as _Fragment, jsx as _jsx } from "react/jsx-runtime";
 function GenerateIcon(iconSize, Icon) {
     if (!Icon)
-        return React.createElement(React.Fragment, null);
-    return React.createElement(Icon, { size: iconSize, strokeWidth: 2.5 });
+        return _jsx(_Fragment, {});
+    return _jsx(Icon, { size: iconSize, strokeWidth: 2.5 });
 }
 export { GenerateIcon };

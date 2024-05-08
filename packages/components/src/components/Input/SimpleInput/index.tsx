@@ -2,7 +2,6 @@ import type { SimpleInputProps } from "@arkyn/types";
 import type { FocusEvent } from "react";
 
 import { useRef, useState } from "react";
-import * as React from "react";
 
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";

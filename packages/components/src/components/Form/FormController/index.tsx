@@ -5,7 +5,6 @@ import type {
 
 import { useActionData } from "@remix-run/react";
 import { createContext, useContext, useId, useRef } from "react";
-import * as React from "react";
 
 import "./styles.css";
 

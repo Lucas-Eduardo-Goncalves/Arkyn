@@ -1,5 +1,4 @@
 import type { LucideIcon } from "lucide-react";
-import * as React from "react";
 
 function morpheme(
   data: LucideIcon | string | undefined,

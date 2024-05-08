@@ -1,5 +1,4 @@
 import type { InputProps } from "@arkyn/types";
-import * as React from "react";
 
 import { CpfCnpjInput } from "./CpfCpnjInput";
 import { CurrencyInput } from "./CurrencyInput";
