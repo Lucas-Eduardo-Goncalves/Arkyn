@@ -1,3 +1,4 @@
+import { jsx as _jsx } from "react/jsx-runtime";
 import { Loader2 } from "lucide-react";
 import { morpheme } from "../utils/morpheme";
 function getConfig(props, isFocused) {
@@ -28,7 +29,7 @@ function getConfig(props, isFocused) {
         loadingPosition,
         iconSize: iconSize,
         showMask,
-        Spinner: <Loader2 className="spinner" size={iconSize} strokeWidth={2.5}/>,
+        Spinner: _jsx(Loader2, { className: "spinner", size: iconSize, strokeWidth: 2.5 }),
         ...rest,
     };
 }

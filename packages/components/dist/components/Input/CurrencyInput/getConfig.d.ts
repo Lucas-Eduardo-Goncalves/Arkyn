@@ -24,7 +24,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     "aria-colindextext"?: string;
     "aria-colspan"?: number;
     "aria-controls"?: string;
-    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date";
+    "aria-current"?: boolean | "true" | "false" | "page" | "step" | "location" | "date" | "time";
     "aria-describedby"?: string;
     "aria-description"?: string;
     "aria-details"?: string;
@@ -34,7 +34,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     "aria-expanded"?: boolean | "true" | "false";
     "aria-flowto"?: string;
     "aria-grabbed"?: boolean | "true" | "false";
-    "aria-haspopup"?: boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree";
+    "aria-haspopup"?: boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree";
     "aria-hidden"?: boolean | "true" | "false";
     "aria-invalid"?: boolean | "true" | "false" | "grammar" | "spelling";
     "aria-keyshortcuts"?: string;
@@ -226,9 +226,6 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     onAnimationIterationCapture?: import("react").AnimationEventHandler<HTMLInputElement>;
     onTransitionEnd?: import("react").TransitionEventHandler<HTMLInputElement>;
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLInputElement>;
-    form?: string;
-    slot?: string;
-    pattern?: string;
     defaultChecked?: boolean;
     suppressContentEditableWarning?: boolean;
     accessKey?: string;
@@ -239,6 +236,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     draggable?: boolean | "true" | "false";
     hidden?: boolean;
     nonce?: string;
+    slot?: string;
     spellCheck?: boolean | "true" | "false";
     translate?: "yes" | "no";
     radioGroup?: string;
@@ -263,8 +261,9 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     results?: number;
     security?: string;
     unselectable?: "on" | "off";
-    inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal";
+    inputMode?: "search" | "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal";
     is?: string;
+    form?: string;
     list?: string;
     step?: string | number;
     formAction?: string;
@@ -281,6 +280,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     maxLength?: number;
     minLength?: number;
     multiple?: boolean;
+    pattern?: string;
     placeholder?: string;
     required?: boolean;
     src?: string;
@@ -288,8 +288,8 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     value?: number;
     isLoading: boolean;
     className: string;
-    prefix: import("react").JSX.Element;
-    sufix: import("react").JSX.Element;
+    prefix: import("react/jsx-runtime").JSX.Element;
+    sufix: import("react/jsx-runtime").JSX.Element;
     LeftIcon: import("lucide-react").LucideIcon;
     RightIcon: import("lucide-react").LucideIcon;
     disabled: boolean;
@@ -303,7 +303,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     showCents: boolean;
     loadingPosition: string;
     iconSize: number;
-    Spinner: import("react").JSX.Element;
+    Spinner: import("react/jsx-runtime").JSX.Element;
 };
 export { getConfig };
 //# sourceMappingURL=getConfig.d.ts.map

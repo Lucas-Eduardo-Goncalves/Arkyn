@@ -5,6 +5,6 @@ type ModalContext = {
     makeInvisible: () => void;
 };
 declare const modalContext: import("react").Context<ModalContext>;
-declare function Container(args: ModalContainerProps): import("react").JSX.Element;
+declare function Container(args: ModalContainerProps): import("react/jsx-runtime").JSX.Element;
 export { Container, modalContext };
 //# sourceMappingURL=index.d.ts.map

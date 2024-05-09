@@ -56,7 +56,7 @@ declare function buildButtonConfig(args: BuildButtonConfigProps): {
     results?: number;
     security?: string;
     unselectable?: "on" | "off";
-    inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal";
+    inputMode?: "search" | "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal";
     is?: string;
     "aria-activedescendant"?: string;
     "aria-atomic"?: boolean | "true" | "false";
@@ -70,7 +70,7 @@ declare function buildButtonConfig(args: BuildButtonConfigProps): {
     "aria-colindextext"?: string;
     "aria-colspan"?: number;
     "aria-controls"?: string;
-    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date";
+    "aria-current"?: boolean | "true" | "false" | "page" | "step" | "location" | "date" | "time";
     "aria-describedby"?: string;
     "aria-description"?: string;
     "aria-details"?: string;
@@ -80,7 +80,7 @@ declare function buildButtonConfig(args: BuildButtonConfigProps): {
     "aria-expanded"?: boolean | "true" | "false";
     "aria-flowto"?: string;
     "aria-grabbed"?: boolean | "true" | "false";
-    "aria-haspopup"?: boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree";
+    "aria-haspopup"?: boolean | "true" | "false" | "dialog" | "grid" | "listbox" | "menu" | "tree";
     "aria-hidden"?: boolean | "true" | "false";
     "aria-invalid"?: boolean | "true" | "false" | "grammar" | "spelling";
     "aria-keyshortcuts"?: string;
@@ -279,8 +279,8 @@ declare function buildButtonConfig(args: BuildButtonConfigProps): {
     children: import("react").ReactNode;
     iconSize: number;
     disabled: boolean;
-    leftIcon: import("react").JSX.Element;
-    rightIcon: import("react").JSX.Element;
+    leftIcon: import("react/jsx-runtime").JSX.Element;
+    rightIcon: import("react/jsx-runtime").JSX.Element;
 };
 export { buildButtonConfig };
 //# sourceMappingURL=buildButtonConfig.d.ts.map

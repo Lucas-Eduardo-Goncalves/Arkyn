@@ -1,3 +1,4 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useRef, useState } from "react";
 import { useFormController } from "../../Form/FormController";
 import { getConfig } from "./getConfig";
@@ -35,16 +36,6 @@ function CurrencyInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (<section title={title} style={style} onClick={handleSectionClick} className={className}>
-      {prefix}
-      {showLeftSpinner && Spinner}
-      {showLeftIcon && <LeftIcon size={iconSize} strokeWidth={2.5}/>}
-
-      <input value={valueDisplay(value || currencyValue, showCents)} onKeyDown={handleKeyDown} disabled={disabled || isLoading} readOnly={readOnly} ref={ref} onFocus={handleFocus} onChange={() => { }} onBlur={handleBlur} {...rest}/>
-
-      {showRightSpinner && Spinner}
-      {showRightIcon && <RightIcon size={iconSize} strokeWidth={2.5}/>}
-      {sufix}
-    </section>);
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { value: valueDisplay(value || currencyValue, showCents), onKeyDown: handleKeyDown, disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onChange: () => { }, onBlur: handleBlur, ...rest }), showRightSpinner && Spinner, showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), sufix] }));
 }
 export { CurrencyInput };

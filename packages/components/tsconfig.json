@@ -15,7 +15,7 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "lib": ["dom", "ESNext"],
     "module": "ESNext",
     "target": "ESNext"
