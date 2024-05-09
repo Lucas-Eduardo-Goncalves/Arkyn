@@ -1,19 +1,22 @@
 {
   "name": "@arkyn/components",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "./dist/bundle.js",
-  "module": "./src/index.ts",
-  "type": "module",
   "types": "./dist/index.d.ts",
+  "author": "Lucas Gonçalves",
+  "type": "module",
+  "private": false,
   "scripts": {
-    "build": "bunx vite build && tsc",
+    "build": "bunx vite build && tsc && sed -i '1i\\\\import \"./styles.css\"' bundle.js",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@react-input/mask": ">=1.1.1",
-    "@remix-run/react": ">=2.8.0",
     "framer-motion": ">=11.0.8",
-    "lucide-react": ">=0.349.0",
+    "lucide-react": ">=0.349.0"
+  },
+  "peerDependencies": {
+    "@remix-run/react": ">=2.0.1",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
