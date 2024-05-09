@@ -1,4 +1,3 @@
-import "./style.css"
 import Xe, { createContext as He, useRef as de, useId as kr, useContext as Ze, useState as ie } from "react";
 import { Loader2 as oe, ChevronRight as Me, X as Nr } from "lucide-react";
 import { useActionData as $r, useLocation as Pr, Link as Ir } from "@remix-run/react";

@@ -1,14 +1,13 @@
 {
   "name": "@arkyn/components",
-  "version": "1.1.9",
+  "version": "1.0.0",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
   "type": "module",
   "private": false,
   "scripts": {
-    "add-styles": "sed -i '1iimport \"./style.css\"' ./dist/bundle.js",
-    "build": "bunx vite build && tsc && bun run add-styles",
+    "build": "bunx vite build && tsc",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
