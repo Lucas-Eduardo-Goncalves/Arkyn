@@ -9,12 +9,11 @@
     "build": "bunx tsc --project tsconfig.json",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
+  "dependencies": {
+    "@remix-run/node": ">=2.8.1"
+  },
   "devDependencies": {
     "bun-types": "latest",
     "typescript": "^5.4.5"
-  },
-  "peerDependencies": {
-    "@remix-run/node": "^2.8.1",
-    "typescript": "^5.0.0"
   }
 }
