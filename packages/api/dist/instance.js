@@ -3,6 +3,7 @@ import { get } from "./functions/get";
 import { patch } from "./functions/patch";
 import { post } from "./functions/post";
 import { put } from "./functions/put";
+import { monitoringErrors } from "./functions/monitoringErrors";
 class Instance {
     base_url;
     cached;
@@ -50,6 +51,12 @@ class Instance {
         return await put(this.generateURL(url), data, {
             inbox_flow: this.inbox_flow,
             ...config,
+        });
+    };
+    MONITORING_REMIX_ERRORS = async (error, request) => {
+        return await monitoringErrors(error, {
+            request,
+            inbox_flow: this.inbox_flow,
         });
     };
 }

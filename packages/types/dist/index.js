@@ -2,6 +2,7 @@
 export * from "./api/DeleteDTO";
 export * from "./api/GetDTO";
 export * from "./api/InstanceConstructorProps";
+export * from "./api/MonitoringErrorsDTO";
 export * from "./api/PatchDTO";
 export * from "./api/PostDTO";
 export * from "./api/PutDTO";

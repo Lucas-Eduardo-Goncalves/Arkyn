@@ -1,6 +1,6 @@
 import type { InboxFlowDTO } from "@arkyn/types";
 type ConfigProps = {
-    method: "POST" | "GET" | "PUT" | "DELETE" | "PATCH";
+    method: "POST" | "GET" | "PUT" | "DELETE" | "PATCH" | "REMIX-ERROR";
     request: string;
     response: string;
     token: string;
