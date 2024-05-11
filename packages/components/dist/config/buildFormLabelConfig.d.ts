@@ -1,4 +1,5 @@
 /// <reference types="react" />
+/// <reference types="react" />
 import type { FormLabelProps } from "@arkyn/types";
 type BuildFormLabelConfigProps = FormLabelProps;
 declare function buildFormLabelConfig(args: BuildFormLabelConfigProps): {
