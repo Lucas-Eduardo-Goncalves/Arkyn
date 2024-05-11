@@ -20,5 +20,8 @@ export * from "./components/InputProps";
 export * from "./components/ModalProps";
 export * from "./components/TooltipProps";
 
-// Utils
-export * from "./utils/CalculateCardInstallmentProps";
+// Server
+export * from "./server/formParseProps";
+
+// Shared
+export * from "./shared/CalculateCardInstallmentProps";

@@ -10,7 +10,7 @@ function getConfig(props, isFocused) {
     const opacity = disabled || readOnly || isLoading ? "opacity" : "";
     const focused = isFocused ? "focused" : "";
     const className = `arkyn_input ${hasPrefix} ${hasSufix} ${variant} ${size} ${opacity} ${errored} ${focused} ${baseClassName}`;
-    const iconSizes = { md: 14, lg: 16 };
+    const iconSizes = { md: 20, lg: 20 };
     const iconSize = iconSizes[size];
     return {
         isLoading,

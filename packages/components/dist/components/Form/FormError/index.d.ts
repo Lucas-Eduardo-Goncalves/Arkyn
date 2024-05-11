@@ -1,4 +1,8 @@
+import { ReactNode } from "react";
 import "./styles.css";
-declare function FormError(): import("react/jsx-runtime").JSX.Element;
+type FormErrorProps = {
+    children?: ReactNode;
+};
+declare function FormError({ children }: FormErrorProps): import("react/jsx-runtime").JSX.Element;
 export { FormError };
 //# sourceMappingURL=index.d.ts.map
