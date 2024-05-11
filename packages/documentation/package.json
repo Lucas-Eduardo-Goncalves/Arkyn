@@ -13,11 +13,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@arkyn/api": "workspace:*",
-    "@arkyn/components": "workspace:*",
-    "@arkyn/types": "workspace:*",
-    "@arkyn/server": "workspace:*",
-    "@arkyn/shared": "workspace:*",
+    "@arkyn/api": "*",
+    "@arkyn/components": "*",
+    "@arkyn/types": "*",
+    "@arkyn/server": "*",
+    "@arkyn/shared": "*",
     "@linaria/core": "^6.2.0",
     "@linaria/react": "^6.2.1",
     "@react-input/mask": "^1.2.3",
