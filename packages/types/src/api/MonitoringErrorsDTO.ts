@@ -5,14 +5,6 @@ type ConfigProps = {
   inbox_flow?: InboxFlowDTO;
 };
 
-type MonitoringErrorsDTO = (
-  error: string,
-  config: ConfigProps
-) => Promise<void>;
+type MonitoringErrorsDTO = (error: any, config: ConfigProps) => Promise<void>;
 
-type InstanceMonitoringErrorsDTO = (
-  error: string,
-  request: Request
-) => Promise<void>;
-
-export type { MonitoringErrorsDTO, InstanceMonitoringErrorsDTO };
+export type { MonitoringErrorsDTO };

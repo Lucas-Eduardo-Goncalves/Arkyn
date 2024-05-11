@@ -1,5 +1,5 @@
 import type { MonitoringErrorsDTO } from "@arkyn/types";
-import { sendInboxFlow } from "../sendInboxFlow";
+import { sendInboxFlow } from "./sendInboxFlow";
 
 const monitoringErrors: MonitoringErrorsDTO = async (error, config) => {
   const { inbox_flow, request } = config;
