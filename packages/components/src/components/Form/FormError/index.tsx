@@ -9,8 +9,9 @@ type FormErrorProps = {
 
 function FormError({ children }: FormErrorProps) {
   const { error } = useFormController();
+  if (children) return <strong className="arkyn_form_error">{children}</strong>;
   if (!error) return <></>;
-  return <strong className="arkyn_form_error">{children || error}</strong>;
+  return <strong className="arkyn_form_error">{error}</strong>;
 }
 
 export { FormError };
