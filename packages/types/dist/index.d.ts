@@ -16,6 +16,7 @@ export * from "./components/FormProps";
 export * from "./components/IconButtonProps";
 export * from "./components/InputProps";
 export * from "./components/ModalProps";
+export * from "./components/SkeletonProps";
 export * from "./components/TooltipProps";
 export * from "./server/formParseProps";
 export * from "./shared/CalculateCardInstallmentProps";

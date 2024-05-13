@@ -1,6 +1,7 @@
 // Data Display
 export { Badge } from "./components/Badge";
 export { Divider } from "./components/Divider";
+export { Skeleton } from "./components/Skeleton";
 
 // Form
 export { Button } from "./components/Button";
