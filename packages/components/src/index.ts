@@ -14,3 +14,6 @@ export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";
 // Overlay
 export { Modal } from "./components/Modal";
 export { Tooltip } from "./components/Tooltip";
+
+// Hooks
+export { useScopedParams } from "./hooks/useScopedParams";
