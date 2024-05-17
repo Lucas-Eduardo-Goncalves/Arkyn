@@ -4,7 +4,7 @@ function currencyFormat(value: number) {
     currency: "BRL",
   }).format(value);
 
-  return { value: format, valueWithotPrefix: format.replace("R$", "").trim() };
+  return { value: format, valueWithoutPrefix: format.replace("R$", "").trim() };
 }
 
 export { currencyFormat };

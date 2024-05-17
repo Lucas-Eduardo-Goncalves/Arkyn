@@ -26,6 +26,7 @@ function View() {
 
           <NavigationTitle label="Server" />
           <NavigationLink to="/v1/server/bad-request" label="badRequest" />
+          <NavigationLink to="/v1/server/form-parse" label="formParse" />
           <NavigationLink
             to="/v1/server/get-scoped-params"
             label="getScopedParams"
@@ -35,6 +36,10 @@ function View() {
           <NavigationLink
             to="/v1/shared/calculate-card-installment"
             label="calculateCardInstallment"
+          />
+          <NavigationLink
+            to="/v1/shared/currency-format"
+            label="currencyFormat"
           />
           <NavigationLink
             to="/v1/shared/generate-color-by-string"
