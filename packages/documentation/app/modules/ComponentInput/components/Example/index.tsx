@@ -1,17 +1,20 @@
 import { Input } from "@arkyn/components";
-import { Container } from "./styles";
+
 import { CircleAlert } from "lucide-react";
+import { Container } from "./styles";
 
 function Example() {
   return (
     <>
       <Container>
         <Input
-          mask="+0 (___) ___-__-__"
+          type="masked"
+          mask="+55 (__) _____-____"
           replacement={{ _: /\d/ }}
           name="asd"
-          leftIcon={CircleAlert}
-          type="masked"
+          rightIcon={CircleAlert}
+          showMask
+          onChange={(e) => console.log(e.target.value)}
         />
       </Container>
     </>

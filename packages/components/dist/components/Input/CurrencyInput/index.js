@@ -36,6 +36,6 @@ function CurrencyInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { value: valueDisplay(value || currencyValue, showCents), onKeyDown: handleKeyDown, disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onChange: () => { }, onBlur: handleBlur, ...rest }), showRightSpinner && Spinner, showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), sufix] }));
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { value: valueDisplay(value || currencyValue, showCents), onKeyDown: handleKeyDown, disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onBlur: handleBlur, onChange: () => { }, ...rest }), showRightSpinner && Spinner, showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), sufix] }));
 }
 export { CurrencyInput };

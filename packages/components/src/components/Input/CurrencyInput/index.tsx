@@ -88,8 +88,8 @@ function CurrencyInput(props: CurrencyInputProps) {
         readOnly={readOnly}
         ref={ref}
         onFocus={handleFocus}
-        onChange={() => {}}
         onBlur={handleBlur}
+        onChange={() => {}}
         {...rest}
       />
 
