@@ -1,13 +1,13 @@
 import { badRequest } from "@arkyn/server";
 import { json } from "@remix-run/node";
-import { api, authSession } from "~/services";
+import { api, authStorage } from "~/services";
 
 type DeleteChannelProps = {
   request: Request;
 };
 
 async function deleteChannel({ request }: DeleteChannelProps) {
-  const { getSession } = authSession;
+  const { getSession } = authStorage;
 
   const session = await getSession(request.headers.get("Cookie"));
   const token = await session.get("token");

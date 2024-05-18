@@ -1,13 +1,5 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Component, SquareMousePointer } from "lucide-react";
-
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  SubMenu,
-  SubMenuLink,
-} from "~/components";
+import { Container, SubMenu, SubMenuLink } from "~/components";
 
 import {
   Api,
@@ -25,7 +17,7 @@ function View() {
     <>
       <Container>
         <Breadcrumb>
-          <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+          <BreadcrumbLink to="/">Documentation</BreadcrumbLink>
           <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
           <BreadcrumbLink to="/v1/components/badge">Badge</BreadcrumbLink>
         </Breadcrumb>
@@ -40,30 +32,17 @@ function View() {
         <BadgeWithIcon />
 
         <Api />
-
-        <NavigationContainer>
-          <NavigationButton
-            icon={Component}
-            label="@arkyn/components"
-            to="/v1/doc/get-started"
-          />
-          <NavigationButton
-            icon={SquareMousePointer}
-            label="Button"
-            to="/v1/components/button"
-          />
-        </NavigationContainer>
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="badge">Introdução</SubMenuLink>
-        <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenuLink id="badge">Introduction</SubMenuLink>
+        <SubMenuLink id="import">Import</SubMenuLink>
+        <SubMenuLink id="how-to-use">How to use</SubMenuLink>
         <SubMenu>
-          <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
-          <SubMenuLink id="variantes">Variantes</SubMenuLink>
-          <SubMenuLink id="esquema-de-cores">Esquema de cores</SubMenuLink>
-          <SubMenuLink id="badge-com-icone">Badge com icone</SubMenuLink>
+          <SubMenuLink id="sizes">Sizes</SubMenuLink>
+          <SubMenuLink id="variants">Variants</SubMenuLink>
+          <SubMenuLink id="color-scheme">Color Scheme</SubMenuLink>
+          <SubMenuLink id="badge-with-icon">Badge with icon</SubMenuLink>
         </SubMenu>
         <SubMenuLink id="api">Api</SubMenuLink>
       </SubMenu>

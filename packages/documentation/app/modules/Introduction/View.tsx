@@ -1,13 +1,6 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Package, Sparkles } from "lucide-react";
 
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  Paragraph,
-  Title,
-} from "~/components";
+import { Container, Paragraph, Title } from "~/components";
 
 function View() {
   return (
@@ -45,19 +38,6 @@ function View() {
         otima integração com o Remix que carrega apenas o que é importado em sua
         rota, então, {'"xô"'} código não utilizado!
       </Paragraph>
-
-      <NavigationContainer>
-        <NavigationButton
-          icon={Package}
-          label="Sobre o Arkyn"
-          to="/v1/doc/about"
-        />
-        <NavigationButton
-          icon={Sparkles}
-          label="Começar"
-          to="/v1/doc/get-started"
-        />
-      </NavigationContainer>
     </Container>
   );
 }

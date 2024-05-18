@@ -1,13 +1,6 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { LayoutGrid } from "lucide-react";
 
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  Paragraph,
-  Title,
-} from "~/components";
+import { Container, Paragraph, Title } from "~/components";
 
 function View() {
   return (
@@ -29,14 +22,6 @@ function View() {
         Isso evita redundâncias e oferece maior controle sobre o que é
         instalado, facilitando o uso das dependências para o programador.
       </Paragraph>
-
-      <NavigationContainer>
-        <NavigationButton
-          icon={LayoutGrid}
-          label="@arkyn/components"
-          to="/v1/components"
-        />
-      </NavigationContainer>
     </Container>
   );
 }

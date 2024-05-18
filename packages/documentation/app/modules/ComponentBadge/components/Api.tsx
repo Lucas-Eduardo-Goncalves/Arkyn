@@ -6,35 +6,34 @@ const columns = [
     name: "size",
     type: "<code>md</code> | <code>lg</code>",
     default: "md",
-    description: "Altera o tamanho do emblema.",
+    description: "Changes the size of the badge.",
   },
   {
     name: "variant",
     type: "<code>solid</code> | <code>outline</code> | <code>ghost</code>",
     default: "ghost",
-    description: "Altera o tipo de estilização do emblema.",
+    description: "Changes the style of the emblem.",
   },
 
   {
     name: "scheme",
-    type: "<code>primary</code> | <code>secondary</code> | <code>success</code> | <code>warning</code> | <code>danger</code> | <code>info</code>",
+    type: "<code>primary</code> | <code>secondary</code> | <code>success</code> | <code>warning</code> | <code>danger</code> | <code >info</code>",
     default: "primary",
-    description: "Altera o esquema de cores do emblema.",
+    description: "Changes the color scheme of the emblem.",
   },
 
   {
     name: "leftIcon",
     type: "LucideIcon",
     default: "-",
-    description:
-      "Adiciona um icone a esquerda que acompanha o tamanho do emblema.",
+    description: "Add an icon to the left that matches the size of the emblem.",
   },
   {
     name: "rightIcon",
     type: "LucideIcon",
     default: "-",
     description:
-      "Adiciona um icone a direita que acompanha o tamanho do emblema.",
+      "Add an icon to the right that matches the size of the emblem.",
   },
 ];
 
@@ -42,20 +41,20 @@ function Api() {
   return (
     <>
       <Title as="h2">Api</Title>
-      <Paragraph>Referência de adereços.</Paragraph>
+      <Paragraph>Props reference.</Paragraph>
 
       <Note type="info">
-        Além dos adereços a seguir, o emblema também possuí todos os adereços de
-        uma <code>div</code> comum.
+        In addition to the following props, the emblem also has all the props of
+        a common <code>div</code>.
       </Note>
 
       <ApiTable>
         <thead>
           <tr>
-            <th>Propriedade</th>
-            <th>Descrição</th>
-            <th>Tipo</th>
-            <th>Padrão</th>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Standard</th>
           </tr>
         </thead>
         <tbody>

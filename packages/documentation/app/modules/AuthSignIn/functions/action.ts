@@ -1,7 +1,7 @@
 import { badRequest } from "@arkyn/server";
 import { ActionFunctionArgs, redirect } from "@remix-run/node";
 
-import { api, authSession } from "~/services";
+import { api, authStorage } from "~/services";
 import { UserProps } from "~/types/AuthTypes";
 
 type OtimisticResponse = {
@@ -31,13 +31,13 @@ async function action({ request }: ActionFunctionArgs) {
   }
 
   const apiData = response.data as OtimisticResponse;
-  const session = await authSession.getSession(request.headers.get("Cookie"));
+  const session = await authStorage.getSession(request.headers.get("Cookie"));
 
   session.set("token", apiData.token);
   session.set("user", apiData.user);
 
   return redirect("/v2/channels", {
-    headers: { "Set-Cookie": await authSession.commitSession(session) },
+    headers: { "Set-Cookie": await authStorage.commitSession(session) },
   });
 }
 

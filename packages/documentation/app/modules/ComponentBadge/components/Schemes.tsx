@@ -4,18 +4,18 @@ import { ExampleContainer, Fence, Note, Paragraph, Title } from "~/components";
 function Schemes() {
   return (
     <>
-      <Title as="h3">Esquema de cores</Title>
+      <Title as="h3">Color scheme</Title>
 
       <Paragraph>
-        Use o suporte <code>scheme</code> para alterar o esquema de cores do
-        emblema. Você pode definir o valor para <code>danger</code>,{" "}
-        <code>info</code>, <code>primary</code>, <code>secondary</code>,{" "}
-        <code>success</code> ou <code>warning</code>.
+        Use <code>scheme</code> support to change the color scheme of the
+        emblem. You can set the value to <code>danger</code>, <code>info</code>,{" "}
+        <code>primary</code>, <code>secondary</code>, <code>success</code> or{" "}
+        <code>warning</code>.
       </Paragraph>
 
       <Note type="info">
-        As cores são respectivas com a palheta de cores importada na
-        configuração da biblioteca.
+        The colors are corresponding to the color palette imported into the
+        library configuration.
       </Note>
 
       <ExampleContainer>

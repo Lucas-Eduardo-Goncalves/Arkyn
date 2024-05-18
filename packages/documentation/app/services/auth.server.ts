@@ -1,6 +1,6 @@
 import { createCookieSessionStorage } from "@remix-run/node";
 
-const authSession = createCookieSessionStorage({
+const authStorage = createCookieSessionStorage({
   cookie: {
     name: "remix:user-session",
     httpOnly: true,
@@ -12,4 +12,4 @@ const authSession = createCookieSessionStorage({
   },
 });
 
-export { authSession };
+export { authStorage };

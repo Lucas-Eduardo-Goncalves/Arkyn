@@ -1,8 +1,7 @@
 import { Instance } from "@arkyn/api";
-import { env } from "~/helpers/env.server";
 
 const api = new Instance({
-  base_url: env.API_BASE_URL,
+  base_url: process.env.API_BASE_URL,
   inbox_flow: {
     channel_id: "0fb19075-8d0d-4b52-845c-9afbeeba56a3",
     user_token:

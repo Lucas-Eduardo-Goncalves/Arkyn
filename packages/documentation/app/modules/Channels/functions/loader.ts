@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs, json } from "@remix-run/node";
-import { api, authSession } from "~/services";
+import { api, authStorage } from "~/services";
 
 type ResponseType = {
   id: string;
@@ -10,7 +10,7 @@ type ResponseType = {
 };
 
 async function loader({ request }: LoaderFunctionArgs) {
-  const session = await authSession.getSession(request.headers.get("Cookie"));
+  const session = await authStorage.getSession(request.headers.get("Cookie"));
   const token = session.get("token");
 
   if (!token) throw new Error("Token not found");
