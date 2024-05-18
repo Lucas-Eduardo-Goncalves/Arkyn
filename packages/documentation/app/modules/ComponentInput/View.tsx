@@ -1,13 +1,6 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Captions, SquareMousePointer } from "lucide-react";
 
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  Paragraph,
-  Title,
-} from "~/components";
+import { Container, Paragraph, Title } from "~/components";
 
 import { Example } from "./components/Example";
 
@@ -31,19 +24,6 @@ function View() {
       </Paragraph>
 
       <Example />
-
-      <NavigationContainer>
-        <NavigationButton
-          icon={SquareMousePointer}
-          label="IconButton"
-          to="/v1/components/icon-button"
-        />
-        <NavigationButton
-          icon={Captions}
-          label="Modal"
-          to="/v1/components/modal"
-        />
-      </NavigationContainer>
     </Container>
   );
 }

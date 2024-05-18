@@ -9,12 +9,12 @@ function Example() {
       <Container>
         <Input
           type="masked"
-          mask="+55 (__) _____-____"
+          mask="__/__"
           replacement={{ _: /\d/ }}
           name="asd"
           rightIcon={CircleAlert}
-          showMask
-          onChange={(e) => console.log(e.target.value)}
+          showMask={false}
+          placeholder="mm/aa"
         />
       </Container>
     </>

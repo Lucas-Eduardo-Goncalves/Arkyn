@@ -8,6 +8,7 @@ export { Button } from "./components/Button";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
+export { Select } from "./components/Select";
 
 // Navigation
 export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";

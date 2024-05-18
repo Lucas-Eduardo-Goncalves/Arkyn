@@ -23,6 +23,7 @@ function View() {
           <NavigationLink to="/v1/components/button" label="Button" />
           <NavigationLink to="/v1/components/icon-button" label="IconButton" />
           <NavigationLink to="/v1/components/input" label="Input" />
+          <NavigationLink to="/v1/components/select" label="Select" />
 
           <NavigationTitle label="Server" />
           <NavigationLink to="/v1/server/bad-request" label="badRequest" />
