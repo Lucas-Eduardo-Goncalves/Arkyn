@@ -4,12 +4,12 @@ import { ExampleContainer, Fence, Paragraph, Title } from "~/components";
 function Variant() {
   return (
     <>
-      <Title as="h3">Variantes</Title>
+      <Title as="h3">Variants</Title>
 
       <Paragraph>
-        Use o suporte <code>variant</code> para alterar o estilo visual do
-        botão. Você pode definir o valor como <code>solid</code>,{" "}
-        <code>outline</code>,<code>ghost</code> ou <code>invisible</code>.
+        Use <code>variant</code> support to change the visual style of the
+        button. You can set the value to <code>solid</code>,{" "}
+        <code>outline</code>,<code>ghost</code> or <code>invisible</code>.
       </Paragraph>
 
       <ExampleContainer>

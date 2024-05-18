@@ -5,16 +5,16 @@ import { ExampleContainer, Fence, Note, Paragraph, Title } from "~/components";
 function ButtonWithIcon() {
   return (
     <>
-      <Title as="h3">Botão com icone</Title>
+      <Title as="h3">Button with icon</Title>
 
       <Paragraph>
-        Você pode adicionar ícones esquerdo e direito ao botão usando os
-        adereços <code>leftIcon</code> e <code>rightIcon</code> respectivamente.
+        You can add left and right icons to the button using the
+        <code>leftIcon</code> and <code>rightIcon</code> props respectively.
       </Paragraph>
 
       <Note type="warning">
-        Os valores devem ser elementos de tipo <code>LucideIcon</code>,{" "}
-        <strong>não</strong> strings e <strong>não</strong> jsx.
+        Values ​​must be elements of type <code>LucideIcon</code>,{" "}
+        <strong>not</strong> strings and <strong>not</strong> jsx.
       </Note>
 
       <ExampleContainer>

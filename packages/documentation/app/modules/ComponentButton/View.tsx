@@ -1,13 +1,6 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
-import { Badge, SquareMousePointer } from "lucide-react";
 
-import {
-  Container,
-  NavigationButton,
-  NavigationContainer,
-  SubMenu,
-  SubMenuLink,
-} from "~/components";
+import { Container, SubMenu, SubMenuLink } from "~/components";
 
 import {
   Api,
@@ -26,7 +19,7 @@ function View() {
     <>
       <Container>
         <Breadcrumb>
-          <BreadcrumbLink to="/">Documentação</BreadcrumbLink>
+          <BreadcrumbLink to="/">Documentation</BreadcrumbLink>
           <BreadcrumbLink to="/v1/components">@arkyn/components</BreadcrumbLink>
           <BreadcrumbLink to="/v1/components/button">Button</BreadcrumbLink>
         </Breadcrumb>
@@ -42,31 +35,18 @@ function View() {
         <Loading />
 
         <Api />
-
-        <NavigationContainer>
-          <NavigationButton
-            icon={Badge}
-            label="Badge"
-            to="/v1/components/badge"
-          />
-          <NavigationButton
-            icon={SquareMousePointer}
-            label="IconButton"
-            to="/v1/components/icon-button"
-          />
-        </NavigationContainer>
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="button">Introdução</SubMenuLink>
-        <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenuLink id="button">Introduction</SubMenuLink>
+        <SubMenuLink id="import">Import</SubMenuLink>
+        <SubMenuLink id="how-to-use">Hot to use</SubMenuLink>
         <SubMenu>
-          <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
-          <SubMenuLink id="variantes">Variantes</SubMenuLink>
-          <SubMenuLink id="esquema-de-cores">Esquema de cores</SubMenuLink>
-          <SubMenuLink id="botão-com-icone">Botão com icone</SubMenuLink>
-          <SubMenuLink id="carregamento">Carregamento</SubMenuLink>
+          <SubMenuLink id="sizes">Sizes</SubMenuLink>
+          <SubMenuLink id="variants">Variants</SubMenuLink>
+          <SubMenuLink id="color-scheme">Color scheme</SubMenuLink>
+          <SubMenuLink id="button-with-icon">Button with icon</SubMenuLink>
+          <SubMenuLink id="loading">Loading</SubMenuLink>
         </SubMenu>
         <SubMenuLink id="api">Api</SubMenuLink>
       </SubMenu>

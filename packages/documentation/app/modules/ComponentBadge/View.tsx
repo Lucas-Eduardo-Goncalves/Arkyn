@@ -41,7 +41,7 @@ function View() {
         <SubMenu>
           <SubMenuLink id="sizes">Sizes</SubMenuLink>
           <SubMenuLink id="variants">Variants</SubMenuLink>
-          <SubMenuLink id="color-scheme">Color Scheme</SubMenuLink>
+          <SubMenuLink id="color-scheme">Color scheme</SubMenuLink>
           <SubMenuLink id="badge-with-icon">Badge with icon</SubMenuLink>
         </SubMenu>
         <SubMenuLink id="api">Api</SubMenuLink>

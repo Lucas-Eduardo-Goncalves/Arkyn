@@ -4,33 +4,33 @@ import { ExampleContainer, Fence, Note, Paragraph, Title } from "~/components";
 function Loading() {
   return (
     <>
-      <Title as="h3">Carregamento</Title>
+      <Title as="h3">Loading</Title>
 
       <Paragraph>
-        Utilize o suporte <code>isLoading</code> para mostrar seu estado de
-        carregamento. Por padrão, o botão mostrará um controle giratório e
-        deixará a largura do botão inalterada. <br />
-        Você também pode passar a propriedade <code>loadingText</code> para
-        adicionar texto durante o carregamento.
+        Use <code>isLoading</code> support to show your load status. loading. By
+        default, the button will show a spinner and will leave the button width
+        unchanged. <br />
+        You can also pass the <code>loadingText</code> property to add text
+        while loading.
       </Paragraph>
 
       <Note type="warning">
-        Caso o <code>loadingText</code> seja maior que o texto + icone inserido
-        no próprio botão, a caracterisica de largura do botão não será ignorada,
-        fazendo com que o botão cresça de tamanho.
+        If <code>loadingText</code> is larger than the inserted text + icon on
+        the button itself, the button width characteristic will not be ignored,
+        causing the bud to grow in size.
       </Note>
 
       <ExampleContainer>
         <Button isLoading>Some Text</Button>
         <Button isLoading loadingText="Loading...">
-          Some Text
+          Add Text
         </Button>
       </ExampleContainer>
 
       <Fence language="html" type="tsx">
         {`<Button isLoading>Some Text</Button>
 <Button isLoading loadingText="Loading...">
-  Some Text 
+  Add Text
 </Button>`}
       </Fence>
     </>
