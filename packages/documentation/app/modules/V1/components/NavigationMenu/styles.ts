@@ -8,8 +8,11 @@ const Container = styled.nav`
   position: sticky;
   top: 16px;
 
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 300px;
+  max-width: 300px;
+
+  max-height: calc(100vh - 32px);
+  overflow: auto;
 `;
 
 export { Container };

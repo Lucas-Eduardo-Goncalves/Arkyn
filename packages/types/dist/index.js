@@ -13,6 +13,7 @@ export * from "./api/config/ResponseDTO";
 export * from "./components/BadgeProps";
 export * from "./components/BreadcrumbProps";
 export * from "./components/ButtonProps";
+export * from "./components/CheckboxProps";
 export * from "./components/DividerProps";
 export * from "./components/FormProps";
 export * from "./components/IconButtonProps";

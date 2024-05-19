@@ -1,0 +1,66 @@
+.arkyn_checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--secondary-400);
+  background-color: var(--secondary-100);
+}
+
+.arkyn_checkbox:hover {
+  cursor: pointer;
+}
+
+.arkyn_checkbox svg {
+  display: none;
+  stroke-width: 3px;
+}
+
+/* SIZE */
+.arkyn_checkbox.sm {
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+}
+
+.arkyn_checkbox.sm svg {
+  min-height: 12px;
+  min-width: 12px;
+}
+
+.arkyn_checkbox.md {
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.arkyn_checkbox.md svg {
+  min-height: 14px;
+  min-width: 14px;
+}
+
+.arkyn_checkbox.lg {
+  height: 24px;
+  width: 24px;
+  border-radius: 6px;
+}
+
+.arkyn_checkbox.lg svg {
+  min-height: 14px;
+  min-width: 14px;
+}
+
+/* CHECKED */
+.arkyn_checkbox.checked {
+  background-color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+.arkyn_checkbox.checked svg {
+  display: unset;
+  color: #fff;
+}
+
+.arkyn_checkbox.error {
+  border-color: var(--danger-500);
+}

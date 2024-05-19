@@ -5,6 +5,7 @@ export { Skeleton } from "./components/Skeleton";
 
 // Form
 export { Button } from "./components/Button";
+export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";

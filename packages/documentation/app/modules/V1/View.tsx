@@ -21,6 +21,7 @@ function View() {
           <NavigationTitle label="Components" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
           <NavigationLink to="/v1/components/button" label="Button" />
+          <NavigationLink to="/v1/components/checkbox" label="Checkbox" />
           <NavigationLink to="/v1/components/icon-button" label="IconButton" />
           <NavigationLink to="/v1/components/input" label="Input" />
           <NavigationLink to="/v1/components/select" label="Select" />

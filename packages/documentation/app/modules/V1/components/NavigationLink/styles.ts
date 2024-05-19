@@ -13,6 +13,8 @@ const Container = styled(Link)`
   text-decoration: none;
   color: var(--secondary-500);
 
+  max-width: 220px;
+
   &:hover {
     background: var(--secondary-100);
     color: var(--secondary-800);
