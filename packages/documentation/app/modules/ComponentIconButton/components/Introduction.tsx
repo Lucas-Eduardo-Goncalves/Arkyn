@@ -6,8 +6,8 @@ function Introduction() {
       <Title as="h1">IconButton</Title>
 
       <Paragraph>
-        Um ícone é uma representação gráfica de significado. Os ícones podem ser
-        usados para expressar ações, estados e até mesmo para categorizar dados.
+        An icon is a graphic representation of meaning. Icons can be used to
+        express actions, states and even to categorize data.
       </Paragraph>
     </>
   );

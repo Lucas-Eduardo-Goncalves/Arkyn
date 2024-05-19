@@ -5,12 +5,12 @@ import { ExampleContainer, Fence, Paragraph, Title } from "~/components";
 function Size() {
   return (
     <>
-      <Title as="h3">Tamanhos</Title>
+      <Title as="h3">Sizes</Title>
 
       <Paragraph>
-        Use o suporte <code>size</code> para alterar o tamanho do botão. Você
-        pode definir o valor como <code>xs</code>, <code>sm</code>,{" "}
-        <code>md</code> ou <code>lg</code>.
+        Use <code>size</code> support to change the button size. You you can set
+        the value as <code>xs</code>, <code>sm</code>, <code>md</code> or{" "}
+        <code>lg</code>.
       </Paragraph>
 
       <ExampleContainer>

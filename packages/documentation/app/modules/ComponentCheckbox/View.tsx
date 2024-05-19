@@ -1,7 +1,14 @@
 import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
 
 import { Container, SubMenu, SubMenuLink } from "~/components";
-import { Api, ImportComponent, Introduction, Size, Use } from "./components";
+import {
+  Api,
+  ImportComponent,
+  Introduction,
+  IsError,
+  Size,
+  Use,
+} from "./components";
 
 function View() {
   return (
@@ -17,6 +24,7 @@ function View() {
         <ImportComponent />
         <Use />
         <Size />
+        <IsError />
         <Api />
       </Container>
 
@@ -25,6 +33,7 @@ function View() {
         <SubMenuLink id="import">Import</SubMenuLink>
         <SubMenuLink id="how-to-use">Hot to use</SubMenuLink>
         <SubMenuLink id="sizes">Sizes</SubMenuLink>
+        <SubMenuLink id="iserror">isError</SubMenuLink>
         <SubMenuLink id="api">Api</SubMenuLink>
       </SubMenu>
     </>

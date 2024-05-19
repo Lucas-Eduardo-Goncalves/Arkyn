@@ -5,11 +5,10 @@ import { ExampleContainer, Fence, Paragraph, Title } from "~/components";
 function Loading() {
   return (
     <>
-      <Title as="h3">Carregamento</Title>
+      <Title as="h3">Loading</Title>
 
       <Paragraph>
-        Utilize o suporte <code>isLoading</code> para mostrar seu estado de
-        carregamento.
+        Use <code>isLoading</code> support to show your load status. loading.
       </Paragraph>
 
       <ExampleContainer>

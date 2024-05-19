@@ -3,14 +3,14 @@ import { Paragraph, Title } from "~/components";
 function Label() {
   return (
     <>
-      <Title as="h2">Etiqueta</Title>
+      <Title as="h2">Aria label</Title>
 
       <Paragraph>
-        O botão de icone por não conter um conteúdo descritivo, é{" "}
-        <strong>obrigatório</strong> o uso de uma propriedade{" "}
-        <code>aria-label</code>, essa propriedade fará com que o botão tenha uma
-        descrição sobre sua funcionalidade, fazendo com que pessoas com
-        problemas visuais consigam utilizar seu website normalmente.
+        The icon button, as it does not contain descriptive content, is{" "}
+        <strong>mandatory</strong> the use of a property <code>aria-label</code>
+        , this property will make the button have a description about its
+        functionality, making people with visual problems can use your website
+        normally.
       </Paragraph>
     </>
   );

@@ -44,31 +44,18 @@ function View() {
         <Loading />
 
         <Api />
-
-        <NavigationContainer>
-          <NavigationButton
-            icon={SquareMousePointer}
-            label="Button"
-            to="/v1/components/button"
-          />
-          <NavigationButton
-            icon={TextCursorInput}
-            label="Input"
-            to="/v1/components/input"
-          />
-        </NavigationContainer>
       </Container>
 
       <SubMenu>
-        <SubMenuLink id="iconbutton">Introdução</SubMenuLink>
-        <SubMenuLink id="importar">Importar</SubMenuLink>
-        <SubMenuLink id="etiqueta">Etiqueta</SubMenuLink>
-        <SubMenuLink id="uso">Uso</SubMenuLink>
+        <SubMenuLink id="iconbutton">IconButton</SubMenuLink>
+        <SubMenuLink id="import">Import</SubMenuLink>
+        <SubMenuLink id="aria-label">Aria label</SubMenuLink>
+        <SubMenuLink id="how-to-use">How to use</SubMenuLink>
         <SubMenu>
-          <SubMenuLink id="tamanhos">Tamanhos</SubMenuLink>
-          <SubMenuLink id="variantes">Variantes</SubMenuLink>
-          <SubMenuLink id="esquema-de-cores">Esquema de cores</SubMenuLink>
-          <SubMenuLink id="carregamento">Carregamento</SubMenuLink>
+          <SubMenuLink id="sizes">Sizes</SubMenuLink>
+          <SubMenuLink id="variants">Variants</SubMenuLink>
+          <SubMenuLink id="color-scheme">Color scheme</SubMenuLink>
+          <SubMenuLink id="loading">Loading</SubMenuLink>
         </SubMenu>
         <SubMenuLink id="api">Api</SubMenuLink>
       </SubMenu>
