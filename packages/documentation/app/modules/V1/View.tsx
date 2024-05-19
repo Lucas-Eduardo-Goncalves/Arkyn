@@ -16,15 +16,15 @@ function View() {
       <LayoutContent>
         <NavigationMenu>
           <NavigationLink to="/v1/doc/introduction" label="Introduction" />
-          <NavigationLink to="/v1/doc/get-started" label="Get Started" />
+          {/* <NavigationLink to="/v1/doc/get-started" label="Get Started" /> */}
 
           <NavigationTitle label="Components" />
           <NavigationLink to="/v1/components/badge" label="Badge" />
           <NavigationLink to="/v1/components/button" label="Button" />
           <NavigationLink to="/v1/components/checkbox" label="Checkbox" />
           <NavigationLink to="/v1/components/icon-button" label="IconButton" />
-          <NavigationLink to="/v1/components/input" label="Input" />
-          <NavigationLink to="/v1/components/select" label="Select" />
+          {/* <NavigationLink to="/v1/components/input" label="Input" /> */}
+          {/* <NavigationLink to="/v1/components/select" label="Select" /> */}
 
           <NavigationTitle label="Server" />
           <NavigationLink to="/v1/server/bad-request" label="badRequest" />
