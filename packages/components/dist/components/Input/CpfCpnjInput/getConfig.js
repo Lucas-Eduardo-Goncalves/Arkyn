@@ -1,8 +1,18 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Loader2 } from "lucide-react";
 import { morpheme } from "../utils/morpheme";
+import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";
 function getConfig(props, isFocused) {
-    const { isLoading, isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, sufix: baseSufix, leftIcon: LeftIcon, rightIcon: RightIcon, disabled, readOnly, onFocus, onBlur, title, style, onChange, ...rest } = props;
+    const { isLoading, isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, sufix: baseSufix, leftIcon: LeftIcon, rightIcon: RightIcon, disabled, defaultValue, readOnly, onFocus, onBlur, title, style, onChange, ...rest } = props;
+    function parseDefault(event) {
+        let value = clear(event);
+        const mask = getMask(value);
+        let nextLength = value.length;
+        if (nextLength > MAX_LENGTH)
+            return;
+        value = applyMask(value, TYPES[mask]);
+        return value;
+    }
     const loadingPosition = RightIcon ? "right" : "left";
     const hasPrefix = !!basePrefix ? "hasPrefix" : "";
     const hasSufix = !!baseSufix ? "hasSufix" : "";
@@ -19,6 +29,7 @@ function getConfig(props, isFocused) {
         sufix: morpheme(baseSufix, iconSize, "sufix"),
         LeftIcon,
         RightIcon,
+        defaultValue: parseDefault(defaultValue || ""),
         disabled,
         readOnly,
         onFocus,

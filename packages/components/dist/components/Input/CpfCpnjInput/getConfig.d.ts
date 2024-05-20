@@ -286,7 +286,6 @@ declare function getConfig(props: CpfCnpjInputProps, isFocused: boolean): {
     placeholder?: string;
     required?: boolean;
     src?: string;
-    defaultValue?: string;
     value?: string;
     isLoading: boolean;
     className: string;
@@ -294,6 +293,7 @@ declare function getConfig(props: CpfCnpjInputProps, isFocused: boolean): {
     sufix: import("react/jsx-runtime").JSX.Element;
     LeftIcon: import("lucide-react").LucideIcon;
     RightIcon: import("lucide-react").LucideIcon;
+    defaultValue: string;
     disabled: boolean;
     readOnly: boolean;
     onFocus: import("react").FocusEventHandler<HTMLInputElement>;

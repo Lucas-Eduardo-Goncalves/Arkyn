@@ -5,12 +5,12 @@ import { getConfig } from "./getConfig";
 import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";
 function CpfCnpjInput(props) {
     const [isFocused, setIsFocused] = useState(false);
-    const [inputValue, setInputValue] = useState(clear(props?.defaultValue || ""));
     const baseRef = useRef(null);
     const { inputRef, id, error } = useFormController();
     const ref = inputRef || baseRef;
     const isError = props.isError || !!error;
-    const { disabled, title, style, className, prefix, sufix, iconSize, loadingPosition, isLoading, LeftIcon, readOnly, onFocus, onBlur, RightIcon, Spinner, onChange, value, defaultValue = "", ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const { disabled, title, style, className, prefix, sufix, iconSize, loadingPosition, isLoading, LeftIcon, readOnly, onFocus, onBlur, RightIcon, Spinner, onChange, value, defaultValue, ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const [inputValue, setInputValue] = useState(defaultValue);
     const showLeftIcon = LeftIcon && !isLoading;
     const showRightIcon = RightIcon && !isLoading;
     const showLeftSpinner = loadingPosition === "left" && isLoading;
