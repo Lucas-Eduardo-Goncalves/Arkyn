@@ -10,7 +10,7 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@remix-run/node": ">=2.8.1"
+    "@remix-run/node": ">=2.9.2"
   },
   "devDependencies": {
     "bun-types": "latest",

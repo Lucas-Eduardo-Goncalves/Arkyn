@@ -10,14 +10,14 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@react-input/mask": ">=1.1.1",
-    "@remix-run/react": ">=2.8.0",
-    "lucide-react": ">=0.349.0",
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0"
+    "@react-input/mask": ">=1.2.4",
+    "@remix-run/react": ">=2.9.2",
+    "lucide-react": ">=0.378.0",
+    "react": ">=18.3.1",
+    "react-dom": ">=18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.1",
+    "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "bun-types": "latest",
     "typescript": "^5.4.5"
