@@ -11,6 +11,7 @@ type SelectProps = {
     name: string;
     value?: string;
     defaultValue?: string;
+    optionMaxHeight?: number;
     options: {
         label: string;
         value: string;

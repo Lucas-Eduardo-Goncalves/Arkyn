@@ -2,6 +2,7 @@ import type { CpfCnpjInputProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
 
 import { morpheme } from "../utils/morpheme";
+import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";
 
 function getConfig(props: CpfCnpjInputProps, isFocused: boolean) {
   const {
@@ -15,6 +16,7 @@ function getConfig(props: CpfCnpjInputProps, isFocused: boolean) {
     leftIcon: LeftIcon,
     rightIcon: RightIcon,
     disabled,
+    defaultValue,
     readOnly,
     onFocus,
     onBlur,
@@ -23,6 +25,18 @@ function getConfig(props: CpfCnpjInputProps, isFocused: boolean) {
     onChange,
     ...rest
   } = props;
+
+  function parseDefault(event: string) {
+    let value = clear(event);
+    const mask = getMask(value);
+
+    let nextLength = value.length;
+
+    if (nextLength > MAX_LENGTH) return;
+    value = applyMask(value, TYPES[mask] as "CPF" | "CNPJ");
+
+    return value;
+  }
 
   const loadingPosition = RightIcon ? "right" : "left";
 
@@ -43,6 +57,7 @@ function getConfig(props: CpfCnpjInputProps, isFocused: boolean) {
     sufix: morpheme(baseSufix, iconSize, "sufix"),
     LeftIcon,
     RightIcon,
+    defaultValue: parseDefault(defaultValue || ""),
     disabled,
     readOnly,
     onFocus,

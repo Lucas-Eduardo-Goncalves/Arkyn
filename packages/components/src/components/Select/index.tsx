@@ -38,6 +38,7 @@ function Select(props: SelectProps) {
     placeholder,
     onSelect,
     options,
+    optionMaxHeight,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
 
@@ -118,7 +119,10 @@ function Select(props: SelectProps) {
         <input type="hidden" name={name} value={currentValue || ""} readOnly />
 
         {isFocused && (
-          <ul className="arkyn_select_content">
+          <ul
+            className="arkyn_select_content"
+            style={{ overflow: "auto", maxHeight: optionMaxHeight }}
+          >
             {filteredOptions.map(({ label, value }) => (
               <li
                 key={value}

@@ -14,7 +14,7 @@
 }
 
 .arkyn_select:hover {
-  cursor: text;
+  cursor: pointer;
 }
 
 .arkyn_select input {

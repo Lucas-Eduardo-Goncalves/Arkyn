@@ -5,6 +5,7 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     name: string;
     value?: string;
     defaultValue?: string;
+    optionMaxHeight?: number;
     options: {
         label: string;
         value: string;

@@ -17,6 +17,8 @@ type SelectProps = {
   value?: string;
   defaultValue?: string;
 
+  optionMaxHeight?: number;
+
   options: { label: string; value: string }[];
   onSelect?: (value: { label: string; value: string }) => void;
 } & Omit<

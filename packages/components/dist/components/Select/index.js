@@ -10,7 +10,7 @@ function Select(props) {
     const baseRef = useRef(null);
     const ref = inputRef || baseRef;
     const isError = props.isError || !!error;
-    const { disabled, title, style, className, prefix, iconSize, isLoading, LeftIcon, value: baseValue = null, defaultValue = "", readOnly, onFocus, onBlur, Spinner, name, isSearchable, placeholder, onSelect, options, ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const { disabled, title, style, className, prefix, iconSize, isLoading, LeftIcon, value: baseValue = null, defaultValue = "", readOnly, onFocus, onBlur, Spinner, name, isSearchable, placeholder, onSelect, options, optionMaxHeight, ...rest } = getConfig({ ...props, id, isError }, isFocused);
     const [selectedValue, setSelectedValue] = useState(defaultValue);
     const [searchValue, setSearchValue] = useState("");
     function handleSectionClick() {
@@ -60,7 +60,7 @@ function Select(props) {
             return true;
         }
     });
-    return (_jsxs(_Fragment, { children: [_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: `${className} placeholder_dark_${placeholderDark()}`, children: [prefix, LeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: !isSearchable, value: searchValue || "", placeholder: currentLabel || placeholder, ref: ref, onFocus: handleFocus, onBlur: () => setSearchValue(""), ...rest, onChange: (e) => setSearchValue(e.target.value) }), _jsx("input", { type: "hidden", name: name, value: currentValue || "", readOnly: true }), isFocused && (_jsxs("ul", { className: "arkyn_select_content", children: [filteredOptions.map(({ label, value }) => (_jsxs("li", { className: currentValue === value ? "active" : "", onClick: () => {
+    return (_jsxs(_Fragment, { children: [_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: `${className} placeholder_dark_${placeholderDark()}`, children: [prefix, LeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: !isSearchable, value: searchValue || "", placeholder: currentLabel || placeholder, ref: ref, onFocus: handleFocus, onBlur: () => setSearchValue(""), ...rest, onChange: (e) => setSearchValue(e.target.value) }), _jsx("input", { type: "hidden", name: name, value: currentValue || "", readOnly: true }), isFocused && (_jsxs("ul", { className: "arkyn_select_content", style: { overflow: "auto", maxHeight: optionMaxHeight }, children: [filteredOptions.map(({ label, value }) => (_jsxs("li", { className: currentValue === value ? "active" : "", onClick: () => {
                                     if (selectedValue !== value)
                                         setSelectedValue(value);
                                     else

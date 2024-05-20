@@ -9,9 +9,6 @@ import { MAX_LENGTH, TYPES, applyMask, clear, getMask } from "./utils";
 
 function CpfCnpjInput(props: CpfCnpjInputProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const [inputValue, setInputValue] = useState(
-    clear(props?.defaultValue || "")
-  );
 
   const baseRef = useRef<HTMLInputElement>(null);
 
@@ -38,9 +35,11 @@ function CpfCnpjInput(props: CpfCnpjInputProps) {
     Spinner,
     onChange,
     value,
-    defaultValue = "",
+    defaultValue,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
+
+  const [inputValue, setInputValue] = useState(defaultValue);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;
