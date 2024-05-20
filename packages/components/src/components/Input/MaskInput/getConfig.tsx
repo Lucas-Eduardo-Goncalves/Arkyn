@@ -21,7 +21,7 @@ function getConfig(props: MaskedInputProps, isFocused: boolean) {
     title,
     style,
     onChange,
-    showMask = true,
+    showMask = false,
     type,
     ...rest
   } = props;
