@@ -11,8 +11,6 @@ export function formParse<T extends FormParseProps>([
       zodResponse.error.formErrors.fieldErrors
     );
 
-    console.log(errorsArray);
-
     const errorsObject = Object.fromEntries(
       errorsArray.map((item) => [item[0], item[1]?.[0] || "Error"])
     );
