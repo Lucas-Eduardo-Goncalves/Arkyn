@@ -15,6 +15,6 @@ function Checkbox(props) {
         setIsChecked(!defaultChecked);
         onCheck && onCheck(!defaultChecked ? value || "checked" : "");
     }
-    return (_jsxs("div", { className: className, onClick: handleCheck, ...rest, children: [_jsx("input", { type: "hidden", name: name, id: id, ref: inputRef, value: currentChecked ? value || "checked" : "" }), _jsx(Check, {})] }));
+    return (_jsxs("div", { id: id, className: className, onClick: handleCheck, ...rest, children: [_jsx("input", { type: "hidden", name: name, ref: inputRef, value: currentChecked ? value || "checked" : "" }), _jsx(Check, {})] }));
 }
 export { Checkbox };

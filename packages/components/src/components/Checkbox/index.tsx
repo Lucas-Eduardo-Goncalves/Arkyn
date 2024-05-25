@@ -36,11 +36,10 @@ function Checkbox(props: CheckboxProps) {
   }
 
   return (
-    <div className={className} onClick={handleCheck} {...rest}>
+    <div id={id} className={className} onClick={handleCheck} {...rest}>
       <input
         type="hidden"
         name={name}
-        id={id}
         ref={inputRef}
         value={currentChecked ? value || "checked" : ""}
       />

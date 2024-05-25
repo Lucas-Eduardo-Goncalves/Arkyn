@@ -751,13 +751,12 @@ function _n(r) {
     const $ = E;
     j(!$), a && a($ ? "" : d || "checked");
   }
-  return /* @__PURE__ */ o.jsxs("div", { className: g, onClick: v, ...h, children: [
+  return /* @__PURE__ */ o.jsxs("div", { id: p, className: g, onClick: v, ...h, children: [
     /* @__PURE__ */ o.jsx(
       "input",
       {
         type: "hidden",
         name: n,
-        id: p,
         ref: x,
         value: R ? d || "checked" : ""
       }
