@@ -7,8 +7,7 @@
     "@arkyn/components": "workspace:*",
     "@arkyn/types": "workspace:*",
     "@arkyn/server": "workspace:*",
-    "@arkyn/shared": "workspace:*",
-    "@flydotio/dockerfile": "latest"
+    "@arkyn/shared": "workspace:*"
   },
   "scripts": {
     "all:update-packages": "cd ./packages/api && ncu -u && cd ../components && ncu -u && cd ../documentation && ncu -u && cd ../server && ncu -u && cd ../shared && ncu -u && cd ../types && ncu -u",
