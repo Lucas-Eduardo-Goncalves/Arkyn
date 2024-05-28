@@ -1,11 +1,4 @@
-import {
-  Breadcrumb,
-  BreadcrumbLink,
-  Checkbox,
-  FormController,
-  FormLabel,
-} from "@arkyn/components";
-
+import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
 import { Container, Paragraph, Title } from "~/components";
 
 function View() {
@@ -17,11 +10,6 @@ function View() {
       </Breadcrumb>
 
       <Title as="h1">Arkyn</Title>
-
-      <FormController>
-        <FormLabel>TESTE</FormLabel>
-        <Checkbox name="as" />
-      </FormController>
 
       <Paragraph>
         Arkyn é uma biblioteca de componentes para React + Remix focada em
