@@ -22,6 +22,8 @@ export * from "./components/ModalProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
 export * from "./components/TooltipProps";
+// Hooks
+export * from "./hooks/Modal";
 // Server
 export * from "./server/formParseProps";
 // Shared

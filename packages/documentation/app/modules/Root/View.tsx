@@ -1,3 +1,4 @@
+import { ModalProvider } from "@arkyn/components";
 import {
   Links,
   Meta,
@@ -29,7 +30,7 @@ function Document({ children }: DocumentProps) {
         />
       </head>
       <body>
-        {children}
+        <ModalProvider>{children}</ModalProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

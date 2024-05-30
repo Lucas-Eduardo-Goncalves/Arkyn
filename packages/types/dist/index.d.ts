@@ -20,6 +20,7 @@ export * from "./components/ModalProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
 export * from "./components/TooltipProps";
+export * from "./hooks/Modal";
 export * from "./server/formParseProps";
 export * from "./shared/CalculateCardInstallmentProps";
 //# sourceMappingURL=index.d.ts.map

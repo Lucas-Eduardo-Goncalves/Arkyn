@@ -19,4 +19,8 @@ export { Modal } from "./components/Modal";
 export { Tooltip } from "./components/Tooltip";
 
 // Hooks
+export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
+
+// Providers
+export { ModalProvider } from "./provider/ModalProvider";
