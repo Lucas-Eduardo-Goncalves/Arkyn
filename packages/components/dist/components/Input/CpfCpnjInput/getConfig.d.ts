@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { CpfCnpjInputProps } from "@arkyn/types";
 declare function getConfig(props: CpfCnpjInputProps, isFocused: boolean): {
     suppressHydrationWarning?: boolean;

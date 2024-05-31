@@ -13,7 +13,8 @@
   "dependencies": {
     "@react-input/mask": ">=1.2.4",
     "framer-motion": ">=11.2.4",
-    "lucide-react": ">=0.378.0"
+    "lucide-react": ">=0.378.0",
+    "sonner": ">=1.4.41"
   },
   "peerDependencies": {
     "@remix-run/react": ">=2.0.1",

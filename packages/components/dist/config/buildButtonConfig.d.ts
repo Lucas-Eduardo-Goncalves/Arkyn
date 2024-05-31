@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { ButtonProps } from "@arkyn/types";
 type BuildButtonConfigProps = ButtonProps;
 declare function buildButtonConfig(args: BuildButtonConfigProps): {

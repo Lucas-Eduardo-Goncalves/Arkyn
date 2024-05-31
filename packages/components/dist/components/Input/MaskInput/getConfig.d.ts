@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { MaskedInputProps } from "@arkyn/types";
 declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     name: string;

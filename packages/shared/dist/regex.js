@@ -5,4 +5,5 @@ const PASSWORD = /(?=^.{8,}$)((?=.*\w)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[|!"
 const PHONE = /([0-9]{2})?(\s|-)?(9?[0-9]{4})-?([0-9]{4}$)/;
 const RG = /(^\d{1,2}).?(\d{3}).?(\d{3})-?(\d{1}|X|x$)/;
 const URL = /^(((https?|ftp):\/\/)?([\w\-\.])+(\.)([\w]){2,4}([\w\/+=%&_\.~?\-]*))*$/;
-export const regex = { URL, RG, PHONE, PASSWORD, CPF, CNPJ, CEP };
+const CPFCNPJ = /^(?:(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})|(\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})|(\d{14}))$/;
+export const regex = { URL, RG, PHONE, PASSWORD, CPF, CNPJ, CEP, CPFCNPJ };

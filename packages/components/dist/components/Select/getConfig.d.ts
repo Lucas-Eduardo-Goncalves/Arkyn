@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { SelectProps } from "@arkyn/types";
 declare function getConfig(props: SelectProps, isFocused: boolean): {
     name: string;

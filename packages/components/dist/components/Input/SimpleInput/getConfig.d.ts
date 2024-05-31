@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { SimpleInputProps } from "@arkyn/types";
 declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     type: "number" | "color" | "search" | "hidden" | "button" | "text" | "tel" | "url" | "email" | "date" | "time" | "submit" | "reset" | "datetime-local" | "file" | "image" | "month" | "password" | "range" | "week";

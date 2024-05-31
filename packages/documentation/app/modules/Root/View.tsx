@@ -1,4 +1,4 @@
-import { ModalProvider } from "@arkyn/components";
+import { ModalProvider, ToastProvider } from "@arkyn/components";
 import {
   Links,
   Meta,
@@ -30,7 +30,9 @@ function Document({ children }: DocumentProps) {
         />
       </head>
       <body>
-        <ModalProvider enableModalAutomation>{children}</ModalProvider>
+        <ToastProvider>
+          <ModalProvider enableModalAutomation>{children}</ModalProvider>
+        </ToastProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

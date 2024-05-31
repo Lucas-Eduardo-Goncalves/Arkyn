@@ -6,5 +6,6 @@ export declare const regex: {
     CPF: RegExp;
     CNPJ: RegExp;
     CEP: RegExp;
+    CPFCNPJ: RegExp;
 };
 //# sourceMappingURL=regex.d.ts.map

@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { CurrencyInputProps } from "@arkyn/types";
 declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     suppressHydrationWarning?: boolean;

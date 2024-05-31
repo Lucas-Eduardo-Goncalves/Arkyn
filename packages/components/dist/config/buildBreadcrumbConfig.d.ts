@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { BreadcrumbProps } from "@arkyn/types";
 type BuildBreadcrumbConfigProps = BreadcrumbProps;
 declare function buildBreadcrumbConfig(args: BuildBreadcrumbConfigProps): {

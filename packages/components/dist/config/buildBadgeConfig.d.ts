@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 import type { BadgeProps } from "@arkyn/types";
 type BuildBadgeConfigProps = BadgeProps;
 declare function buildBadgeConfig(args: BuildBadgeConfigProps): {
