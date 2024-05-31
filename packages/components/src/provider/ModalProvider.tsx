@@ -16,7 +16,13 @@ function ModalProvider(args: ModalProviderProps) {
   }
 
   function openModal(key: string, data?: any) {
-    setOpenedModals([...openedModals, { key, data }]);
+    const alreadyExist = modalIsOpen(key);
+    if (alreadyExist) {
+      setOpenedModals((old) => {
+        const filtered = old.filter((modal) => modal.key !== key);
+        return [...filtered, { key, data }];
+      });
+    } else setOpenedModals([...openedModals, { key, data }]);
   }
 
   function closeModal(key: string) {
