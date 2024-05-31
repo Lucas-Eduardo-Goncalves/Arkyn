@@ -1,5 +1,5 @@
 import { ModalProviderProps, OpenedModals } from "@arkyn/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { ModalContext } from "../context/ModalContext";
 
