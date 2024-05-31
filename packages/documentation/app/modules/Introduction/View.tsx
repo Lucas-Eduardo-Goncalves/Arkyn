@@ -1,14 +1,7 @@
-import {
-  Breadcrumb,
-  BreadcrumbLink,
-  Button,
-  useToast,
-} from "@arkyn/components";
+import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
 import { Container, Paragraph, Title } from "~/components";
 
 function View() {
-  const { successToast } = useToast();
-
   return (
     <Container>
       <Breadcrumb>
@@ -17,10 +10,6 @@ function View() {
       </Breadcrumb>
 
       <Title as="h1">Arkyn</Title>
-
-      <Button onClick={() => successToast("Seja bem vindo Lucas Gonçalves!")}>
-        Open
-      </Button>
 
       <Paragraph>
         Arkyn é uma biblioteca de componentes para React + Remix focada em

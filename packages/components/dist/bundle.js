@@ -1560,13 +1560,16 @@ function da(n) {
   const t = gt(Wt);
   if (Object.entries(t).length === 0)
     throw new Error("useModal must be used within a Provider");
-  const {
-    modalData: a,
-    modalIsOpen: s,
-    openModal: l,
-    closeModal: c
-  } = t, h = s(n), u = a(n);
-  return { modalIsOpen: h, modalData: u, openModal: (y) => l(n, y == null ? void 0 : y.data), closeModal: () => c(n) };
+  if (n) {
+    const {
+      modalData: a,
+      modalIsOpen: s,
+      openModal: l,
+      closeModal: c
+    } = t, h = s(n), u = a(n);
+    return { modalIsOpen: h, modalData: u, openModal: (y) => l(n, y == null ? void 0 : y.data), closeModal: () => c(n) };
+  } else
+    return t;
 }
 function fa(n = "") {
   const t = ln(), a = new URLSearchParams(t.search), s = n ? `${n}:` : "", l = (c) => {
