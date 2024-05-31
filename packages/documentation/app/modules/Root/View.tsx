@@ -30,7 +30,7 @@ function Document({ children }: DocumentProps) {
         />
       </head>
       <body>
-        <ModalProvider>{children}</ModalProvider>
+        <ModalProvider enableModalAutomation>{children}</ModalProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

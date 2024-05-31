@@ -1,7 +1,8 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useState } from "react";
 import { ModalContext } from "../context/ModalContext";
-function ModalProvider({ children }) {
+function ModalProvider(args) {
+    const { children = false } = args;
     const [openedModals, setOpenedModals] = useState([]);
     function modalIsOpen(key) {
         return !!openedModals.some((modal) => modal.key === key);

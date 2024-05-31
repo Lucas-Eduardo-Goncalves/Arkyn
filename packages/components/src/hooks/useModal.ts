@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ModalContext } from "../context/ModalContext";
 
+type OpenModalProps = (e?: { data: any }) => void;
+
 function useModal(key: string) {
   const contextData = useContext(ModalContext);
 
@@ -18,7 +20,7 @@ function useModal(key: string) {
   const modalIsOpen = contextModalIsOpen(key);
   const modalData = contextModalData(key);
 
-  const openModal = (data?: any) => contextOpenModal(key, data);
+  const openModal: OpenModalProps = (data) => contextOpenModal(key, data?.data);
   const closeModal = () => contextCloseModal(key);
 
   return { modalIsOpen, modalData, openModal, closeModal };

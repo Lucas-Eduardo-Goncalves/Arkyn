@@ -3,7 +3,8 @@ import { useState } from "react";
 
 import { ModalContext } from "../context/ModalContext";
 
-function ModalProvider({ children }: ModalProviderProps) {
+function ModalProvider(args: ModalProviderProps) {
+  const { children = false } = args;
   const [openedModals, setOpenedModals] = useState<OpenedModals>([]);
 
   function modalIsOpen(key: string) {

@@ -1,7 +1,17 @@
-import { Breadcrumb, BreadcrumbLink } from "@arkyn/components";
+import {
+  Breadcrumb,
+  BreadcrumbLink,
+  Button,
+  Modal,
+  useModal,
+} from "@arkyn/components";
+import { useFetcher } from "@remix-run/react";
 import { Container, Paragraph, Title } from "~/components";
 
 function View() {
+  const { Form } = useFetcher();
+  const { modalIsOpen, openModal, closeModal } = useModal("introduction-modal");
+
   return (
     <Container>
       <Breadcrumb>
@@ -10,6 +20,8 @@ function View() {
       </Breadcrumb>
 
       <Title as="h1">Arkyn</Title>
+
+      <Button onClick={() => openModal()}>Open</Button>
 
       <Paragraph>
         Arkyn é uma biblioteca de componentes para React + Remix focada em
@@ -37,6 +49,13 @@ function View() {
         otima integração com o Remix que carrega apenas o que é importado em sua
         rota, então, {'"xô"'} código não utilizado!
       </Paragraph>
+
+      <Modal.Container isVisibled={modalIsOpen} makeInvisible={closeModal}>
+        <Form style={{ padding: 24 }} method="POST">
+          <input type="text" name="search" placeholder="Pesquisar" />
+          <button>opa</button>
+        </Form>
+      </Modal.Container>
     </Container>
   );
 }

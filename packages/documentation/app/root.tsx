@@ -1,5 +1,5 @@
-import { RootClient } from "./modules/Root/client";
 import "@arkyn/components/dist/style.css";
+import { RootClient } from "./modules/Root/client";
 
 export const meta = RootClient.meta;
 export const Layout = RootClient.Document;

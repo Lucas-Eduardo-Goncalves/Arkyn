@@ -11,6 +11,7 @@ type OpenedModals = {
 }[];
 type ModalProviderProps = {
     children: ReactNode;
+    enableModalAutomation?: boolean;
 };
 export type { ModalContextProps, OpenedModals, ModalProviderProps };
 //# sourceMappingURL=Modal.d.ts.map

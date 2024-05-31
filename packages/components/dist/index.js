@@ -15,6 +15,7 @@ export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";
 export { Modal } from "./components/Modal";
 export { Tooltip } from "./components/Tooltip";
 // Hooks
+export { useAutomation } from "./hooks/useAutomation";
 export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 // Providers

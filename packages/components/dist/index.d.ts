@@ -10,6 +10,7 @@ export { Select } from "./components/Select";
 export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";
 export { Modal } from "./components/Modal";
 export { Tooltip } from "./components/Tooltip";
+export { useAutomation } from "./hooks/useAutomation";
 export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 export { ModalProvider } from "./provider/ModalProvider";
