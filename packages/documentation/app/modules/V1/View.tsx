@@ -48,6 +48,7 @@ function View() {
             label="generateColorByString"
           />
           <NavigationLink to="/v1/shared/generate-slug" label="generateSlug" />
+          <NavigationLink to="/v1/shared/regex" label="regex" />
         </NavigationMenu>
         <Outlet />
       </LayoutContent>
