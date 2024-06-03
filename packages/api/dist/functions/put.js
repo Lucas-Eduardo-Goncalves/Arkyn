@@ -35,7 +35,7 @@ const put = async (url, data, config) => {
             .then((data) => {
             responseConfig = response;
             responseData = {
-                success: true,
+                success: response.ok,
                 status: response.status,
                 response: data,
                 message: response.statusText,

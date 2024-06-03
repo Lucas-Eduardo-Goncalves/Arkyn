@@ -1,7 +1,6 @@
 type ResponseDTO = {
   success: boolean;
   status: number;
-
   response: any;
   message: string;
 };
