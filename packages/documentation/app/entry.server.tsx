@@ -1,19 +1,29 @@
-import { PassThrough } from "node:stream";
-
-import type { AppLoadContext, EntryContext } from "@remix-run/node";
+import { monitoringErrors } from "@arkyn/api";
+import type { EntryContext, HandleErrorFunction } from "@remix-run/node";
 import { createReadableStreamFromReadable } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
+import { PassThrough } from "node:stream";
 import { renderToPipeableStream } from "react-dom/server";
+import { env } from "./services";
 
 const ABORT_DELAY = 5_000;
+
+export const handleError: HandleErrorFunction = (error, { request }) => {
+  monitoringErrors(error, {
+    request,
+    inbox_flow: {
+      channel_id: env.CHANNEL_ID,
+      user_token: env.USER_TOKEN,
+    },
+  });
+};
 
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
-  loadContext: AppLoadContext
+  remixContext: EntryContext
 ) {
   return isbot(request.headers.get("user-agent") || "")
     ? handleBotRequest(
@@ -64,7 +74,7 @@ function handleBotRequest(
         onShellError(error: unknown) {
           reject(error);
         },
-        onError(error: any) {
+        onError(error) {
           responseStatusCode = 500;
           if (shellRendered) console.error(error);
         },
@@ -109,7 +119,7 @@ function handleBrowserRequest(
         onShellError(error: unknown) {
           reject(error);
         },
-        onError(error: any) {
+        onError(error) {
           responseStatusCode = 500;
           if (shellRendered) console.error(error);
         },

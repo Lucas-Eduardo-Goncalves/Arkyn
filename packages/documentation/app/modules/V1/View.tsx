@@ -10,6 +10,8 @@ import {
 } from "./components";
 
 function View() {
+  throw new Error("Not implemented");
+
   return (
     <>
       <LayoutHeader />
