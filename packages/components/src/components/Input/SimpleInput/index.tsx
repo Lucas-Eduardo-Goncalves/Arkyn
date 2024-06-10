@@ -58,8 +58,8 @@ function SimpleInput(props: SimpleInputProps) {
     if (onBlur) onBlur(e);
   }
 
-  if(type === "hidden") {
-    return <input type="hidden" {...rest} />
+  if (type === "hidden") {
+    return <input type="hidden" ref={ref} {...rest} />;
   }
 
   return (

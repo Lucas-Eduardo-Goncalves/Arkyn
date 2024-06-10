@@ -30,9 +30,11 @@ function Document({ children }: DocumentProps) {
         />
       </head>
       <body>
-        <ToastProvider>
-          <ModalProvider enableModalAutomation>{children}</ModalProvider>
-        </ToastProvider>
+        <ModalProvider>
+          <ToastProvider>
+            <ModalProvider enableModalAutomation>{children}</ModalProvider>
+          </ToastProvider>
+        </ModalProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

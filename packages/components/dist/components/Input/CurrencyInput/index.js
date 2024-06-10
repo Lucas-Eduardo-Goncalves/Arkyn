@@ -5,12 +5,12 @@ import { getConfig } from "./getConfig";
 import { currencyInputKeyDown, valueDisplay } from "./utils";
 function CurrencyInput(props) {
     const [isFocused, setIsFocused] = useState(false);
-    const [currencyValue, setCurrencyValue] = useState(props.defaultValue * 100 || 0);
     const baseRef = useRef(null);
     const { inputRef, id, error } = useFormController();
     const ref = inputRef || baseRef;
     const isError = props.isError || !!error;
-    const { disabled, title, style, className, prefix, sufix, iconSize, loadingPosition, isLoading, LeftIcon, readOnly, onFocus, onBlur, RightIcon, Spinner, value, max, onKeyDown, onChange, showCents, ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const { disabled, title, style, className, prefix, sufix, iconSize, loadingPosition, isLoading, LeftIcon, readOnly, onFocus, onBlur, RightIcon, Spinner, value, max, onKeyDown, onChange, showCents, defaultValue, ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const [currencyValue, setCurrencyValue] = useState(defaultValue * 100 || 0);
     const showLeftIcon = LeftIcon && !isLoading;
     const showRightIcon = RightIcon && !isLoading;
     const showLeftSpinner = loadingPosition === "left" && isLoading;

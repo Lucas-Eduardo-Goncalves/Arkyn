@@ -109,14 +109,19 @@ function Select(props: SelectProps) {
           readOnly={!isSearchable}
           value={searchValue || ""}
           placeholder={currentLabel || placeholder}
-          ref={ref}
           onFocus={handleFocus}
           onBlur={() => setSearchValue("")}
           {...rest}
           onChange={(e) => setSearchValue(e.target.value)}
         />
 
-        <input type="hidden" name={name} value={currentValue || ""} readOnly />
+        <input
+          type="hidden"
+          ref={ref}
+          name={name}
+          value={currentValue || ""}
+          readOnly
+        />
 
         {isFocused && (
           <ul
