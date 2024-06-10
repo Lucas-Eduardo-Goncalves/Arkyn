@@ -8,7 +8,7 @@ function SimpleInput(props) {
     const { inputRef, id, error } = useFormController();
     const ref = inputRef || baseRef;
     const isError = props.isError || !!error;
-    const { disabled, title, style, className, prefix, sufix, iconSize, loadingPosition, isLoading, LeftIcon, readOnly, onFocus, onBlur, RightIcon, Spinner, ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const { disabled, title, style, className, prefix, sufix, iconSize, loadingPosition, isLoading, LeftIcon, readOnly, onFocus, onBlur, RightIcon, type, Spinner, ...rest } = getConfig({ ...props, id, isError }, isFocused);
     const showLeftIcon = LeftIcon && !isLoading;
     const showRightIcon = RightIcon && !isLoading;
     const showLeftSpinner = loadingPosition === "left" && isLoading;
@@ -29,6 +29,9 @@ function SimpleInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onBlur: handleBlur, ...rest }), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
+    if (type === "hidden") {
+        return _jsx("input", { type: "hidden", ...rest });
+    }
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onBlur: handleBlur, type: type, ...rest }), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
 }
 export { SimpleInput };

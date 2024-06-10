@@ -5,7 +5,7 @@ import { getConfig } from "./getConfig";
 import { currencyInputKeyDown, valueDisplay } from "./utils";
 function CurrencyInput(props) {
     const [isFocused, setIsFocused] = useState(false);
-    const [currencyValue, setCurrencyValue] = useState(props.defaultValue || 0);
+    const [currencyValue, setCurrencyValue] = useState(props.defaultValue * 100 || 0);
     const baseRef = useRef(null);
     const { inputRef, id, error } = useFormController();
     const ref = inputRef || baseRef;
@@ -23,7 +23,7 @@ function CurrencyInput(props) {
     }
     function handleKeyDown(event) {
         currencyInputKeyDown({ currencyValue, event, max, setCurrencyValue });
-        onChange && onChange(currencyValue);
+        onChange && onChange(currencyValue / 100);
         onKeyDown && onKeyDown(event);
     }
     function handleFocus(e) {
