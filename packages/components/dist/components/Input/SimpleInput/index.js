@@ -30,7 +30,7 @@ function SimpleInput(props) {
             onBlur(e);
     }
     if (type === "hidden") {
-        return _jsx("input", { type: "hidden", ...rest });
+        return _jsx("input", { type: "hidden", ref: ref, ...rest });
     }
     return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: readOnly, ref: ref, onFocus: handleFocus, onBlur: handleBlur, type: type, ...rest }), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
 }
