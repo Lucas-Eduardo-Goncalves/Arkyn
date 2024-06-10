@@ -9,9 +9,6 @@ import { currencyInputKeyDown, valueDisplay } from "./utils";
 
 function CurrencyInput(props: CurrencyInputProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const [currencyValue, setCurrencyValue] = useState(
-    props.defaultValue * 100 || 0
-  );
 
   const baseRef = useRef<HTMLInputElement>(null);
 
@@ -41,8 +38,11 @@ function CurrencyInput(props: CurrencyInputProps) {
     onKeyDown,
     onChange,
     showCents,
+    defaultValue,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
+
+  const [currencyValue, setCurrencyValue] = useState(defaultValue * 100 || 0);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;
