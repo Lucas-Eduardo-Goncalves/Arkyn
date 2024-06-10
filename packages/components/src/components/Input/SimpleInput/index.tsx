@@ -31,6 +31,7 @@ function SimpleInput(props: SimpleInputProps) {
     onFocus,
     onBlur,
     RightIcon,
+    type,
     Spinner,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
@@ -57,6 +58,10 @@ function SimpleInput(props: SimpleInputProps) {
     if (onBlur) onBlur(e);
   }
 
+  if(type === "hidden") {
+    return <input type="hidden" {...rest} />
+  }
+
   return (
     <section
       title={title}
@@ -74,6 +79,7 @@ function SimpleInput(props: SimpleInputProps) {
         ref={ref}
         onFocus={handleFocus}
         onBlur={handleBlur}
+        type={type}
         {...rest}
       />
 
