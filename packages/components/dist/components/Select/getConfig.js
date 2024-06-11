@@ -2,7 +2,7 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import { Loader2 } from "lucide-react";
 import { morpheme } from "./utils/morpheme";
 function getConfig(props, isFocused) {
-    const { isLoading, isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, leftIcon: LeftIcon, disabled, readOnly, onFocus, onBlur, title, style, isSearchable = false, ...rest } = props;
+    const { isLoading, isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, leftIcon: LeftIcon, disabled, readOnly, onFocus, onBlur, title, style, isSearchable = false, closeOnSelect = true, ...rest } = props;
     const hasPrefix = !!basePrefix ? "hasPrefix" : "";
     const errored = isError ? "errored" : "";
     const opacity = disabled || readOnly || isLoading ? "opacity" : "";
@@ -20,6 +20,7 @@ function getConfig(props, isFocused) {
         onFocus,
         onBlur,
         title,
+        closeOnSelect,
         style,
         isSearchable,
         iconSize: iconSize,

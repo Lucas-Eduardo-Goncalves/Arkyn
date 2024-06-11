@@ -10,7 +10,7 @@ function Select(props) {
     const baseRef = useRef(null);
     const ref = inputRef || baseRef;
     const isError = props.isError || !!error;
-    const { disabled, title, style, className, prefix, iconSize, isLoading, LeftIcon, value: baseValue = null, defaultValue = "", readOnly, onFocus, onBlur, Spinner, name, isSearchable, placeholder, onSelect, options, optionMaxHeight, ...rest } = getConfig({ ...props, id, isError }, isFocused);
+    const { disabled, title, style, className, prefix, iconSize, isLoading, LeftIcon, value: baseValue = null, defaultValue = "", readOnly, onFocus, onBlur, Spinner, name, isSearchable, placeholder, onSelect, options, optionMaxHeight, closeOnSelect, ...rest } = getConfig({ ...props, id, isError }, isFocused);
     const [selectedValue, setSelectedValue] = useState(defaultValue);
     const [searchValue, setSearchValue] = useState("");
     function handleSectionClick() {
@@ -66,6 +66,7 @@ function Select(props) {
                                     else
                                         setSelectedValue("");
                                     onSelect && onSelect({ label, value });
+                                    closeOnSelect && setTimeout(() => handleBlur(), 100);
                                 }, children: [label, " ", _jsx(Check, {})] }, value))), filteredOptions.length <= 0 && _jsx("p", { children: "Sem op\u00E7\u00F5es dispon\u00EDveis" })] })), !isLoading && (_jsx(ChevronDown, { className: "arkyn_select_arrow", size: iconSize, strokeWidth: 2.5 })), isLoading && Spinner] }), isFocused && (_jsx("aside", { className: "arkyn_select_overlay", onClick: handleBlur }))] }));
 }
 export { Select };

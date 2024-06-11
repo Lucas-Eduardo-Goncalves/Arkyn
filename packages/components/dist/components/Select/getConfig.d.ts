@@ -303,6 +303,7 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     onFocus: import("react").FocusEventHandler<HTMLInputElement>;
     onBlur: import("react").FocusEventHandler<HTMLInputElement>;
     title: string;
+    closeOnSelect: boolean;
     style: import("react").CSSProperties;
     isSearchable: boolean;
     iconSize: number;
