@@ -19,6 +19,7 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     title,
     style,
     isSearchable = false,
+    closeOnSelect = true,
     ...rest
   } = props;
 
@@ -41,6 +42,7 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     onFocus,
     onBlur,
     title,
+    closeOnSelect,
     style,
     isSearchable,
     iconSize: iconSize,

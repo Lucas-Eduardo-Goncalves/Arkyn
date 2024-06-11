@@ -5,6 +5,7 @@ type SelectProps = {
   isLoading?: boolean;
   isError?: boolean;
   isSearchable?: boolean;
+  closeOnSelect?: boolean;
 
   size?: "md" | "lg";
   variant?: "solid" | "outline" | "underline";

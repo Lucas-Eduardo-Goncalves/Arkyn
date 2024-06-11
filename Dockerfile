@@ -37,8 +37,6 @@ RUN apt-get update -qq && \
 # Copy built application
 COPY --from=build /app /app
 
-RUN bun run build
-
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD [ "bun", "run", "start" ]
+CMD [ "bun", "run", "prod:documentation" ]

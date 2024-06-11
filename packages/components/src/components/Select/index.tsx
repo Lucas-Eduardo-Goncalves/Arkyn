@@ -39,6 +39,7 @@ function Select(props: SelectProps) {
     onSelect,
     options,
     optionMaxHeight,
+    closeOnSelect,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
 
@@ -136,6 +137,7 @@ function Select(props: SelectProps) {
                   if (selectedValue !== value) setSelectedValue(value);
                   else setSelectedValue("");
                   onSelect && onSelect({ label, value });
+                  closeOnSelect && setTimeout(() => handleBlur(), 100);
                 }}
               >
                 {label} <Check />
