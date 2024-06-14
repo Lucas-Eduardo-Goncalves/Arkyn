@@ -1,5 +1,7 @@
 import type { GetDTO, ResponseDTO } from "@arkyn/types";
+
 import { sendInboxFlow } from "../sendInboxFlow";
+import { standardizeResponseMessage } from "../standardizeResponseMessage";
 
 const get: GetDTO = async (url, config) => {
   const { headers, inbox_flow, token } = config;
@@ -34,7 +36,7 @@ const get: GetDTO = async (url, config) => {
             success: true,
             status: response.status,
             response: data,
-            message: response.statusText,
+            message: standardizeResponseMessage(data, response),
           };
         })
         .catch((err) => {

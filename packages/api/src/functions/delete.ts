@@ -1,5 +1,7 @@
 import type { DeleteDTO, ResponseDTO } from "@arkyn/types";
+
 import { sendInboxFlow } from "../sendInboxFlow";
+import { standardizeResponseMessage } from "../standardizeResponseMessage";
 
 const deleteF: DeleteDTO = async (url, config) => {
   const { headers, inbox_flow, token } = config;
@@ -34,7 +36,7 @@ const deleteF: DeleteDTO = async (url, config) => {
             success: response.ok,
             status: response.status,
             response: data,
-            message: response.statusText,
+            message: standardizeResponseMessage(data, response),
           };
         })
         .catch((err) => {
