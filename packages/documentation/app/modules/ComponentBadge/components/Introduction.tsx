@@ -6,7 +6,7 @@ function Introduction() {
       <Title as="h1">Badge</Title>
 
       <Paragraph>
-        Small numeric value or status descriptor for recognition fast.
+        Small numeric value or status description for fast recognition.
       </Paragraph>
     </>
   );

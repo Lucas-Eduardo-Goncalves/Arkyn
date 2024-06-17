@@ -8,13 +8,13 @@ function Schemes() {
       <Title as="h3">Color scheme</Title>
 
       <Paragraph>
-        Use <code>scheme</code> support to change the color scheme of the
+        Use the <code>scheme</code> property to change the color scheme of the
         button. You can set the value to <code>danger</code>,{" "}
         <code>primary</code>, <code>success</code> and <code>warning</code>.
       </Paragraph>
 
       <Note type="info">
-        The colors are corresponding to the color palette imported into the
+        The colors are correspondent to the color palette imported from the
         library configuration.
       </Note>
 

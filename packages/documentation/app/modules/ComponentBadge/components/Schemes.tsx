@@ -7,14 +7,14 @@ function Schemes() {
       <Title as="h3">Color scheme</Title>
 
       <Paragraph>
-        Use <code>scheme</code> support to change the color scheme of the
+        Use the <code>scheme</code> property to change the color scheme of the
         emblem. You can set the value to <code>danger</code>, <code>info</code>,{" "}
         <code>primary</code>, <code>secondary</code>, <code>success</code> or{" "}
         <code>warning</code>.
       </Paragraph>
 
       <Note type="info">
-        The colors are corresponding to the color palette imported into the
+        The colors are correspondent to the color palette imported from the
         library configuration.
       </Note>
 

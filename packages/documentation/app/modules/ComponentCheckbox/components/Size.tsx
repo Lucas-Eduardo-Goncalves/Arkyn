@@ -7,7 +7,7 @@ function Size() {
       <Title as="h3">Sizes</Title>
 
       <Paragraph>
-        Use <code>size</code> support to change the Checkbox size. You you can
+        Use the <code>size</code> property to change the Checkbox size. You can
         set the value as <code>lg</code>, <code>md</code> or <code>sm</code>.
       </Paragraph>
 

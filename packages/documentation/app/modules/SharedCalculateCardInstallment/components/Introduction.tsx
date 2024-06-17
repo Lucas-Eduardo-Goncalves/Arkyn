@@ -16,6 +16,10 @@ function Introduction() {
         financing, allowing users to visualize the impact of payment in
         installments on the final purchase price.
       </Paragraph>
+
+      <Paragraph>
+       É um novo paragráfo
+      </Paragraph>
     </>
   );
 }

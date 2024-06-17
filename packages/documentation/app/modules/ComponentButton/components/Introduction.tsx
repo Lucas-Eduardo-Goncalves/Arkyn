@@ -6,7 +6,7 @@ function Introduction() {
       <Title as="h1">Button</Title>
 
       <Paragraph>
-        A button means an operation (or a series of operations). Click in a
+        A button means an operation (or a series of operations). Clicking on a
         button will trigger the corresponding business logic.
       </Paragraph>
     </>
