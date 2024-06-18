@@ -9,7 +9,7 @@ function Input(props) {
         return _jsx(CurrencyInput, { ...props });
     if (props.type === "masked")
         return _jsx(MaskedInput, { ...props });
-    if (props.type === "cpf-cpnj")
+    if (props.type === "cpf-cnpj")
         return _jsx(CpfCnpjInput, { ...props });
     return _jsx(SimpleInput, { ...props });
 }

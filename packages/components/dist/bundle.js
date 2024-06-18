@@ -1289,7 +1289,7 @@ function Gn(n) {
   );
 }
 function aa(n) {
-  return n.type === "currency" ? /* @__PURE__ */ m.jsx(Un, { ...n }) : n.type === "masked" ? /* @__PURE__ */ m.jsx(Yn, { ...n }) : n.type === "cpf-cpnj" ? /* @__PURE__ */ m.jsx(Dn, { ...n }) : /* @__PURE__ */ m.jsx(Gn, { ...n });
+  return n.type === "currency" ? /* @__PURE__ */ m.jsx(Un, { ...n }) : n.type === "masked" ? /* @__PURE__ */ m.jsx(Yn, { ...n }) : n.type === "cpf-cnpj" ? /* @__PURE__ */ m.jsx(Dn, { ...n }) : /* @__PURE__ */ m.jsx(Gn, { ...n });
 }
 function Kn(n, t, a) {
   if (!n)

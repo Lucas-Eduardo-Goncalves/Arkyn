@@ -9,7 +9,7 @@ declare function getConfig(props: CpfCnpjInputProps, isFocused: boolean): {
     max?: string | number;
     min?: string | number;
     name: string;
-    type: "cpf-cpnj";
+    type: "cpf-cnpj";
     width?: string | number;
     role?: import("react").AriaRole;
     tabIndex?: number;

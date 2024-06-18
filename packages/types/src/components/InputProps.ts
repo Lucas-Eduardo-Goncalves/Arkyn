@@ -63,7 +63,7 @@ type MaskedInputProps = BaseInputProps<"masked"> & {
 };
 
 type CpfCnpjInputProps = Omit<
-  BaseInputProps<"cpf-cpnj">,
+  BaseInputProps<"cpf-cnpj">,
   "value" | "defaultValue"
 > & {
   defaultValue?: string;
