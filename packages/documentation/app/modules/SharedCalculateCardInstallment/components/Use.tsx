@@ -6,14 +6,14 @@ function Use() {
       <Title as="h3">How to use</Title>
 
       <Paragraph>
-        This function accepts a single argument of the type
+        This function accepts a single value of the type
         <code>CalculateCardInstallmentProps</code>. The object contains the
         following properties: <br />
       </Paragraph>
 
       <Paragraph>
-        <strong>cash_price:</strong> The cash price of the transaction in units
-        monetary. <br />
+        <strong>cash_price:</strong> The cash price of the transaction in monetary units.
+         <br />
         <strong>number_installments:</strong> The number of installations
         desired for the transaction. <br />
         <strong>fees:</strong> The interest rates applied to the transaction.

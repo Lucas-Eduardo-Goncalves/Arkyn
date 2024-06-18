@@ -8,13 +8,13 @@ function Introduction() {
       <Paragraph>
         This function was created to generate unique colors based on a string
         input. It converts each character in the string into a numeric value and
-        uses these values ​​to calculate values ​​for the red channels, green
-        and blue (RGB).
+        uses these values ​​to calculate values ​​for the red, green
+        and blue channels (RGB).
       </Paragraph>
 
       <Paragraph>
-        Based on these channel values, the function generates a color code
-        hexadecimal that represents the final color.
+        Based on these channel values, the function generates a hexadecimal color code
+        that represents the final color.
       </Paragraph>
 
       <Paragraph>

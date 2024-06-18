@@ -6,7 +6,7 @@ function Introduction() {
       <Title as="h1">currencyFormat</Title>
 
       <Paragraph>
-        This function was created to format currency values (int or float) clean
+        This function was created to format currency values (int or float) and make them clean
         and consistent.
       </Paragraph>
 

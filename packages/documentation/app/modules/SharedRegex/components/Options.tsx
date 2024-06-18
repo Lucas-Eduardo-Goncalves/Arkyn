@@ -21,9 +21,9 @@ function Options() {
         <strong>CPFCNPJ:</strong> CPF or CNPJ.
         <br />
         <strong>PASSWORD:</strong> There are at least 8 characters. Contains at
-        least one alphanumeric character. Contains fur least one capital letter.
+        least one alphanumeric character. Contains at least one capital letter.
         Contains at least one lowercase letter. Contains at least one digit.
-        Contains at least one of the following characters specials
+        Contains at least one of the following special characters 
       </Paragraph>
     </>
   );
