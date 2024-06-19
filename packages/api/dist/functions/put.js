@@ -1,4 +1,5 @@
 import { sendInboxFlow } from "../sendInboxFlow";
+import { standardizeResponseMessage } from "../standardizeResponseMessage";
 const put = async (url, data, config) => {
     const { headers, inbox_flow, token } = config;
     let responseConfig = {};
@@ -38,7 +39,7 @@ const put = async (url, data, config) => {
                 success: response.ok,
                 status: response.status,
                 response: data,
-                message: response.statusText,
+                message: standardizeResponseMessage(data, response),
             };
         })
             .catch((err) => {

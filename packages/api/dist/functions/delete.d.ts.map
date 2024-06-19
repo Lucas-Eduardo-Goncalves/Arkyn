@@ -1,1 +1,1 @@
-{"version":3,"file":"delete.d.ts","sourceRoot":"","sources":["../../src/functions/delete.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAe,MAAM,cAAc,CAAC;AAG3D,QAAA,MAAM,OAAO,EAAE,SAkEd,CAAC;AAEF,OAAO,EAAE,OAAO,EAAE,CAAC"}
+{"version":3,"file":"delete.d.ts","sourceRoot":"","sources":["../../src/functions/delete.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAe,MAAM,cAAc,CAAC;AAK3D,QAAA,MAAM,OAAO,EAAE,SAkEd,CAAC;AAEF,OAAO,EAAE,OAAO,EAAE,CAAC"}

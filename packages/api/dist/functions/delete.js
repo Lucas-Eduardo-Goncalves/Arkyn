@@ -1,4 +1,5 @@
 import { sendInboxFlow } from "../sendInboxFlow";
+import { standardizeResponseMessage } from "../standardizeResponseMessage";
 const deleteF = async (url, config) => {
     const { headers, inbox_flow, token } = config;
     let responseConfig = {};
@@ -28,7 +29,7 @@ const deleteF = async (url, config) => {
                 success: response.ok,
                 status: response.status,
                 response: data,
-                message: response.statusText,
+                message: standardizeResponseMessage(data, response),
             };
         })
             .catch((err) => {
