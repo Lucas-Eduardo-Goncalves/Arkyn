@@ -7,8 +7,7 @@
     "@arkyn/components": "workspace:*",
     "@arkyn/server": "workspace:*",
     "@arkyn/shared": "workspace:*",
-    "@arkyn/types": "workspace:*",
-    "@types/uuid": "^10.0.0"
+    "@arkyn/types": "workspace:*"
   },
   "scripts": {
     "all:update-packages": "cd ./packages/api && ncu -u && cd ../components && ncu -u && cd ../documentation && ncu -u && cd ../server && ncu -u && cd ../shared && ncu -u && cd ../types && ncu -u",
@@ -36,8 +35,5 @@
   },
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {
-    "uuid": "^10.0.0"
-  }
+  ]
 }

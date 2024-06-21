@@ -10,10 +10,12 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@remix-run/node": ">=2.9.2"
+    "@remix-run/node": ">=2.9.2",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "bun-types": "latest",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2",
+    "@types/uuid": "^10.0.0"
   }
 }
