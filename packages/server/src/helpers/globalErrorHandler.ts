@@ -6,6 +6,10 @@ import { forbidden, ForbiddenError } from "../httpBadResponses/forbidden";
 import { notFound, NotFoundError } from "../httpBadResponses/notFound";
 import { serverError } from "../httpBadResponses/serverError";
 import {
+  UnprocessableEntityError,
+  unprocessableEntity,
+} from "../httpBadResponses/unprocessableEntity";
+import {
   unauthorized,
   UnauthorizedError,
 } from "../httpBadResponses/unauthorized";
@@ -22,6 +26,8 @@ const globalErrorHandler = (error: any) => {
       return json(unauthorized(error));
     case error instanceof NotFoundError:
       return json(notFound(error));
+    case error instanceof UnprocessableEntityError:
+      return json(unprocessableEntity(error));
     default:
       return json(
         serverError({

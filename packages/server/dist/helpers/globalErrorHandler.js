@@ -4,6 +4,7 @@ import { conflict, ConflictError } from "../httpBadResponses/conflict";
 import { forbidden, ForbiddenError } from "../httpBadResponses/forbidden";
 import { notFound, NotFoundError } from "../httpBadResponses/notFound";
 import { serverError } from "../httpBadResponses/serverError";
+import { UnprocessableEntityError, unprocessableEntity, } from "../httpBadResponses/unprocessableEntity";
 import { unauthorized, UnauthorizedError, } from "../httpBadResponses/unauthorized";
 const globalErrorHandler = (error) => {
     switch (true) {
@@ -17,6 +18,8 @@ const globalErrorHandler = (error) => {
             return json(unauthorized(error));
         case error instanceof NotFoundError:
             return json(notFound(error));
+        case error instanceof UnprocessableEntityError:
+            return json(unprocessableEntity(error));
         default:
             return json(serverError({
                 message: error?.message || "Server error | Message not found",

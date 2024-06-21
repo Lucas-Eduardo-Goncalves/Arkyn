@@ -6,4 +6,14 @@ type HttpResponse = {
   message: string;
 };
 
-export type { HttpResponse };
+type HttpDataResponse = {
+  success: boolean;
+  status: number;
+  fieldErrors?: { [x: string]: string };
+  fields?: { [x: string]: string };
+  data?: any;
+  name: string;
+  message?: string;
+};
+
+export type { HttpResponse, HttpDataResponse };
