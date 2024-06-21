@@ -18,7 +18,11 @@ const globalErrorHandler = (error) => {
         case error instanceof NotFoundError:
             return json(notFound(error));
         default:
-            return json(serverError(error));
+            return json(serverError({
+                message: error?.message || "Server error | Message not found",
+                name: "Server Error",
+                cause: error,
+            }));
     }
 };
 export { globalErrorHandler };

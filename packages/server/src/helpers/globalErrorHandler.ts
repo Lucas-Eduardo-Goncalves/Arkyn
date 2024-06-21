@@ -10,7 +10,7 @@ import {
   UnauthorizedError,
 } from "../httpBadResponses/unauthorized";
 
-const globalErrorHandler = (error: Error) => {
+const globalErrorHandler = (error: any) => {
   switch (true) {
     case error instanceof BadRequestError:
       return json(badRequest(error));
@@ -23,7 +23,13 @@ const globalErrorHandler = (error: Error) => {
     case error instanceof NotFoundError:
       return json(notFound(error));
     default:
-      return json(serverError(error));
+      return json(
+        serverError({
+          message: error?.message || "Server error | Message not found",
+          name: "Server Error",
+          cause: error,
+        })
+      );
   }
 };
 

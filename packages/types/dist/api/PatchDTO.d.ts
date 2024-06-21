@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import type { InboxFlowDTO } from "./config/InboxFlowDTO";
 import type { ResponseDTO } from "./config/ResponseDTO";
 type ConfigProps = {

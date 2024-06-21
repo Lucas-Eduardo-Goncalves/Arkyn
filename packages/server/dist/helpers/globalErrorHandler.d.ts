@@ -1,3 +1,3 @@
-declare const globalErrorHandler: (error: Error) => import("@remix-run/node").TypedResponse<import("@arkyn/types").HttpResponse>;
+declare const globalErrorHandler: (error: any) => import("@remix-run/node").TypedResponse<import("@arkyn/types").HttpResponse>;
 export { globalErrorHandler };
 //# sourceMappingURL=globalErrorHandler.d.ts.map

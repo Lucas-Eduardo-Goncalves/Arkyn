@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import type { ModalContainerProps } from "@arkyn/types";
 import "./styles.css";
 type ModalContext = {
