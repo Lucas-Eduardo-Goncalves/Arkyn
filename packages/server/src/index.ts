@@ -5,6 +5,7 @@ export { ForbiddenError } from "./httpBadResponses/forbidden";
 export { NotFoundError } from "./httpBadResponses/notFound";
 export { ServerError } from "./httpBadResponses/serverError";
 export { UnauthorizedError } from "./httpBadResponses/unauthorized";
+export { UnprocessableEntityError } from "./httpBadResponses/unprocessableEntity";
 
 // helpers
 export { globalErrorHandler } from "./helpers/globalErrorHandler";
