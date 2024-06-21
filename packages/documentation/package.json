@@ -1,6 +1,6 @@
 {
   "name": "documentation",
-  "version": "1.3.12",
+  "version": "1.3.13",
   "private": true,
   "sideEffects": false,
   "type": "module",
