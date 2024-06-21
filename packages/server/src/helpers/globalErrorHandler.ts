@@ -1,0 +1,30 @@
+import { json } from "@remix-run/node";
+
+import { badRequest, BadRequestError } from "../httpBadResponses/badRequest";
+import { conflict, ConflictError } from "../httpBadResponses/conflict";
+import { forbidden, ForbiddenError } from "../httpBadResponses/forbidden";
+import { notFound, NotFoundError } from "../httpBadResponses/notFound";
+import { serverError } from "../httpBadResponses/serverError";
+import {
+  unauthorized,
+  UnauthorizedError,
+} from "../httpBadResponses/unauthorized";
+
+const globalErrorHandler = (error: Error) => {
+  switch (true) {
+    case error instanceof BadRequestError:
+      return json(badRequest(error));
+    case error instanceof ForbiddenError:
+      return json(forbidden(error));
+    case error instanceof ConflictError:
+      return json(conflict(error));
+    case error instanceof UnauthorizedError:
+      return json(unauthorized(error));
+    case error instanceof NotFoundError:
+      return json(notFound(error));
+    default:
+      return json(serverError(error));
+  }
+};
+
+export { globalErrorHandler };

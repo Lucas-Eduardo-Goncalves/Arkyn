@@ -1,0 +1,1 @@
+{"version":3,"file":"conflict.d.ts","sourceRoot":"","sources":["../../src/httpBadResponses/conflict.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,cAAc,CAAC;AAEjD,iBAAS,QAAQ,CAAC,KAAK,EAAE,KAAK,GAAG,YAAY,CAQ5C;AAED,cAAM,aAAc,SAAQ,KAAK;gBACnB,OAAO,EAAE,MAAM;CAI5B;AAED,OAAO,EAAE,QAAQ,EAAE,aAAa,EAAE,CAAC"}

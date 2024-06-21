@@ -27,5 +27,6 @@ export * from "./hooks/Modal";
 export * from "./hooks/Toast";
 // Server
 export * from "./server/formParseProps";
+export * from "./server/httpResponse";
 // Shared
 export * from "./shared/CalculateCardInstallmentProps";
