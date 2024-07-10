@@ -6,9 +6,9 @@ function Use() {
       <Title as="h3">How to use</Title>
 
       <Paragraph>
-        The function takes two arguments; The first being a return object to the
+        The function takes two values; The first being a return object to the
         client; The second being the HTTP response status. It&apos;s optional,
-        your default value is <code>400</code>.
+        its default value is <code>400</code>.
       </Paragraph>
 
       <Fence language="js" type="typescript">

@@ -7,7 +7,7 @@ function Size() {
       <Title as="h3">Sizes</Title>
 
       <Paragraph>
-        Use <code>size</code> support to change the button size. You you can set
+        Use the <code>size</code> property to change the button size. You can set
         the value as <code>lg</code>, <code>md</code>, <code>sm</code> or{" "}
         <code>xs</code>.
       </Paragraph>

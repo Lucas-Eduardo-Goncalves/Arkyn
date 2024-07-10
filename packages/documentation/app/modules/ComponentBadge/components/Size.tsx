@@ -7,7 +7,7 @@ function Size() {
       <Title as="h3">Sizes</Title>
 
       <Paragraph>
-        Use the <code>size</code> support to change the size of the badge. You
+        Use the <code>size</code> property to change the size of the badge.
         You can set the value to <code>md</code> or <code>lg</code>.
       </Paragraph>
 

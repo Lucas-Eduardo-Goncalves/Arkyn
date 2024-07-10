@@ -12,13 +12,13 @@ function Use() {
       </Paragraph>
 
       <Paragraph>
-        <strong>- Invoke the Function:</strong> Call the{" "}
-        <code>getScopedParams</code> function, passing the Request object and an
+        <strong>- Import the Function:</strong> Execute the{" "}
+        <code>getScopedParams</code> function, adding the Request object and an
         optional scope parameter.
       </Paragraph>
 
       <Note type="info">
-        Omitting the scope argument or using an empty value (scope:
+        Omitting the scope value or using an empty value (scope:
         &quot;&quot;) will result in all parameters being extracted from the
         URL.
       </Note>

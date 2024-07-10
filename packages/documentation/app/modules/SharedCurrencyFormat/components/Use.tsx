@@ -7,8 +7,8 @@ function Use() {
 
       <Paragraph>
         The function has a simple use, in which the value to be formatted must
-        be informed, the function will return an object with the formatting
-        using the suffix, and another without.
+        be informed. The function will return an object with the formatting
+        using the suffix, and another without it.
       </Paragraph>
 
       <Fence language="js" type="typescript">

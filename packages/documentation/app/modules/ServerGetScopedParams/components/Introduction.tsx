@@ -6,8 +6,8 @@ function Introduction() {
       <Title as="h1">getScopedParams</Title>
 
       <Paragraph>
-        function provides a streamlined approach to extracting parameters from a
-        request URL, enabling filtered access based on a defined scope. It
+        Function provides a streamlined approach to extract parameters from a
+        requested URL, enabling filtered access based on a defined scope. It
         simplifies the process of retrieving specific parameter subsets within
         larger URL query strings.
       </Paragraph>
@@ -20,7 +20,7 @@ function Introduction() {
 
       <Paragraph>
         <strong>- Flexible Scope Handling:</strong> Accepts an optional scope
-        argument, allowing for targeted parameter retrieval or returning all
+        value, allowing for targeted parameter retrieval or returning all
         parameters if omitted.
       </Paragraph>
 

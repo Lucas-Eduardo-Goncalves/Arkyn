@@ -7,7 +7,7 @@ function Variant() {
       <Title as="h3">Variants</Title>
 
       <Paragraph>
-        Use <code>variant</code> support to change the visual style of the
+        Use the <code>variant</code> property to change the visual style of the
         emblem. You can set the value to <code>solid</code>,{" "}
         <code>outline</code> or <code>ghost</code>.
       </Paragraph>

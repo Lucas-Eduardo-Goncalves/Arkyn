@@ -7,7 +7,7 @@ function ImportUtil() {
 
       <Paragraph>
         To use this function, the <code>@arkyn/types</code> package is
-        mandatory. , which will bring the types of this function, facilitating
+        mandatory, which will bring the types of this function, facilitating
         its use for the developer.
       </Paragraph>
 

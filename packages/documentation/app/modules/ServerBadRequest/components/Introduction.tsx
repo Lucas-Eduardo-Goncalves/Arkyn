@@ -6,8 +6,8 @@ function Introduction() {
       <Title as="h1">badRequest</Title>
 
       <Paragraph>
-        A simple function to simplify the process of sending email responses
-        error in your Remix application.
+        A simple function to simplify the process of sending error responses
+       in your Remix application.
       </Paragraph>
 
       <Paragraph>
@@ -18,9 +18,9 @@ function Introduction() {
       </Paragraph>
 
       <Paragraph>
-        It&apos;s purpose is to centralize error handling in your application,
-        simplifying the code, standardizing responses and offering an
-        environment more efficient development.
+        Its purpose is to centralize error handling in your application,
+        simplifying the code, standardizing responses and offering a
+         more efficient development environment.
       </Paragraph>
     </>
   );

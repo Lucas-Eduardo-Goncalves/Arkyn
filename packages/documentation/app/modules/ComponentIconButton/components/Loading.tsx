@@ -8,7 +8,7 @@ function Loading() {
       <Title as="h3">Loading</Title>
 
       <Paragraph>
-        Use <code>isLoading</code> support to show your load status. loading.
+        Use the <code>isLoading</code> property to show your loading status.
       </Paragraph>
 
       <ExampleContainer>

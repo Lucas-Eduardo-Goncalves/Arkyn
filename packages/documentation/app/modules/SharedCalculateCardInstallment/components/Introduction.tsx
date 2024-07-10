@@ -8,14 +8,17 @@ function Introduction() {
       <Paragraph>
         A function for a very specific niche is used to calculate the value of
         the installments and the total price of a purchase in installments on
-        the credit card credit using a compound interest formula.
+        credit cards, using a compound interest formula.
       </Paragraph>
 
       <Paragraph>
-        It is ideal for use in e-commerce applications or business simulators.
+        It is ideal for use in e-commerce applications or business simulators and
         financing, allowing users to visualize the impact of payment in
         installments on the final purchase price.
       </Paragraph>
+
+      
+    
     </>
   );
 }

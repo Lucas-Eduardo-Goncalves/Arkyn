@@ -6,7 +6,7 @@ function Use() {
       <Title as="h3">How to use</Title>
 
       <Paragraph>
-        If the function fails, it returns success <code>false</code>,
+        If the function fails, it returns success as <code>false</code>,
         fieldErrors <code>key: string</code> object with error field + error
         message, fields <code>key: any</code>, what was received received to be
         validated.

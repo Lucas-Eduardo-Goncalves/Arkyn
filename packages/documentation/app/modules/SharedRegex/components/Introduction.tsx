@@ -6,8 +6,8 @@ function Introduction() {
       <Title as="h1">regex</Title>
 
       <Paragraph>
-        Just a utility that will return an object that contains several regex
-        that can be useful to the programmer.
+        Just an utility that will return an object that contains a lot of regex
+        that can be useful to the developer.
       </Paragraph>
     </>
   );

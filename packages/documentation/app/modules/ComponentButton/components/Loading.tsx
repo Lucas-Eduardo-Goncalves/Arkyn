@@ -7,17 +7,17 @@ function Loading() {
       <Title as="h3">Loading</Title>
 
       <Paragraph>
-        Use <code>isLoading</code> support to show your load status. loading. By
+        Use the <code>isLoading</code> property to show your loading status. By
         default, the button will show a spinner and will leave the button width
         unchanged. <br />
-        You can also pass the <code>loadingText</code> property to add text
+        You can also add the <code>loadingText</code> property to add text
         while loading.
       </Paragraph>
 
       <Note type="warning">
         If <code>loadingText</code> is larger than the inserted text + icon on
         the button itself, the button width characteristic will not be ignored,
-        causing the bud to grow in size.
+        causing the button to grow in size.
       </Note>
 
       <ExampleContainer>

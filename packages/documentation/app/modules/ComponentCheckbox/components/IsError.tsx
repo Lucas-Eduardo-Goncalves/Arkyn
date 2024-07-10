@@ -7,7 +7,7 @@ function IsError() {
       <Title as="h3">isError</Title>
 
       <Paragraph>
-        Use <code>isError</code> support to change the Checkbox in error state.
+        Use the <code>isError</code> property to change the Checkbox in error state.
       </Paragraph>
 
       <ExampleContainer>

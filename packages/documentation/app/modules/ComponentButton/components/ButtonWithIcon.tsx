@@ -9,12 +9,12 @@ function ButtonWithIcon() {
 
       <Paragraph>
         You can add left and right icons to the button using the
-        <code>leftIcon</code> and <code>rightIcon</code> props respectively.
+        <code>leftIcon</code> and <code>rightIcon</code> props, respectively.
       </Paragraph>
 
       <Note type="warning">
-        Values ​​must be elements of type <code>LucideIcon</code>,{" "}
-        <strong>not</strong> strings and <strong>not</strong> jsx.
+        Values ​​must be elements of <code>LucideIcon</code> type,{" "}
+        <strong>not</strong> strings, <strong>or</strong> jsx.
       </Note>
 
       <ExampleContainer>

@@ -6,10 +6,10 @@ function Label() {
       <Title as="h2">Aria label</Title>
 
       <Paragraph>
-        The icon button, as it does not contain descriptive content, is{" "}
-        <strong>mandatory</strong> the use of a property <code>aria-label</code>
-        , this property will make the button have a description about its
-        functionality, making people with visual problems can use your website
+        Since icon buttons do not contain descriptive content, it is{" "}
+        <strong>mandatory</strong> to use the <code>aria-label</code> property 
+        , this property will give the button a description about its
+        functionality, allowing people with visual problems to use your website
         normally.
       </Paragraph>
     </>
