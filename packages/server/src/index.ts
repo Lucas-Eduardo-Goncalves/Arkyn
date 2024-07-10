@@ -8,7 +8,8 @@ export { UnauthorizedError } from "./httpBadResponses/unauthorized";
 export { UnprocessableEntityError } from "./httpBadResponses/unprocessableEntity";
 
 // helpers
-export { globalErrorHandler } from "./helpers/globalErrorHandler";
 export { formParse } from "./helpers/formParse";
 export { getScopedParams } from "./helpers/getScopedParams";
+export { globalErrorHandler } from "./helpers/globalErrorHandler";
 export { uuid } from "./helpers/uuid";
+export { validateCPF } from "./helpers/validateCPF";

@@ -31,7 +31,7 @@ class UnprocessableEntityError extends Error {
     this.data = data?.data || null;
     this.fieldErrors = data?.fieldErrors || null;
     this.fields = data?.fields || null;
-    this.name = "UnprocessableEntityError";
+    this.name = "UnprocessableEntity";
   }
 }
 
