@@ -32,5 +32,5 @@
 
 .arkyn_modal_header > button:hover {
   cursor: pointer;
-  background-color: var(--secondary-100);
+  background-color: var(--secondary-50);
 }

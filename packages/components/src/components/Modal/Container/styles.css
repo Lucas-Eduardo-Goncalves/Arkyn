@@ -31,5 +31,5 @@
 .arkyn_modal_container > .content {
   z-index: 9999;
   border-radius: 6px;
-  background: var(--secondary-50);
+  background: var(--white);
 }
