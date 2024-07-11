@@ -12,6 +12,8 @@
   padding: 10vh 0;
   padding-bottom: 2rem;
   overflow: auto;
+
+  z-index: 9999;
 }
 
 .arkyn_modal_container > .overlay {
