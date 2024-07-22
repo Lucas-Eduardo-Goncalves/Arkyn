@@ -4,7 +4,6 @@
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
-  "module": "./src/index.ts",
   "type": "module",
   "private": false,
   "scripts": {
