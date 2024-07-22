@@ -26,7 +26,7 @@ const get = async (url, config) => {
             .then((data) => {
             responseConfig = response;
             responseData = {
-                success: true,
+                success: response.ok,
                 status: response.status,
                 response: data,
                 message: standardizeResponseMessage(data, response),
