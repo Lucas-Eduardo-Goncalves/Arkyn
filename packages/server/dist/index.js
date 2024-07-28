@@ -10,5 +10,4 @@ export { UnprocessableEntityError } from "./httpBadResponses/unprocessableEntity
 export { formParse } from "./helpers/formParse";
 export { getScopedParams } from "./helpers/getScopedParams";
 export { globalErrorHandler } from "./helpers/globalErrorHandler";
-export { uuid } from "./helpers/uuid";
 export { validateCPF } from "./helpers/validateCPF";
