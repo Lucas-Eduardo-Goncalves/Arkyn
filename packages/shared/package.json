@@ -9,7 +9,11 @@
     "build": "bunx tsc --project tsconfig.json",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
+  "dependencies": {
+    "uuid": "^10.0.0"
+  },
   "devDependencies": {
+    "@types/uuid": "^10.0.0",
     "bun-types": "latest",
     "typescript": ">=5.5.2"
   }
