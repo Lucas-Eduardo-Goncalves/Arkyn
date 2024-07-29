@@ -1562,7 +1562,7 @@ function hn() {
     const l = t == null ? void 0 : t.closeModalKey;
     l && r(l);
   }, [t]), mt(() => {
-    typeof (t == null ? void 0 : t.message) == "string" && typeof (t == null ? void 0 : t.success) == "boolean" && (t != null && t.success ? n(t == null ? void 0 : t.message) : o(t == null ? void 0 : t.message));
+    typeof (t == null ? void 0 : t.message) == "string" && typeof (t == null ? void 0 : t.success) == "boolean" && t.message !== "" && (t != null && t.success ? n(t == null ? void 0 : t.message) : o(t == null ? void 0 : t.message));
   }, [t]);
 }
 function mn(t) {

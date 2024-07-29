@@ -13,7 +13,8 @@ function useAutomation() {
     }, [actionData]);
     useEffect(() => {
         const showToast = typeof actionData?.message === "string" &&
-            typeof actionData?.success === "boolean";
+            typeof actionData?.success === "boolean" &&
+            actionData.message !== "";
         if (showToast) {
             if (actionData?.success)
                 successToast(actionData?.message);
