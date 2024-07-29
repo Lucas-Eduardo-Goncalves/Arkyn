@@ -1,5 +1,4 @@
 import type { LucideIcon } from "lucide-react";
-import React from "react";
 
 function GenerateIcon(iconSize: number, Icon?: LucideIcon) {
   if (!Icon) return <></>;

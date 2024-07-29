@@ -30,6 +30,20 @@ function Select(props) {
             ref.current.blur();
         }
     }
+    function handleChangeValue(option) {
+        const { label, value } = option;
+        if (selectedValue !== value)
+            setSelectedValue(value);
+        else
+            setSelectedValue("");
+        if (onSelect)
+            onSelect({ label, value });
+        if (closeOnSelect) {
+            ref.current.blur();
+            setIsFocused(false);
+            console.log("fecha");
+        }
+    }
     const currentValue = typeof baseValue === "string" ? baseValue : selectedValue;
     const currentLabel = options.find((option) => option.value === currentValue)?.label || "";
     const placeholderDark = () => {
@@ -60,13 +74,8 @@ function Select(props) {
             return true;
         }
     });
-    return (_jsxs(_Fragment, { children: [_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: `${className} placeholder_dark_${placeholderDark()}`, children: [prefix, LeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: !isSearchable, value: searchValue || "", placeholder: currentLabel || placeholder, onFocus: handleFocus, onBlur: () => setSearchValue(""), ...rest, onChange: (e) => setSearchValue(e.target.value) }), _jsx("input", { type: "hidden", ref: ref, name: name, value: currentValue || "", readOnly: true }), isFocused && (_jsxs("ul", { className: "arkyn_select_content", style: { overflow: "auto", maxHeight: optionMaxHeight }, children: [filteredOptions.map(({ label, value }) => (_jsxs("li", { className: currentValue === value ? "active" : "", onClick: () => {
-                                    if (selectedValue !== value)
-                                        setSelectedValue(value);
-                                    else
-                                        setSelectedValue("");
-                                    onSelect && onSelect({ label, value });
-                                    closeOnSelect && setTimeout(() => handleBlur(), 100);
-                                }, children: [label, " ", _jsx(Check, {})] }, value))), filteredOptions.length <= 0 && _jsx("p", { children: "Sem op\u00E7\u00F5es dispon\u00EDveis" })] })), !isLoading && (_jsx(ChevronDown, { className: "arkyn_select_arrow", size: iconSize, strokeWidth: 2.5 })), isLoading && Spinner] }), isFocused && (_jsx("aside", { className: "arkyn_select_overlay", onClick: handleBlur }))] }));
+    return (_jsxs(_Fragment, { children: [_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: `${className} placeholder_dark_${placeholderDark()}`, children: [prefix, LeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled || isLoading, readOnly: !isSearchable, value: searchValue || "", placeholder: currentLabel || placeholder, onFocus: handleFocus, onBlur: () => setSearchValue(""), ...rest, onChange: (e) => setSearchValue(e.target.value) }), _jsx("input", { type: "hidden", ref: ref, name: name, value: currentValue || "", readOnly: true }), isFocused && (_jsxs("div", { className: "arkyn_select_content", style: { overflow: "auto", maxHeight: optionMaxHeight }, children: [filteredOptions.map(({ label, value }) => (_jsxs("div", { onClick: () => handleChangeValue({ label, value }), className: currentValue === value
+                                    ? "arkyn_select_option active"
+                                    : "arkyn_select_option", children: [label, " ", _jsx(Check, {})] }, value))), filteredOptions.length <= 0 && _jsx("p", { children: "Sem op\u00E7\u00F5es dispon\u00EDveis" })] })), !isLoading && (_jsx(ChevronDown, { className: "arkyn_select_arrow", size: iconSize, strokeWidth: 2.5 })), isLoading && Spinner] }), isFocused && (_jsx("aside", { className: "arkyn_select_overlay", onClick: handleBlur }))] }));
 }
 export { Select };

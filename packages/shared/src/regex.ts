@@ -4,6 +4,13 @@ const CNPJ = /(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/;
 
 const CPF = /(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)/;
 
+const DATE = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/;
+
+const DATEHOUR =
+  /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}\s(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$/;
+
+const HOUR = /^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$/;
+
 const PASSWORD =
   /(?=^.{8,}$)((?=.*\w)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[|!"$%&\/\(\)\?\^\'\\\+\-\*]))^.*/;
 
@@ -17,4 +24,16 @@ const URL =
 const CPFCNPJ =
   /^(?:(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})|(\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})|(\d{14}))$/;
 
-export const regex = { URL, RG, PHONE, PASSWORD, CPF, CNPJ, CEP, CPFCNPJ };
+export const regex = {
+  URL,
+  HOUR,
+  RG,
+  PHONE,
+  PASSWORD,
+  DATEHOUR,
+  CPF,
+  CNPJ,
+  CEP,
+  CPFCNPJ,
+  DATE,
+};

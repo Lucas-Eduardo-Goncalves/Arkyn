@@ -65,6 +65,20 @@ function Select(props: SelectProps) {
     }
   }
 
+  function handleChangeValue(option: { label: string; value: string }) {
+    const { label, value } = option;
+
+    if (selectedValue !== value) setSelectedValue(value);
+    else setSelectedValue("");
+
+    if (onSelect) onSelect({ label, value });
+    if (closeOnSelect) {
+      ref.current.blur();
+      setIsFocused(false);
+      console.log("fecha");
+    }
+  }
+
   const currentValue =
     typeof baseValue === "string" ? baseValue : selectedValue;
 
@@ -125,27 +139,26 @@ function Select(props: SelectProps) {
         />
 
         {isFocused && (
-          <ul
+          <div
             className="arkyn_select_content"
             style={{ overflow: "auto", maxHeight: optionMaxHeight }}
           >
             {filteredOptions.map(({ label, value }) => (
-              <li
+              <div
                 key={value}
-                className={currentValue === value ? "active" : ""}
-                onClick={() => {
-                  if (selectedValue !== value) setSelectedValue(value);
-                  else setSelectedValue("");
-                  onSelect && onSelect({ label, value });
-                  closeOnSelect && setTimeout(() => handleBlur(), 100);
-                }}
+                onClick={() => handleChangeValue({ label, value })}
+                className={
+                  currentValue === value
+                    ? "arkyn_select_option active"
+                    : "arkyn_select_option"
+                }
               >
                 {label} <Check />
-              </li>
+              </div>
             ))}
 
             {filteredOptions.length <= 0 && <p>Sem opções disponíveis</p>}
-          </ul>
+          </div>
         )}
 
         {!isLoading && (
