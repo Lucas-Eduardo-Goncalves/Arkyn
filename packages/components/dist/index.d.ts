@@ -8,7 +8,7 @@ export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
 export { Select } from "./components/Select";
 export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";
-export { Modal } from "./components/Modal";
+export { Modal } from "./newComponents/Modal";
 export { Tooltip } from "./components/Tooltip";
 export { useAutomation } from "./hooks/useAutomation";
 export { useModal } from "./hooks/useModal";
