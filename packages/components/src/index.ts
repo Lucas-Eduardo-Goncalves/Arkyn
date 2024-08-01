@@ -15,7 +15,7 @@ export { Select } from "./components/Select";
 export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";
 
 // Overlay
-export { Modal } from "./components/Modal";
+export { Modal } from "./newComponents/Modal";
 export { Tooltip } from "./components/Tooltip";
 
 // Hooks

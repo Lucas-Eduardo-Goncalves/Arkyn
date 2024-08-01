@@ -10,9 +10,9 @@
   font-weight: 600;
   line-height: 20px;
 
-  color: var(--secondary-900);
+  color: var(--strong-text);
 
-  border-bottom: 1px solid var(--secondary-200);
+  border-bottom: 1px solid var(--normal-line);
 }
 
 .arkyn_modal_header > button {
@@ -26,11 +26,12 @@
   border: none;
   background: none;
 
-  color: var(--secondary-400);
+  color: var(--normal-text);
+  background-color: var(--strong-background);
   transition: all 0.15s ease-out;
 }
 
 .arkyn_modal_header > button:hover {
   cursor: pointer;
-  background-color: var(--secondary-50);
+  filter: brightness(0.9);
 }
