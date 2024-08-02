@@ -1,4 +1,4 @@
-.arkyn_modal_header {
+.arkyn_drawer_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
   border-bottom: 1px solid var(--border);
 }
 
-.arkyn_modal_header > button {
+.arkyn_drawer_header > button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@
   transition: all 0.15s ease-out;
 }
 
-.arkyn_modal_header > button:hover {
+.arkyn_drawer_header > button:hover {
   cursor: pointer;
   filter: brightness(0.9);
 }
