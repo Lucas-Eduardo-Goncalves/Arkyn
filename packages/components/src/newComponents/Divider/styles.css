@@ -1,7 +1,7 @@
 .arkyn_divider {
   display: block;
   flex: 1;
-  background-color: var(--secondary-300);
+  background-color: var(--border);
 }
 
 .arkyn_divider.horizontal {

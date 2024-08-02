@@ -2,5 +2,5 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 600;
-  color: var(--danger-600);
+  color: rgb(var(--spotlights-danger), 1);
 }

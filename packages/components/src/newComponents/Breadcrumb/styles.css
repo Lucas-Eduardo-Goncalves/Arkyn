@@ -11,16 +11,16 @@
   user-select: none;
   text-decoration: none;
   font-size: 14px;
-  color: var(--secondary-500);
+  color: var(--text-body);
 }
 
 .arkyn_breadcrumb_link.active {
-  color: var(--secondary-900);
+  color: var(--text-heading);
 }
 
 .arkyn_breadcrumb_link.inactive:hover {
   cursor: pointer;
-  color: var(--secondary-900);
+  color: var(--text-heading);
 }
 
 .arkyn_breadcrumb_link:first-child > svg {
@@ -35,5 +35,5 @@
 
 .arkyn_breadcrumb_link:not(:first-child) > svg {
   display: unset;
-  color: var(--secondary-400);
+  color: var(--text-body);
 }
