@@ -1,13 +1,13 @@
 export { Badge } from "./newComponents/Badge";
-export { Divider } from "./components/Divider";
+export { Divider } from "./newComponents/Divider";
 export { Skeleton } from "./components/Skeleton";
 export { Button } from "./newComponents/Button";
-export { Checkbox } from "./components/Checkbox";
-export { FormController, FormError, FormLabel } from "./components/Form";
+export { Checkbox } from "./newComponents/Checkbox";
+export { FormController, FormError, FormLabel } from "./newComponents/Form";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
 export { Select } from "./components/Select";
-export { Breadcrumb, BreadcrumbLink } from "./components/Breadcrumb";
+export { Breadcrumb, BreadcrumbLink } from "./newComponents/Breadcrumb";
 export { Modal } from "./newComponents/Modal";
 export { Tooltip } from "./components/Tooltip";
 export { useAutomation } from "./hooks/useAutomation";

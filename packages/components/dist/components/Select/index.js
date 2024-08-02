@@ -1,9 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { Check, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
-import { useFormController } from "../Form/FormController";
 import { getConfig } from "./getConfig";
 import "./styles.css";
+import { useFormController } from "../../newComponents/Form/FormController";
 function Select(props) {
     const [isFocused, setIsFocused] = useState(false);
     const { inputRef, id, error } = useFormController();
