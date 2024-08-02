@@ -20,7 +20,7 @@
 .arkyn_checkbox.sm {
   height: 16px;
   width: 16px;
-  border-radius: 2px;
+  border-radius: calc(var(--rounded-inputs) * 0.3333);
 }
 
 .arkyn_checkbox.sm svg {
@@ -31,7 +31,7 @@
 .arkyn_checkbox.md {
   height: 20px;
   width: 20px;
-  border-radius: 4px;
+  border-radius: calc(var(--rounded-inputs) * 0.6667);
 }
 
 .arkyn_checkbox.md svg {
@@ -42,7 +42,7 @@
 .arkyn_checkbox.lg {
   height: 24px;
   width: 24px;
-  border-radius: 6px;
+  border-radius: var(--rounded-inputs);
 }
 
 .arkyn_checkbox.lg svg {
@@ -52,8 +52,8 @@
 
 /* CHECKED */
 .arkyn_checkbox.checked {
-  background-color: rgb(var(--spotlights-primary), 1);
-  border-color: rgb(var(--spotlights-primary), 1);
+  background-color: rgb(var(--spotlight-primary), 1);
+  border-color: rgb(var(--spotlight-primary), 1);
 }
 
 .arkyn_checkbox.checked svg {
@@ -62,5 +62,5 @@
 }
 
 .arkyn_checkbox.error {
-  border-color: rgb(var(--spotlights-danger), 1);
+  border-color: rgb(var(--spotlight-danger), 1);
 }

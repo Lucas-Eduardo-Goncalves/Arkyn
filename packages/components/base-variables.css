@@ -1,7 +1,15 @@
 :root {
+  /* Border Rounded */
+  --rounded-inputs: 6px;
+  --rounded-cards: 8px;
+
   /* Background */
   --background: #f1f5f9;
   --background-foreground: #ffffff;
+
+  /* Modal, Drawer, Popover */
+  --card: #ffffff;
+  --card-foreground: #ffffff;
 
   /* Text */
   --text-primary: #116ddc;
@@ -13,11 +21,15 @@
   /* Border */
   --border: #e2e8f0;
 
-  /* Spotlights */
-  --spotlights-primary: 17, 109, 220; /* #116ddc */
-  --spotlights-success: 16, 185, 129; /* #10b981 */
-  --spotlights-danger: 244, 63, 94; /* #f43f5e */
-  --spotlights-info: 14, 165, 233; /* #0ea5e9 */
-  --spotlights-warning: 249, 115, 22; /* #f97316 */
-  --spotlights-outline: 255, 255, 255; /* #ffffff */
+  /* Tooltip */
+  --tooltip-text: #f1f5f9;
+  --tooltip-background: #0f172a;
+
+  /* Spotlight */
+  --spotlight-primary: 17, 109, 220; /* #116ddc */
+  --spotlight-success: 16, 185, 129; /* #10b981 */
+  --spotlight-danger: 244, 63, 94; /* #f43f5e */
+  --spotlight-info: 14, 165, 233; /* #0ea5e9 */
+  --spotlight-warning: 249, 115, 22; /* #f97316 */
+  --spotlight-outline: 255, 255, 255; /* #ffffff */
 }

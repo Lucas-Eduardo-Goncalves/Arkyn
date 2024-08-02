@@ -27,7 +27,7 @@
   background: none;
 
   color: var(--text-body);
-  background-color: var(--background);
+  background-color: var(--card);
   transition: all 0.15s ease-out;
 }
 

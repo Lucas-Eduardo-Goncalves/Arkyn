@@ -32,6 +32,6 @@
 
 .arkyn_modal_container > .content {
   z-index: 9999;
-  border-radius: 6px;
-  background: var(--background-foreground);
+  border-radius: var(--rounded-cards);
+  background: var(--card);
 }

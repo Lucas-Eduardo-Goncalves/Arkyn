@@ -7,7 +7,7 @@
 
   padding: 0 16px;
   gap: 8px;
-  border-radius: 6px;
+  border-radius: var(--rounded-inputs);
 
   border: 1px solid transparent;
   outline: 1px solid transparent;
@@ -45,7 +45,8 @@
   left: 0;
   top: 0;
   bottom: 0;
-  border-radius: 5px 0 0 5px;
+  border-radius: calc(var(--rounded-inputs) - 1px) 0 0
+    calc(var(--rounded-inputs) - 1px);
   border-right: 1px solid var(--border);
 }
 
@@ -53,7 +54,8 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 calc(var(--rounded-inputs) - 1px)
+    calc(var(--rounded-inputs) - 1px) 0;
   border-left: 1px solid var(--border);
 }
 
@@ -66,11 +68,11 @@
 }
 
 .arkyn_input.errored svg {
-  color: rgba(var(--spotlights-danger), 1);
+  color: rgba(var(--spotlight-danger), 1);
 }
 
 .arkyn_input:not(.opacity).focused svg {
-  color: rgba(var(--spotlights-primary), 1);
+  color: rgba(var(--spotlight-primary), 1);
 }
 
 .arkyn_input.opacity {
@@ -84,13 +86,13 @@
 }
 
 .arkyn_input.solid.errored {
-  border-color: rgba(var(--spotlights-danger), 1);
-  outline-color: rgba(var(--spotlights-danger), 1);
+  border-color: rgba(var(--spotlight-danger), 1);
+  outline-color: rgba(var(--spotlight-danger), 1);
 }
 
 .arkyn_input:not(.opacity).solid.focused {
-  border-color: rgba(var(--spotlights-primary), 1);
-  outline-color: rgba(var(--spotlights-primary), 1);
+  border-color: rgba(var(--spotlight-primary), 1);
+  outline-color: rgba(var(--spotlight-primary), 1);
 }
 
 .arkyn_input.outline {
@@ -98,13 +100,13 @@
 }
 
 .arkyn_input.outline.errored {
-  border-color: rgba(var(--spotlights-danger), 1);
-  outline-color: rgba(var(--spotlights-danger), 1);
+  border-color: rgba(var(--spotlight-danger), 1);
+  outline-color: rgba(var(--spotlight-danger), 1);
 }
 
 .arkyn_input:not(.opacity).outline.focused {
-  border-color: rgba(var(--spotlights-primary), 1);
-  outline-color: rgba(var(--spotlights-primary), 1);
+  border-color: rgba(var(--spotlight-primary), 1);
+  outline-color: rgba(var(--spotlight-primary), 1);
 }
 
 .arkyn_input.underline {
@@ -132,19 +134,19 @@
 }
 
 .arkyn_input.underline.errored {
-  border-color: rgba(var(--spotlights-danger), 1);
+  border-color: rgba(var(--spotlight-danger), 1);
 }
 
 .arkyn_input.underline.errored::before {
-  background: rgba(var(--spotlights-danger), 1);
+  background: rgba(var(--spotlight-danger), 1);
 }
 
 .arkyn_input:not(.opacity).underline.focused {
-  border-color: rgba(var(--spotlights-primary), 1);
+  border-color: rgba(var(--spotlight-primary), 1);
 }
 
 .arkyn_input:not(.opacity).underline.focused::before {
-  background: rgba(var(--spotlights-primary), 1);
+  background: rgba(var(--spotlight-primary), 1);
 }
 
 /* SIZE */
