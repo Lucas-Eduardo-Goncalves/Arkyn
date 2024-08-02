@@ -2,6 +2,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { DrawerContainerProps } from "@arkyn/types";
 import { createContext } from "react";
 
+import "./styles.css";
+
 type DrawerContext = { makeInvisible: () => void };
 const drawerContext = createContext({} as DrawerContext);
 
