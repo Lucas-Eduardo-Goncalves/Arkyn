@@ -3,7 +3,7 @@ export { Badge } from "./components/Badge";
 export { Divider } from "./components/Divider";
 export { Skeleton } from "./components/Skeleton";
 // Form
-export { Button } from "./components/Button";
+export { Button } from "./newComponents/Button";
 export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
