@@ -25,13 +25,13 @@
 }
 
 .arkyn_input input {
-  color: var(--secondary-900);
+  color: var(--text-heading);
 }
 
 .arkyn_input .prefix,
 .arkyn_input .sufix {
-  color: var(--secondary-600);
-  background: var(--secondary-200);
+  color: var(--text-body);
+  background: var(--border);
   font-weight: 400;
 
   display: flex;
@@ -46,7 +46,7 @@
   top: 0;
   bottom: 0;
   border-radius: 5px 0 0 5px;
-  border-right: 1px solid var(--secondary-300);
+  border-right: 1px solid var(--border);
 }
 
 .arkyn_input .sufix {
@@ -54,23 +54,23 @@
   top: 0;
   bottom: 0;
   border-radius: 0 5px 5px 0;
-  border-left: 1px solid var(--secondary-300);
+  border-left: 1px solid var(--border);
 }
 
 .arkyn_input input::placeholder {
-  color: var(--secondary-400);
+  color: var(--text-light);
 }
 
 .arkyn_input svg {
-  color: var(--secondary-400);
+  color: var(--text-light);
 }
 
 .arkyn_input.errored svg {
-  color: var(--danger-600);
+  color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_input:not(.opacity).focused svg {
-  color: var(--primary-500);
+  color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_input.opacity {
@@ -79,32 +79,32 @@
 
 /* VARIANTS */
 .arkyn_input.solid {
-  border-color: var(--secondary-300);
-  background-color: var(--secondary-50);
+  border-color: var(--border);
+  background-color: var(--background);
 }
 
 .arkyn_input.solid.errored {
-  border-color: var(--danger-600);
-  outline-color: var(--danger-600);
+  border-color: rgba(var(--spotlights-danger), 1);
+  outline-color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_input:not(.opacity).solid.focused {
-  border-color: var(--primary-500);
-  outline-color: var(--primary-500);
+  border-color: rgba(var(--spotlights-primary), 1);
+  outline-color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_input.outline {
-  border-color: var(--secondary-300);
+  border-color: var(--border);
 }
 
 .arkyn_input.outline.errored {
-  border-color: var(--danger-600);
-  outline-color: var(--danger-600);
+  border-color: rgba(var(--spotlights-danger), 1);
+  outline-color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_input:not(.opacity).outline.focused {
-  border-color: var(--primary-500);
-  outline-color: var(--primary-500);
+  border-color: rgba(var(--spotlights-primary), 1);
+  outline-color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_input.underline {
@@ -113,7 +113,7 @@
   border-left: none;
   border-right: none;
   outline: none;
-  border-color: var(--secondary-300);
+  border-color: var(--border);
 }
 
 .arkyn_input.underline .sufix,
@@ -132,23 +132,22 @@
 }
 
 .arkyn_input.underline.errored {
-  border-color: var(--danger-600);
+  border-color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_input.underline.errored::before {
-  background: var(--danger-600);
+  background: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_input:not(.opacity).underline.focused {
-  border-color: var(--primary-500);
+  border-color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_input:not(.opacity).underline.focused::before {
-  background: var(--primary-500);
+  background: rgba(var(--spotlights-primary), 1);
 }
 
 /* SIZE */
-
 .arkyn_input.md input {
   min-height: 40px;
   max-height: 40px;
@@ -208,7 +207,6 @@
 }
 
 /* SPIN */
-
 .arkyn_input .spinner {
   animation: spin 2s linear infinite;
 }
