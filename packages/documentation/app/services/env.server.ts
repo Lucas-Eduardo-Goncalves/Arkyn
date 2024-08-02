@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  API_BASE_URL: z.string().min(3).url(),
-  USER_TOKEN: z.string().min(3),
-  CHANNEL_ID: z.string().min(3),
+  // API_BASE_URL: z.string().min(3).url(),
+  // USER_TOKEN: z.string().min(3),
+  // CHANNEL_ID: z.string().min(3),
 });
 
 function formatErrorMessage(error: z.ZodError) {

@@ -1,0 +1,22 @@
+html {
+  /* Background */
+  --background: #f1f5f9;
+  --background-foreground: #ffffff;
+
+  /* Text */
+  --text-primary: #116ddc;
+  --text-heading: #0f172a;
+  --text-body: #475569;
+  --text-fraquinho: #94a3b8;
+  --text-link: #0ea5e9;
+
+  /* Border */
+  --border: #e2e8f0;
+
+  /* Spotlights */
+  --spotlights-primary: #116ddc;
+  --spotlights-success: #10b981;
+  --spotlights-danger: #f43f5e;
+  --spotlights-warning: #f97316;
+  --spotlights-outline: #ffffff;
+}
