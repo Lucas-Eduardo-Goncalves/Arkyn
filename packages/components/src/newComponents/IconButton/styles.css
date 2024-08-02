@@ -7,12 +7,12 @@
   transition: 0.15s all ease-out;
 }
 
-.arkyn_button:hover {
+.arkyn_icon_button:hover {
   cursor: pointer;
   filter: brightness(1.2);
 }
 
-.arkyn_button:disabled {
+.arkyn_icon_button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
