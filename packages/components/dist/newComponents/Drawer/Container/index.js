@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { createContext } from "react";
 const drawerContext = createContext({});
 function Container(props) {
-    const { isVisibled, makeInvisible, orientation, children, className: baseClassName, ...rest } = props;
+    const { isVisibled, makeInvisible, orientation = "left", children, className: baseClassName, ...rest } = props;
     const translateX = orientation === "left" ? "-100%" : "100%";
     const visibled = isVisibled ? "visible" : "";
     const className = `arkyn_drawer_container ${orientation} ${visibled} ${baseClassName}`;

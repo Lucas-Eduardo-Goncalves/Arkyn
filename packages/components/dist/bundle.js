@@ -1532,7 +1532,7 @@ function Er(e) {
   const {
     isVisibled: r,
     makeInvisible: n,
-    orientation: o,
+    orientation: o = "left",
     children: i,
     className: c,
     ...f
