@@ -1,6 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { AnimatePresence, motion } from "framer-motion";
 import { createContext } from "react";
+import "./styles.css";
 const drawerContext = createContext({});
 function Container(props) {
     const { isVisibled, makeInvisible, orientation = "left", children, className: baseClassName, ...rest } = props;

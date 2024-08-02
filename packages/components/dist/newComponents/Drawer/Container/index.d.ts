@@ -1,4 +1,5 @@
 import { DrawerContainerProps } from "@arkyn/types";
+import "./styles.css";
 type DrawerContext = {
     makeInvisible: () => void;
 };
