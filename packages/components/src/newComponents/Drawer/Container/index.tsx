@@ -9,7 +9,7 @@ function Container(props: DrawerContainerProps) {
   const {
     isVisibled,
     makeInvisible,
-    orientation,
+    orientation = "left",
     children,
     className: baseClassName,
     ...rest
