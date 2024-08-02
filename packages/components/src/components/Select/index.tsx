@@ -1,13 +1,13 @@
 import type { SelectProps } from "@arkyn/types";
 import type { FocusEvent } from "react";
 
-import { ArrowUp, Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
 
-import { useFormController } from "../Form/FormController";
 import { getConfig } from "./getConfig";
 
 import "./styles.css";
+import { useFormController } from "../../newComponents/Form/FormController";
 
 function Select(props: SelectProps) {
   const [isFocused, setIsFocused] = useState(false);

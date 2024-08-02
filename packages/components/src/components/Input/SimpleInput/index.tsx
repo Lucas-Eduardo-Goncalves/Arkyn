@@ -3,7 +3,7 @@ import type { FocusEvent } from "react";
 
 import { useRef, useState } from "react";
 
-import { useFormController } from "../../Form/FormController";
+import { useFormController } from "../../../newComponents/Form/FormController";
 import { getConfig } from "./getConfig";
 
 function SimpleInput(props: SimpleInputProps) {
