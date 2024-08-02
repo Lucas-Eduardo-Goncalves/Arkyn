@@ -1,0 +1,109 @@
+/* BASE */
+.arkyn_badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  border: 1px solid transparent;
+}
+
+/* VARIANTS */
+.arkyn_badge.solid {
+  color: #fff;
+}
+
+.arkyn_badge.solid.primary {
+  background-color: rgba(var(--spotlights-primary), 1);
+}
+
+.arkyn_badge.solid.danger {
+  background-color: rgba(var(--spotlights-danger), 1);
+}
+
+.arkyn_badge.solid.success {
+  background-color: rgba(var(--spotlights-success), 1);
+}
+
+.arkyn_badge.solid.warning {
+  background-color: rgba(var(--spotlights-warning), 1);
+}
+
+.arkyn_badge.solid.info {
+  background-color: rgba(var(--spotlights-info), 1);
+}
+
+.arkyn_button.outline {
+  background-color: rgba(var(--spotlights-outline), 1);
+}
+
+.arkyn_badge.outline.primary {
+  color: rgba(var(--spotlights-primary), 1);
+  border-color: rgba(var(--spotlights-primary), 1);
+}
+
+.arkyn_badge.outline.danger {
+  color: rgba(var(--spotlights-danger), 1);
+  border-color: rgba(var(--spotlights-danger), 1);
+}
+
+.arkyn_badge.outline.success {
+  color: rgba(var(--spotlights-success), 1);
+  border-color: rgba(var(--spotlights-success), 1);
+}
+
+.arkyn_badge.outline.warning {
+  color: rgba(var(--spotlights-warning), 1);
+  border-color: rgba(var(--spotlights-warning), 1);
+}
+
+.arkyn_badge.outline.info {
+  color: rgba(var(--spotlights-info), 1);
+  border-color: rgba(var(--spotlights-info), 1);
+}
+
+.arkyn_badge.ghost.primary {
+  color: rgba(var(--spotlights-primary), 1);
+  background-color: rgba(var(--spotlights-primary), 0.2);
+}
+
+.arkyn_badge.ghost.danger {
+  color: rgba(var(--spotlights-danger), 1);
+  background-color: rgba(var(--spotlights-danger), 0.2);
+}
+
+.arkyn_badge.ghost.success {
+  color: rgba(var(--spotlights-success), 1);
+  background-color: rgba(var(--spotlights-success), 0.2);
+}
+
+.arkyn_badge.ghost.warning {
+  color: rgba(var(--spotlights-warning), 1);
+  background-color: rgba(var(--spotlights-warning), 0.2);
+}
+
+.arkyn_badge.ghost.info {
+  color: rgba(var(--spotlights-info), 1);
+  background-color: rgba(var(--spotlights-info), 0.2);
+}
+
+/* SIZE */
+.arkyn_badge.lg {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+
+  border-radius: 4px;
+  padding: 0px 16px;
+  height: 24px;
+}
+
+.arkyn_badge.md {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+
+  border-radius: 4px;
+  padding: 0px 12px;
+  height: 20px;
+}
