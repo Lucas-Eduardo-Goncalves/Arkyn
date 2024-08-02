@@ -35,76 +35,76 @@
 }
 
 .arkyn_button.solid.primary {
-  background-color: var(--spotlights-primary);
+  background-color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_button.solid.danger {
-  background-color: var(--spotlights-danger);
+  background-color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_button.solid.success {
-  background-color: var(--spotlights-success);
+  background-color: rgba(var(--spotlights-success), 1);
 }
 
 .arkyn_button.solid.warning {
-  background-color: var(--spotlights-warning);
+  background-color: rgba(var(--spotlights-warning), 1);
 }
 
 .arkyn_button.outline {
-  background-color: var(--spotlights-outline);
+  background-color: rgba(var(--spotlights-outline), 1);
   border-color: var(--border);
 }
 
 .arkyn_button.outline.primary {
-  color: var(--spotlights-primary);
+  color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_button.outline.danger {
-  color: var(--spotlights-danger);
+  color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_button.outline.success {
-  color: var(--spotlights-success);
+  color: rgba(var(--spotlights-success), 1);
 }
 
 .arkyn_button.outline.warning {
-  color: var(--spotlights-warning);
+  color: rgba(var(--spotlights-warning), 1);
 }
 
 .arkyn_button.ghost.primary {
-  color: var(--spotlights-primary);
+  color: rgba(var(--spotlights-primary), 1);
   background-color: rgba(var(--spotlights-primary), 0.2);
 }
 
 .arkyn_button.ghost.danger {
-  color: var(--spotlights-danger);
+  color: rgba(var(--spotlights-danger), 1);
   background-color: rgba(var(--spotlights-danger), 0.2);
 }
 
 .arkyn_button.ghost.success {
-  color: var(--spotlights-success);
+  color: rgba(var(--spotlights-success), 1);
   background-color: rgba(var(--spotlights-success), 0.2);
 }
 
 .arkyn_button.ghost.warning {
-  color: var(--spotlights-warning);
+  color: rgba(var(--spotlights-warning), 1);
   background-color: rgba(var(--spotlights-warning), 0.2);
 }
 
 .arkyn_button.invisible.primary {
-  color: var(--spotlights-primary);
+  color: rgba(var(--spotlights-primary), 1);
 }
 
 .arkyn_button.invisible.danger {
-  color: var(--spotlights-danger);
+  color: rgba(var(--spotlights-danger), 1);
 }
 
 .arkyn_button.invisible.success {
-  color: var(--spotlights-success);
+  color: rgba(var(--spotlights-success), 1);
 }
 
 .arkyn_button.invisible.warning {
-  color: var(--spotlights-warning);
+  color: rgba(var(--spotlights-warning), 1);
 }
 
 /* SIZE */
