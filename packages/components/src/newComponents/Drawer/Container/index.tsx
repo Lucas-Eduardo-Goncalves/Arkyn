@@ -7,7 +7,7 @@ import "./styles.css";
 type DrawerContext = { makeInvisible: () => void };
 const drawerContext = createContext({} as DrawerContext);
 
-function Container(props: DrawerContainerProps) {
+function DrawerContainer(props: DrawerContainerProps) {
   const {
     isVisibled,
     makeInvisible,
@@ -28,7 +28,7 @@ function Container(props: DrawerContainerProps) {
         {isVisibled && (
           <aside className={className.trim()} {...rest}>
             <motion.div
-              className="overlay"
+              className="arkyn_drawer_container:overlay"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -37,7 +37,7 @@ function Container(props: DrawerContainerProps) {
             />
 
             <motion.div
-              className="content"
+              className="arkyn_drawer_container:content"
               transition={{ ease: "easeOut", duration: 0.15 }}
               initial={{ transform: `translateX(${translateX})` }}
               animate={{ transform: "translateX(0px)" }}
@@ -52,4 +52,4 @@ function Container(props: DrawerContainerProps) {
   );
 }
 
-export { Container, drawerContext };
+export { DrawerContainer, drawerContext };

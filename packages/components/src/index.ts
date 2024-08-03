@@ -20,7 +20,7 @@ export {
   ModalFooter,
   ModalHeader,
 } from "./newComponents/Modal";
-export { Drawer } from "./newComponents/Drawer";
+export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
 export { Tooltip } from "./newComponents/Tooltip";
 
 // Hooks
