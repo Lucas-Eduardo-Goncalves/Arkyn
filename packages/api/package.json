@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/api",
-  "version": "1.3.36",
+  "version": "1.3.37",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
