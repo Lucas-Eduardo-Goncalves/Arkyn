@@ -957,8 +957,8 @@ function nn(e) {
       className: g.trim(),
       ...d,
       children: [
-        /* @__PURE__ */ c.jsx("div", { className: "arkyn_icon_button:spinner", children: /* @__PURE__ */ c.jsx(_e, { size: h[i], strokeWidth: 2.5 }) }),
-        /* @__PURE__ */ c.jsx("div", { className: "arkyn_icon_button:content", children: /* @__PURE__ */ c.jsx(l, { size: h[i], strokeWidth: 2.5 }) })
+        /* @__PURE__ */ c.jsx("div", { className: "arkyn_icon_button-spinner", children: /* @__PURE__ */ c.jsx(_e, { size: h[i], strokeWidth: 2.5 }) }),
+        /* @__PURE__ */ c.jsx("div", { className: "arkyn_icon_button-content", children: /* @__PURE__ */ c.jsx(l, { size: h[i], strokeWidth: 2.5 }) })
       ]
     }
   );
@@ -1486,7 +1486,7 @@ function ln(e) {
     /* @__PURE__ */ c.jsx(
       qe.div,
       {
-        className: "arkyn_modal_container:overlay",
+        className: "arkyn_modal_container-overlay",
         transition: { duration: 0.15, ease: "easeOut" },
         initial: { opacity: 0 },
         animate: { opacity: 1 },
@@ -1497,7 +1497,7 @@ function ln(e) {
     /* @__PURE__ */ c.jsx(
       qe.div,
       {
-        className: "arkyn_modal_container:content",
+        className: "arkyn_modal_container-content",
         transition: { duration: 0.15, ease: "easeOut" },
         initial: { opacity: 0, scale: 0.75 },
         animate: { opacity: 1, scale: 1 },
@@ -1526,7 +1526,7 @@ function un(e) {
         type: "button",
         onClick: l,
         "aria-label": "Close modal button",
-        className: "arkyn_modal_header:close_button",
+        className: "arkyn_modal_header-close_button",
         children: /* @__PURE__ */ c.jsx(Et, { size: 24 })
       }
     )
@@ -1546,7 +1546,7 @@ function dn(e) {
     /* @__PURE__ */ c.jsx(
       qe.div,
       {
-        className: "arkyn_drawer_container:overlay",
+        className: "arkyn_drawer_container-overlay",
         transition: { duration: 0.15, ease: "easeOut" },
         initial: { opacity: 0 },
         animate: { opacity: 1 },
@@ -1557,7 +1557,7 @@ function dn(e) {
     /* @__PURE__ */ c.jsx(
       qe.div,
       {
-        className: "arkyn_drawer_container:content",
+        className: "arkyn_drawer_container-content",
         transition: { ease: "easeOut", duration: 0.15 },
         initial: { transform: `translateX(${o})` },
         animate: { transform: "translateX(0px)" },
@@ -1574,7 +1574,7 @@ function fn(e) {
     r && /* @__PURE__ */ c.jsx(
       "button",
       {
-        className: "arkyn_drawer_header:close_button",
+        className: "arkyn_drawer_header-close_button",
         type: "button",
         onClick: l,
         "aria-label": "Close drawer",
@@ -1594,7 +1594,7 @@ function hn(e) {
   } = e, o = `arkyn_tooltip ${n} ${i} ${l}`;
   return /* @__PURE__ */ c.jsxs("div", { className: o.trim(), ...f, children: [
     s,
-    /* @__PURE__ */ c.jsx("div", { className: "arkyn_tooltip:text", children: r })
+    /* @__PURE__ */ c.jsx("div", { className: "arkyn_tooltip-text", children: r })
   ] });
 }
 const ct = Pe({}), Pt = Pe({});
