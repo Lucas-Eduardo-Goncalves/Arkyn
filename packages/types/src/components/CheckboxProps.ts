@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 
 type CheckboxProps = {
   isError?: boolean;
@@ -8,10 +8,11 @@ type CheckboxProps = {
   name: string;
   value?: string;
 
+  checked?: boolean;
   defaultChecked?: boolean;
   onCheck?: (value: string) => void;
 } & Omit<
-  InputHTMLAttributes<HTMLInputElement>,
+  ButtonHTMLAttributes<HTMLButtonElement>,
   | "size"
   | "prefix"
   | "type"
@@ -20,6 +21,7 @@ type CheckboxProps = {
   | "value"
   | "onChange"
   | "onSelect"
+  | "onClick"
 >;
 
 export type { CheckboxProps };

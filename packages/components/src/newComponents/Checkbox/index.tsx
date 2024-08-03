@@ -36,7 +36,13 @@ function Checkbox(props: CheckboxProps) {
   }
 
   return (
-    <div id={id} className={className} onClick={handleCheck} {...rest}>
+    <button
+      type="button"
+      id={id}
+      className={className}
+      onClick={handleCheck}
+      {...rest}
+    >
       <input
         type="hidden"
         name={name}
@@ -44,7 +50,7 @@ function Checkbox(props: CheckboxProps) {
         value={currentChecked ? value || "checked" : ""}
       />
       <Check />
-    </div>
+    </button>
   );
 }
 

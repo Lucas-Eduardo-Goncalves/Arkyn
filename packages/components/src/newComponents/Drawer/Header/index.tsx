@@ -7,7 +7,12 @@ import { drawerContext } from "../Container";
 import "./styles.css";
 
 function DrawerHeader(args: ModalHeaderProps) {
-  const { showCloseButton, className: baseClassName, children, ...rest } = args;
+  const {
+    showCloseButton = true,
+    className: baseClassName,
+    children,
+    ...rest
+  } = args;
   const { makeInvisible } = useContext(drawerContext);
 
   const className = `arkyn_drawer_header ${baseClassName}`;

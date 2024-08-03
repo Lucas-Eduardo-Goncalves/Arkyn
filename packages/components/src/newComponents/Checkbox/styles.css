@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-.arkyn_checkbox svg {
+.arkyn_checkbox > svg {
   display: none;
   stroke-width: 3px;
 }
@@ -23,7 +23,7 @@
   border-radius: calc(var(--rounded-inputs) * 0.3333);
 }
 
-.arkyn_checkbox.sm svg {
+.arkyn_checkbox.sm > svg {
   min-height: 12px;
   min-width: 12px;
 }
@@ -34,7 +34,7 @@
   border-radius: calc(var(--rounded-inputs) * 0.6667);
 }
 
-.arkyn_checkbox.md svg {
+.arkyn_checkbox.md > svg {
   min-height: 14px;
   min-width: 14px;
 }
@@ -45,7 +45,7 @@
   border-radius: var(--rounded-inputs);
 }
 
-.arkyn_checkbox.lg svg {
+.arkyn_checkbox.lg > svg {
   min-height: 14px;
   min-width: 14px;
 }
@@ -56,7 +56,7 @@
   border-color: rgb(var(--spotlight-primary), 1);
 }
 
-.arkyn_checkbox.checked svg {
+.arkyn_checkbox.checked > svg {
   display: unset;
   color: #fff;
 }
