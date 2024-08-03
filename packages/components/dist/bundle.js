@@ -914,18 +914,28 @@ function en(e) {
     const U = P;
     C(!U), o && o(U ? "" : d || "checked");
   }
-  return /* @__PURE__ */ c.jsxs("div", { id: g, className: b, onClick: y, ...h, children: [
-    /* @__PURE__ */ c.jsx(
-      "input",
-      {
-        type: "hidden",
-        name: r,
-        ref: x,
-        value: T ? d || "checked" : ""
-      }
-    ),
-    /* @__PURE__ */ c.jsx(wt, {})
-  ] });
+  return /* @__PURE__ */ c.jsxs(
+    "button",
+    {
+      type: "button",
+      id: g,
+      className: b,
+      onClick: y,
+      ...h,
+      children: [
+        /* @__PURE__ */ c.jsx(
+          "input",
+          {
+            type: "hidden",
+            name: r,
+            ref: x,
+            value: T ? d || "checked" : ""
+          }
+        ),
+        /* @__PURE__ */ c.jsx(wt, {})
+      ]
+    }
+  );
 }
 function tn(e) {
   const { children: r, className: n, ...s } = e, i = `arkyn_form_error ${n}`, { error: l } = ke();
@@ -1568,7 +1578,12 @@ function dn(e) {
   ] }) }) });
 }
 function fn(e) {
-  const { showCloseButton: r, className: n, children: s, ...i } = e, { makeInvisible: l } = Ne(It), f = `arkyn_drawer_header ${n}`;
+  const {
+    showCloseButton: r = !0,
+    className: n,
+    children: s,
+    ...i
+  } = e, { makeInvisible: l } = Ne(It), f = `arkyn_drawer_header ${n}`;
   return /* @__PURE__ */ c.jsxs("header", { className: f.trim(), ...i, children: [
     s,
     r && /* @__PURE__ */ c.jsx(
