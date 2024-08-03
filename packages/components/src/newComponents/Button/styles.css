@@ -17,7 +17,7 @@
   opacity: 0.5;
 }
 
-.arkyn_button .content {
+.arkyn_button .arkyn_button-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,8 +113,8 @@
   height: 44px;
 }
 
-.arkyn_button.lg .content,
-.arkyn_button.lg .spinner {
+.arkyn_button.lg .arkyn_button-content,
+.arkyn_button.lg .arkyn_button-spinner {
   gap: 16px;
 }
 
@@ -129,8 +129,8 @@
   height: 40px;
 }
 
-.arkyn_button.md .content,
-.arkyn_button.md .spinner {
+.arkyn_button.md .arkyn_button-content,
+.arkyn_button.md .arkyn_button-spinner {
   gap: 14px;
 }
 
@@ -144,8 +144,8 @@
   height: 32px;
 }
 
-.arkyn_button.sm .content,
-.arkyn_button.sm .spinner {
+.arkyn_button.sm .arkyn_button-content,
+.arkyn_button.sm .arkyn_button-spinner {
   gap: 12px;
 }
 
@@ -159,13 +159,13 @@
   height: 24px;
 }
 
-.arkyn_button.xs .content,
-.arkyn_button.xs .spinner {
+.arkyn_button.xs .arkyn_button-content,
+.arkyn_button.xs .arkyn_button-spinner {
   gap: 8px;
 }
 
 /* SPIN */
-.arkyn_button .spinner {
+.arkyn_button .arkyn_button-spinner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,27 +174,27 @@
   opacity: 0;
 }
 
-.arkyn_button .spinner > svg {
+.arkyn_button .arkyn_button-spinner > svg {
   animation: spin 2s linear infinite;
 }
 
-.arkyn_button.loading_text_false .spinner {
+.arkyn_button.loading_text_false .arkyn_button-spinner {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.arkyn_button.loading_text_true .spinner {
+.arkyn_button.loading_text_true .arkyn_button-spinner {
   max-height: 0px;
 }
 
-.arkyn_button.loading_true .content {
+.arkyn_button.loading_true .arkyn_button-content {
   opacity: 0;
   max-height: 0px;
 }
 
-.arkyn_button.loading_true .spinner {
+.arkyn_button.loading_true .arkyn_button-spinner {
   opacity: 1;
   max-height: unset;
 }
