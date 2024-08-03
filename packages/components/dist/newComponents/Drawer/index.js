@@ -1,3 +1,3 @@
-import { Container } from "./Container";
-import { Header } from "./Header";
-export const Drawer = { Container, Header };
+import { DrawerContainer } from "./Container";
+import { DrawerHeader } from "./Header";
+export { DrawerContainer, DrawerHeader };

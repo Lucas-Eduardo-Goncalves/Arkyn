@@ -1,8 +1,5 @@
-import { ReactNode } from "react";
+import { FormErrorProps } from "@arkyn/types";
 import "./styles.css";
-type FormErrorProps = {
-    children?: ReactNode;
-};
-declare function FormError({ children }: FormErrorProps): import("react/jsx-runtime").JSX.Element;
+declare function FormError(args: FormErrorProps): import("react/jsx-runtime").JSX.Element;
 export { FormError };
 //# sourceMappingURL=index.d.ts.map

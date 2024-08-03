@@ -12,8 +12,8 @@ export { Input } from "./newComponents/Input";
 // Navigation
 export { Breadcrumb, BreadcrumbLink } from "./newComponents/Breadcrumb";
 // Overlay
-export { Modal } from "./newComponents/Modal";
-export { Drawer } from "./newComponents/Drawer";
+export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";
+export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
 export { Tooltip } from "./newComponents/Tooltip";
 // Hooks
 export { useAutomation } from "./hooks/useAutomation";

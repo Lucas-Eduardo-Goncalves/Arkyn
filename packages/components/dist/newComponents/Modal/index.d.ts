@@ -1,9 +1,5 @@
-import { Container } from "./Container";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-export declare const Modal: {
-    Container: typeof Container;
-    Header: typeof Header;
-    Footer: typeof Footer;
-};
+import { ModalContainer } from "./Container";
+import { ModalFooter } from "./Footer";
+import { ModalHeader } from "./Header";
+export { ModalContainer, ModalHeader, ModalFooter };
 //# sourceMappingURL=index.d.ts.map

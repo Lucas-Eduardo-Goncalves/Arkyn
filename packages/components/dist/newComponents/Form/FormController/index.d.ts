@@ -1,6 +1,6 @@
-import type { FormControllerContextProps, FormControllerProps } from "@arkyn/types";
+import { FormControllerContextProps, FormControllerProps } from "@arkyn/types";
 import "./styles.css";
-declare function FormController({ children, ...rest }: FormControllerProps): import("react/jsx-runtime").JSX.Element;
+declare function FormController(args: FormControllerProps): import("react/jsx-runtime").JSX.Element;
 declare function useFormController(): FormControllerContextProps;
 export { FormController, useFormController };
 //# sourceMappingURL=index.d.ts.map

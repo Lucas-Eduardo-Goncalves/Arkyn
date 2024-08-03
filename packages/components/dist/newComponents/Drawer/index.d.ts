@@ -1,7 +1,4 @@
-import { Container } from "./Container";
-import { Header } from "./Header";
-export declare const Drawer: {
-    Container: typeof Container;
-    Header: typeof Header;
-};
+import { DrawerContainer } from "./Container";
+import { DrawerHeader } from "./Header";
+export { DrawerContainer, DrawerHeader };
 //# sourceMappingURL=index.d.ts.map
