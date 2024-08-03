@@ -25,7 +25,7 @@ function ModalContainer(args: ModalContainerProps) {
         {isVisibled && (
           <aside className={className.trim()} {...rest}>
             <motion.div
-              className="arkyn_modal_container:overlay"
+              className="arkyn_modal_container-overlay"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -34,7 +34,7 @@ function ModalContainer(args: ModalContainerProps) {
             />
 
             <motion.div
-              className="arkyn_modal_container:content"
+              className="arkyn_modal_container-content"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0, scale: 0.75 }}
               animate={{ opacity: 1, scale: 1 }}

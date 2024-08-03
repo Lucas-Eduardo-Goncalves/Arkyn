@@ -25,7 +25,7 @@ function ModalHeader(args: ModalHeaderProps) {
           type="button"
           onClick={makeInvisible}
           aria-label="Close modal button"
-          className="arkyn_modal_header:close_button"
+          className="arkyn_modal_header-close_button"
         >
           <X size={24} />
         </button>

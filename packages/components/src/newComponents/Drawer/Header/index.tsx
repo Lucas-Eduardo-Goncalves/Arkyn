@@ -18,7 +18,7 @@ function DrawerHeader(args: ModalHeaderProps) {
 
       {showCloseButton && (
         <button
-          className="arkyn_drawer_header:close_button"
+          className="arkyn_drawer_header-close_button"
           type="button"
           onClick={makeInvisible}
           aria-label="Close drawer"

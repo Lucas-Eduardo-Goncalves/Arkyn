@@ -16,7 +16,7 @@ function Tooltip(args: TooltipProps) {
   return (
     <div className={className.trim()} {...rest}>
       {children}
-      <div className="arkyn_tooltip:text">{text}</div>
+      <div className="arkyn_tooltip-text">{text}</div>
     </div>
   );
 }

@@ -24,11 +24,11 @@ function IconButton(args: IconButtonProps) {
       className={className.trim()}
       {...rest}
     >
-      <div className="arkyn_icon_button:spinner">
+      <div className="arkyn_icon_button-spinner">
         <Loader2 size={iconSize[size]} strokeWidth={2.5} />
       </div>
 
-      <div className="arkyn_icon_button:content">
+      <div className="arkyn_icon_button-content">
         <Icon size={iconSize[size]} strokeWidth={2.5} />
       </div>
     </button>
