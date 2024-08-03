@@ -9,6 +9,11 @@
 
 .arkyn_button:hover {
   cursor: pointer;
+  filter: brightness(0.8);
+}
+
+html.dark .arkyn_button:hover {
+  cursor: pointer;
   filter: brightness(1.2);
 }
 
