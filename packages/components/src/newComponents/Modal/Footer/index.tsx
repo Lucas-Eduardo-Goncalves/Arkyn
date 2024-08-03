@@ -1,12 +1,12 @@
-import type { ModalFooterProps } from "@arkyn/types";
+import { ModalFooterProps } from "@arkyn/types";
 
 import "./styles.css";
 
-function Footer(args: ModalFooterProps) {
+function ModalFooter(args: ModalFooterProps) {
   const { alignment = "right", className: baseClassName, ...rest } = args;
   const className = `arkyn_modal_footer ${alignment} ${baseClassName}`;
 
   return <footer className={className.trim()} {...rest} />;
 }
 
-export { Footer };
+export { ModalFooter };

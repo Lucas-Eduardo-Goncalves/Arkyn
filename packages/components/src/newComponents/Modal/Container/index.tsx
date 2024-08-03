@@ -8,7 +8,7 @@ import "./styles.css";
 type ModalContext = { makeInvisible: () => void };
 const modalContext = createContext({} as ModalContext);
 
-function Container(args: ModalContainerProps) {
+function ModalContainer(args: ModalContainerProps) {
   const {
     isVisibled,
     makeInvisible,
@@ -26,7 +26,7 @@ function Container(args: ModalContainerProps) {
         {isVisibled && (
           <aside className={className.trim()} {...rest}>
             <motion.div
-              className="overlay"
+              className="arkyn_modal_container:overlay"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -35,7 +35,7 @@ function Container(args: ModalContainerProps) {
             />
 
             <motion.div
-              className="content"
+              className="arkyn_modal_container:content"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0, scale: 0.75 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -50,4 +50,4 @@ function Container(args: ModalContainerProps) {
   );
 }
 
-export { Container, modalContext };
+export { ModalContainer, modalContext };

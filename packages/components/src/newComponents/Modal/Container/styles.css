@@ -16,7 +16,7 @@
   z-index: 9999;
 }
 
-.arkyn_modal_container > .overlay {
+.arkyn_modal_container:overlay {
   position: fixed;
   z-index: 9997;
   top: 0;
@@ -26,11 +26,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.arkyn_modal_container > .overlay:hover {
+.arkyn_modal_container:overlay:hover {
   cursor: pointer;
 }
 
-.arkyn_modal_container > .content {
+.arkyn_modal_container:content {
   z-index: 9999;
   border-radius: var(--rounded-cards);
   background: var(--card);

@@ -1,5 +1,5 @@
-import { Container } from "./Container";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { ModalContainer } from "./Container";
+import { ModalFooter } from "./Footer";
+import { ModalHeader } from "./Header";
 
-export const Modal = { Container, Header, Footer };
+export { ModalContainer, ModalHeader, ModalFooter };
