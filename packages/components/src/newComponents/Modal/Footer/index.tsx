@@ -1,5 +1,4 @@
 import { ModalFooterProps } from "@arkyn/types";
-
 import "./styles.css";
 
 function ModalFooter(args: ModalFooterProps) {

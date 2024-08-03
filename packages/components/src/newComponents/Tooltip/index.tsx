@@ -1,5 +1,4 @@
-import type { TooltipProps } from "@arkyn/types";
-
+import { TooltipProps } from "@arkyn/types";
 import "./styles.css";
 
 function Tooltip(args: TooltipProps) {
@@ -8,17 +7,16 @@ function Tooltip(args: TooltipProps) {
     size = "lg",
     children,
     orientation = "top",
-    className,
+    className: baseClassName,
     ...rest
   } = args;
 
+  const className = `arkyn_tooltip ${size} ${orientation} ${baseClassName}`;
+
   return (
-    <div
-      className={`arkyn_tooltip ${size} ${orientation} ${className}`}
-      {...rest}
-    >
+    <div className={className.trim()} {...rest}>
       {children}
-      <div className="arkyn_tooltip_text">{text}</div>
+      <div className="arkyn_tooltip:text">{text}</div>
     </div>
   );
 }

@@ -17,7 +17,7 @@
   opacity: 0.5;
 }
 
-.arkyn_icon_button .content {
+.arkyn_icon_button:content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,13 +121,13 @@
 }
 
 .arkyn_icon_button.xs {
-  border-radius: calc(var(--rounded-inputs) * 0.6667);
+  border-radius: calc(var(--rounded-inputs) * 0.6667); /* 2/3 */
   height: 24px;
   width: 24px;
 }
 
 /* SPIN */
-.arkyn_icon_button .spinner {
+.arkyn_icon_button:spinner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,16 +139,16 @@
   opacity: 0;
 }
 
-.arkyn_icon_button .spinner svg {
+.arkyn_icon_button:spinner > svg {
   animation: spin 2s linear infinite;
 }
 
-.arkyn_icon_button.loading_true .content {
-  opacity: 0;
+.arkyn_icon_button.loading_true .arkyn_icon_button:spinner {
+  opacity: 1;
 }
 
-.arkyn_icon_button.loading_true .spinner {
-  opacity: 1;
+.arkyn_icon_button.loading_true .arkyn_icon_button:content {
+  opacity: 0;
 }
 
 @keyframes spin {
