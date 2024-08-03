@@ -10,5 +10,6 @@ type FormControllerProps = {
 type FormLabelProps = {
     showAsterisk?: boolean;
 } & LabelHTMLAttributes<HTMLLabelElement>;
-export type { FormControllerContextProps, FormControllerProps, FormLabelProps };
+type FormErrorProps = HTMLAttributes<HTMLElement>;
+export type { FormControllerContextProps, FormControllerProps, FormLabelProps, FormErrorProps, };
 //# sourceMappingURL=FormProps.d.ts.map

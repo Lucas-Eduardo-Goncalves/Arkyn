@@ -1,13 +1,21 @@
-import type { FormLabelProps } from "@arkyn/types";
+import { FormLabelProps } from "@arkyn/types";
 
-import { buildFormLabelConfig } from "../../../config/buildFormLabelConfig";
 import { useFormController } from "../FormController";
-
 import "./styles.css";
 
 function FormLabel(props: FormLabelProps) {
+  const {
+    showAsterisk = false,
+    className: baseClassName = "",
+    ...rest
+  } = props;
+
   const { id } = useFormController();
-  return <label {...buildFormLabelConfig(props)} htmlFor={id} />;
+
+  const show = showAsterisk ? "show-asterisk" : "";
+  const className = `arkyn_form_label ${show} ${baseClassName}`;
+
+  return <label {...rest} className={className.trim()} htmlFor={id} />;
 }
 
 export { FormLabel };

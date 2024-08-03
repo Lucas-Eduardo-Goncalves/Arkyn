@@ -1,17 +1,27 @@
-import { ReactNode } from "react";
-import { useFormController } from "../FormController";
+import { FormErrorProps } from "@arkyn/types";
 
+import { useFormController } from "../FormController";
 import "./styles.css";
 
-type FormErrorProps = {
-  children?: ReactNode;
-};
+function FormError(args: FormErrorProps) {
+  const { children, className: baseClassName, ...rest } = args;
+  const className = `arkyn_form_error ${baseClassName}`;
 
-function FormError({ children }: FormErrorProps) {
   const { error } = useFormController();
-  if (children) return <strong className="arkyn_form_error">{children}</strong>;
+  if (children) {
+    return (
+      <strong className={className.trim()} {...rest}>
+        {children}
+      </strong>
+    );
+  }
+
   if (!error) return <></>;
-  return <strong className="arkyn_form_error">{error}</strong>;
+  return (
+    <strong className={className.trim()} {...rest}>
+      {error}
+    </strong>
+  );
 }
 
 export { FormError };

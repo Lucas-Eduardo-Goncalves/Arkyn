@@ -1,8 +1,4 @@
-import type {
-  FormControllerContextProps,
-  FormControllerProps,
-} from "@arkyn/types";
-
+import { FormControllerContextProps, FormControllerProps } from "@arkyn/types";
 import { useActionData } from "@remix-run/react";
 import { createContext, useContext, useId, useRef } from "react";
 
@@ -10,8 +6,9 @@ import "./styles.css";
 
 const FormControllerContext = createContext({} as FormControllerContextProps);
 
-function FormController({ children, ...rest }: FormControllerProps) {
+function FormController(args: FormControllerProps) {
   const actionData = useActionData<any>();
+  const { children, className: baseClassName, ...rest } = args;
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -20,9 +17,11 @@ function FormController({ children, ...rest }: FormControllerProps) {
 
   const id = useId();
 
+  const className = `arkyn_form_controller ${baseClassName}`;
+
   return (
     <FormControllerContext.Provider value={{ error, id, inputRef }}>
-      <section className="arkyn_form_controller" {...rest}>
+      <section className={className.trim()} {...rest}>
         {children}
       </section>
     </FormControllerContext.Provider>
