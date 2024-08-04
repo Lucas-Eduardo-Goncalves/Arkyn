@@ -4,7 +4,7 @@ import { ToastProps } from "@arkyn/types";
 import "./styles.css";
 
 function Toast({ message, title, type, size = "lg" }: ToastProps) {
-  const className = `arkyn_toast danger ${size}`;
+  const className = `arkyn_toast ${type} ${size}`;
 
   function Icon() {
     switch (type) {

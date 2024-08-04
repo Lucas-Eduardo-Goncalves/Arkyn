@@ -11,21 +11,21 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@react-input/mask": ">=1.2.5",
-    "framer-motion": ">=11.2.11",
-    "lucide-react": ">=0.396.0",
-    "sonner": ">=1.5.0"
+    "@react-input/mask": "^1.2.5",
+    "framer-motion": "^11.3.21",
+    "lucide-react": "^0.424.0",
+    "sonner": "^1.5.0"
   },
   "peerDependencies": {
-    "@remix-run/react": ">=2.0.1",
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0"
+    "@remix-run/react": "^2.9.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": ">=18.3.3",
-    "@types/react-dom": ">=18.3.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "bun-types": "latest",
-    "typescript": ">=5.5.2",
-    "vite": "^5.3.1"
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
   }
 }
