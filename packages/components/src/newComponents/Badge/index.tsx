@@ -1,16 +1,30 @@
 import type { BadgeProps } from "@arkyn/types";
 
-import { buildBadgeConfig } from "../../config/buildBadgeConfig";
+import { GenerateIcon } from "../../utils/generateIcon";
 import "./styles.css";
 
 function Badge(args: BadgeProps) {
-  const { leftIcon, children, rightIcon, ...rest } = buildBadgeConfig(args);
+  const {
+    variant = "ghost",
+    scheme = "primary",
+    size = "md",
+    leftIcon,
+    rightIcon,
+    className: baseClassName = "",
+    children,
+    ...rest
+  } = args;
+
+  const iconSizes = { md: 12, lg: 14 };
+  const iconSize = iconSizes[size];
+
+  const className = `arkyn_badge ${variant} ${scheme} ${size} ${baseClassName}`;
 
   return (
-    <div {...rest}>
-      {leftIcon}
+    <div className={className.trim()} {...rest}>
+      {GenerateIcon(iconSize, leftIcon)}
       {children}
-      {rightIcon}
+      {GenerateIcon(iconSize, leftIcon)}
     </div>
   );
 }

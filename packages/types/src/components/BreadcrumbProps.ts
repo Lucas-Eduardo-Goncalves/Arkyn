@@ -5,6 +5,6 @@ type BreadcrumbLinkProps = LinkProps & {
   disabled?: boolean;
 };
 
-type BreadcrumbProps = HTMLAttributes<HTMLElement>;
+type BreadcrumbContainerProps = HTMLAttributes<HTMLElement>;
 
-export type { BreadcrumbProps, BreadcrumbLinkProps };
+export type { BreadcrumbContainerProps, BreadcrumbLinkProps };
