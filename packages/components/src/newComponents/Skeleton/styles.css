@@ -3,7 +3,13 @@
   height: 100%;
   border-radius: 6px;
 
-  background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+  background: linear-gradient(
+    to right,
+    var(--skeleton) 4%,
+    var(--skeleton-foreground) 25%,
+    var(--skeleton) 36%
+  );
+
   background-size: 40rem 100%;
   animation: shimmer 1.5s infinite linear;
 }

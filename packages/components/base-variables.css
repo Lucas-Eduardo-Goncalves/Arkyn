@@ -11,6 +11,9 @@
   --card: #ffffff;
   --card-foreground: #ffffff;
 
+  --skeleton: #f0f0f0;
+  --skeleton-foreground: #e0e0e0;
+
   /* Text */
   --text-primary: #116ddc;
   --text-heading: #0f172a;

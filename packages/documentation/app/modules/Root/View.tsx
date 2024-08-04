@@ -8,6 +8,7 @@ import {
 } from "@remix-run/react";
 
 import "remix-development-tools/client.css";
+import "@arkyn/components/base-variables.css";
 import "~/config/styles.css";
 
 type DocumentProps = {
