@@ -1,0 +1,151 @@
+.arkyn_toast {
+  display: flex;
+  align-items: start;
+
+  width: 300px;
+  padding: 16px;
+  gap: 12px;
+
+  border-radius: var(--rounded-cards);
+}
+
+.arkyn_toast > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  border-radius: 90px;
+  overflow: hidden;
+}
+
+.arkyn_toast > div > .bg {
+  content: " ";
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+.arkyn_toast > div > svg {
+  z-index: 2;
+}
+
+.arkyn_toast > div circle {
+  display: none;
+}
+
+.arkyn_toast > p {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.arkyn_toast > p > strong {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Schemas */
+.arkyn_toast.info {
+  background-color: rgba(var(--spotlight-info), 1);
+  color: #ffffff;
+}
+
+.arkyn_toast.info > div > .bg {
+  background-color: rgba(var(--spotlight-info), 1);
+  filter: brightness(0.8);
+}
+
+.arkyn_toast.warning {
+  background-color: rgba(var(--spotlight-warning), 1);
+  color: #ffffff;
+}
+
+.arkyn_toast.warning > div > .bg {
+  background-color: rgba(var(--spotlight-warning), 1);
+  filter: brightness(0.8);
+}
+
+.arkyn_toast.danger {
+  background-color: rgba(var(--spotlight-danger), 1);
+  color: #ffffff;
+}
+
+.arkyn_toast.danger > div > .bg {
+  background-color: rgba(var(--spotlight-danger), 1);
+  filter: brightness(0.8);
+}
+
+.arkyn_toast.success {
+  background-color: rgba(var(--spotlight-success), 1);
+  color: #ffffff;
+}
+
+.arkyn_toast.success > div > .bg {
+  background-color: rgba(var(--spotlight-success), 1);
+  filter: brightness(0.8);
+}
+
+/* Sizes */
+.arkyn_toast.md {
+  width: 260px;
+}
+
+.arkyn_toast.md > div {
+  min-height: 20px;
+  max-height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+}
+
+.arkyn_toast.md > div > svg {
+  min-height: 26px;
+  min-width: 26px;
+}
+
+.arkyn_toast.md > p > strong {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.arkyn_toast.md > p > span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.arkyn_toast.lg {
+  width: 260px;
+}
+
+.arkyn_toast.lg > div {
+  min-height: 24px;
+  max-height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+}
+
+.arkyn_toast.lg > div > svg {
+  min-height: 30px;
+  min-width: 30px;
+}
+
+.arkyn_toast.lg > p > strong {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.arkyn_toast.lg > p > span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}

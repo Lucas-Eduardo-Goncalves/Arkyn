@@ -1,0 +1,1 @@
+{"version":3,"file":"ToastProps.d.ts","sourceRoot":"","sources":["../../src/components/ToastProps.ts"],"names":[],"mappings":"AAAA,KAAK,UAAU,GAAG;IAChB,KAAK,EAAE,MAAM,CAAC;IACd,OAAO,EAAE,MAAM,CAAC;IAChB,IAAI,CAAC,EAAE,IAAI,GAAG,IAAI,CAAC;IACnB,IAAI,EAAE,MAAM,GAAG,SAAS,GAAG,QAAQ,GAAG,SAAS,CAAC;CACjD,CAAC;AAEF,YAAY,EAAE,UAAU,EAAE,CAAC"}

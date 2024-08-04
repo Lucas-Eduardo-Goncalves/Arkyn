@@ -1,10 +1,8 @@
 import type { ReactNode } from "react";
+import type { ToastProps } from "../components/ToastProps";
 
 type ToastContextProps = {
-  errorToast(message: string): void;
-  warningToast(message: string): void;
-  successToast(message: string): void;
-  infoToast(message: string): void;
+  showToast(toast: ToastProps): void;
 };
 
 type ToastProviderProps = {

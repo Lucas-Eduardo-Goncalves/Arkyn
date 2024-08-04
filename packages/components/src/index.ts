@@ -1,7 +1,7 @@
 // Data Display
-export { Skeleton } from "./newComponents/Skeleton";
 export { Badge } from "./newComponents/Badge";
 export { Divider } from "./newComponents/Divider";
+export { Skeleton } from "./newComponents/Skeleton";
 
 // Form
 export { Select } from "./components/Select";
@@ -24,6 +24,7 @@ export {
   ModalFooter,
   ModalHeader,
 } from "./newComponents/Modal";
+export { Toast } from "./newComponents/Toast";
 export { Tooltip } from "./newComponents/Tooltip";
 
 // Hooks

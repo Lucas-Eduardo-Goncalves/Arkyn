@@ -1,30 +1,17 @@
-import { ToastProviderProps } from "@arkyn/types";
+import { ToastProps, ToastProviderProps } from "@arkyn/types";
 import { Toaster, toast } from "sonner";
 
 import { ToastContext } from "../context/ToastContext";
+import { Toast } from "../newComponents/Toast";
 
 function ToastProvider({ children }: ToastProviderProps) {
-  function successToast(message: string) {
-    toast.success(message);
-  }
-
-  function infoToast(message: string) {
-    toast.info(message);
-  }
-
-  function errorToast(message: string) {
-    toast.error(message);
-  }
-
-  function warningToast(message: string) {
-    toast.warning(message);
+  function showToast(data: ToastProps) {
+    toast.custom((ars) => <Toast {...data} />);
   }
 
   return (
-    <ToastContext.Provider
-      value={{ errorToast, warningToast, successToast, infoToast }}
-    >
-      <Toaster richColors />
+    <ToastContext.Provider value={{ showToast }}>
+      <Toaster />
       {children}
     </ToastContext.Provider>
   );

@@ -11,15 +11,14 @@
   --card: #ffffff;
   --card-foreground: #ffffff;
 
+  /* Skeleton */
   --skeleton: #f0f0f0;
   --skeleton-foreground: #e0e0e0;
 
   /* Text */
-  --text-primary: #116ddc;
   --text-heading: #0f172a;
   --text-body: #475569;
   --text-light: #94a3b8;
-  --text-link: #0ea5e9;
 
   /* Border */
   --border: #e2e8f0;

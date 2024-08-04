@@ -23,6 +23,7 @@ export * from "./components/ModalProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
 export * from "./components/TooltipProps";
+export * from "./components/ToastProps";
 // Hooks
 export * from "./hooks/Drawer";
 export * from "./hooks/Modal";
