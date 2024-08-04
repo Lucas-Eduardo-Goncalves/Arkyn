@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { AlertCircle, CheckCircle, Info, XCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, Info, XCircle } from "lucide-react";
 import "./styles.css";
 function Toast({ message, title, type, size = "lg" }) {
     const className = `arkyn_toast ${type} ${size}`;
@@ -8,7 +8,7 @@ function Toast({ message, title, type, size = "lg" }) {
             case "info":
                 return _jsx(Info, {});
             case "success":
-                return _jsx(CheckCircle, {});
+                return _jsx(CheckCircle2, {});
             case "danger":
                 return _jsx(XCircle, {});
             case "warning":
