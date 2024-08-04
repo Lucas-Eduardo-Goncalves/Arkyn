@@ -1,6 +1,6 @@
-export { Skeleton } from "./components/Skeleton";
 export { Badge } from "./newComponents/Badge";
 export { Divider } from "./newComponents/Divider";
+export { Skeleton } from "./newComponents/Skeleton";
 export { Select } from "./components/Select";
 export { Button } from "./newComponents/Button";
 export { Checkbox } from "./newComponents/Checkbox";
@@ -10,6 +10,7 @@ export { Input } from "./newComponents/Input";
 export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb";
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";
+export { Toast } from "./newComponents/Toast";
 export { Tooltip } from "./newComponents/Tooltip";
 export { useAutomation } from "./hooks/useAutomation";
 export { useDrawer } from "./hooks/useDrawer";

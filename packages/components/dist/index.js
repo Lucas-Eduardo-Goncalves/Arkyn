@@ -1,7 +1,7 @@
 // Data Display
-export { Skeleton } from "./components/Skeleton";
 export { Badge } from "./newComponents/Badge";
 export { Divider } from "./newComponents/Divider";
+export { Skeleton } from "./newComponents/Skeleton";
 // Form
 export { Select } from "./components/Select";
 export { Button } from "./newComponents/Button";
@@ -14,6 +14,7 @@ export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb
 // Overlay
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";
+export { Toast } from "./newComponents/Toast";
 export { Tooltip } from "./newComponents/Tooltip";
 // Hooks
 export { useAutomation } from "./hooks/useAutomation";
