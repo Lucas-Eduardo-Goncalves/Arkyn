@@ -1,4 +1,4 @@
-import { AlertCircle, CheckCircle, Info, XCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, Info, XCircle } from "lucide-react";
 import { ToastProps } from "@arkyn/types";
 
 import "./styles.css";
@@ -11,7 +11,7 @@ function Toast({ message, title, type, size = "lg" }: ToastProps) {
       case "info":
         return <Info />;
       case "success":
-        return <CheckCircle />;
+        return <CheckCircle2 />;
       case "danger":
         return <XCircle />;
       case "warning":
