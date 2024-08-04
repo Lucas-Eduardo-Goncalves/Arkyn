@@ -1564,7 +1564,7 @@ function mn(t) {
   ] });
 }
 function gr({ message: t, title: r, type: n, size: o = "lg" }) {
-  const l = `arkyn_toast danger ${o}`;
+  const l = `arkyn_toast ${n} ${o}`;
   function u() {
     switch (n) {
       case "info":
