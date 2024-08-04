@@ -265,7 +265,6 @@ declare function getConfig(props: CpfCnpjInputProps, isFocused: boolean): {
     name: string;
     type: "cpf-cnpj";
     width?: number | string | undefined;
-    step?: number | string | undefined;
     accept?: string | undefined;
     alt?: string | undefined;
     autoComplete?: import("react").HTMLInputAutoCompleteAttribute | undefined;
@@ -284,6 +283,7 @@ declare function getConfig(props: CpfCnpjInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
+    step?: number | string | undefined;
     value?: string;
     isLoading: boolean;
     className: string;

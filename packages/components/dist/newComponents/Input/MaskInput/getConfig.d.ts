@@ -265,7 +265,6 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     max?: number | string | undefined;
     min?: number | string | undefined;
     width?: number | string | undefined;
-    step?: number | string | undefined;
     value?: string | readonly string[] | number | undefined;
     accept?: string | undefined;
     alt?: string | undefined;
@@ -285,6 +284,7 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
+    step?: number | string | undefined;
     mask: string;
     separate?: boolean;
     replacement?: string | import("@react-input/mask").Replacement;

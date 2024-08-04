@@ -266,7 +266,6 @@ declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     max?: number | string | undefined;
     min?: number | string | undefined;
     width?: number | string | undefined;
-    step?: number | string | undefined;
     value?: string | readonly string[] | number | undefined;
     accept?: string | undefined;
     alt?: string | undefined;
@@ -286,6 +285,7 @@ declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
+    step?: number | string | undefined;
     isLoading: boolean;
     className: string;
     prefix: import("react/jsx-runtime").JSX.Element;

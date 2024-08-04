@@ -274,7 +274,6 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     max?: number | string | undefined;
     min?: number | string | undefined;
     width?: number | string | undefined;
-    step?: number | string | undefined;
     accept?: string | undefined;
     alt?: string | undefined;
     autoComplete?: import("react").HTMLInputAutoCompleteAttribute | undefined;
@@ -293,6 +292,7 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
+    step?: number | string | undefined;
     isLoading: boolean;
     className: string;
     prefix: import("react/jsx-runtime").JSX.Element;

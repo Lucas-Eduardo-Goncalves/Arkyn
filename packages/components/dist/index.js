@@ -10,10 +10,10 @@ export { FormController, FormError, FormLabel } from "./newComponents/Form";
 export { IconButton } from "./newComponents/IconButton";
 export { Input } from "./newComponents/Input";
 // Navigation
-export { Breadcrumb, BreadcrumbLink } from "./newComponents/Breadcrumb";
+export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb";
 // Overlay
-export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
+export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";
 export { Tooltip } from "./newComponents/Tooltip";
 // Hooks
 export { useAutomation } from "./hooks/useAutomation";

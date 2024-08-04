@@ -264,7 +264,6 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     name: string;
     type: "currency";
     width?: number | string | undefined;
-    step?: number | string | undefined;
     accept?: string | undefined;
     alt?: string | undefined;
     autoComplete?: import("react").HTMLInputAutoCompleteAttribute | undefined;
@@ -283,6 +282,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
+    step?: number | string | undefined;
     defaultValue?: number;
     value?: number;
     isLoading: boolean;
