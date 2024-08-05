@@ -11,6 +11,9 @@
   --card: #ffffff;
   --card-foreground: #ffffff;
 
+  /* Input, Select, Textarea */
+  --input-background: 255, 255, 255;
+
   /* Skeleton */
   --skeleton: #f0f0f0;
   --skeleton-foreground: #e0e0e0;

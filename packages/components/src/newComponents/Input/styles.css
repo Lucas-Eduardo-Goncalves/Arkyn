@@ -82,7 +82,7 @@
 /* VARIANTS */
 .arkyn_input.solid {
   border-color: var(--border);
-  background-color: var(--background);
+  background-color: rgba(var(--input-background), 1);
 }
 
 .arkyn_input.solid.errored {
