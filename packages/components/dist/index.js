@@ -12,6 +12,7 @@ export { IconButton } from "./newComponents/IconButton";
 export { Input } from "./newComponents/Input";
 // Navigation
 export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb";
+export { Pagination } from "./newComponents/Pagination";
 // Overlay
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";

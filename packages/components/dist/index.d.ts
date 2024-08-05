@@ -9,6 +9,7 @@ export { FormController, FormError, FormLabel } from "./newComponents/Form";
 export { IconButton } from "./newComponents/IconButton";
 export { Input } from "./newComponents/Input";
 export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb";
+export { Pagination } from "./newComponents/Pagination";
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader, } from "./newComponents/Modal";
 export { Toast } from "./newComponents/Toast";
