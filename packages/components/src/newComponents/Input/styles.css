@@ -60,11 +60,11 @@
 }
 
 .arkyn_input input::placeholder {
-  color: var(--text-light);
+  color: var(--text-muted);
 }
 
 .arkyn_input svg {
-  color: var(--text-light);
+  color: var(--text-muted);
 }
 
 .arkyn_input.errored svg {
