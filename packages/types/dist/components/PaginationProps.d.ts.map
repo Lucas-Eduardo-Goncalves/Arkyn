@@ -1,0 +1,1 @@
+{"version":3,"file":"PaginationProps.d.ts","sourceRoot":"","sources":["../../src/components/PaginationProps.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,OAAO,CAAC;AAE5C,KAAK,eAAe,GAAG;IACrB,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,mBAAmB,EAAE,MAAM,CAAC;IAC5B,aAAa,CAAC,EAAE,MAAM,CAAC;CACxB,GAAG,cAAc,CAAC,cAAc,CAAC,CAAC;AAEnC,YAAY,EAAE,eAAe,EAAE,CAAC"}

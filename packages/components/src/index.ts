@@ -23,6 +23,7 @@ export {
   BreadcrumbContainer,
   BreadcrumbLink,
 } from "./newComponents/Breadcrumb";
+export { Pagination } from "./newComponents/Pagination";
 
 // Overlay
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";

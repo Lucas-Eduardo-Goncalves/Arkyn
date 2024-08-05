@@ -1,0 +1,94 @@
+.arkyn_pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.arkyn_pagination .arkyn_pagination-icon_button,
+.arkyn_pagination .arkyn_pagination-page_button {
+  background-color: var(--background-foreground);
+  border: none;
+
+  max-height: 28px;
+  max-width: 28px;
+
+  min-height: 28px;
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--rounded-inputs);
+}
+
+.arkyn_pagination .arkyn_pagination-icon_button:hover,
+.arkyn_pagination .arkyn_pagination-page_button:hover {
+  filter: brightness(0.98);
+  cursor: pointer;
+}
+
+html.dark .arkyn_pagination .arkyn_pagination-icon_button:hover,
+html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
+  filter: brightness(1.2);
+}
+
+.arkyn_pagination .arkyn_pagination-icon_button > svg {
+  color: var(--text-light);
+  height: 20px;
+  width: 20px;
+}
+
+.arkyn_pagination .arkyn_pagination-page_button {
+  color: var(--text-body);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.arkyn_pagination .arkyn_pagination-icon_button:disabled {
+  filter: brightness(1);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.arkyn_pagination .arkyn_pagination-current {
+  background-color: rgba(var(--spotlight-primary), 1);
+  color: #ffffff;
+  border: none;
+
+  max-height: 28px;
+  max-width: 28px;
+
+  min-height: 28px;
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--rounded-inputs);
+}
+
+.arkyn_pagination .arkyn_pagination-spread {
+  background-color: transparent;
+  color: var(--text-light);
+  border: none;
+
+  max-height: 28px;
+  max-width: 28px;
+
+  min-height: 28px;
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arkyn_pagination .arkyn_pagination-spread > svg {
+  color: var(--text-light);
+  height: 16px;
+  width: 16px;
+}
