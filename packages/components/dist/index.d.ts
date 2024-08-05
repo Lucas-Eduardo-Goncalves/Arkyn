@@ -1,6 +1,7 @@
 export { Badge } from "./newComponents/Badge";
 export { Divider } from "./newComponents/Divider";
 export { Skeleton } from "./newComponents/Skeleton";
+export { TableBody, TableCaption, TableContainer, TableFooter, TableHeader, } from "./newComponents/Table";
 export { Select } from "./components/Select";
 export { Button } from "./newComponents/Button";
 export { Checkbox } from "./newComponents/Checkbox";
