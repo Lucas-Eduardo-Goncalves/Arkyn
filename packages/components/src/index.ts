@@ -2,6 +2,13 @@
 export { Badge } from "./newComponents/Badge";
 export { Divider } from "./newComponents/Divider";
 export { Skeleton } from "./newComponents/Skeleton";
+export {
+  TableBody,
+  TableCaption,
+  TableContainer,
+  TableFooter,
+  TableHeader,
+} from "./newComponents/Table";
 
 // Form
 export { Select } from "./components/Select";

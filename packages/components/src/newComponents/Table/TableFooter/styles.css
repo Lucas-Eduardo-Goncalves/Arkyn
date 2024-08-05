@@ -1,0 +1,15 @@
+.arkyn_table_footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+
+  height: 48px;
+  padding: 16px;
+  padding-bottom: 0;
+  border-top: 1px solid var(--border);
+}
+
+.arkyn_table_footer .spacing-row {
+  height: 24px;
+}

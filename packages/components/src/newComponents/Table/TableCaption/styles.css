@@ -1,0 +1,18 @@
+.arkyn_table_caption {
+  margin-bottom: 24px;
+}
+
+.arkyn_table_caption-content {
+  display: flex;
+  align-items: center;
+}
+
+.arkyn_table_caption-content > .right-section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+
+  flex: 2;
+  padding-left: auto;
+}

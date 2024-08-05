@@ -1,0 +1,19 @@
+.arkyn_table_container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  width: 100%;
+  height: max-content;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  border-radius: var(--rounded-cards);
+  background-color: var(--background-foreground);
+}
+
+.arkyn_table_container table {
+  border-collapse: separate;
+  border-spacing: 0;
+}

@@ -1,0 +1,41 @@
+.arkyn_table_body > tr:nth-child(odd) > td {
+  background-color: var(--card);
+}
+
+.arkyn_table_body > tr > td {
+  padding-left: 16px;
+  height: 64px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  color: var(--text-body);
+}
+
+.arkyn_table_body > tr > td:first-child {
+  border-top-left-radius: var(--rounded-cards);
+  border-bottom-left-radius: var(--rounded-cards);
+}
+
+.arkyn_table_body > tr > td:last-child {
+  border-top-right-radius: var(--rounded-cards);
+  border-bottom-right-radius: var(--rounded-cards);
+}
+
+.arkyn_table_body > tr:nth-child(odd):hover > td {
+  filter: brightness(0.98);
+}
+
+.arkyn_table_body > tr:nth-child(even):hover > td {
+  background-color: var(--card);
+  filter: brightness(0.98);
+}
+
+html.dark .arkyn_table_body > tr:nth-child(odd):hover > td {
+  filter: brightness(1.2);
+}
+
+html.dark .arkyn_table_body > tr:nth-child(even):hover > td {
+  background-color: var(--card);
+  filter: brightness(1.2);
+}
