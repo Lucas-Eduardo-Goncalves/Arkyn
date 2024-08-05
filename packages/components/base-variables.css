@@ -9,19 +9,20 @@
 
   /* Modal, Drawer, Popover */
   --card: #ffffff;
-  --card-foreground: #ffffff;
+  --card-foreground-primary: #f8fafc;
+  --card-foreground-secondary: #f1f5f9;
 
-  /* Input, Select, Textarea */
-  --input-background: 255, 255, 255;
+  /* Input, Select, Textarea, Button (outline) */
+  --input-background: 248, 250, 252; /* #f8fafc */
 
   /* Skeleton */
-  --skeleton: #f0f0f0;
-  --skeleton-foreground: #e0e0e0;
+  --skeleton: #f8fafc;
+  --skeleton-foreground: #f1f5f9;
 
   /* Text */
   --text-heading: #0f172a;
   --text-body: #475569;
-  --text-light: #94a3b8;
+  --text-muted: #94a3b8;
 
   /* Border */
   --border: #e2e8f0;

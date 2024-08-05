@@ -50,7 +50,7 @@ html.dark .arkyn_icon_button:hover {
 }
 
 .arkyn_icon_button.outline {
-  background-color: rgba(var(--spotlight-outline), 1);
+  background-color: rgba(var(--input-background), 1);
   border-color: var(--border);
 }
 

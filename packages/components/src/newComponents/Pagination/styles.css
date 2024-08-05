@@ -36,7 +36,7 @@ html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
 }
 
 .arkyn_pagination .arkyn_pagination-icon_button > svg {
-  color: var(--text-light);
+  color: var(--text-muted);
   height: 20px;
   width: 20px;
 }
@@ -73,7 +73,7 @@ html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
 
 .arkyn_pagination .arkyn_pagination-spread {
   background-color: transparent;
-  color: var(--text-light);
+  color: var(--text-muted);
   border: none;
 
   max-height: 28px;
@@ -88,7 +88,7 @@ html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
 }
 
 .arkyn_pagination .arkyn_pagination-spread > svg {
-  color: var(--text-light);
+  color: var(--text-muted);
   height: 16px;
   width: 16px;
 }

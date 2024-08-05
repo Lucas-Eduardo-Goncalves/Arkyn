@@ -6,12 +6,12 @@
 }
 
 .arkyn_breadcrumb_link.active {
-  color: var(--text-heading);
+  color: var(--text-muted);
 }
 
 .arkyn_breadcrumb_link.inactive:hover {
   cursor: pointer;
-  color: var(--text-heading);
+  color: var(--text-muted);
 }
 
 .arkyn_breadcrumb_link:first-child > svg {

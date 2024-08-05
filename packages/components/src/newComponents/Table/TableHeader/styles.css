@@ -1,6 +1,6 @@
 .arkyn_table_header th {
   text-align: left;
-  background-color: var(--card-foreground);
+  background-color: var(--card-foreground-secondary);
   padding-left: 16px;
   height: 44px;
 

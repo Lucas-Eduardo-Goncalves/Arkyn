@@ -1,5 +1,5 @@
 .arkyn_table_body > tr:nth-child(odd) > td {
-  background-color: var(--card);
+  background-color: var(--card-foreground-primary);
 }
 
 .arkyn_table_body > tr > td {
@@ -27,7 +27,7 @@
 }
 
 .arkyn_table_body > tr:nth-child(even):hover > td {
-  background-color: var(--card);
+  background-color: var(--card-foreground);
   filter: brightness(0.98);
 }
 
@@ -36,6 +36,6 @@ html.dark .arkyn_table_body > tr:nth-child(odd):hover > td {
 }
 
 html.dark .arkyn_table_body > tr:nth-child(even):hover > td {
-  background-color: var(--card);
+  background-color: var(--card-foreground);
   filter: brightness(1.2);
 }

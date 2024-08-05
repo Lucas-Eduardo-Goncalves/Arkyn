@@ -4,7 +4,7 @@
   justify-content: center;
 
   border: 2px solid var(--border);
-  background-color: var(--background);
+  background-color: rgba(var(--input-background), 1);
 }
 
 .arkyn_checkbox:hover {
