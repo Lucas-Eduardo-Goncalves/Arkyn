@@ -36,7 +36,7 @@ function useAutomation() {
     if (!isToastProps(existsToast) && existsMessage) {
       showToast({
         message: existsMessage,
-        title: "Atenção DEV!",
+        title: "Atenção!",
         type: "warning",
       });
     }

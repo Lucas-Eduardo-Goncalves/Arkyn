@@ -55,42 +55,42 @@
 
 /* Schemas */
 .arkyn_toast.info {
-  background-color: rgba(var(--spotlight-info), 1);
+  background-color: rgba(var(--toast-info), 1);
   color: #ffffff;
 }
 
 .arkyn_toast.info > div > .bg {
-  background-color: rgba(var(--spotlight-info), 1);
+  background-color: rgba(var(--toast-info), 1);
   filter: brightness(0.8);
 }
 
 .arkyn_toast.warning {
-  background-color: rgba(var(--spotlight-warning), 1);
+  background-color: rgba(var(--toast-warning), 1);
   color: #ffffff;
 }
 
 .arkyn_toast.warning > div > .bg {
-  background-color: rgba(var(--spotlight-warning), 1);
+  background-color: rgba(var(--toast-warning), 1);
   filter: brightness(0.8);
 }
 
 .arkyn_toast.danger {
-  background-color: rgba(var(--spotlight-danger), 1);
+  background-color: rgba(var(--toast-danger), 1);
   color: #ffffff;
 }
 
 .arkyn_toast.danger > div > .bg {
-  background-color: rgba(var(--spotlight-danger), 1);
+  background-color: rgba(var(--toast-danger), 1);
   filter: brightness(0.8);
 }
 
 .arkyn_toast.success {
-  background-color: rgba(var(--spotlight-success), 1);
+  background-color: rgba(var(--toast-success), 1);
   color: #ffffff;
 }
 
 .arkyn_toast.success > div > .bg {
-  background-color: rgba(var(--spotlight-success), 1);
+  background-color: rgba(var(--toast-success), 1);
   filter: brightness(0.8);
 }
 

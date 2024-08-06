@@ -37,4 +37,10 @@
   --spotlight-danger: 244, 63, 94; /* #f43f5e */
   --spotlight-info: 14, 165, 233; /* #0ea5e9 */
   --spotlight-warning: 249, 115, 22; /* #f97316 */
+
+  /* Toast */
+  --toast-success: 16, 185, 129; /* #10b981 */
+  --toast-danger: 244, 63, 94; /* #f43f5e */
+  --toast-info: 14, 165, 233; /* #0ea5e9 */
+  --toast-warning: 249, 115, 22; /* #f97316 */
 }
