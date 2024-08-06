@@ -5,6 +5,7 @@
   width: 300px;
   padding: 16px;
   gap: 12px;
+  flex: 1;
 
   border-radius: var(--rounded-cards);
 }
@@ -95,7 +96,7 @@
 
 /* Sizes */
 .arkyn_toast.md {
-  width: 260px;
+  min-width: 260px;
 }
 
 .arkyn_toast.md > div {
@@ -123,7 +124,7 @@
 }
 
 .arkyn_toast.lg {
-  width: 260px;
+  min-width: 260px;
 }
 
 .arkyn_toast.lg > div {

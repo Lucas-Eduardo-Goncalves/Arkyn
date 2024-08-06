@@ -30,7 +30,16 @@ function useAutomation() {
 
   useEffect(() => {
     const existsToast = actionData?.toast;
+    const existsMessage = actionData?.message;
+
     if (isToastProps(existsToast)) showToast(existsToast);
+    if (!isToastProps(existsToast) && existsMessage) {
+      showToast({
+        message: existsMessage,
+        title: "Atenção DEV!",
+        type: "warning",
+      });
+    }
   }, [actionData]);
 }
 
