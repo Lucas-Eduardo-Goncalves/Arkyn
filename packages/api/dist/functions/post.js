@@ -44,10 +44,10 @@ const post = async (url, data, config) => {
         })
             .catch((err) => {
             responseData = {
-                success: false,
-                status: 500,
-                response: err,
-                message: "Api Internal Error: Not a JSON response",
+                success: response.ok,
+                status: response.status,
+                response: null,
+                message: response.statusText,
             };
         });
     })
