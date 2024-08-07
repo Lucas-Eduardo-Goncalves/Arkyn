@@ -10,6 +10,7 @@ export { Checkbox } from "./newComponents/Checkbox";
 export { FormController, FormError, FormLabel } from "./newComponents/Form";
 export { IconButton } from "./newComponents/IconButton";
 export { Input } from "./newComponents/Input";
+export { Textarea } from "./newComponents/Textarea";
 // Navigation
 export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb";
 export { Pagination } from "./newComponents/Pagination";

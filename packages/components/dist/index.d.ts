@@ -8,6 +8,7 @@ export { Checkbox } from "./newComponents/Checkbox";
 export { FormController, FormError, FormLabel } from "./newComponents/Form";
 export { IconButton } from "./newComponents/IconButton";
 export { Input } from "./newComponents/Input";
+export { Textarea } from "./newComponents/Textarea";
 export { BreadcrumbContainer, BreadcrumbLink, } from "./newComponents/Breadcrumb";
 export { Pagination } from "./newComponents/Pagination";
 export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
