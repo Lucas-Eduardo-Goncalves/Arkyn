@@ -14,6 +14,7 @@ function getConfig(props: TextareaProps, isFocused: boolean) {
     title,
     style,
     onChange,
+    rows = 3,
     ...rest
   } = props;
 
@@ -29,6 +30,7 @@ function getConfig(props: TextareaProps, isFocused: boolean) {
     readOnly,
     onFocus,
     onBlur,
+    rows,
     title,
     style,
     onChange,
