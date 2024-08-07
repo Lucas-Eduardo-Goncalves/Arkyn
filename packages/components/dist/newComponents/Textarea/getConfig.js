@@ -1,5 +1,5 @@
 function getConfig(props, isFocused) {
-    const { isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, disabled, readOnly, onFocus, onBlur, title, style, onChange, ...rest } = props;
+    const { isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, disabled, readOnly, onFocus, onBlur, title, style, onChange, rows = 3, ...rest } = props;
     const errored = isError ? "errored" : "";
     const opacity = disabled || readOnly ? "opacity" : "";
     const focused = isFocused ? "focused" : "";
@@ -10,6 +10,7 @@ function getConfig(props, isFocused) {
         readOnly,
         onFocus,
         onBlur,
+        rows,
         title,
         style,
         onChange,

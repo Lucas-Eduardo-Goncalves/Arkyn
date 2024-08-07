@@ -268,13 +268,13 @@ declare function getConfig(props: TextareaProps, isFocused: boolean): {
     required?: boolean | undefined;
     cols?: number | undefined;
     dirName?: string | undefined;
-    rows?: number | undefined;
     wrap?: string | undefined;
     className: string;
     disabled: boolean;
     readOnly: boolean;
     onFocus: import("react").FocusEventHandler<HTMLTextAreaElement>;
     onBlur: import("react").FocusEventHandler<HTMLTextAreaElement>;
+    rows: number;
     title: string;
     style: import("react").CSSProperties;
     onChange: import("react").ChangeEventHandler<HTMLTextAreaElement>;
