@@ -23,6 +23,7 @@ export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
 export * from "./components/TableProps";
 export * from "./components/ToastProps";
+export * from "./components/TextareaProps";
 export * from "./components/TooltipProps";
 export * from "./hooks/Drawer";
 export * from "./hooks/Modal";
