@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { DrawerContext } from "../context/DrawerContext";
 
-type OpenDrawerProps = (data?: any) => void;
+type OpenDrawerProps<T = any> = (data?: T) => void;
 
 function useDrawer<T = any>(): DrawerContextProps<T>;
 function useDrawer<T = any>(
@@ -11,7 +11,7 @@ function useDrawer<T = any>(
 ): {
   drawerIsOpen: boolean;
   drawerData: T;
-  openDrawer: OpenDrawerProps;
+  openDrawer: OpenDrawerProps<T>;
   closeDrawer: () => void;
 };
 

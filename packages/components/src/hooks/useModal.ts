@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { ModalContext } from "../context/ModalContext";
 
-type OpenModalProps = (data?: any) => void;
+type OpenModalProps<T = any> = (data?: T) => void;
 
 function useModal<T = any>(): ModalContextProps<T>;
 function useModal<T = any>(
@@ -11,7 +11,7 @@ function useModal<T = any>(
 ): {
   modalIsOpen: boolean;
   modalData: T;
-  openModal: OpenModalProps;
+  openModal: OpenModalProps<T>;
   closeModal: () => void;
 };
 
