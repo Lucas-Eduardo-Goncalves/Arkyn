@@ -2,8 +2,15 @@
   position: relative;
 }
 
-.arkyn_popover-content {
+.arkyn_popover .arkyn_popover-content {
   display: none;
+}
+
+.arkyn_popover.show .arkyn_popover-content {
+  display: unset;
+}
+
+.arkyn_popover-content {
   position: absolute;
   z-index: 3;
 

@@ -1725,7 +1725,7 @@ function Sr(e) {
   ] });
 }
 function Rr(e) {
-  const { children: n, button: r, closeOnClick: o, orientation: i = "bottom-left" } = e, [c, f] = ue(!1), l = `arkyn_popover ${i}`;
+  const { children: n, button: r, closeOnClick: o, orientation: i = "bottom-left" } = e, [c, f] = ue(!1), l = `arkyn_popover ${i} ${c ? "show" : ""}`;
   return /* @__PURE__ */ a.jsxs("div", { className: l, onClick: () => f(!0), children: [
     r,
     /* @__PURE__ */ a.jsx(
@@ -1742,7 +1742,7 @@ function Rr(e) {
       }
     ),
     c && /* @__PURE__ */ a.jsx(
-      "span",
+      "div",
       {
         onClick: () => f(!1),
         className: "arkyn_popover-overlay"
