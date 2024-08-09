@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-type ModalContextProps = {
+type ModalContextProps<T = any> = {
     modalIsOpen(key: string): boolean;
-    modalData(key: string): any;
-    openModal(key: string, data?: any): void;
+    modalData(key: string): T;
+    openModal(key: string, data?: T): void;
     closeModal(key: string): void;
 };
 type OpenedModals = {

@@ -5,10 +5,12 @@ import { DrawerContext } from "../context/DrawerContext";
 
 type OpenDrawerProps = (e?: { data: any }) => void;
 
-function useDrawer(): DrawerContextProps;
-function useDrawer(key: string): {
+function useDrawer<T = any>(): DrawerContextProps<T>;
+function useDrawer<T = any>(
+  key: string
+): {
   drawerIsOpen: boolean;
-  drawerData: any;
+  drawerData: T;
   openDrawer: OpenDrawerProps;
   closeDrawer: () => void;
 };

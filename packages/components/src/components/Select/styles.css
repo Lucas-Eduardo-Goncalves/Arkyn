@@ -220,6 +220,8 @@
 
   border: 1px solid var(--border);
   background-color: var(--card);
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .arkyn_select_content .arkyn_select_option {
@@ -241,7 +243,6 @@
 .arkyn_select.lg .arkyn_select_content .arkyn_select_option {
   font-size: 16px;
   padding: 8px 16px;
-  border-radius: var(--rounded-inputs);
 }
 
 .arkyn_select_content > p {

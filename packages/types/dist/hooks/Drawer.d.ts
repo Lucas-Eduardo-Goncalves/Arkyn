@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-type DrawerContextProps = {
+type DrawerContextProps<T = any> = {
     drawerIsOpen(key: string): boolean;
-    drawerData(key: string): any;
-    openDrawer(key: string, data?: any): void;
+    drawerData(key: string): T;
+    openDrawer(key: string, data?: T): void;
     closeDrawer(key: string): void;
 };
 type OpenedDrawers = {
