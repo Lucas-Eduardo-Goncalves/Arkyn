@@ -11,12 +11,12 @@ export {
 } from "./components/Table";
 
 // Form
-export { Select } from "./components/Select";
 export { Button } from "./components/Button";
 export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
+export { Select } from "./components/Select";
 export { Textarea } from "./components/Textarea";
 
 // Navigation
@@ -26,6 +26,7 @@ export { Pagination } from "./components/Pagination";
 // Overlay
 export { DrawerContainer, DrawerHeader } from "./components/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader } from "./components/Modal";
+export { Popover } from "./components/Popover";
 export { Toast } from "./components/Toast";
 export { Tooltip } from "./components/Tooltip";
 

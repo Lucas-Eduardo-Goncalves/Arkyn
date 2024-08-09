@@ -1,0 +1,70 @@
+.arkyn_popover {
+  position: relative;
+}
+
+.arkyn_popover-content {
+  display: none;
+  position: absolute;
+  z-index: 3;
+
+  background-color: var(--card);
+  border-radius: var(--rounded-cards);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arkyn_popover.bottom-left .arkyn_popover-content {
+  bottom: -5px;
+  right: 0;
+  transform: translateY(100%);
+}
+
+.arkyn_popover.bottom-right .arkyn_popover-content {
+  bottom: -5px;
+  left: 0;
+  transform: translateY(100%);
+}
+
+.arkyn_popover.top-left .arkyn_popover-content {
+  top: -5px;
+  right: 0;
+  transform: translateY(-100%);
+}
+
+.arkyn_popover.top-right .arkyn_popover-content {
+  top: -5px;
+  left: 0;
+  transform: translateY(-100%);
+}
+
+.arkyn_popover.bottom .arkyn_popover-content {
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arkyn_popover.top .arkyn_popover-content {
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arkyn_popover.left .arkyn_popover-content {
+  bottom: 50%;
+  right: calc(100% + 5px);
+  transform: translateY(50%);
+}
+
+.arkyn_popover.right .arkyn_popover-content {
+  bottom: 50%;
+  left: calc(100% + 5px);
+  transform: translateY(50%);
+}
+
+.arkyn_popover-overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

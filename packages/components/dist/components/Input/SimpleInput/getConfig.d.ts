@@ -1,6 +1,6 @@
 import type { SimpleInputProps } from "@arkyn/types";
 declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
-    type: "number" | "color" | "search" | "hidden" | "button" | "text" | "tel" | "url" | "email" | "date" | "time" | "datetime-local" | "file" | "image" | "month" | "password" | "range" | "reset" | "submit" | "week";
+    type: "number" | "color" | "search" | "hidden" | "button" | "text" | "tel" | "url" | "email" | "submit" | "reset" | "date" | "time" | "datetime-local" | "file" | "image" | "month" | "password" | "range" | "week";
     name: string;
     suppressHydrationWarning?: boolean | undefined;
     color?: string | undefined;
@@ -266,18 +266,19 @@ declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     is?: string | undefined;
     form?: string | undefined;
     list?: string | undefined;
-    value?: string | readonly string[] | number | undefined;
-    accept?: string | undefined;
-    alt?: string | undefined;
-    autoComplete?: import("react").HTMLInputAutoCompleteAttribute | undefined;
-    capture?: boolean | "user" | "environment" | undefined;
-    checked?: boolean | undefined;
-    enterKeyHint?: "enter" | "done" | "go" | "next" | "previous" | "search" | "send" | undefined;
     formAction?: string | import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS[keyof import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS] | undefined;
     formEncType?: string | undefined;
     formMethod?: string | undefined;
     formNoValidate?: boolean | undefined;
     formTarget?: string | undefined;
+    value?: string | readonly string[] | number | undefined;
+    checked?: boolean | undefined;
+    step?: number | string | undefined;
+    accept?: string | undefined;
+    alt?: string | undefined;
+    autoComplete?: import("react").HTMLInputAutoCompleteAttribute | undefined;
+    capture?: boolean | "user" | "environment" | undefined;
+    enterKeyHint?: "enter" | "done" | "go" | "next" | "previous" | "search" | "send" | undefined;
     maxLength?: number | undefined;
     minLength?: number | undefined;
     multiple?: boolean | undefined;
@@ -285,7 +286,6 @@ declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
-    step?: number | string | undefined;
     isLoading: boolean;
     className: string;
     prefix: import("react/jsx-runtime").JSX.Element;

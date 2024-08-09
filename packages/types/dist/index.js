@@ -21,11 +21,12 @@ export * from "./components/IconButtonProps";
 export * from "./components/InputProps";
 export * from "./components/ModalProps";
 export * from "./components/PaginationProps";
+export * from "./components/PopoverProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
 export * from "./components/TableProps";
-export * from "./components/ToastProps";
 export * from "./components/TextareaProps";
+export * from "./components/ToastProps";
 export * from "./components/TooltipProps";
 // Hooks
 export * from "./hooks/Drawer";
