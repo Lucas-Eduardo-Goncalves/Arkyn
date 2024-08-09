@@ -1,7 +1,5 @@
 import { ModalContextProps } from "@arkyn/types";
-type OpenModalProps = (e?: {
-    data: any;
-}) => void;
+type OpenModalProps = (data?: any) => void;
 declare function useModal<T = any>(): ModalContextProps<T>;
 declare function useModal<T = any>(key: string): {
     modalIsOpen: boolean;

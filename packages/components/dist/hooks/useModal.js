@@ -9,7 +9,7 @@ function useModal(key) {
         const { modalData: contextModalData, modalIsOpen: contextModalIsOpen, openModal: contextOpenModal, closeModal: contextCloseModal, } = contextData;
         const modalIsOpen = contextModalIsOpen(key);
         const modalData = contextModalData(key);
-        const openModal = (data) => contextOpenModal(key, data?.data);
+        const openModal = (data) => contextOpenModal(key, data);
         const closeModal = () => contextCloseModal(key);
         return { modalIsOpen, modalData, openModal, closeModal };
     }

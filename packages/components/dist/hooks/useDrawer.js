@@ -9,7 +9,7 @@ function useDrawer(key) {
         const { drawerData: contextDrawerData, drawerIsOpen: contextDrawerIsOpen, openDrawer: contextOpenDrawer, closeDrawer: contextCloseDrawer, } = contextData;
         const drawerIsOpen = contextDrawerIsOpen(key);
         const drawerData = contextDrawerData(key);
-        const openDrawer = (data) => contextOpenDrawer(key, data?.data);
+        const openDrawer = (data) => contextOpenDrawer(key, data);
         const closeDrawer = () => contextCloseDrawer(key);
         return { drawerIsOpen, drawerData, openDrawer, closeDrawer };
     }

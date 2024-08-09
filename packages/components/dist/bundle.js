@@ -1801,7 +1801,7 @@ function Pr(e) {
       openDrawer: i,
       closeDrawer: c
     } = n, f = o(e), l = r(e);
-    return { drawerIsOpen: f, drawerData: l, openDrawer: (h) => i(e, h == null ? void 0 : h.data), closeDrawer: () => c(e) };
+    return { drawerIsOpen: f, drawerData: l, openDrawer: (h) => i(e, h), closeDrawer: () => c(e) };
   } else
     return n;
 }
@@ -1816,7 +1816,7 @@ function Tr(e) {
       openModal: i,
       closeModal: c
     } = n, f = o(e), l = r(e);
-    return { modalIsOpen: f, modalData: l, openModal: (h) => i(e, h == null ? void 0 : h.data), closeModal: () => c(e) };
+    return { modalIsOpen: f, modalData: l, openModal: (h) => i(e, h), closeModal: () => c(e) };
   } else
     return n;
 }
