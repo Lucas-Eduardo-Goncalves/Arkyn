@@ -304,7 +304,6 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     title: string;
     closeOnSelect: boolean;
     style: import("react").CSSProperties;
-    isSearchable: boolean;
     iconSize: number;
     Spinner: import("react/jsx-runtime").JSX.Element;
 };

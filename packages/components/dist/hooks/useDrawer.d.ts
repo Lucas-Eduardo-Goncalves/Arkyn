@@ -2,10 +2,10 @@ import { DrawerContextProps } from "@arkyn/types";
 type OpenDrawerProps = (e?: {
     data: any;
 }) => void;
-declare function useDrawer(): DrawerContextProps;
-declare function useDrawer(key: string): {
+declare function useDrawer<T = any>(): DrawerContextProps<T>;
+declare function useDrawer<T = any>(key: string): {
     drawerIsOpen: boolean;
-    drawerData: any;
+    drawerData: T;
     openDrawer: OpenDrawerProps;
     closeDrawer: () => void;
 };
