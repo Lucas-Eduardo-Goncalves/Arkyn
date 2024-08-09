@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { DrawerContext } from "../context/DrawerContext";
 
-type OpenDrawerProps = (e?: { data: any }) => void;
+type OpenDrawerProps = (data?: any) => void;
 
 function useDrawer<T = any>(): DrawerContextProps<T>;
 function useDrawer<T = any>(
@@ -33,9 +33,7 @@ function useDrawer(key?: string) {
     const drawerIsOpen = contextDrawerIsOpen(key);
     const drawerData = contextDrawerData(key);
 
-    const openDrawer: OpenDrawerProps = (data) =>
-      contextOpenDrawer(key, data?.data);
-
+    const openDrawer: OpenDrawerProps = (data) => contextOpenDrawer(key, data);
     const closeDrawer = () => contextCloseDrawer(key);
 
     return { drawerIsOpen, drawerData, openDrawer, closeDrawer };
