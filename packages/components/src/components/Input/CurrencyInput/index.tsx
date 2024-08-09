@@ -3,7 +3,7 @@ import type { FocusEvent, KeyboardEvent } from "react";
 
 import { useRef, useState } from "react";
 
-import { useFormController } from "../../../newComponents/Form/FormController";
+import { useFormController } from "../../../components/Form/FormController";
 import { getConfig } from "./getConfig";
 import { currencyInputKeyDown, valueDisplay } from "./utils";
 

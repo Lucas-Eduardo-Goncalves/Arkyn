@@ -1,4 +1,4 @@
-import type { SelectProps } from "@arkyn/types";
+import { SelectProps } from "@arkyn/types";
 declare function getConfig(props: SelectProps, isFocused: boolean): {
     name: string;
     value?: string;

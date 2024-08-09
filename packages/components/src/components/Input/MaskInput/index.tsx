@@ -4,7 +4,7 @@ import type { FocusEvent, InputHTMLAttributes } from "react";
 import { InputMask } from "@react-input/mask";
 import { forwardRef, useRef, useState } from "react";
 
-import { useFormController } from "../../../newComponents/Form/FormController";
+import { useFormController } from "../../../components/Form/FormController";
 import { getConfig } from "./getConfig";
 
 const BaseInput = forwardRef<

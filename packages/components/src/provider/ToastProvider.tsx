@@ -2,7 +2,7 @@ import { ToastProps, ToastProviderProps } from "@arkyn/types";
 import { Toaster, toast } from "sonner";
 
 import { ToastContext } from "../context/ToastContext";
-import { Toast } from "../newComponents/Toast";
+import { Toast } from "../components/Toast";
 
 function ToastProvider({ children }: ToastProviderProps) {
   function showToast(data: ToastProps) {
