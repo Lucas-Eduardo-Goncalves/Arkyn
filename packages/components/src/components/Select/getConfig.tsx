@@ -1,7 +1,7 @@
-import type { SelectProps } from "@arkyn/types";
+import { SelectProps } from "@arkyn/types";
 import { Loader2 } from "lucide-react";
 
-import { morpheme } from "./utils/morpheme";
+import { morpheme } from "../../services";
 
 function getConfig(props: SelectProps, isFocused: boolean) {
   const {

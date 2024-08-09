@@ -4,7 +4,7 @@ import type { InputHTMLAttributes } from "react";
 type SelectProps = {
   isLoading?: boolean;
   isError?: boolean;
-  isSearchable?: boolean;
+  // isSearchable?: boolean;
   closeOnSelect?: boolean;
 
   size?: "md" | "lg";

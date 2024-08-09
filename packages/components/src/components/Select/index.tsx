@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import { getConfig } from "./getConfig";
 
 import "./styles.css";
-import { useFormController } from "../../newComponents/Form/FormController";
+import { useFormController } from "../../components/Form/FormController";
 
 function Select(props: SelectProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -34,7 +34,7 @@ function Select(props: SelectProps) {
     onBlur,
     Spinner,
     name,
-    isSearchable,
+    // isSearchable,
     placeholder,
     onSelect,
     options,
@@ -86,26 +86,26 @@ function Select(props: SelectProps) {
     options.find((option) => option.value === currentValue)?.label || "";
 
   const placeholderDark = () => {
-    if (isSearchable) {
-      if (!isFocused && !!currentLabel) return true;
-      if (!isFocused && !currentLabel) return false;
-      if (isFocused) return false;
-    }
+    // if (isSearchable) {
+    //   if (!isFocused && !!currentLabel) return true;
+    //   if (!isFocused && !currentLabel) return false;
+    //   if (isFocused) return false;
+    // }
 
-    if (!isSearchable) {
-      if (!isFocused && !!currentLabel) return true;
-      if (!isFocused && !currentLabel) return false;
-      if (isFocused && !!currentLabel) return true;
-      if (isFocused && !currentLabel) return false;
-    }
+    // if (!isSearchable) {
+    if (!isFocused && !!currentLabel) return true;
+    if (!isFocused && !currentLabel) return false;
+    if (isFocused && !!currentLabel) return true;
+    if (isFocused && !currentLabel) return false;
+    // }
   };
 
   const filteredOptions = options.filter((option) => {
-    if (isSearchable) {
-      return option.label.toLowerCase().includes(searchValue.toLowerCase());
-    } else {
-      return true;
-    }
+    // if (isSearchable) {
+    //   return option.label.toLowerCase().includes(searchValue.toLowerCase());
+    // } else {
+    return true;
+    // }
   });
 
   return (
@@ -121,13 +121,14 @@ function Select(props: SelectProps) {
 
         <input
           disabled={disabled || isLoading}
-          readOnly={!isSearchable}
+          // readOnly={!isSearchable}
+          readOnly
           value={searchValue || ""}
           placeholder={currentLabel || placeholder}
           onFocus={handleFocus}
           onBlur={() => setSearchValue("")}
           {...rest}
-          onChange={(e) => setSearchValue(e.target.value)}
+          // onChange={(e) => setSearchValue(e.target.value)}
         />
 
         <input

@@ -1,8 +1,10 @@
 import type { HTMLAttributes } from "react";
 type PaginationProps = {
     scope?: string;
-    totalCountRegisters: number;
+    pageKey?: string;
+    perPageKey?: string;
     siblingsCount?: number;
+    totalCountRegisters: number;
 } & HTMLAttributes<HTMLDivElement>;
 export type { PaginationProps };
 //# sourceMappingURL=PaginationProps.d.ts.map

@@ -1,40 +1,33 @@
 // Data Display
-export { Badge } from "./newComponents/Badge";
-export { Divider } from "./newComponents/Divider";
-export { Skeleton } from "./newComponents/Skeleton";
+export { Badge } from "./components/Badge";
+export { Divider } from "./components/Divider";
+export { Skeleton } from "./components/Skeleton";
 export {
   TableBody,
   TableCaption,
   TableContainer,
   TableFooter,
   TableHeader,
-} from "./newComponents/Table";
+} from "./components/Table";
 
 // Form
 export { Select } from "./components/Select";
-export { Button } from "./newComponents/Button";
-export { Checkbox } from "./newComponents/Checkbox";
-export { FormController, FormError, FormLabel } from "./newComponents/Form";
-export { IconButton } from "./newComponents/IconButton";
-export { Input } from "./newComponents/Input";
-export { Textarea } from "./newComponents/Textarea";
+export { Button } from "./components/Button";
+export { Checkbox } from "./components/Checkbox";
+export { FormController, FormError, FormLabel } from "./components/Form";
+export { IconButton } from "./components/IconButton";
+export { Input } from "./components/Input";
+export { Textarea } from "./components/Textarea";
 
 // Navigation
-export {
-  BreadcrumbContainer,
-  BreadcrumbLink,
-} from "./newComponents/Breadcrumb";
-export { Pagination } from "./newComponents/Pagination";
+export { BreadcrumbContainer, BreadcrumbLink } from "./components/Breadcrumb";
+export { Pagination } from "./components/Pagination";
 
 // Overlay
-export { DrawerContainer, DrawerHeader } from "./newComponents/Drawer";
-export {
-  ModalContainer,
-  ModalFooter,
-  ModalHeader,
-} from "./newComponents/Modal";
-export { Toast } from "./newComponents/Toast";
-export { Tooltip } from "./newComponents/Tooltip";
+export { DrawerContainer, DrawerHeader } from "./components/Drawer";
+export { ModalContainer, ModalFooter, ModalHeader } from "./components/Modal";
+export { Toast } from "./components/Toast";
+export { Tooltip } from "./components/Tooltip";
 
 // Hooks
 export { useAutomation } from "./hooks/useAutomation";
