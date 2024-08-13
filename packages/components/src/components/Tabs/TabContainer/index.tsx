@@ -1,17 +1,7 @@
-import {
-  HTMLAttributes,
-  ReactNode,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { TabContainerProps } from "@arkyn/types";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import "./styles.css";
-
-type TabContainerProps = {
-  children: ReactNode;
-  onClick?: (index: string) => void;
-} & Omit<HTMLAttributes<HTMLElement>, "onClick" | "children" | "ref">;
 
 function TabContainer(props: TabContainerProps) {
   const { children, onClick, className: baseClassName, ...rest } = props;

@@ -28,6 +28,7 @@ export * from "./components/TableProps";
 export * from "./components/TextareaProps";
 export * from "./components/ToastProps";
 export * from "./components/TooltipProps";
+export * from "./components/TabProps";
 // Hooks
 export * from "./hooks/Drawer";
 export * from "./hooks/Modal";

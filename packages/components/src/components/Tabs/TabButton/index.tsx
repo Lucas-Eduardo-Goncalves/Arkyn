@@ -1,12 +1,5 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
-
+import { TabButtonProps } from "@arkyn/types";
 import "./styles.css";
-
-type TabButtonProps = {
-  children: ReactNode;
-  value: string;
-  defaultActive?: boolean;
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "value">;
 
 function TabButton(props: TabButtonProps) {
   const { children, value, className: baseClassName, ...rest } = props;
