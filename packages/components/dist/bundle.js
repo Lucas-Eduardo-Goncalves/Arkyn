@@ -1726,7 +1726,10 @@ function Sr(e) {
 }
 function Rr(e) {
   const { children: n, button: r, closeOnClick: o, orientation: i = "bottom-left" } = e, [c, f] = ue(!1), l = `arkyn_popover ${i} ${c ? "show" : ""}`;
-  return /* @__PURE__ */ a.jsxs("div", { className: l, onClick: () => f(!0), children: [
+  function u() {
+    c || f(!0);
+  }
+  return /* @__PURE__ */ a.jsxs("div", { className: l, onClick: u, children: [
     r,
     /* @__PURE__ */ a.jsx(
       Ae.div,

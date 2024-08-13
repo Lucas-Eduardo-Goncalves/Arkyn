@@ -10,8 +10,12 @@ function Popover(props: PopoverProps) {
 
   const className = `arkyn_popover ${orientation} ${isOpen ? "show" : ""}`;
 
+  function handleOpenPopover() {
+    if (!isOpen) setIsOpen(true);
+  }
+
   return (
-    <div className={className} onClick={() => setIsOpen(true)}>
+    <div className={className} onClick={handleOpenPopover}>
       {button}
 
       <motion.div

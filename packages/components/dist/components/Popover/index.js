@@ -6,6 +6,10 @@ function Popover(props) {
     const { children, button, closeOnClick, orientation = "bottom-left" } = props;
     const [isOpen, setIsOpen] = useState(false);
     const className = `arkyn_popover ${orientation} ${isOpen ? "show" : ""}`;
-    return (_jsxs("div", { className: className, onClick: () => setIsOpen(true), children: [button, _jsx(motion.div, { style: { visibility: isOpen ? "visible" : "hidden" }, transition: { ease: "easeOut", duration: 0 }, initial: { opacity: 0 }, animate: { opacity: isOpen ? 1 : 0 }, exit: { opacity: 0 }, onClick: () => closeOnClick && setIsOpen(false), className: "arkyn_popover-content", children: children }), isOpen && (_jsx("div", { onClick: () => setIsOpen(false), className: "arkyn_popover-overlay" }))] }));
+    function handleOpenPopover() {
+        if (!isOpen)
+            setIsOpen(true);
+    }
+    return (_jsxs("div", { className: className, onClick: handleOpenPopover, children: [button, _jsx(motion.div, { style: { visibility: isOpen ? "visible" : "hidden" }, transition: { ease: "easeOut", duration: 0 }, initial: { opacity: 0 }, animate: { opacity: isOpen ? 1 : 0 }, exit: { opacity: 0 }, onClick: () => closeOnClick && setIsOpen(false), className: "arkyn_popover-content", children: children }), isOpen && (_jsx("div", { onClick: () => setIsOpen(false), className: "arkyn_popover-overlay" }))] }));
 }
 export { Popover };
