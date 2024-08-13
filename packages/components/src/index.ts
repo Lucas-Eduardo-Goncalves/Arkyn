@@ -22,7 +22,7 @@ export { Textarea } from "./components/Textarea";
 // Navigation
 export { BreadcrumbContainer, BreadcrumbLink } from "./components/Breadcrumb";
 export { Pagination } from "./components/Pagination";
-
+export { TabButton, TabContainer } from "./components/Tabs";
 // Overlay
 export { DrawerContainer, DrawerHeader } from "./components/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader } from "./components/Modal";

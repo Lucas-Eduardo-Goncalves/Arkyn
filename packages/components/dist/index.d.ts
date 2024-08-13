@@ -11,6 +11,7 @@ export { Select } from "./components/Select";
 export { Textarea } from "./components/Textarea";
 export { BreadcrumbContainer, BreadcrumbLink } from "./components/Breadcrumb";
 export { Pagination } from "./components/Pagination";
+export { TabButton, TabContainer } from "./components/Tabs";
 export { DrawerContainer, DrawerHeader } from "./components/Drawer";
 export { ModalContainer, ModalFooter, ModalHeader } from "./components/Modal";
 export { Popover } from "./components/Popover";
