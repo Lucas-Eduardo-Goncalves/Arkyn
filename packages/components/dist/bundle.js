@@ -1610,8 +1610,14 @@ function Nr(e) {
   ] });
 }
 function _r(e) {
-  const { children: n, value: r, className: o, ...i } = e, l = `arkyn_tab_button ${e.defaultActive ? "active" : ""} ${o || ""}`;
-  return /* @__PURE__ */ s.jsx("button", { className: l.trim(), ...i, children: n });
+  const {
+    children: n,
+    value: r,
+    className: o,
+    defaultActive: i,
+    ...l
+  } = e, f = `arkyn_tab_button ${i ? "active" : ""} ${o || ""}`;
+  return /* @__PURE__ */ s.jsx("button", { className: f.trim(), ...l, children: n });
 }
 function jr(e) {
   const { children: n, onClick: r, className: o, ...i } = e, l = Ne(null), f = `arkyn_tab_container ${o || ""}`, [c, u] = le({

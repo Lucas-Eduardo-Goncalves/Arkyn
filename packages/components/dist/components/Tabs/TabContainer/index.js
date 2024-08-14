@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useLayoutEffect, useRef, useState, } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import "./styles.css";
 function TabContainer(props) {
     const { children, onClick, className: baseClassName, ...rest } = props;
