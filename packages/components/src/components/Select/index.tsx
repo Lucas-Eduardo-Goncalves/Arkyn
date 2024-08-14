@@ -34,7 +34,6 @@ function Select(props: SelectProps) {
     onBlur,
     Spinner,
     name,
-    // isSearchable,
     placeholder,
     onSelect,
     options,
@@ -44,7 +43,6 @@ function Select(props: SelectProps) {
   } = getConfig({ ...props, id, isError }, isFocused);
 
   const [selectedValue, setSelectedValue] = useState(defaultValue);
-  const [searchValue, setSearchValue] = useState("");
 
   function handleSectionClick() {
     if (disabled || !ref?.current) return;
@@ -53,16 +51,14 @@ function Select(props: SelectProps) {
   }
 
   function handleFocus(e: FocusEvent<HTMLInputElement>) {
+    if (isFocused) return;
     setIsFocused(true);
     if (onFocus) onFocus(e);
   }
 
   function handleBlur() {
     setIsFocused(false);
-
-    if (onBlur && ref.current) {
-      ref.current.blur();
-    }
+    if (onBlur && ref.current) ref.current.blur();
   }
 
   function handleChangeValue(option: { label: string; value: string }) {
@@ -72,11 +68,7 @@ function Select(props: SelectProps) {
     else setSelectedValue("");
 
     if (onSelect) onSelect({ label, value });
-    if (closeOnSelect) {
-      ref.current.blur();
-      setIsFocused(false);
-      console.log("fecha");
-    }
+    if (closeOnSelect) handleBlur();
   }
 
   const currentValue =
@@ -86,27 +78,11 @@ function Select(props: SelectProps) {
     options.find((option) => option.value === currentValue)?.label || "";
 
   const placeholderDark = () => {
-    // if (isSearchable) {
-    //   if (!isFocused && !!currentLabel) return true;
-    //   if (!isFocused && !currentLabel) return false;
-    //   if (isFocused) return false;
-    // }
-
-    // if (!isSearchable) {
     if (!isFocused && !!currentLabel) return true;
     if (!isFocused && !currentLabel) return false;
     if (isFocused && !!currentLabel) return true;
     if (isFocused && !currentLabel) return false;
-    // }
   };
-
-  const filteredOptions = options.filter((option) => {
-    // if (isSearchable) {
-    //   return option.label.toLowerCase().includes(searchValue.toLowerCase());
-    // } else {
-    return true;
-    // }
-  });
 
   return (
     <>
@@ -121,14 +97,10 @@ function Select(props: SelectProps) {
 
         <input
           disabled={disabled || isLoading}
-          // readOnly={!isSearchable}
           readOnly
-          value={searchValue || ""}
           placeholder={currentLabel || placeholder}
           onFocus={handleFocus}
-          onBlur={() => setSearchValue("")}
           {...rest}
-          // onChange={(e) => setSearchValue(e.target.value)}
         />
 
         <input
@@ -144,7 +116,7 @@ function Select(props: SelectProps) {
             className="arkyn_select_content"
             style={{ overflow: "auto", maxHeight: optionMaxHeight }}
           >
-            {filteredOptions.map(({ label, value }) => (
+            {options.map(({ label, value }) => (
               <div
                 key={value}
                 onClick={() => handleChangeValue({ label, value })}
@@ -158,7 +130,7 @@ function Select(props: SelectProps) {
               </div>
             ))}
 
-            {filteredOptions.length <= 0 && <p>Sem opções disponíveis</p>}
+            {options.length <= 0 && <p>Sem opções disponíveis</p>}
           </div>
         )}
 

@@ -18,7 +18,6 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     onBlur,
     title,
     style,
-    // isSearchable = false,
     closeOnSelect = true,
     ...rest
   } = props;
@@ -44,7 +43,6 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     title,
     closeOnSelect,
     style,
-    // isSearchable,
     iconSize: iconSize,
     Spinner: <Loader2 className="spinner" size={iconSize} strokeWidth={2.5} />,
     ...rest,

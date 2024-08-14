@@ -2,9 +2,7 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import { Loader2 } from "lucide-react";
 import { morpheme } from "../../services";
 function getConfig(props, isFocused) {
-    const { isLoading, isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, leftIcon: LeftIcon, disabled, readOnly, onFocus, onBlur, title, style, 
-    // isSearchable = false,
-    closeOnSelect = true, ...rest } = props;
+    const { isLoading, isError, size = "md", className: baseClassName = "", variant = "solid", prefix: basePrefix, leftIcon: LeftIcon, disabled, readOnly, onFocus, onBlur, title, style, closeOnSelect = true, ...rest } = props;
     const hasPrefix = !!basePrefix ? "hasPrefix" : "";
     const errored = isError ? "errored" : "";
     const opacity = disabled || readOnly || isLoading ? "opacity" : "";
@@ -24,7 +22,6 @@ function getConfig(props, isFocused) {
         title,
         closeOnSelect,
         style,
-        // isSearchable,
         iconSize: iconSize,
         Spinner: _jsx(Loader2, { className: "spinner", size: iconSize, strokeWidth: 2.5 }),
         ...rest,
