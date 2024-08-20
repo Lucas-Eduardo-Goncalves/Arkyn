@@ -1270,7 +1270,16 @@ function Cn(e) {
   function U(ne) {
     r(!1), R && R(ne);
   }
-  return L === "hidden" ? /* @__PURE__ */ s.jsx("input", { type: "hidden", ref: c, ...K }) : /* @__PURE__ */ s.jsxs(
+  return L === "hidden" ? /* @__PURE__ */ s.jsx(
+    "input",
+    {
+      style: { display: "none" },
+      readOnly: !0,
+      type: "text",
+      ref: c,
+      ...K
+    }
+  ) : /* @__PURE__ */ s.jsxs(
     "section",
     {
       title: h,

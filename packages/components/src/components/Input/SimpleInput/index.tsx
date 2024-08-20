@@ -59,7 +59,15 @@ function SimpleInput(props: SimpleInputProps) {
   }
 
   if (type === "hidden") {
-    return <input type="hidden" ref={ref} {...rest} />;
+    return (
+      <input
+        style={{ display: "none" }}
+        readOnly
+        type="text"
+        ref={ref}
+        {...rest}
+      />
+    );
   }
 
   return (
