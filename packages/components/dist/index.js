@@ -9,6 +9,7 @@ export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
+export { RadioBox, RadioGroup } from "./components/Radio";
 export { Select } from "./components/Select";
 export { Textarea } from "./components/Textarea";
 // Navigation

@@ -30,6 +30,7 @@ export * from "./components/TextareaProps";
 export * from "./components/ToastProps";
 export * from "./components/TooltipProps";
 export * from "./components/TabProps";
+export * from "./components/RadioProps";
 
 // Hooks
 export * from "./hooks/Drawer";

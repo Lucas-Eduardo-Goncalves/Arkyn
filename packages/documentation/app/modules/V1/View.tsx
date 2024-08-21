@@ -24,11 +24,11 @@ export function View() {
         <Input
           type="currency"
           name="as"
-          defaultValue={10000.6}
-          onChangeValue={(_, e, y) => {
-            setValue(e);
-            setMaskedValue(y);
-          }}
+          defaultValue="10000.6"
+          // onChangeValue={(_, e, y) => {
+          //   setValue(e);
+          //   setMaskedValue(y);
+          // }}
         />
         <button>opa</button>
       </Form>

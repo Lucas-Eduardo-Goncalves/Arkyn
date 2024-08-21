@@ -1,0 +1,95 @@
+.arkyn_radio_box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--text-body);
+  font-size: 14px;
+  line-height: 19.07px;
+}
+
+.arkyn_radio_box > button {
+  position: relative;
+  background-color: rgba(var(--input-background), 1);
+
+  border: 2px solid var(--border);
+  border-radius: 99999px;
+}
+
+.arkyn_radio_box > button:not(:disabled):hover {
+  cursor: pointer;
+}
+
+.arkyn_radio_box.isChecked > button {
+  border-color: rgba(var(--spotlight-primary), 1);
+}
+
+.arkyn_radio_box.isErrored > button {
+  border-color: rgba(var(--spotlight-danger), 1);
+}
+
+.arkyn_radio_box.isChecked > button::before {
+  content: "  ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 99999px;
+  background-color: rgba(var(--spotlight-primary), 1);
+}
+
+.arkyn_radio_box.sm > button {
+  min-height: 20px;
+  min-width: 20px;
+
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.arkyn_radio_box.md > button {
+  min-height: 24px;
+  min-width: 24px;
+
+  max-height: 24px;
+  max-width: 24px;
+}
+
+.arkyn_radio_box.lg > button {
+  min-height: 24px;
+  min-width: 24px;
+
+  max-height: 24px;
+  max-width: 24px;
+}
+
+.arkyn_radio_box.isChecked.sm > button::before {
+  min-height: 10px;
+  min-width: 10px;
+
+  max-height: 10px;
+  max-width: 10px;
+}
+
+.arkyn_radio_box.isChecked.md > button::before {
+  min-height: 12px;
+  min-width: 12px;
+
+  max-height: 12px;
+  max-width: 12px;
+}
+
+.arkyn_radio_box.isChecked.lg > button::before {
+  min-height: 12px;
+  min-width: 12px;
+
+  max-height: 12px;
+  max-width: 12px;
+}
+
+.arkyn_radio_box.isDisabled {
+  opacity: 0.5;
+}
+
+.arkyn_radio_box.isDisabled > button {
+  cursor: not-allowed;
+}
