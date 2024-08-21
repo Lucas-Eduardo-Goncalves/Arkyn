@@ -1024,7 +1024,7 @@ function bn(e, n) {
   };
 }
 function yn(e) {
-  const [n, r] = de(!1), [o, i] = de(""), l = _e(null), { inputRef: f, id: c, error: d } = xe(), h = f || l, m = e.isError || !!d, {
+  const [n, r] = de(!1), [o, i] = de("0"), l = _e(null), { inputRef: f, id: c, error: d } = xe(), h = f || l, m = e.isError || !!d, {
     disabled: b,
     title: a,
     style: v,

@@ -6,7 +6,7 @@ import { normalizeValue } from "../../../services/normalizeValue";
 import { getConfig } from "./getConfig";
 function CurrencyInput(props) {
     const [isFocused, setIsFocused] = useState(false);
-    const [maskedValue, setMaskedValue] = useState("");
+    const [maskedValue, setMaskedValue] = useState("0");
     const baseRef = useRef(null);
     const { inputRef, id, error } = useFormController();
     const ref = inputRef || baseRef;
