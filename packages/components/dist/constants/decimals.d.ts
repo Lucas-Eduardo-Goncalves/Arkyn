@@ -1,0 +1,3 @@
+declare const MAXIMUM_FRACTION_DIGITS = 2;
+export { MAXIMUM_FRACTION_DIGITS };
+//# sourceMappingURL=decimals.d.ts.map

@@ -99,7 +99,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     onErrorCapture?: import("react").ReactEventHandler<HTMLInputElement>;
     onKeyDown?: import("react").KeyboardEventHandler<HTMLInputElement>;
     onKeyDownCapture?: import("react").KeyboardEventHandler<HTMLInputElement>;
-    onKeyPress?: import("react").KeyboardEventHandler<HTMLInputElement>;
+    onKeyPress?: import("react").KeyboardEventHandler<HTMLInputElement> & ((event: import("react").KeyboardEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void);
     onKeyPressCapture?: import("react").KeyboardEventHandler<HTMLInputElement>;
     onKeyUp?: import("react").KeyboardEventHandler<HTMLInputElement>;
     onKeyUpCapture?: import("react").KeyboardEventHandler<HTMLInputElement>;
@@ -283,8 +283,9 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
-    defaultValue?: number;
-    value?: number;
+    defaultValue?: string;
+    onChangeValue?: (event: import("react").ChangeEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
+    value?: string;
     isLoading: boolean;
     className: string;
     prefix: import("react/jsx-runtime").JSX.Element;
@@ -292,14 +293,14 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     LeftIcon: import("lucide-react").LucideIcon;
     RightIcon: import("lucide-react").LucideIcon;
     disabled: boolean;
+    locale: string;
+    currency: string;
     readOnly: boolean;
     onFocus: import("react").FocusEventHandler<HTMLInputElement>;
     onBlur: import("react").FocusEventHandler<HTMLInputElement>;
     title: string;
     style: import("react").CSSProperties;
     max: number;
-    onChange: (value: number) => void;
-    showCents: boolean;
     loadingPosition: string;
     iconSize: number;
     Spinner: import("react/jsx-runtime").JSX.Element;

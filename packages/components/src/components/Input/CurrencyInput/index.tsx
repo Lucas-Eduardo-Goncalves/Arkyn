@@ -1,14 +1,16 @@
 import type { CurrencyInputProps } from "@arkyn/types";
-import type { FocusEvent, KeyboardEvent } from "react";
-
-import { useRef, useState } from "react";
+import type { ChangeEvent, FocusEvent, KeyboardEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useFormController } from "../../../components/Form/FormController";
+import { maskValues } from "../../../services/maskValues";
+import { normalizeValue } from "../../../services/normalizeValue";
+
 import { getConfig } from "./getConfig";
-import { currencyInputKeyDown, valueDisplay } from "./utils";
 
 function CurrencyInput(props: CurrencyInputProps) {
   const [isFocused, setIsFocused] = useState(false);
+  const [maskedValue, setMaskedValue] = useState("");
 
   const baseRef = useRef<HTMLInputElement>(null);
 
@@ -35,14 +37,14 @@ function CurrencyInput(props: CurrencyInputProps) {
     Spinner,
     value,
     max,
-    onKeyDown,
-    onChange,
-    showCents,
+    onChangeValue,
+    onKeyPress,
+    currency,
+    locale,
+    name,
     defaultValue,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
-
-  const [currencyValue, setCurrencyValue] = useState(defaultValue * 100 || 0);
 
   const showLeftIcon = LeftIcon && !isLoading;
   const showRightIcon = RightIcon && !isLoading;
@@ -56,21 +58,46 @@ function CurrencyInput(props: CurrencyInputProps) {
     ref.current.focus();
   }
 
-  function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
-    currencyInputKeyDown({ currencyValue, event, max, setCurrencyValue });
-    onChange && onChange(currencyValue / 100);
-    onKeyDown && onKeyDown(event);
-  }
-
-  function handleFocus(e: FocusEvent<HTMLInputElement>) {
+  function handleFocus(event: FocusEvent<HTMLInputElement>) {
     setIsFocused(true);
-    if (onFocus) onFocus(e);
+    if (onFocus) onFocus(event);
   }
 
   function handleBlur(e: FocusEvent<HTMLInputElement>) {
     setIsFocused(false);
     if (onBlur) onBlur(e);
   }
+
+  const updateValues = (originalValue: string | number) => {
+    const [calculatedValue, calculatedMaskedValue] = maskValues(
+      locale,
+      originalValue,
+      currency
+    );
+
+    if (!max || calculatedValue <= max) {
+      setMaskedValue(calculatedMaskedValue);
+      return [calculatedValue, calculatedMaskedValue];
+    }
+
+    return [normalizeValue(maskedValue), maskedValue];
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    const [originalValue, maskedValue] = updateValues(event.target.value);
+    onChangeValue(event, String(originalValue), String(maskedValue));
+  };
+
+  const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>) =>
+    onKeyPress && onKeyPress(event, event.key, event.key);
+
+  useEffect(() => {
+    const currentValue = value || defaultValue || undefined;
+    const [, maskedValue] = maskValues(locale, currentValue, currency);
+
+    setMaskedValue(maskedValue);
+  }, [currency, defaultValue, value]);
 
   return (
     <section
@@ -84,16 +111,18 @@ function CurrencyInput(props: CurrencyInputProps) {
       {showLeftIcon && <LeftIcon size={iconSize} strokeWidth={2.5} />}
 
       <input
-        value={valueDisplay(value || currencyValue, showCents)}
-        onKeyDown={handleKeyDown}
+        value={maskedValue}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        onFocus={handleFocus}
+        onKeyUp={handleKeyUp}
         disabled={disabled || isLoading}
         readOnly={readOnly}
         ref={ref}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onChange={() => {}}
         {...rest}
       />
+
+      <input type="hidden" name={name} value={normalizeValue(maskedValue)} />
 
       {showRightSpinner && Spinner}
       {showRightIcon && <RightIcon size={iconSize} strokeWidth={2.5} />}

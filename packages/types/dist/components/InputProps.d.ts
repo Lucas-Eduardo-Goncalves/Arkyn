@@ -1,6 +1,6 @@
 import type { Replacement } from "@react-input/mask";
 import type { LucideIcon } from "lucide-react";
-import type { InputHTMLAttributes } from "react";
+import type { ChangeEvent, InputHTMLAttributes, KeyboardEvent } from "react";
 type InputBaseTypes = "button" | "color" | "date" | "datetime-local" | "email" | "file" | "hidden" | "image" | "month" | "number" | "password" | "range" | "reset" | "search" | "submit" | "tel" | "text" | "time" | "url" | "week";
 type BaseInputProps<T extends string> = {
     isLoading?: boolean;
@@ -15,11 +15,13 @@ type BaseInputProps<T extends string> = {
     name: string;
 } & Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix" | "type" | "name">;
 type CurrencyInputProps = Omit<BaseInputProps<"currency">, "max" | "defaultValue" | "value" | "onChange"> & {
-    defaultValue?: number;
-    onChange?: (value: number) => void;
-    value?: number;
+    defaultValue?: string;
+    onChangeValue?: (event: ChangeEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
+    onKeyPress?: (event: KeyboardEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
+    value?: string;
     max?: number;
-    showCents?: boolean;
+    locale?: string;
+    currency?: string;
 };
 type MaskedInputProps = BaseInputProps<"masked"> & {
     mask: string;
