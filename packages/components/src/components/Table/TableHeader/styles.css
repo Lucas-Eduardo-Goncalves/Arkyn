@@ -7,6 +7,8 @@
   color: var(--text-heading);
   font-weight: 600;
   font-size: 14px;
+
+  white-space: nowrap;
 }
 
 .arkyn_table_header th:first-child {
@@ -17,6 +19,8 @@
 .arkyn_table_header th:last-child {
   border-top-right-radius: var(--rounded-cards);
   border-bottom-right-radius: var(--rounded-cards);
+
+  padding-right: 16px;
 }
 
 .arkyn_table_header .spacing-row {
