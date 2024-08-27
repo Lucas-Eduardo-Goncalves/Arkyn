@@ -1,8 +1,16 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useLayoutEffect, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState, } from "react";
 import "./styles.css";
+const TabContext = createContext({});
+function useTabContext() {
+    if (!TabContext)
+        throw new Error("useTabContext must be used within a TabProvider");
+    return useContext(TabContext);
+}
 function TabContainer(props) {
-    const { children, onClick, className: baseClassName, ...rest } = props;
+    const { children, onClick, defaultActive, className: baseClassName, ...rest } = props;
+    const [value, setValue] = useState(defaultActive || "");
+    const [showInitialTab, setShowInitialTab] = useState(true);
     const reference = useRef(null);
     const className = `arkyn_tab_container ${baseClassName || ""}`;
     const [activeLineStyle, setActiveLineStyle] = useState({
@@ -14,13 +22,14 @@ function TabContainer(props) {
         const rect = button.getBoundingClientRect();
         const containerRect = reference.current.getBoundingClientRect();
         const transition = applyTransition ? undefined : "none";
+        setShowInitialTab(false);
         setActiveLineStyle({
             transition,
             width: `${rect.width}px`,
             left: `${rect.left - containerRect.left}px`,
         });
     };
-    useLayoutEffect(() => {
+    useEffect(() => {
         const tabContainer = reference.current;
         if (!tabContainer)
             return;
@@ -31,15 +40,13 @@ function TabContainer(props) {
     }, []);
     const handleTabClick = (event) => {
         const target = event.target;
-        const tabContainer = reference.current;
-        if (target && tabContainer && tabContainer.contains(target)) {
-            const buttons = tabContainer.querySelectorAll("button");
-            buttons.forEach((button) => button.classList.remove("active"));
+        if (target) {
+            setValue(target.value);
             target.classList.add("active");
             updateActiveLine(target, true);
             onClick && onClick(target.value);
         }
     };
-    return (_jsxs("nav", { ref: reference, onClick: handleTabClick, className: className.trim(), ...rest, children: [children, _jsx("div", { className: "active-line", style: activeLineStyle })] }));
+    return (_jsxs("nav", { ref: reference, onClick: handleTabClick, className: className.trim(), ...rest, children: [_jsx(TabContext.Provider, { value: { handleTabClick, showInitialTab, value }, children: children }), _jsx("div", { className: "active-line", style: activeLineStyle })] }));
 }
-export { TabContainer };
+export { TabContainer, useTabContext };

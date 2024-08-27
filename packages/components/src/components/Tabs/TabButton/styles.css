@@ -1,4 +1,6 @@
 .arkyn_tab_button {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +16,17 @@
   color: var(--text-muted);
 
   transition: all 0.3s ease-in-out;
+}
+
+.arkyn_tab_button.show_border_bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+  background-color: rgba(var(--spotlight-primary), 1);
 }
 
 .arkyn_tab_button:hover {

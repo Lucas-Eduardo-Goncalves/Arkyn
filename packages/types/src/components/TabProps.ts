@@ -3,11 +3,11 @@ import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
 type TabButtonProps = {
   children: ReactNode;
   value: string;
-  defaultActive?: boolean;
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "value">;
 
 type TabContainerProps = {
   children: ReactNode;
+  defaultActive?: string;
   onClick?: (index: string) => void;
 } & Omit<HTMLAttributes<HTMLElement>, "onClick" | "children" | "ref">;
 
