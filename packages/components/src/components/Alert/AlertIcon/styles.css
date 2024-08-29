@@ -1,0 +1,23 @@
+.arkyn_alert_icon {
+  min-width: 28px;
+  min-height: 28px;
+
+  max-width: 28px;
+  max-height: 28px;
+}
+
+.arkyn_alert_icon.danger {
+  color: rgba(var(--spotlight-danger), 1);
+}
+
+.arkyn_alert_icon.success {
+  color: rgba(var(--spotlight-success), 1);
+}
+
+.arkyn_alert_icon.info {
+  color: rgba(var(--spotlight-info), 1);
+}
+
+.arkyn_alert_icon.warning {
+  color: rgba(var(--spotlight-warning), 1);
+}

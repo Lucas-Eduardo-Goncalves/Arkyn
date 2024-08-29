@@ -1,0 +1,29 @@
+.arkyn_alert {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  padding: 16px;
+
+  border: 1px solid transparent;
+  border-radius: var(--rounded-cards);
+}
+
+.arkyn_alert.danger {
+  background: rgba(var(--spotlight-danger), 0.1);
+  border-color: rgba(var(--spotlight-danger), 0.4);
+}
+
+.arkyn_alert.success {
+  background: rgba(var(--spotlight-success), 0.1);
+  border-color: rgba(var(--spotlight-success), 0.4);
+}
+
+.arkyn_alert.info {
+  background: rgba(var(--spotlight-info), 0.1);
+  border-color: rgba(var(--spotlight-info), 0.4);
+}
+
+.arkyn_alert.warning {
+  background: rgba(var(--spotlight-warning), 0.1);
+  border-color: rgba(var(--spotlight-warning), 0.4);
+}

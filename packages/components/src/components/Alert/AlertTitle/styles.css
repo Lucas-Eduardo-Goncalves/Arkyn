@@ -1,0 +1,8 @@
+.arkyn_title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.79px;
+  text-align: left;
+
+  color: var(--text-heading);
+}
