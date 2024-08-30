@@ -86,12 +86,7 @@ function TabContainer(props: TabContainerProps) {
   };
 
   return (
-    <nav
-      ref={reference}
-      onClick={handleTabClick}
-      className={className.trim()}
-      {...rest}
-    >
+    <nav ref={reference} className={className.trim()} {...rest}>
       <TabContext.Provider value={{ handleTabClick, showInitialTab, value }}>
         {children}
       </TabContext.Provider>
