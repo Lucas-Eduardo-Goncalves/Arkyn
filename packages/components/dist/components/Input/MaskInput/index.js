@@ -33,6 +33,6 @@ function MaskedInput(props) {
         if (onBlur)
             onBlur(e);
     }
-    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx(InputMask, { component: BaseInput, ref: ref, onFocus: handleFocus, onBlur: handleBlur, ...rest }), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx(InputMask, { component: BaseInput, ref: ref, onFocus: handleFocus, onBlur: handleBlur, disabled: disabled, ...rest }), showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), showRightSpinner && Spinner, sufix] }));
 }
 export { MaskedInput };

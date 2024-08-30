@@ -16,6 +16,7 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     readOnly,
     onFocus,
     onBlur,
+
     title,
     style,
     closeOnSelect = true,
@@ -36,8 +37,7 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     className,
     prefix: morpheme(basePrefix, iconSize, "prefix"),
     LeftIcon,
-    disabled,
-    readOnly,
+    disabled: disabled || isLoading || readOnly,
     onFocus,
     onBlur,
     title,

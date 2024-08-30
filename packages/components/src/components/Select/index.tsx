@@ -29,7 +29,6 @@ function Select(props: SelectProps) {
     LeftIcon,
     value: baseValue = null,
     defaultValue = "",
-    readOnly,
     onFocus,
     onBlur,
     Spinner,
@@ -39,13 +38,14 @@ function Select(props: SelectProps) {
     options,
     optionMaxHeight,
     closeOnSelect,
+
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
 
   const [selectedValue, setSelectedValue] = useState(defaultValue);
 
   function handleSectionClick() {
-    if (disabled || !ref?.current) return;
+    if (disabled || !ref?.current || isFocused) return;
     setIsFocused(true);
     ref.current.focus();
   }
@@ -96,7 +96,7 @@ function Select(props: SelectProps) {
         {LeftIcon && <LeftIcon size={iconSize} strokeWidth={2.5} />}
 
         <input
-          disabled={disabled || isLoading}
+          disabled={disabled}
           readOnly
           placeholder={currentLabel || placeholder}
           onFocus={handleFocus}

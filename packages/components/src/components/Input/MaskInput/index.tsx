@@ -81,6 +81,7 @@ function MaskedInput(props: MaskedInputProps) {
         ref={ref}
         onFocus={handleFocus}
         onBlur={handleBlur}
+        disabled={disabled}
         {...rest}
       />
 
