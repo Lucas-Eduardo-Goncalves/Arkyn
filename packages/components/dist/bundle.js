@@ -651,7 +651,7 @@ function fr(e) {
   return /* @__PURE__ */ a.jsx(Ot.Provider, { value: e, children: /* @__PURE__ */ a.jsx("div", { className: l.trim(), ...i, children: r }) });
 }
 function mr(e) {
-  const { children: t, className: r, ...s } = e, i = `arkyn_content ${r}`;
+  const { children: t, className: r, ...s } = e, i = `arkyn_alert_content ${r}`;
   return /* @__PURE__ */ a.jsx("div", { className: i.trim(), ...s, children: t });
 }
 function hr(e) {
@@ -1746,19 +1746,10 @@ function Mr(e) {
     const v = k.target;
     v && (c(v.value), v.classList.add("active"), C(v, !0), r && r(v.value));
   };
-  return /* @__PURE__ */ a.jsxs(
-    "nav",
-    {
-      ref: m,
-      onClick: w,
-      className: y.trim(),
-      ...l,
-      children: [
-        /* @__PURE__ */ a.jsx(ut.Provider, { value: { handleTabClick: w, showInitialTab: u, value: d }, children: t }),
-        /* @__PURE__ */ a.jsx("div", { className: "active-line", style: o })
-      ]
-    }
-  );
+  return /* @__PURE__ */ a.jsxs("nav", { ref: m, className: y.trim(), ...l, children: [
+    /* @__PURE__ */ a.jsx(ut.Provider, { value: { handleTabClick: w, showInitialTab: u, value: d }, children: t }),
+    /* @__PURE__ */ a.jsx("div", { className: "active-line", style: o })
+  ] });
 }
 function Lr(e) {
   const { children: t, className: r = "", onClick: s, ...i } = e, { value: l, showInitialTab: d, handleTabClick: c } = Tn(), u = l === i.value && l ? "active" : "", m = `arkyn_tab_button ${l === i.value && d ? "show_border_bottom" : ""} ${u} ${r}`;

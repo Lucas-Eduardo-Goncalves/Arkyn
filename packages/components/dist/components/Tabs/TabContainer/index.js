@@ -47,6 +47,6 @@ function TabContainer(props) {
             onClick && onClick(target.value);
         }
     };
-    return (_jsxs("nav", { ref: reference, onClick: handleTabClick, className: className.trim(), ...rest, children: [_jsx(TabContext.Provider, { value: { handleTabClick, showInitialTab, value }, children: children }), _jsx("div", { className: "active-line", style: activeLineStyle })] }));
+    return (_jsxs("nav", { ref: reference, className: className.trim(), ...rest, children: [_jsx(TabContext.Provider, { value: { handleTabClick, showInitialTab, value }, children: children }), _jsx("div", { className: "active-line", style: activeLineStyle })] }));
 }
 export { TabContainer, useTabContext };
