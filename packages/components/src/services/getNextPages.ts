@@ -6,7 +6,7 @@ function getNextPages(
   lastPage: number
 ) {
   if (currentPage >= lastPage) return [];
-  return generatePagesArray(currentPage + 1, currentPage + siblingsCount);
+  return generatePagesArray(currentPage, currentPage + siblingsCount);
 }
 
 export { getNextPages };

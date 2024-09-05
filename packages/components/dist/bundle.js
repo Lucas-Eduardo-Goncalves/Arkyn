@@ -682,7 +682,7 @@ function zt(e, t) {
   return [...new Array(t - e)].map((r, s) => e + s + 1).filter((r) => r > 0);
 }
 function pn(e, t, r) {
-  return e >= r ? [] : zt(e + 1, e + t);
+  return e >= r ? [] : zt(e, e + t);
 }
 function gn(e, t) {
   return e <= 1 ? [] : zt(e - 1 - t, e - 1);

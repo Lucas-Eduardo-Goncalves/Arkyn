@@ -50,6 +50,7 @@ function Pagination(props: PaginationProps) {
           >
             1
           </button>
+
           {currentPage > 2 + siblingsCount && (
             <button disabled className="arkyn_pagination-spread">
               <Ellipsis />
@@ -89,6 +90,7 @@ function Pagination(props: PaginationProps) {
               <Ellipsis />
             </button>
           )}
+
           <button
             className="arkyn_pagination-page_button"
             onClick={() => handlePageChange(lastPage)}
