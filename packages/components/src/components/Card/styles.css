@@ -1,0 +1,10 @@
+.arkyn_card_container {
+  display: flex;
+
+  padding: 20px;
+  width: 100%;
+  height: max-content;
+
+  border-radius: var(--rounded-cards);
+  background-color: var(--card);
+}

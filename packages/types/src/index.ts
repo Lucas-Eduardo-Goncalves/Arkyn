@@ -15,6 +15,7 @@ export * from "./components/AlertProps";
 export * from "./components/BadgeProps";
 export * from "./components/BreadcrumbProps";
 export * from "./components/ButtonProps";
+export * from "./components/CardProps";
 export * from "./components/CheckboxProps";
 export * from "./components/DividerProps";
 export * from "./components/DrawerProps";
