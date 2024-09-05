@@ -9,7 +9,7 @@ type ButtonProps = BaseButtonProps & {
 
   size?: "xs" | "sm" | "md" | "lg";
   variant?: "solid" | "outline" | "ghost" | "invisible";
-  scheme?: "primary" | "success" | "warning" | "danger";
+  scheme?: "primary" | "success" | "warning" | "danger" | "info";
 
   leftIcon?: LucideIcon;
   rightIcon?: LucideIcon;

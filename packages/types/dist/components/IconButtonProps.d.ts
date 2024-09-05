@@ -7,7 +7,7 @@ type IconButtonProps = BaseIconButtonProps & {
     isLoading?: boolean;
     size?: "xs" | "sm" | "md" | "lg";
     variant?: "solid" | "outline" | "ghost" | "invisible";
-    scheme?: "primary" | "success" | "warning" | "danger";
+    scheme?: "primary" | "success" | "warning" | "danger" | "info";
 };
 export type { IconButtonProps };
 //# sourceMappingURL=IconButtonProps.d.ts.map

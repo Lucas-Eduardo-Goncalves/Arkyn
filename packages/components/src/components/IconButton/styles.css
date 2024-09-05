@@ -49,6 +49,10 @@ html.dark .arkyn_icon_button:hover {
   background-color: rgba(var(--spotlight-warning), 1);
 }
 
+.arkyn_icon_button.solid.info {
+  background-color: rgba(var(--spotlight-info), 1);
+}
+
 .arkyn_icon_button.outline {
   background-color: rgba(var(--input-background), 1);
   border-color: var(--border);
@@ -68,6 +72,10 @@ html.dark .arkyn_icon_button:hover {
 
 .arkyn_icon_button.outline.warning {
   color: rgba(var(--spotlight-warning), 1);
+}
+
+.arkyn_icon_button.outline.info {
+  color: rgba(var(--spotlight-info), 1);
 }
 
 .arkyn_icon_button.ghost.primary {
@@ -90,6 +98,11 @@ html.dark .arkyn_icon_button:hover {
   background-color: rgba(var(--spotlight-warning), 0.2);
 }
 
+.arkyn_icon_button.ghost.info {
+  color: rgba(var(--spotlight-info), 1);
+  background-color: rgba(var(--spotlight-info), 0.2);
+}
+
 .arkyn_icon_button.invisible.primary {
   color: rgba(var(--spotlight-primary), 1);
 }
@@ -104,6 +117,10 @@ html.dark .arkyn_icon_button:hover {
 
 .arkyn_icon_button.invisible.warning {
   color: rgba(var(--spotlight-warning), 1);
+}
+
+.arkyn_icon_button.invisible.info {
+  color: rgba(var(--spotlight-info), 1);
 }
 
 /* SIZE */
