@@ -7,6 +7,7 @@ export {
   AlertTitle,
 } from "./components/Alert";
 export { Badge } from "./components/Badge";
+export { Card } from "./components/Card";
 export { Divider } from "./components/Divider";
 export { Skeleton } from "./components/Skeleton";
 export {

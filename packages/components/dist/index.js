@@ -1,6 +1,7 @@
 // Data Display
 export { AlertContainer, AlertContent, AlertDescription, AlertIcon, AlertTitle, } from "./components/Alert";
 export { Badge } from "./components/Badge";
+export { Card } from "./components/Card";
 export { Divider } from "./components/Divider";
 export { Skeleton } from "./components/Skeleton";
 export { TableBody, TableCaption, TableContainer, TableFooter, TableHeader, } from "./components/Table";

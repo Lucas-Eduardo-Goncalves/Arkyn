@@ -9,7 +9,7 @@
   overflow-x: auto;
 }
 
-.arkyn_table_container {
+.arkyn_table_container table {
   border-collapse: separate;
   border-spacing: 0;
 }

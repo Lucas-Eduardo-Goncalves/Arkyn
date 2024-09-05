@@ -21,7 +21,7 @@
   border-top-right-radius: var(--rounded-cards);
   border-bottom-right-radius: var(--rounded-cards);
 
-  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .arkyn_table_body > tr:nth-child(odd):hover > td {

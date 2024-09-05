@@ -711,6 +711,10 @@ function vr(e) {
   ] });
 }
 function br(e) {
+  const { className: t, ...r } = e, s = `arkyn_card_container ${t}`;
+  return /* @__PURE__ */ a.jsx("div", { className: s.trim(), ...r });
+}
+function yr(e) {
   const {
     className: t,
     orientation: r = "horizontal",
@@ -718,37 +722,37 @@ function br(e) {
   } = e, i = `arkyn_divider ${r} ${t}`;
   return /* @__PURE__ */ a.jsx("div", { className: i, ...s });
 }
-function yr(e) {
+function xr(e) {
   const { className: t, ...r } = e, s = `arkyn_skeleton ${t}`;
   return /* @__PURE__ */ a.jsx("aside", { className: s.trim(), ...r });
 }
-function xr(e) {
+function wr(e) {
   const { className: t, ...r } = e, s = `arkyn_table_body ${t}`;
   return /* @__PURE__ */ a.jsx("tbody", { className: s.trim(), ...r });
 }
-function wr(e) {
+function kr(e) {
   const { className: t, children: r, ...s } = e, i = `arkyn_table_caption ${t}`;
   return /* @__PURE__ */ a.jsx("caption", { className: i.trim(), ...s, children: /* @__PURE__ */ a.jsx("div", { className: "arkyn_table_caption-content", children: r }) });
 }
-function kr(e) {
+function Nr(e) {
   const { children: t, className: r, ...s } = e, i = `arkyn_table_container ${r}`;
   return /* @__PURE__ */ a.jsx("div", { className: i.trim(), ...s, children: /* @__PURE__ */ a.jsx("table", { children: t }) });
 }
-function Nr(e) {
+function Cr(e) {
   const { className: t, children: r, ...s } = e, i = `arkyn_table_footer ${t}`;
   return /* @__PURE__ */ a.jsxs("tfoot", { className: i.trim(), ...s, children: [
     /* @__PURE__ */ a.jsx("tr", { className: "spacing-row" }),
     /* @__PURE__ */ a.jsx("tr", { children: /* @__PURE__ */ a.jsx("th", { colSpan: 100, children: /* @__PURE__ */ a.jsx("div", { className: "arkyn_table_footer-content", children: r }) }) })
   ] });
 }
-function Cr(e) {
+function _r(e) {
   const { className: t, children: r, ...s } = e, i = `arkyn_table_header ${t}`;
   return /* @__PURE__ */ a.jsxs("thead", { className: i.trim(), ...s, children: [
     /* @__PURE__ */ a.jsx("tr", { children: r }),
     /* @__PURE__ */ a.jsx("tr", { className: "spacing-row" })
   ] });
 }
-function _r(e) {
+function jr(e) {
   const {
     isLoading: t = !1,
     scheme: r = "primary",
@@ -775,7 +779,7 @@ function _r(e) {
   ] });
 }
 const Ft = ke({});
-function jr(e) {
+function Er(e) {
   var m, y;
   const t = Pt(), { children: r, className: s, ...i } = e, l = Ee(null), d = ((m = l.current) == null ? void 0 : m.name) || "", c = ((y = t == null ? void 0 : t.fieldErrors) == null ? void 0 : y[d]) || null, u = tn(), h = `arkyn_form_controller ${s}`;
   return /* @__PURE__ */ a.jsx(Ft.Provider, { value: { error: c, id: u, inputRef: l }, children: /* @__PURE__ */ a.jsx("section", { className: h.trim(), ...i, children: r }) });
@@ -783,7 +787,7 @@ function jr(e) {
 function ve() {
   return ye(Ft);
 }
-function Er(e) {
+function Sr(e) {
   const {
     name: t,
     className: r = "",
@@ -822,11 +826,11 @@ function Er(e) {
     }
   );
 }
-function Sr(e) {
+function Rr(e) {
   const { children: t, className: r, ...s } = e, i = `arkyn_form_error ${r}`, { error: l } = ve();
   return t ? /* @__PURE__ */ a.jsx("strong", { className: i.trim(), ...s, children: t }) : l ? /* @__PURE__ */ a.jsx("strong", { className: i.trim(), ...s, children: l }) : /* @__PURE__ */ a.jsx(a.Fragment, {});
 }
-function Rr(e) {
+function $r(e) {
   const {
     showAsterisk: t = !1,
     className: r = "",
@@ -834,7 +838,7 @@ function Rr(e) {
   } = e, { id: i } = ve(), d = `arkyn_form_label ${t ? "show-asterisk" : ""} ${r}`;
   return /* @__PURE__ */ a.jsx("label", { ...s, className: d.trim(), htmlFor: i });
 }
-function $r(e) {
+function Pr(e) {
   const {
     isLoading: t = !1,
     scheme: r = "primary",
@@ -1349,14 +1353,14 @@ function Sn(e) {
     }
   );
 }
-function Pr(e) {
+function Tr(e) {
   return e.type === "currency" ? /* @__PURE__ */ a.jsx(Nn, { ...e }) : e.type === "masked" ? /* @__PURE__ */ a.jsx(jn, { ...e }) : e.type === "cpf-cnpj" ? /* @__PURE__ */ a.jsx(yn, { ...e }) : /* @__PURE__ */ a.jsx(Sn, { ...e });
 }
 const Lt = ke({});
 function Rn() {
   return ye(Lt);
 }
-function Tr(e) {
+function Ir(e) {
   const {
     defaultValue: t,
     name: r,
@@ -1392,7 +1396,7 @@ function Tr(e) {
     }
   );
 }
-function Ir(e) {
+function Or(e) {
   const {
     value: t,
     size: r,
@@ -1446,7 +1450,7 @@ function $n(e, t) {
     ...k
   };
 }
-function Or(e) {
+function zr(e) {
   var S;
   const [t, r] = oe(!1), { inputRef: s, id: i, error: l } = ve(), d = Ee(null), c = s || d, u = e.isError || !!l, {
     disabled: h,
@@ -1558,7 +1562,7 @@ function Or(e) {
     t && /* @__PURE__ */ a.jsx("aside", { className: "arkyn_select_overlay", onClick: Q })
   ] });
 }
-function zr(e) {
+function Fr(e) {
   const {
     variant: t = "solid",
     size: r = "md",
@@ -1602,11 +1606,11 @@ function zr(e) {
     }
   );
 }
-function Fr(e) {
+function Dr(e) {
   const { className: t = "", ...r } = e, s = `arkyn_breadcrumb_container ${t}`;
   return /* @__PURE__ */ a.jsx("nav", { className: s, ...r });
 }
-function Dr(e) {
+function Br(e) {
   const { pathname: t } = Tt(), {
     className: r = "",
     disabled: s = !1,
@@ -1637,7 +1641,7 @@ function Pn(e = "") {
     }
   };
 }
-function Br(e) {
+function Mr(e) {
   const {
     scope: t,
     totalCountRegisters: r,
@@ -1717,7 +1721,7 @@ function Tn() {
     throw new Error("useTabContext must be used within a TabProvider");
   return ye(ut);
 }
-function Mr(e) {
+function Lr(e) {
   const {
     children: t,
     onClick: r,
@@ -1751,7 +1755,7 @@ function Mr(e) {
     /* @__PURE__ */ a.jsx("div", { className: "active-line", style: o })
   ] });
 }
-function Lr(e) {
+function Ar(e) {
   const { children: t, className: r = "", onClick: s, ...i } = e, { value: l, showInitialTab: d, handleTabClick: c } = Tn(), u = l === i.value && l ? "active" : "", m = `arkyn_tab_button ${l === i.value && d ? "show_border_bottom" : ""} ${u} ${r}`;
   function y(o) {
     c(o), s && s(o);
@@ -1759,7 +1763,7 @@ function Lr(e) {
   return /* @__PURE__ */ a.jsx("button", { onClick: y, className: m.trim(), ...i, children: t });
 }
 const At = ke({});
-function Ar(e) {
+function Vr(e) {
   const {
     isVisibled: t,
     makeInvisible: r,
@@ -1793,7 +1797,7 @@ function Ar(e) {
     )
   ] }) }) });
 }
-function Vr(e) {
+function Wr(e) {
   const {
     showCloseButton: t = !0,
     className: r,
@@ -1815,7 +1819,7 @@ function Vr(e) {
   ] });
 }
 const Vt = ke({});
-function Wr(e) {
+function Yr(e) {
   const {
     isVisibled: t,
     makeInvisible: r,
@@ -1848,11 +1852,11 @@ function Wr(e) {
     )
   ] }) }) });
 }
-function Yr(e) {
+function Ur(e) {
   const { alignment: t = "right", className: r, ...s } = e, i = `arkyn_modal_footer ${t} ${r}`;
   return /* @__PURE__ */ a.jsx("footer", { className: i.trim(), ...s });
 }
-function Ur(e) {
+function Hr(e) {
   const {
     showCloseButton: t = !0,
     className: r,
@@ -1873,7 +1877,7 @@ function Ur(e) {
     )
   ] });
 }
-function Hr(e) {
+function Kr(e) {
   const { children: t, button: r, closeOnClick: s, orientation: i = "bottom-left" } = e, [l, d] = oe(!1), c = `arkyn_popover ${i} ${l ? "show" : ""}`;
   function u() {
     l || d(!0);
@@ -1929,7 +1933,7 @@ function In(e) {
     ] })
   ] });
 }
-function Kr(e) {
+function Xr(e) {
   const {
     text: t,
     size: r = "lg",
@@ -1953,7 +1957,7 @@ function On() {
 function _t(e) {
   return e && typeof e.title == "string" && typeof e.message == "string" && (e.size === void 0 || e.size === "md" || e.size === "lg") && (e.type === "info" || e.type === "success" || e.type === "danger" || e.type === "warning");
 }
-function Xr() {
+function Jr() {
   const e = Pt(), { closeModal: t } = ye(ht), { showToast: r } = On();
   Ze(() => {
     const s = e == null ? void 0 : e.closeModalKey;
@@ -1968,7 +1972,7 @@ function Xr() {
   }, [e]);
 }
 const Yt = ke({});
-function Jr(e) {
+function Gr(e) {
   const t = ye(Yt);
   if (Object.entries(t).length === 0)
     throw new Error("useDrawer must be used within a Provider");
@@ -1983,7 +1987,7 @@ function Jr(e) {
   } else
     return t;
 }
-function Gr(e) {
+function qr(e) {
   const t = ye(ht);
   if (Object.entries(t).length === 0)
     throw new Error("useModal must be used within a Provider");
@@ -1998,7 +2002,7 @@ function Gr(e) {
   } else
     return t;
 }
-function qr(e) {
+function Zr(e) {
   const { children: t = !1 } = e, [r, s] = oe([]);
   function i(u) {
     return !!r.some((h) => h.key === u);
@@ -2022,7 +2026,7 @@ function qr(e) {
     }
   );
 }
-function Zr(e) {
+function Qr(e) {
   const { children: t = !1 } = e, [r, s] = oe([]);
   function i(u) {
     return !!r.some((h) => h.key === u);
@@ -2264,7 +2268,7 @@ var sr = (e) => {
     }));
   })) : null;
 };
-function Qr({ children: e }) {
+function ea({ children: e }) {
   function t(r) {
     Xn.custom((s) => /* @__PURE__ */ a.jsx(In, { ...r }));
   }
@@ -2280,43 +2284,44 @@ export {
   pr as AlertIcon,
   gr as AlertTitle,
   vr as Badge,
-  Fr as BreadcrumbContainer,
-  Dr as BreadcrumbLink,
-  _r as Button,
-  Er as Checkbox,
-  br as Divider,
-  Ar as DrawerContainer,
-  Vr as DrawerHeader,
-  qr as DrawerProvider,
-  jr as FormController,
-  Sr as FormError,
-  Rr as FormLabel,
-  $r as IconButton,
-  Pr as Input,
-  Wr as ModalContainer,
-  Yr as ModalFooter,
-  Ur as ModalHeader,
-  Zr as ModalProvider,
-  Br as Pagination,
-  Hr as Popover,
-  Ir as RadioBox,
-  Tr as RadioGroup,
-  Or as Select,
-  yr as Skeleton,
-  Lr as TabButton,
-  Mr as TabContainer,
-  xr as TableBody,
-  wr as TableCaption,
-  kr as TableContainer,
-  Nr as TableFooter,
-  Cr as TableHeader,
-  zr as Textarea,
+  Dr as BreadcrumbContainer,
+  Br as BreadcrumbLink,
+  jr as Button,
+  br as Card,
+  Sr as Checkbox,
+  yr as Divider,
+  Vr as DrawerContainer,
+  Wr as DrawerHeader,
+  Zr as DrawerProvider,
+  Er as FormController,
+  Rr as FormError,
+  $r as FormLabel,
+  Pr as IconButton,
+  Tr as Input,
+  Yr as ModalContainer,
+  Ur as ModalFooter,
+  Hr as ModalHeader,
+  Qr as ModalProvider,
+  Mr as Pagination,
+  Kr as Popover,
+  Or as RadioBox,
+  Ir as RadioGroup,
+  zr as Select,
+  xr as Skeleton,
+  Ar as TabButton,
+  Lr as TabContainer,
+  wr as TableBody,
+  kr as TableCaption,
+  Nr as TableContainer,
+  Cr as TableFooter,
+  _r as TableHeader,
+  Fr as Textarea,
   In as Toast,
-  Qr as ToastProvider,
-  Kr as Tooltip,
-  Xr as useAutomation,
-  Jr as useDrawer,
-  Gr as useModal,
+  ea as ToastProvider,
+  Xr as Tooltip,
+  Jr as useAutomation,
+  Gr as useDrawer,
+  qr as useModal,
   Pn as useScopedParams,
   On as useToast
 };
