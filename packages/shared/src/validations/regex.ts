@@ -24,7 +24,7 @@ const URL =
 const CPFCNPJ =
   /^(?:(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})|(\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})|(\d{14}))$/;
 
-export const regex = {
+const regex = {
   URL,
   HOUR,
   RG,
@@ -37,3 +37,5 @@ export const regex = {
   CPFCNPJ,
   DATE,
 };
+
+export { regex };

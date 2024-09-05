@@ -12,19 +12,19 @@ function hexToBin(hex: string) {
 
 function uuidV4() {
   const uuid = v4();
-  return {
-    text: uuid,
-    binary: hexToBin(uuid),
-  };
+  return { text: uuid, binary: hexToBin(uuid) };
 }
 
 function uuidV7() {
   const uuid = v7();
+  return { text: uuid, binary: hexToBin(uuid) };
+}
 
+function generateId(type: "text" | "binary") {
   return {
-    text: uuid,
-    binary: hexToBin(uuid),
+    v4: uuidV4()[type],
+    v7: uuidV7()[type],
   };
 }
 
-export { uuidV4, uuidV7 };
+export { generateId };
