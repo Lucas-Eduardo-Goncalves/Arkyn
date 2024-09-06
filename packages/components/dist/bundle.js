@@ -1886,7 +1886,7 @@ function Ka(e) {
   ] });
 }
 function Xa(e) {
-  const { children: t, button: a, closeOnClick: s, orientation: i = "bottom-left" } = e, [l, d] = oe(!1), u = `arkynPopover ${i} ${l ? "visibleTrue" : "visibleFalse"}`;
+  const { children: t, button: a, closeOnClick: s, orientation: i = "bottomLeft" } = e, [l, d] = oe(!1), u = `arkynPopover ${i} ${l ? "visibleTrue" : "visibleFalse"}`;
   function h() {
     l || d(!0);
   }

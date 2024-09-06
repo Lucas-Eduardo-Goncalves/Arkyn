@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import "./styles.css";
 function Popover(props) {
-    const { children, button, closeOnClick, orientation = "bottom-left" } = props;
+    const { children, button, closeOnClick, orientation = "bottomLeft" } = props;
     const [isOpen, setIsOpen] = useState(false);
     const visible = isOpen ? "visibleTrue" : "visibleFalse";
     const className = `arkynPopover ${orientation} ${visible}`;
