@@ -1,5 +1,7 @@
 import type { HTMLAttributes, TableHTMLAttributes } from "react";
-type TableBodyProps = HTMLAttributes<HTMLTableSectionElement>;
+type TableBodyProps = {
+    emptyMessage?: string;
+} & HTMLAttributes<HTMLTableSectionElement>;
 type TableCaptionProps = HTMLAttributes<HTMLElement>;
 type TableContainerProps = TableHTMLAttributes<HTMLTableElement>;
 type TableFooterProps = HTMLAttributes<HTMLTableSectionElement>;

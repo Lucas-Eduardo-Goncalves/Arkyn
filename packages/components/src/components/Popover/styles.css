@@ -6,7 +6,7 @@
   display: none;
 }
 
-.arkynPopover.show .arkynPopoverContent {
+.arkynPopover.visibleTrue .arkynPopoverContent {
   display: unset;
 }
 
