@@ -1,4 +1,4 @@
-.arkyn_radio_box {
+.arkynRadioBox {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -8,7 +8,7 @@
   line-height: 19.07px;
 }
 
-.arkyn_radio_box > button {
+.arkynRadioBox > button {
   position: relative;
   background-color: rgba(var(--input-background), 1);
 
@@ -16,19 +16,19 @@
   border-radius: 99999px;
 }
 
-.arkyn_radio_box > button:not(:disabled):hover {
+.arkynRadioBox > button:not(:disabled):hover {
   cursor: pointer;
 }
 
-.arkyn_radio_box.isChecked > button {
+.arkynRadioBox.checkedTrue > button {
   border-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_radio_box.isErrored > button {
+.arkynRadioBox.errorTrue > button {
   border-color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_radio_box.isChecked > button::before {
+.arkynRadioBox.checkedTrue > button::before {
   content: "  ";
   position: absolute;
   top: 50%;
@@ -38,7 +38,7 @@
   background-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_radio_box.sm > button {
+.arkynRadioBox.sm > button {
   min-height: 20px;
   min-width: 20px;
 
@@ -46,7 +46,7 @@
   max-width: 20px;
 }
 
-.arkyn_radio_box.md > button {
+.arkynRadioBox.md > button {
   min-height: 24px;
   min-width: 24px;
 
@@ -54,7 +54,7 @@
   max-width: 24px;
 }
 
-.arkyn_radio_box.lg > button {
+.arkynRadioBox.lg > button {
   min-height: 24px;
   min-width: 24px;
 
@@ -62,7 +62,7 @@
   max-width: 24px;
 }
 
-.arkyn_radio_box.isChecked.sm > button::before {
+.arkynRadioBox.checkedTrue.sm > button::before {
   min-height: 10px;
   min-width: 10px;
 
@@ -70,7 +70,7 @@
   max-width: 10px;
 }
 
-.arkyn_radio_box.isChecked.md > button::before {
+.arkynRadioBox.checkedTrue.md > button::before {
   min-height: 12px;
   min-width: 12px;
 
@@ -78,7 +78,7 @@
   max-width: 12px;
 }
 
-.arkyn_radio_box.isChecked.lg > button::before {
+.arkynRadioBox.checkedTrue.lg > button::before {
   min-height: 12px;
   min-width: 12px;
 
@@ -86,10 +86,10 @@
   max-width: 12px;
 }
 
-.arkyn_radio_box.isDisabled {
+.arkynRadioBox.disabledTrue {
   opacity: 0.5;
 }
 
-.arkyn_radio_box.isDisabled > button {
+.arkynRadioBox.disabledTrue > button {
   cursor: not-allowed;
 }

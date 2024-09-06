@@ -2,14 +2,10 @@ import { AlertTitleProps } from "@arkyn/types";
 import "./styles.css";
 
 function AlertTitle(props: AlertTitleProps) {
-  const { children, className: baseClassName, ...rest } = props;
-  const className = `arkyn_title ${baseClassName}`;
+  const { className: baseClassName, ...rest } = props;
+  const className = `arkynAlertTitle ${baseClassName}`;
 
-  return (
-    <div className={className.trim()} {...rest}>
-      {children}
-    </div>
-  );
+  return <div className={className.trim()} {...rest} />;
 }
 
 export { AlertTitle };

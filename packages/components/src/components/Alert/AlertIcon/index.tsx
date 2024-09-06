@@ -8,7 +8,7 @@ function AlertIcon(props: AlertIconProps) {
   const { className: baseClassName, ...rest } = props;
   const { schema } = useAlertContainer();
 
-  const className = `arkyn_alert_icon ${schema} ${baseClassName}`;
+  const className = `arkynAlertIcon ${schema} ${baseClassName}`;
 
   switch (schema) {
     case "success":

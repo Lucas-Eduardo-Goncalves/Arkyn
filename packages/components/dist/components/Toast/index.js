@@ -3,7 +3,7 @@ import { AlertCircle, CheckCircle2, Info, XCircle } from "lucide-react";
 import "./styles.css";
 function Toast(props) {
     const { message, title, type, size = "lg" } = props;
-    const className = `arkyn_toast ${type} ${size}`;
+    const className = `arkynToast ${type} ${size}`;
     function Icon() {
         switch (type) {
             case "info":

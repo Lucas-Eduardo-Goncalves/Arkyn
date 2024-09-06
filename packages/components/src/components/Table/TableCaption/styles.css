@@ -1,13 +1,13 @@
-.arkyn_table_caption {
+.arkynTableCaption {
   margin-bottom: 24px;
 }
 
-.arkyn_table_caption-content {
+.arkynTableCaptionContent {
   display: flex;
   align-items: center;
 }
 
-.arkyn_table_caption-content > .right-section {
+.arkynTableCaptionContent > .rightSection {
   display: flex;
   align-items: center;
   justify-content: end;

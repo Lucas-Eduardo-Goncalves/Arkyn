@@ -3,7 +3,7 @@ import "./styles.css";
 
 function BreadcrumbContainer(args: BreadcrumbContainerProps) {
   const { className: baseClassName = "", ...rest } = args;
-  const className = `arkyn_breadcrumb_container ${baseClassName}`;
+  const className = `arkynBreadcrumbContainer ${baseClassName}`;
 
   return <nav className={className} {...rest} />;
 }

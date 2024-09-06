@@ -17,7 +17,7 @@ function FormController(props: FormControllerProps) {
 
   const id = useId();
 
-  const className = `arkyn_form_controller ${baseClassName}`;
+  const className = `arkynFormController ${baseClassName}`;
 
   return (
     <FormControllerContext.Provider value={{ error, id, inputRef }}>

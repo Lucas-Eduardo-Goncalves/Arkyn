@@ -18,7 +18,7 @@ function RadioGroup(props: RadioGroupProps) {
     value: forceValue,
     onChange,
     size = "md",
-    className: baseClassName,
+    className: baseClassName = "",
     ...rest
   } = props;
 
@@ -30,7 +30,7 @@ function RadioGroup(props: RadioGroupProps) {
     onChange && onChange(value);
   }
 
-  const className = `arkyn_radio_group ${size} ${baseClassName || ""}`;
+  const className = `arkynRadioGroup ${size} ${baseClassName}`;
 
   return (
     <RadioContext.Provider

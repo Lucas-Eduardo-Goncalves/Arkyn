@@ -8,9 +8,9 @@ function Divider(props: DividerProps) {
     ...rest
   } = props;
 
-  const className = `arkyn_divider ${orientation} ${baseClassName}`;
+  const className = `arkynDivider ${orientation} ${baseClassName}`;
 
-  return <div className={className} {...rest} />;
+  return <div className={className.trim()} {...rest} />;
 }
 
 export { Divider };

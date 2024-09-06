@@ -1,5 +1,5 @@
 /* BASE */
-.arkyn_textarea {
+.arkynTextarea {
   flex: 1;
   position: relative;
   display: flex;
@@ -13,11 +13,11 @@
   outline: 1px solid transparent;
 }
 
-.arkyn_textarea:hover {
+.arkynTextarea:hover {
   cursor: text;
 }
 
-.arkyn_textarea textarea {
+.arkynTextarea textarea {
   border: none;
   outline: none;
   background: transparent;
@@ -25,68 +25,68 @@
   resize: none;
 }
 
-.arkyn_textarea textarea {
+.arkynTextarea textarea {
   color: var(--text-heading);
 }
 
-.arkyn_textarea textarea::placeholder {
+.arkynTextarea textarea::placeholder {
   color: var(--text-muted);
 }
 
-.arkyn_textarea.opacity {
+.arkynTextarea.opacityTrue {
   opacity: 0.5;
 }
 
 /* VARIANTS */
-.arkyn_textarea.solid {
+.arkynTextarea.solid {
   border-color: var(--border);
   background-color: rgba(var(--input-background), 1);
 }
 
-.arkyn_textarea.solid.errored {
+.arkynTextarea.solid.errored {
   border-color: rgba(var(--spotlight-danger), 1);
   outline-color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_textarea:not(.opacity).solid.focused {
+.arkynTextarea:not(.opacityTrue).solid.focusedTrue {
   border-color: rgba(var(--spotlight-primary), 1);
   outline-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_textarea.outline {
+.arkynTextarea.outline {
   border-color: var(--border);
 }
 
-.arkyn_textarea.outline.errored {
+.arkynTextarea.outline.errorTrue {
   border-color: rgba(var(--spotlight-danger), 1);
   outline-color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_textarea:not(.opacity).outline.focused {
+.arkynTextarea:not(.opacityTrue).outline.focusedTrue {
   border-color: rgba(var(--spotlight-primary), 1);
   outline-color: rgba(var(--spotlight-primary), 1);
 }
 
 /* SIZE */
-.arkyn_textarea.md textarea {
+.arkynTextarea.md textarea {
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
 }
 
-.arkyn_textarea.md textarea::placeholder {
+.arkynTextarea.md textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
 }
 
-.arkyn_textarea.lg textarea {
+.arkynTextarea.lg textarea {
   line-height: 16px;
   font-size: 16px;
   font-weight: 400;
 }
 
-.arkyn_textarea.lg textarea::placeholder {
+.arkynTextarea.lg textarea::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;

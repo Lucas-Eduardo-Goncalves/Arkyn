@@ -7,16 +7,16 @@ function Tooltip(props: TooltipProps) {
     size = "lg",
     children,
     orientation = "top",
-    className: baseClassName,
+    className: baseClassName = "",
     ...rest
   } = props;
 
-  const className = `arkyn_tooltip ${size} ${orientation} ${baseClassName}`;
+  const className = `arkynTooltip ${size} ${orientation} ${baseClassName}`;
 
   return (
     <div className={className.trim()} {...rest}>
       {children}
-      <div className="arkyn_tooltip-text">{text}</div>
+      <div className="arkynTooltipText">{text}</div>
     </div>
   );
 }

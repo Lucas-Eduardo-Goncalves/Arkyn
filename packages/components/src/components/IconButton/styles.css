@@ -1,5 +1,5 @@
 /* BASE */
-.arkyn_icon_button {
+.arkynIconButton {
   background: transparent;
   border: 1px solid transparent;
   outline: 1px solid transparent;
@@ -7,149 +7,149 @@
   transition: 0.15s all ease-out;
 }
 
-.arkyn_icon_button:hover {
+.arkynIconButton:hover {
   cursor: pointer;
   filter: brightness(0.95);
 }
 
-html.dark .arkyn_icon_button:hover {
+html.dark .arkynIconButton:hover {
   cursor: pointer;
   filter: brightness(1.2);
 }
 
-.arkyn_icon_button:disabled {
+.arkynIconButton:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.arkyn_icon_button-content {
+.arkynIconButtonContent {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* VARIANTS */
-.arkyn_icon_button.solid {
+.arkynIconButton.solid {
   color: #fff;
 }
 
-.arkyn_icon_button.solid.primary {
+.arkynIconButton.solid.primary {
   background-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_icon_button.solid.danger {
+.arkynIconButton.solid.danger {
   background-color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_icon_button.solid.success {
+.arkynIconButton.solid.success {
   background-color: rgba(var(--spotlight-success), 1);
 }
 
-.arkyn_icon_button.solid.warning {
+.arkynIconButton.solid.warning {
   background-color: rgba(var(--spotlight-warning), 1);
 }
 
-.arkyn_icon_button.solid.info {
+.arkynIconButton.solid.info {
   background-color: rgba(var(--spotlight-info), 1);
 }
 
-.arkyn_icon_button.outline {
+.arkynIconButton.outline {
   background-color: rgba(var(--input-background), 1);
   border-color: var(--border);
 }
 
-.arkyn_icon_button.outline.primary {
+.arkynIconButton.outline.primary {
   color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_icon_button.outline.danger {
+.arkynIconButton.outline.danger {
   color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_icon_button.outline.success {
+.arkynIconButton.outline.success {
   color: rgba(var(--spotlight-success), 1);
 }
 
-.arkyn_icon_button.outline.warning {
+.arkynIconButton.outline.warning {
   color: rgba(var(--spotlight-warning), 1);
 }
 
-.arkyn_icon_button.outline.info {
+.arkynIconButton.outline.info {
   color: rgba(var(--spotlight-info), 1);
 }
 
-.arkyn_icon_button.ghost.primary {
+.arkynIconButton.ghost.primary {
   color: rgba(var(--spotlight-primary), 1);
   background-color: rgba(var(--spotlight-primary), 0.2);
 }
 
-.arkyn_icon_button.ghost.danger {
+.arkynIconButton.ghost.danger {
   color: rgba(var(--spotlight-danger), 1);
   background-color: rgba(var(--spotlight-danger), 0.2);
 }
 
-.arkyn_icon_button.ghost.success {
+.arkynIconButton.ghost.success {
   color: rgba(var(--spotlight-success), 1);
   background-color: rgba(var(--spotlight-success), 0.2);
 }
 
-.arkyn_icon_button.ghost.warning {
+.arkynIconButton.ghost.warning {
   color: rgba(var(--spotlight-warning), 1);
   background-color: rgba(var(--spotlight-warning), 0.2);
 }
 
-.arkyn_icon_button.ghost.info {
+.arkynIconButton.ghost.info {
   color: rgba(var(--spotlight-info), 1);
   background-color: rgba(var(--spotlight-info), 0.2);
 }
 
-.arkyn_icon_button.invisible.primary {
+.arkynIconButton.invisible.primary {
   color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_icon_button.invisible.danger {
+.arkynIconButton.invisible.danger {
   color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_icon_button.invisible.success {
+.arkynIconButton.invisible.success {
   color: rgba(var(--spotlight-success), 1);
 }
 
-.arkyn_icon_button.invisible.warning {
+.arkynIconButton.invisible.warning {
   color: rgba(var(--spotlight-warning), 1);
 }
 
-.arkyn_icon_button.invisible.info {
+.arkynIconButton.invisible.info {
   color: rgba(var(--spotlight-info), 1);
 }
 
 /* SIZE */
-.arkyn_icon_button.lg {
+.arkynIconButton.lg {
   border-radius: var(--rounded-inputs);
   height: 44px;
   width: 44px;
 }
 
-.arkyn_icon_button.md {
+.arkynIconButton.md {
   border-radius: var(--rounded-inputs);
   height: 40px;
   width: 40px;
 }
 
-.arkyn_icon_button.sm {
+.arkynIconButton.sm {
   border-radius: var(--rounded-inputs);
   height: 32px;
   width: 32px;
 }
 
-.arkyn_icon_button.xs {
+.arkynIconButton.xs {
   border-radius: calc(var(--rounded-inputs) * 0.6667); /* 2/3 */
   height: 24px;
   width: 24px;
 }
 
 /* SPIN */
-.arkyn_icon_button-spinner {
+.arkynIconButtonSpinner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,15 +161,15 @@ html.dark .arkyn_icon_button:hover {
   opacity: 0;
 }
 
-.arkyn_icon_button-spinner > svg {
+.arkynIconButtonSpinner > svg {
   animation: spin 2s linear infinite;
 }
 
-.arkyn_icon_button.loading_true .arkyn_icon_button-spinner {
+.arkynIconButton.loadingTrue .arkynIconButtonSpinner {
   opacity: 1;
 }
 
-.arkyn_icon_button.loading_true .arkyn_icon_button-content {
+.arkynIconButton.loadingTrue .arkynIconButtonContent {
   opacity: 0;
 }
 

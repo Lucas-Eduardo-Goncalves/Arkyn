@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-type OrientationProps = "bottom-left" | "bottom-right" | "top-left" | "top-right" | "top" | "left" | "bottom" | "right";
+type OrientationProps = "bottomLeft" | "bottomRight" | "topLeft" | "topRight" | "top" | "left" | "bottom" | "right";
 type PopoverProps = {
     children: ReactNode;
     button: ReactNode;

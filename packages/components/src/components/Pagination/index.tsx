@@ -33,9 +33,9 @@ function Pagination(props: PaginationProps) {
   }
 
   return (
-    <div className="arkyn_pagination" {...rest}>
+    <div className="arkynPagination" {...rest}>
       <button
-        className="arkyn_pagination-icon_button"
+        className="arkynPaginationIconButton"
         disabled={currentPage <= 1}
         onClick={() => handlePageChange(currentPage - 1)}
       >
@@ -45,14 +45,14 @@ function Pagination(props: PaginationProps) {
       {currentPage > 1 + siblingsCount && (
         <>
           <button
-            className="arkyn_pagination-page_button"
+            className="arkynPaginationPageButton"
             onClick={() => handlePageChange(1)}
           >
             1
           </button>
 
           {currentPage > 2 + siblingsCount && (
-            <button disabled className="arkyn_pagination-spread">
+            <button disabled className="arkynPaginationSpread">
               <Ellipsis />
             </button>
           )}
@@ -63,13 +63,13 @@ function Pagination(props: PaginationProps) {
         <button
           key={index}
           onClick={() => handlePageChange(page)}
-          className="arkyn_pagination-page_button"
+          className="arkynPaginationPageButton"
         >
           {page}
         </button>
       ))}
 
-      <button className="arkyn_pagination-current" disabled>
+      <button className="arkynPaginationCurrent" disabled>
         {currentPage}
       </button>
 
@@ -77,7 +77,7 @@ function Pagination(props: PaginationProps) {
         <button
           key={index}
           onClick={() => handlePageChange(page)}
-          className="arkyn_pagination-page_button"
+          className="arkynPaginationPageButton"
         >
           {page}
         </button>
@@ -86,13 +86,13 @@ function Pagination(props: PaginationProps) {
       {currentPage + siblingsCount < lastPage && (
         <>
           {currentPage + 1 + siblingsCount < lastPage && (
-            <button disabled className="arkyn_pagination-spread">
+            <button disabled className="arkynPaginationSpread">
               <Ellipsis />
             </button>
           )}
 
           <button
-            className="arkyn_pagination-page_button"
+            className="arkynPaginationPageButton"
             onClick={() => handlePageChange(lastPage)}
           >
             {lastPage}
@@ -101,7 +101,7 @@ function Pagination(props: PaginationProps) {
       )}
 
       <button
-        className="arkyn_pagination-icon_button"
+        className="arkynPaginationIconButton"
         disabled={currentPage >= lastPage}
         onClick={() => handlePageChange(currentPage + 1)}
       >

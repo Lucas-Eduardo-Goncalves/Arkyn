@@ -12,10 +12,10 @@ function FormLabel(props: FormLabelProps) {
 
   const { id } = useFormController();
 
-  const show = showAsterisk ? "show-asterisk" : "";
-  const className = `arkyn_form_label ${show} ${baseClassName}`;
+  const show = showAsterisk ? "asteriskTrue" : "asteriskFalse";
+  const className = `arkynFormLabel ${show} ${baseClassName}`;
 
-  return <label {...rest} className={className.trim()} htmlFor={id} />;
+  return <label className={className.trim()} htmlFor={id} {...rest} />;
 }
 
 export { FormLabel };

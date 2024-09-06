@@ -1,30 +1,30 @@
-.arkyn_breadcrumb_link {
+.arkynBreadcrumbLink {
   user-select: none;
   text-decoration: none;
   font-size: 14px;
   color: var(--text-body);
 }
 
-.arkyn_breadcrumb_link.active {
+.arkynBreadcrumbLink.active {
   color: var(--text-muted);
 }
 
-.arkyn_breadcrumb_link.inactive:hover {
+.arkynBreadcrumbLink.inactive:hover {
   cursor: pointer;
   color: var(--text-muted);
 }
 
-.arkyn_breadcrumb_link:first-child > svg {
+.arkynBreadcrumbLink:first-child > svg {
   display: none;
 }
 
-.arkyn_breadcrumb_link:not(:first-child) {
+.arkynBreadcrumbLink:not(:first-child) {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.arkyn_breadcrumb_link:not(:first-child) > svg {
+.arkynBreadcrumbLink:not(:first-child) > svg {
   display: unset;
   color: var(--text-body);
 }

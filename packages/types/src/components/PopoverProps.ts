@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
 type OrientationProps =
-  | "bottom-left"
-  | "bottom-right"
-  | "top-left"
-  | "top-right"
+  | "bottomLeft"
+  | "bottomRight"
+  | "topLeft"
+  | "topRight"
   | "top"
   | "left"
   | "bottom"

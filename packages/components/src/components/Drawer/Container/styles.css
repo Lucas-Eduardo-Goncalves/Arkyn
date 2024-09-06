@@ -1,4 +1,4 @@
-.arkyn_drawer_container {
+.arkynDrawerContainer {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   z-index: 9999;
 }
 
-.arkyn_drawer_container-overlay {
+.arkynDrawerContainerOverlay {
   position: fixed;
   z-index: 9997;
   top: 0;
@@ -19,11 +19,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.arkyn_drawer_container-overlay:hover {
+.arkynDrawerContainerOverlay:hover {
   cursor: pointer;
 }
 
-.arkyn_drawer_container-content {
+.arkynDrawerContainerContent {
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -32,10 +32,10 @@
   background: var(--card);
 }
 
-.arkyn_drawer_container.left > .arkyn_drawer_container-content {
+.arkynDrawerContainer.left > .arkynDrawerContainerContent {
   left: 0;
 }
 
-.arkyn_drawer_container.right > .arkyn_drawer_container-content {
+.arkynDrawerContainer.right > .arkynDrawerContainerContent {
   right: 0;
 }

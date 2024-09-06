@@ -3,7 +3,7 @@ import "./styles.css";
 
 function TableBody(props: TableBodyProps) {
   const { className: baseClassName, ...rest } = props;
-  const className = `arkyn_table_body ${baseClassName}`;
+  const className = `arkynTableBody ${baseClassName}`;
 
   return <tbody className={className.trim()} {...rest} />;
 }

@@ -1,4 +1,4 @@
-.arkyn_alert_icon {
+.arkynAlertIcon {
   min-width: 28px;
   min-height: 28px;
 
@@ -6,18 +6,18 @@
   max-height: 28px;
 }
 
-.arkyn_alert_icon.danger {
+.arkynAlertIcon.danger {
   color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_alert_icon.success {
+.arkynAlertIcon.success {
   color: rgba(var(--spotlight-success), 1);
 }
 
-.arkyn_alert_icon.info {
+.arkynAlertIcon.info {
   color: rgba(var(--spotlight-info), 1);
 }
 
-.arkyn_alert_icon.warning {
+.arkynAlertIcon.warning {
   color: rgba(var(--spotlight-warning), 1);
 }

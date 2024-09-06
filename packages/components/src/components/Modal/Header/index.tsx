@@ -14,7 +14,7 @@ function ModalHeader(args: ModalHeaderProps) {
   } = args;
 
   const { makeInvisible } = useContext(modalContext);
-  const className = `arkyn_modal_header ${baseClassName}`;
+  const className = `arkynModalHeader ${baseClassName}`;
 
   return (
     <header className={className.trim()} {...rest}>
@@ -25,7 +25,7 @@ function ModalHeader(args: ModalHeaderProps) {
           type="button"
           onClick={makeInvisible}
           aria-label="Close modal button"
-          className="arkyn_modal_header-close_button"
+          className="arkynModalHeaderCloseButton"
         >
           <X size={24} />
         </button>

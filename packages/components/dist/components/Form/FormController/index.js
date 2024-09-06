@@ -10,7 +10,7 @@ function FormController(props) {
     const name = inputRef.current?.name || "";
     const error = actionData?.fieldErrors?.[name] || null;
     const id = useId();
-    const className = `arkyn_form_controller ${baseClassName}`;
+    const className = `arkynFormController ${baseClassName}`;
     return (_jsx(FormControllerContext.Provider, { value: { error, id, inputRef }, children: _jsx("section", { className: className.trim(), ...rest, children: children }) }));
 }
 function useFormController() {

@@ -1,9 +1,9 @@
-.arkyn_tooltip {
+.arkynTooltip {
   position: relative;
   display: block;
 }
 
-.arkyn_tooltip-text {
+.arkynTooltipText {
   visibility: hidden;
 
   opacity: 0;
@@ -25,30 +25,30 @@
   z-index: 9999;
 }
 
-.arkyn_tooltip.lg .arkyn_tooltip-text {
+.arkynTooltip.lg .arkynTooltipText {
   font-size: 14px;
   line-height: 14px;
   padding: 8px 12px;
 }
 
-.arkyn_tooltip.md .arkyn_tooltip-text {
+.arkynTooltip.md .arkynTooltipText {
   font-size: 12px;
   line-height: 12px;
   padding: 8px 12px;
 }
 
-.arkyn_tooltip:hover .arkyn_tooltip-text {
+.arkynTooltip:hover .arkynTooltipText {
   opacity: 1;
   visibility: visible;
 }
 
-.arkyn_tooltip.top .arkyn_tooltip-text {
+.arkynTooltip.top .arkynTooltipText {
   bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
 }
 
-.arkyn_tooltip.top .arkyn_tooltip-text::before {
+.arkynTooltip.top .arkynTooltipText::before {
   content: "";
   top: 100%;
   border-style: solid;
@@ -60,13 +60,13 @@
   transform: translateX(-50%);
 }
 
-.arkyn_tooltip.left .arkyn_tooltip-text {
+.arkynTooltip.left .arkynTooltipText {
   top: 50%;
   right: calc(100% + 10px);
   transform: translateY(-50%);
 }
 
-.arkyn_tooltip.left .arkyn_tooltip-text::before {
+.arkynTooltip.left .arkynTooltipText::before {
   content: "";
   top: 50%;
   border-style: solid;
@@ -77,13 +77,13 @@
   transform: translateY(-50%);
 }
 
-.arkyn_tooltip.right .arkyn_tooltip-text {
+.arkynTooltip.right .arkynTooltipText {
   top: 50%;
   left: calc(100% + 10px);
   transform: translateY(-50%);
 }
 
-.arkyn_tooltip.right .arkyn_tooltip-text::before {
+.arkynTooltip.right .arkynTooltipText::before {
   content: "";
   border-style: solid;
   border-color: transparent var(--tooltip-background);
@@ -94,13 +94,13 @@
   position: absolute;
 }
 
-.arkyn_tooltip.bottom .arkyn_tooltip-text {
+.arkynTooltip.bottom .arkynTooltipText {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
 }
 
-.arkyn_tooltip.bottom .arkyn_tooltip-text::before {
+.arkynTooltip.bottom .arkynTooltipText::before {
   content: "";
   border-style: solid;
   border-color: var(--tooltip-background) transparent;

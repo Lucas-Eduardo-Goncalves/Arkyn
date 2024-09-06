@@ -12,7 +12,7 @@ function TabContainer(props) {
     const [value, setValue] = useState(defaultActive || "");
     const [showInitialTab, setShowInitialTab] = useState(true);
     const reference = useRef(null);
-    const className = `arkyn_tab_container ${baseClassName || ""}`;
+    const className = `arkynTabContainer ${baseClassName || ""}`;
     const [activeLineStyle, setActiveLineStyle] = useState({
         width: "0px",
         left: "0px",
@@ -47,6 +47,6 @@ function TabContainer(props) {
             onClick && onClick(target.value);
         }
     };
-    return (_jsxs("nav", { ref: reference, className: className.trim(), ...rest, children: [_jsx(TabContext.Provider, { value: { handleTabClick, showInitialTab, value }, children: children }), _jsx("div", { className: "active-line", style: activeLineStyle })] }));
+    return (_jsxs("nav", { ref: reference, className: className.trim(), ...rest, children: [_jsx(TabContext.Provider, { value: { handleTabClick, showInitialTab, value }, children: children }), _jsx("div", { className: "activeLine", style: activeLineStyle })] }));
 }
 export { TabContainer, useTabContext };

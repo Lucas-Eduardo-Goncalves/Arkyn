@@ -25,9 +25,10 @@ function Checkbox(props: CheckboxProps) {
   const currentChecked =
     typeof baseChecked === "boolean" ? baseChecked : isChecked;
 
-  const className = `arkyn_checkbox ${size} ${isError ? "error" : ""} ${
-    currentChecked ? "checked" : ""
-  } ${baseClassName}`;
+  const errorClass = isError ? "errorTrue" : "errorFalse";
+  const currentCheckedClass = currentChecked ? "checkedTrue" : "checkedFalse";
+
+  const className = `arkynCheckbox ${size} ${errorClass} ${currentCheckedClass} ${baseClassName}`;
 
   function handleCheck() {
     const defaultChecked = isChecked;
@@ -37,8 +38,8 @@ function Checkbox(props: CheckboxProps) {
 
   return (
     <button
-      type="button"
       id={id}
+      type="button"
       className={className}
       onClick={handleCheck}
       {...rest}
@@ -49,6 +50,7 @@ function Checkbox(props: CheckboxProps) {
         ref={inputRef}
         value={currentChecked ? value || "checked" : ""}
       />
+
       <Check />
     </button>
   );

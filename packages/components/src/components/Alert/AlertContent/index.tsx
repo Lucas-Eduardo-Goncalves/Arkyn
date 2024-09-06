@@ -1,16 +1,11 @@
 import { AlertContentProps } from "@arkyn/types";
-
 import "./styles.css";
 
 function AlertContent(props: AlertContentProps) {
-  const { children, className: baseClassName, ...rest } = props;
-  const className = `arkyn_alert_content ${baseClassName}`;
+  const { className: baseClassName, ...rest } = props;
+  const className = `arkynAlertContent ${baseClassName}`;
 
-  return (
-    <div className={className.trim()} {...rest}>
-      {children}
-    </div>
-  );
+  return <div className={className.trim()} {...rest} />;
 }
 
 export { AlertContent };

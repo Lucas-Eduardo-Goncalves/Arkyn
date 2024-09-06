@@ -4,9 +4,9 @@ import "./styles.css";
 function TabButton(props) {
     const { children, className: baseClassName = "", onClick, ...rest } = props;
     const { value, showInitialTab, handleTabClick } = useTabContext();
-    const active = value === rest.value && value ? "active" : "";
-    const defaultShowBorderBottomTable = value === rest.value && showInitialTab ? "show_border_bottom" : "";
-    const className = `arkyn_tab_button ${defaultShowBorderBottomTable} ${active} ${baseClassName}`;
+    const activeClass = value === rest.value && value ? "activeTrue" : "activeFalse";
+    const defaultShowBorderBottomTable = value === rest.value && showInitialTab ? "showBorderBottom" : "";
+    const className = `arkynTabButton ${defaultShowBorderBottomTable} ${activeClass} ${baseClassName}`;
     function handleClick(event) {
         handleTabClick(event);
         onClick && onClick(event);

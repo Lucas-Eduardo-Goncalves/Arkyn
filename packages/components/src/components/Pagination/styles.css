@@ -1,4 +1,4 @@
-.arkyn_pagination {
+.arkynPagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,8 +6,8 @@
   gap: 8px;
 }
 
-.arkyn_pagination .arkyn_pagination-icon_button,
-.arkyn_pagination .arkyn_pagination-page_button {
+.arkynPagination .arkynPaginationIconButton,
+.arkynPagination .arkynPaginationPageButton {
   background-color: var(--background-foreground);
   border: none;
 
@@ -24,36 +24,36 @@
   border-radius: var(--rounded-inputs);
 }
 
-.arkyn_pagination .arkyn_pagination-icon_button:hover,
-.arkyn_pagination .arkyn_pagination-page_button:hover {
+.arkynPagination .arkynPaginationIconButton:hover,
+.arkynPagination .arkynPaginationPageButton:hover {
   filter: brightness(0.98);
   cursor: pointer;
 }
 
-html.dark .arkyn_pagination .arkyn_pagination-icon_button:hover,
-html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
+html.dark .arkynPagination .arkynPaginationIconButton:hover,
+html.dark .arkynPagination .arkynPaginationPageButton:hover {
   filter: brightness(1.2);
 }
 
-.arkyn_pagination .arkyn_pagination-icon_button > svg {
+.arkynPagination .arkynPaginationIconButton > svg {
   color: var(--text-muted);
   height: 20px;
   width: 20px;
 }
 
-.arkyn_pagination .arkyn_pagination-page_button {
+.arkynPagination .arkynPaginationPageButton {
   color: var(--text-body);
   font-size: 14px;
   font-weight: 600;
 }
 
-.arkyn_pagination .arkyn_pagination-icon_button:disabled {
+.arkynPagination .arkynPaginationIconButton:disabled {
   filter: brightness(1);
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.arkyn_pagination .arkyn_pagination-current {
+.arkynPagination .arkynPaginationCurrent {
   background-color: rgba(var(--spotlight-primary), 1);
   color: #ffffff;
   border: none;
@@ -71,7 +71,7 @@ html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
   border-radius: var(--rounded-inputs);
 }
 
-.arkyn_pagination .arkyn_pagination-spread {
+.arkynPagination .arkynPaginationSpread {
   background-color: transparent;
   color: var(--text-muted);
   border: none;
@@ -87,7 +87,7 @@ html.dark .arkyn_pagination .arkyn_pagination-page_button:hover {
   justify-content: center;
 }
 
-.arkyn_pagination .arkyn_pagination-spread > svg {
+.arkynPagination .arkynPaginationSpread > svg {
   color: var(--text-muted);
   height: 16px;
   width: 16px;

@@ -3,7 +3,7 @@ import "./styles.css";
 
 function TableContainer(props: TableContainerProps) {
   const { children, className: baseClassName, ...rest } = props;
-  const className = `arkyn_table_container ${baseClassName}`;
+  const className = `arkynTableContainer ${baseClassName}`;
 
   return (
     <div className={className.trim()} {...rest}>

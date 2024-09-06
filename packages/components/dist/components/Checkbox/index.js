@@ -9,12 +9,14 @@ function Checkbox(props) {
     const isError = defaultIsError || !!error;
     const [isChecked, setIsChecked] = useState(defaultChecked || false);
     const currentChecked = typeof baseChecked === "boolean" ? baseChecked : isChecked;
-    const className = `arkyn_checkbox ${size} ${isError ? "error" : ""} ${currentChecked ? "checked" : ""} ${baseClassName}`;
+    const errorClass = isError ? "errorTrue" : "errorFalse";
+    const currentCheckedClass = currentChecked ? "checkedTrue" : "checkedFalse";
+    const className = `arkynCheckbox ${size} ${errorClass} ${currentCheckedClass} ${baseClassName}`;
     function handleCheck() {
         const defaultChecked = isChecked;
         setIsChecked(!defaultChecked);
         onCheck && onCheck(!defaultChecked ? value || "checked" : "");
     }
-    return (_jsxs("button", { type: "button", id: id, className: className, onClick: handleCheck, ...rest, children: [_jsx("input", { type: "hidden", name: name, ref: inputRef, value: currentChecked ? value || "checked" : "" }), _jsx(Check, {})] }));
+    return (_jsxs("button", { id: id, type: "button", className: className, onClick: handleCheck, ...rest, children: [_jsx("input", { type: "hidden", name: name, ref: inputRef, value: currentChecked ? value || "checked" : "" }), _jsx(Check, {})] }));
 }
 export { Checkbox };

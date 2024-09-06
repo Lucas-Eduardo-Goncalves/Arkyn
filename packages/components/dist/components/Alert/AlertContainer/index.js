@@ -6,8 +6,8 @@ function useAlertContainer() {
     return useContext(AlertContainerContext);
 }
 function AlertContainer(props) {
-    const { schema, children, className: baseClassName, ...rest } = props;
-    const className = `arkyn_alert ${schema} ${baseClassName}`;
-    return (_jsx(AlertContainerContext.Provider, { value: props, children: _jsx("div", { className: className.trim(), ...rest, children: children }) }));
+    const { schema, className: baseClassName, ...rest } = props;
+    const className = `arkynAlertContainer ${schema} ${baseClassName}`;
+    return (_jsx(AlertContainerContext.Provider, { value: props, children: _jsx("div", { className: className.trim(), ...rest }) }));
 }
 export { AlertContainer, useAlertContainer };

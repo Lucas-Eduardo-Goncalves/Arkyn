@@ -16,7 +16,8 @@ function IconButton(props: IconButtonProps) {
   } = props;
 
   const iconSize = { xs: 12, sm: 16, md: 20, lg: 24 };
-  const className = `arkyn_icon_button ${variant} ${scheme} ${size} loading_${isLoading} ${baseClassName}`;
+  const loading = isLoading ? "loadingTrue" : "loadingFalse";
+  const className = `arkynIconButton ${variant} ${scheme} ${size} ${loading} ${baseClassName}`;
 
   return (
     <button
@@ -24,11 +25,11 @@ function IconButton(props: IconButtonProps) {
       className={className.trim()}
       {...rest}
     >
-      <div className="arkyn_icon_button-spinner">
+      <div className="arkynIconButtonSpinner">
         <Loader2 size={iconSize[size]} strokeWidth={2.5} />
       </div>
 
-      <div className="arkyn_icon_button-content">
+      <div className="arkynIconButtonContent">
         <Icon size={iconSize[size]} strokeWidth={2.5} />
       </div>
     </button>

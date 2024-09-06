@@ -5,7 +5,7 @@ import "./styles.css";
 
 function FormError(props: FormErrorProps) {
   const { children, className: baseClassName, ...rest } = props;
-  const className = `arkyn_form_error ${baseClassName}`;
+  const className = `arkynFormError ${baseClassName}`;
 
   const { error } = useFormController();
   if (children) {

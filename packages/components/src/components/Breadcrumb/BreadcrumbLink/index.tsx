@@ -16,7 +16,7 @@ function BreadcrumbLink(args: BreadcrumbLinkProps) {
   } = args;
 
   const active = pathname === to ? "active" : "inactive";
-  const className = `arkyn_breadcrumb_link ${active} ${baseClassName}`;
+  const className = `arkynBreadcrumbLink ${active} ${baseClassName}`;
 
   if (disabled) {
     return (

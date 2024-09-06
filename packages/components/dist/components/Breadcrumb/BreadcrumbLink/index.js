@@ -6,7 +6,7 @@ function BreadcrumbLink(args) {
     const { pathname } = useLocation();
     const { className: baseClassName = "", disabled = false, children, to, ...rest } = args;
     const active = pathname === to ? "active" : "inactive";
-    const className = `arkyn_breadcrumb_link ${active} ${baseClassName}`;
+    const className = `arkynBreadcrumbLink ${active} ${baseClassName}`;
     if (disabled) {
         return (_jsxs("p", { className: className, children: [_jsx(ChevronRight, { size: 14, strokeWidth: 2.5 }), children] }));
     }

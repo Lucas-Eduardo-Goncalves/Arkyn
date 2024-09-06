@@ -10,14 +10,12 @@ function useAlertContainer() {
 }
 
 function AlertContainer(props: AlertContainerProps) {
-  const { schema, children, className: baseClassName, ...rest } = props;
-  const className = `arkyn_alert ${schema} ${baseClassName}`;
+  const { schema, className: baseClassName, ...rest } = props;
+  const className = `arkynAlertContainer ${schema} ${baseClassName}`;
 
   return (
     <AlertContainerContext.Provider value={props}>
-      <div className={className.trim()} {...rest}>
-        {children}
-      </div>
+      <div className={className.trim()} {...rest} />
     </AlertContainerContext.Provider>
   );
 }

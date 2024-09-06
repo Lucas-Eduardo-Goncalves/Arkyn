@@ -16,8 +16,8 @@ function ModalContainer(args: ModalContainerProps) {
     ...rest
   } = args;
 
-  const visibled = isVisibled ? "visible" : "";
-  const className = `arkyn_modal_container ${visibled} ${baseClassName}`;
+  const visibleClass = isVisibled ? "visibleTrue" : "visibleFalse";
+  const className = `arkynModalContainer ${visibleClass} ${baseClassName}`;
 
   return (
     <modalContext.Provider value={{ makeInvisible }}>
@@ -25,7 +25,7 @@ function ModalContainer(args: ModalContainerProps) {
         {isVisibled && (
           <aside className={className.trim()} {...rest}>
             <motion.div
-              className="arkyn_modal_container-overlay"
+              className="arkynModalContainerOverlay"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -34,7 +34,7 @@ function ModalContainer(args: ModalContainerProps) {
             />
 
             <motion.div
-              className="arkyn_modal_container-content"
+              className="arkynModalContainerContent"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0, scale: 0.75 }}
               animate={{ opacity: 1, scale: 1 }}

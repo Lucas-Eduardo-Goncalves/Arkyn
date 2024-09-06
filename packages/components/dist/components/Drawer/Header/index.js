@@ -6,7 +6,7 @@ import "./styles.css";
 function DrawerHeader(props) {
     const { showCloseButton = true, className: baseClassName, children, ...rest } = props;
     const { makeInvisible } = useContext(drawerContext);
-    const className = `arkyn_drawer_header ${baseClassName}`;
-    return (_jsxs("header", { className: className.trim(), ...rest, children: [children, showCloseButton && (_jsx("button", { className: "arkyn_drawer_header-close_button", type: "button", onClick: makeInvisible, "aria-label": "Close drawer", children: _jsx(X, { size: 24 }) }))] }));
+    const className = `arkynDrawerHeader ${baseClassName}`;
+    return (_jsxs("header", { className: className.trim(), ...rest, children: [children, showCloseButton && (_jsx("button", { className: "arkynDrawerHeaderCloseButton", type: "button", onClick: makeInvisible, "aria-label": "Close drawer", children: _jsx(X, { size: 24 }) }))] }));
 }
 export { DrawerHeader };

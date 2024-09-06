@@ -1,4 +1,4 @@
-.arkyn_toast {
+.arkynToast {
   display: flex;
   align-items: start;
 
@@ -10,7 +10,7 @@
   border-radius: var(--rounded-cards);
 }
 
-.arkyn_toast > div {
+.arkynToast > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 
-.arkyn_toast > div > .bg {
+.arkynToast > div > .bg {
   content: " ";
   left: 0px;
   right: 0px;
@@ -30,15 +30,15 @@
   z-index: 1;
 }
 
-.arkyn_toast > div > svg {
+.arkynToast > div > svg {
   z-index: 2;
 }
 
-.arkyn_toast > div circle {
+.arkynToast > div circle {
   display: none;
 }
 
-.arkyn_toast > p {
+.arkynToast > p {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -47,105 +47,105 @@
   overflow: hidden;
 }
 
-.arkyn_toast > p > strong {
+.arkynToast > p > strong {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* Schemas */
-.arkyn_toast.info {
+.arkynToast.info {
   background-color: rgba(var(--toast-info), 1);
   color: #ffffff;
 }
 
-.arkyn_toast.info > div > .bg {
+.arkynToast.info > div > .bg {
   background-color: rgba(var(--toast-info), 1);
   filter: brightness(0.8);
 }
 
-.arkyn_toast.warning {
+.arkynToast.warning {
   background-color: rgba(var(--toast-warning), 1);
   color: #ffffff;
 }
 
-.arkyn_toast.warning > div > .bg {
+.arkynToast.warning > div > .bg {
   background-color: rgba(var(--toast-warning), 1);
   filter: brightness(0.8);
 }
 
-.arkyn_toast.danger {
+.arkynToast.danger {
   background-color: rgba(var(--toast-danger), 1);
   color: #ffffff;
 }
 
-.arkyn_toast.danger > div > .bg {
+.arkynToast.danger > div > .bg {
   background-color: rgba(var(--toast-danger), 1);
   filter: brightness(0.8);
 }
 
-.arkyn_toast.success {
+.arkynToast.success {
   background-color: rgba(var(--toast-success), 1);
   color: #ffffff;
 }
 
-.arkyn_toast.success > div > .bg {
+.arkynToast.success > div > .bg {
   background-color: rgba(var(--toast-success), 1);
   filter: brightness(0.8);
 }
 
 /* Sizes */
-.arkyn_toast.md {
+.arkynToast.md {
   min-width: 260px;
 }
 
-.arkyn_toast.md > div {
+.arkynToast.md > div {
   min-height: 20px;
   max-height: 20px;
   min-width: 20px;
   max-width: 20px;
 }
 
-.arkyn_toast.md > div > svg {
+.arkynToast.md > div > svg {
   min-height: 26px;
   min-width: 26px;
 }
 
-.arkyn_toast.md > p > strong {
+.arkynToast.md > p > strong {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
 }
 
-.arkyn_toast.md > p > span {
+.arkynToast.md > p > span {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
 }
 
-.arkyn_toast.lg {
+.arkynToast.lg {
   min-width: 260px;
 }
 
-.arkyn_toast.lg > div {
+.arkynToast.lg > div {
   min-height: 24px;
   max-height: 24px;
   min-width: 24px;
   max-width: 24px;
 }
 
-.arkyn_toast.lg > div > svg {
+.arkynToast.lg > div > svg {
   min-height: 30px;
   min-width: 30px;
 }
 
-.arkyn_toast.lg > p > strong {
+.arkynToast.lg > p > strong {
   font-weight: 600;
   font-size: 15px;
   line-height: 17px;
 }
 
-.arkyn_toast.lg > p > span {
+.arkynToast.lg > p > span {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;

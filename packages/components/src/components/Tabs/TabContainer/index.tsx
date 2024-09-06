@@ -38,7 +38,7 @@ function TabContainer(props: TabContainerProps) {
   const [showInitialTab, setShowInitialTab] = useState(true);
 
   const reference = useRef<HTMLElement>(null);
-  const className = `arkyn_tab_container ${baseClassName || ""}`;
+  const className = `arkynTabContainer ${baseClassName || ""}`;
 
   const [activeLineStyle, setActiveLineStyle] = useState({
     width: "0px",
@@ -90,7 +90,7 @@ function TabContainer(props: TabContainerProps) {
       <TabContext.Provider value={{ handleTabClick, showInitialTab, value }}>
         {children}
       </TabContext.Provider>
-      <div className="active-line" style={activeLineStyle} />
+      <div className="activeLine" style={activeLineStyle} />
     </nav>
   );
 }

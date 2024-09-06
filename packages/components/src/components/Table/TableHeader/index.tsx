@@ -3,12 +3,12 @@ import "./styles.css";
 
 function TableHeader(props: TableHeaderProps) {
   const { className: baseClassName, children, ...rest } = props;
-  const className = `arkyn_table_header ${baseClassName}`;
+  const className = `arkynTableHeader ${baseClassName}`;
 
   return (
     <thead className={className.trim()} {...rest}>
       <tr>{children}</tr>
-      <tr className="spacing-row" />
+      <tr className="spacingRow" />
     </thead>
   );
 }

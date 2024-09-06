@@ -19,8 +19,8 @@ function DrawerContainer(props: DrawerContainerProps) {
 
   const translateX = orientation === "left" ? "-100%" : "100%";
 
-  const visibled = isVisibled ? "visible" : "";
-  const className = `arkyn_drawer_container ${orientation} ${visibled} ${baseClassName}`;
+  const visibledClass = isVisibled ? "visibleTrue" : "visibleFalse";
+  const className = `arkynDrawerContainer ${orientation} ${visibledClass} ${baseClassName}`;
 
   return (
     <drawerContext.Provider value={{ makeInvisible }}>
@@ -28,7 +28,7 @@ function DrawerContainer(props: DrawerContainerProps) {
         {isVisibled && (
           <aside className={className.trim()} {...rest}>
             <motion.div
-              className="arkyn_drawer_container-overlay"
+              className="arkynDrawerContainerOverlay"
               transition={{ duration: 0.15, ease: "easeOut" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -37,7 +37,7 @@ function DrawerContainer(props: DrawerContainerProps) {
             />
 
             <motion.div
-              className="arkyn_drawer_container-content"
+              className="arkynDrawerContainerContent"
               transition={{ ease: "easeOut", duration: 0.15 }}
               initial={{ transform: `translateX(${translateX})` }}
               animate={{ transform: "translateX(0px)" }}

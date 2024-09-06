@@ -3,7 +3,7 @@ import "./styles.css";
 
 function ModalFooter(args: ModalFooterProps) {
   const { alignment = "right", className: baseClassName, ...rest } = args;
-  const className = `arkyn_modal_footer ${alignment} ${baseClassName}`;
+  const className = `arkynModalFooter ${alignment} ${baseClassName}`;
 
   return <footer className={className.trim()} {...rest} />;
 }

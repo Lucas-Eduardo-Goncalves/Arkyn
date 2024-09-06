@@ -8,7 +8,8 @@ function Popover(props: PopoverProps) {
   const { children, button, closeOnClick, orientation = "bottom-left" } = props;
   const [isOpen, setIsOpen] = useState(false);
 
-  const className = `arkyn_popover ${orientation} ${isOpen ? "show" : ""}`;
+  const visible = isOpen ? "visibleTrue" : "visibleFalse";
+  const className = `arkynPopover ${orientation} ${visible}`;
 
   function handleOpenPopover() {
     if (!isOpen) setIsOpen(true);
@@ -25,16 +26,13 @@ function Popover(props: PopoverProps) {
         animate={{ opacity: isOpen ? 1 : 0 }}
         exit={{ opacity: 0 }}
         onClick={() => closeOnClick && setIsOpen(false)}
-        className="arkyn_popover-content"
+        className="arkynPopoverContent"
       >
         {children}
       </motion.div>
 
       {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="arkyn_popover-overlay"
-        />
+        <div onClick={() => setIsOpen(false)} className="arkynPopoverOverlay" />
       )}
     </div>
   );

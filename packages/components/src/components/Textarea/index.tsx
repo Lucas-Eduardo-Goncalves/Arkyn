@@ -25,11 +25,11 @@ function Textarea(props: TextareaProps) {
   const ref = inputRef || baseRef;
   const isError = props.isError || !!error;
 
-  const errored = isError ? "errored" : "";
-  const opacity = disabled || readOnly ? "opacity" : "";
-  const focused = isFocused ? "focused" : "";
+  const errorClass = isError ? "errorTrue" : "errorFalse";
+  const opacityClass = disabled || readOnly ? "opacityTrue" : "opacityFalse";
+  const focusedClass = isFocused ? "focusedTrue" : "focusedFalse";
 
-  const className = `arkyn_textarea ${variant} ${size} ${opacity} ${errored} ${focused} ${baseClassName}`;
+  const className = `arkynTextarea ${variant} ${size} ${opacityClass} ${errorClass} ${focusedClass} ${baseClassName}`;
 
   function handleSectionClick() {
     if (disabled || !ref?.current) return;

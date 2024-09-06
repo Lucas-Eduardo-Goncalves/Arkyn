@@ -11,17 +11,20 @@ function RadioBox(props: RadioBoxProps) {
     size: componentSize,
     disabled,
     children,
+    className: baseClassName = "",
+    ...rest
   } = props;
 
   const { onChange, size: groupSize, value: selectedValue } = useRadioGroup();
   const { error } = useFormController();
 
   const size = componentSize || groupSize;
-  const isChecked = selectedValue === componentValue ? "isChecked" : "";
-  const isErrored = !!error ? "isErrored" : "";
-  const isDisabled = disabled ? "isDisabled" : "";
+  const checkedClass =
+    selectedValue === componentValue ? "checkedTrue" : "checkedFalse";
+  const errorClass = !!error ? "errorTrue" : "errorFalse";
+  const disabledClass = disabled ? "disabledTrue" : "disabledFalse";
 
-  const className = `arkyn_radio_box ${size} ${isChecked} ${isErrored} ${isDisabled}`;
+  const className = `arkynRadioBox ${size} ${checkedClass} ${errorClass} ${disabledClass} ${baseClassName}`;
 
   return (
     <label className={className.trim()}>
@@ -30,6 +33,7 @@ function RadioBox(props: RadioBoxProps) {
         disabled={disabled}
         onClick={() => onChange(componentValue)}
         onFocus={() => onChange(componentValue)}
+        {...rest}
       />
 
       {children}

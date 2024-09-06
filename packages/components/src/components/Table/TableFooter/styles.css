@@ -1,4 +1,4 @@
-.arkyn_table_footer-content {
+.arkynTableFooterContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,6 +8,6 @@
   border-top: 1px solid var(--border);
 }
 
-.arkyn_table_footer .spacing-row {
+.arkynTableFooter .spacingRow {
   height: 24px;
 }

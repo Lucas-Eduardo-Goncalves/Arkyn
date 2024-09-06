@@ -1,16 +1,16 @@
-.arkyn_popover {
+.arkynPopover {
   position: relative;
 }
 
-.arkyn_popover .arkyn_popover-content {
+.arkynPopover .arkynPopoverContent {
   display: none;
 }
 
-.arkyn_popover.show .arkyn_popover-content {
+.arkynPopover.show .arkynPopoverContent {
   display: unset;
 }
 
-.arkyn_popover-content {
+.arkynPopoverContent {
   position: absolute;
   z-index: 3;
 
@@ -19,55 +19,55 @@
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.arkyn_popover.bottom-left .arkyn_popover-content {
+.arkynPopover.bottomLeft .arkynPopoverContent {
   bottom: -5px;
   right: 0;
   transform: translateY(100%);
 }
 
-.arkyn_popover.bottom-right .arkyn_popover-content {
+.arkynPopover.bottomRight .arkynPopoverContent {
   bottom: -5px;
   left: 0;
   transform: translateY(100%);
 }
 
-.arkyn_popover.top-left .arkyn_popover-content {
+.arkynPopover.topLeft .arkynPopoverContent {
   top: -5px;
   right: 0;
   transform: translateY(-100%);
 }
 
-.arkyn_popover.top-right .arkyn_popover-content {
+.arkynPopover.topRight .arkynPopoverContent {
   top: -5px;
   left: 0;
   transform: translateY(-100%);
 }
 
-.arkyn_popover.bottom .arkyn_popover-content {
+.arkynPopover.bottom .arkynPopoverContent {
   top: calc(100% + 5px);
   left: 50%;
   transform: translateX(-50%);
 }
 
-.arkyn_popover.top .arkyn_popover-content {
+.arkynPopover.top .arkynPopoverContent {
   bottom: calc(100% + 5px);
   left: 50%;
   transform: translateX(-50%);
 }
 
-.arkyn_popover.left .arkyn_popover-content {
+.arkynPopover.left .arkynPopoverContent {
   bottom: 50%;
   right: calc(100% + 5px);
   transform: translateY(50%);
 }
 
-.arkyn_popover.right .arkyn_popover-content {
+.arkynPopover.right .arkynPopoverContent {
   bottom: 50%;
   left: calc(100% + 5px);
   transform: translateY(50%);
 }
 
-.arkyn_popover-overlay {
+.arkynPopoverOverlay {
   position: fixed;
   z-index: 1;
   top: 0;

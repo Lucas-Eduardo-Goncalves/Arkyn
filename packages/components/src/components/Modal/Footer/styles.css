@@ -1,4 +1,4 @@
-.arkyn_modal_footer {
+.arkynModalFooter {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -6,22 +6,22 @@
   border-top: 1px solid var(--border);
 }
 
-.arkyn_modal_footer.left {
+.arkynModalFooter.left {
   justify-content: flex-start;
 }
 
-.arkyn_modal_footer.right {
+.arkynModalFooter.right {
   justify-content: flex-end;
 }
 
-.arkyn_modal_footer.center {
+.arkynModalFooter.center {
   justify-content: center;
 }
 
-.arkyn_modal_footer.between {
+.arkynModalFooter.between {
   justify-content: space-between;
 }
 
-.arkyn_modal_footer.around {
+.arkynModalFooter.around {
   justify-content: space-around;
 }

@@ -1,4 +1,4 @@
-.arkyn_tab_container {
+.arkynTabContainer {
   position: relative;
 
   display: flex;
@@ -10,7 +10,7 @@
   border-bottom: 1px solid var(--border);
 }
 
-.arkyn_tab_container .active-line {
+.arkynTabContainer .activeLine {
   position: absolute;
   height: 1px;
 

@@ -1,5 +1,5 @@
 /* BASE */
-.arkyn_badge {
+.arkynBadge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,86 +11,82 @@
 }
 
 /* VARIANTS */
-.arkyn_badge.solid {
+.arkynBadge.solid {
   color: #fff;
 }
 
-.arkyn_badge.solid.primary {
+.arkynBadge.solid.primary {
   background-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_badge.solid.danger {
+.arkynBadge.solid.danger {
   background-color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_badge.solid.success {
+.arkynBadge.solid.success {
   background-color: rgba(var(--spotlight-success), 1);
 }
 
-.arkyn_badge.solid.warning {
+.arkynBadge.solid.warning {
   background-color: rgba(var(--spotlight-warning), 1);
 }
 
-.arkyn_badge.solid.info {
+.arkynBadge.solid.info {
   background-color: rgba(var(--spotlight-info), 1);
 }
 
-.arkyn_button.outline {
-  background-color: rgba(var(--spotlight-outline), 1);
-}
-
-.arkyn_badge.outline.primary {
+.arkynBadge.outline.primary {
   color: rgba(var(--spotlight-primary), 1);
   border-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_badge.outline.danger {
+.arkynBadge.outline.danger {
   color: rgba(var(--spotlight-danger), 1);
   border-color: rgba(var(--spotlight-danger), 1);
 }
 
-.arkyn_badge.outline.success {
+.arkynBadge.outline.success {
   color: rgba(var(--spotlight-success), 1);
   border-color: rgba(var(--spotlight-success), 1);
 }
 
-.arkyn_badge.outline.warning {
+.arkynBadge.outline.warning {
   color: rgba(var(--spotlight-warning), 1);
   border-color: rgba(var(--spotlight-warning), 1);
 }
 
-.arkyn_badge.outline.info {
+.arkynBadge.outline.info {
   color: rgba(var(--spotlight-info), 1);
   border-color: rgba(var(--spotlight-info), 1);
 }
 
-.arkyn_badge.ghost.primary {
+.arkynBadge.ghost.primary {
   color: rgba(var(--spotlight-primary), 1);
   background-color: rgba(var(--spotlight-primary), 0.2);
 }
 
-.arkyn_badge.ghost.danger {
+.arkynBadge.ghost.danger {
   color: rgba(var(--spotlight-danger), 1);
   background-color: rgba(var(--spotlight-danger), 0.2);
 }
 
-.arkyn_badge.ghost.success {
+.arkynBadge.ghost.success {
   color: rgba(var(--spotlight-success), 1);
   background-color: rgba(var(--spotlight-success), 0.2);
 }
 
-.arkyn_badge.ghost.warning {
+.arkynBadge.ghost.warning {
   color: rgba(var(--spotlight-warning), 1);
   background-color: rgba(var(--spotlight-warning), 0.2);
 }
 
-.arkyn_badge.ghost.info {
+.arkynBadge.ghost.info {
   color: rgba(var(--spotlight-info), 1);
   background-color: rgba(var(--spotlight-info), 0.2);
 }
 
 /* SIZE */
-.arkyn_badge.lg {
+.arkynBadge.lg {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
@@ -100,7 +96,7 @@
   height: 24px;
 }
 
-.arkyn_badge.md {
+.arkynBadge.md {
   font-weight: 400;
   font-size: 10px;
   line-height: 10px;

@@ -1,4 +1,4 @@
-.arkyn_tab_button {
+.arkynTabButton {
   position: relative;
 
   display: flex;
@@ -18,7 +18,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.arkyn_tab_button.show_border_bottom::after {
+.arkynTabButton.showBorderBottom::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -29,10 +29,10 @@
   background-color: rgba(var(--spotlight-primary), 1);
 }
 
-.arkyn_tab_button:hover {
+.arkynTabButton:hover {
   cursor: pointer;
 }
 
-.arkyn_tab_button.active {
+.arkynTabButton.activeTrue {
   color: rgba(var(--spotlight-primary), 1);
 }

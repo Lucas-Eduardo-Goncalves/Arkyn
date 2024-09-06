@@ -5,7 +5,7 @@ import "./styles.css";
 function AlertIcon(props) {
     const { className: baseClassName, ...rest } = props;
     const { schema } = useAlertContainer();
-    const className = `arkyn_alert_icon ${schema} ${baseClassName}`;
+    const className = `arkynAlertIcon ${schema} ${baseClassName}`;
     switch (schema) {
         case "success":
             return _jsx(CheckCircle2, { className: className, ...rest });

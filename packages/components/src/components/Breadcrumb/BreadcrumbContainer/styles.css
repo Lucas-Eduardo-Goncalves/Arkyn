@@ -1,39 +1,7 @@
-.arkyn_breadcrumb_container {
+.arkynBreadcrumbContainer {
   display: flex;
   align-items: center;
   justify-content: start;
-
   flex-wrap: wrap;
   gap: 4px;
-}
-
-.arkyn_breadcrumb_link {
-  user-select: none;
-  text-decoration: none;
-  font-size: 14px;
-  color: var(--text-body);
-}
-
-.arkyn_breadcrumb_link.active {
-  color: var(--text-heading);
-}
-
-.arkyn_breadcrumb_link.inactive:hover {
-  cursor: pointer;
-  color: var(--text-heading);
-}
-
-.arkyn_breadcrumb_link:first-child > svg {
-  display: none;
-}
-
-.arkyn_breadcrumb_link:not(:first-child) {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.arkyn_breadcrumb_link:not(:first-child) > svg {
-  display: unset;
-  color: var(--text-body);
 }

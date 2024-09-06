@@ -15,7 +15,7 @@ function DrawerHeader(props: ModalHeaderProps) {
   } = props;
 
   const { makeInvisible } = useContext(drawerContext);
-  const className = `arkyn_drawer_header ${baseClassName}`;
+  const className = `arkynDrawerHeader ${baseClassName}`;
 
   return (
     <header className={className.trim()} {...rest}>
@@ -23,7 +23,7 @@ function DrawerHeader(props: ModalHeaderProps) {
 
       {showCloseButton && (
         <button
-          className="arkyn_drawer_header-close_button"
+          className="arkynDrawerHeaderCloseButton"
           type="button"
           onClick={makeInvisible}
           aria-label="Close drawer"

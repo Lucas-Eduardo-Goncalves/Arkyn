@@ -18,7 +18,7 @@ function Badge(args: BadgeProps) {
   const iconSizes = { md: 12, lg: 14 };
   const iconSize = iconSizes[size];
 
-  const className = `arkyn_badge ${variant} ${scheme} ${size} ${baseClassName}`;
+  const className = `arkynBadge ${variant} ${scheme} ${size} ${baseClassName}`;
 
   return (
     <div className={className.trim()} {...rest}>
