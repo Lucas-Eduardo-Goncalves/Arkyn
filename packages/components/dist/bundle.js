@@ -1137,11 +1137,18 @@ function Nn(e) {
             onKeyUp: me,
             disabled: y || O,
             readOnly: R,
-            ref: h,
             ...$
           }
         ),
-        /* @__PURE__ */ r.jsx("input", { type: "hidden", name: K, value: ct(s) }),
+        /* @__PURE__ */ r.jsx(
+          "input",
+          {
+            type: "hidden",
+            ref: h,
+            name: K,
+            value: ct(s)
+          }
+        ),
         T && W,
         ie && /* @__PURE__ */ r.jsx(H, { size: v, strokeWidth: 2.5 }),
         C

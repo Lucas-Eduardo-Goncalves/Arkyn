@@ -51,6 +51,6 @@ function CurrencyInput(props) {
         const [, maskedValue] = maskValues(locale, currentValue, currency);
         setMaskedValue(maskedValue);
     }, [currency, defaultValue, value]);
-    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { value: maskedValue, onChange: handleChange, onBlur: handleBlur, onFocus: handleFocus, onKeyUp: handleKeyUp, disabled: disabled || isLoading, readOnly: readOnly, ref: ref, ...rest }), _jsx("input", { type: "hidden", name: name, value: normalizeValue(maskedValue) }), showRightSpinner && Spinner, showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), sufix] }));
+    return (_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: className, children: [prefix, showLeftSpinner && Spinner, showLeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { value: maskedValue, onChange: handleChange, onBlur: handleBlur, onFocus: handleFocus, onKeyUp: handleKeyUp, disabled: disabled || isLoading, readOnly: readOnly, ...rest }), _jsx("input", { type: "hidden", ref: ref, name: name, value: normalizeValue(maskedValue) }), showRightSpinner && Spinner, showRightIcon && _jsx(RightIcon, { size: iconSize, strokeWidth: 2.5 }), sufix] }));
 }
 export { CurrencyInput };

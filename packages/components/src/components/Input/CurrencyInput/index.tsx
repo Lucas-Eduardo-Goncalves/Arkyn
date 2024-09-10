@@ -118,11 +118,15 @@ function CurrencyInput(props: CurrencyInputProps) {
         onKeyUp={handleKeyUp}
         disabled={disabled || isLoading}
         readOnly={readOnly}
-        ref={ref}
         {...rest}
       />
 
-      <input type="hidden" name={name} value={normalizeValue(maskedValue)} />
+      <input
+        type="hidden"
+        ref={ref}
+        name={name}
+        value={normalizeValue(maskedValue)}
+      />
 
       {showRightSpinner && Spinner}
       {showRightIcon && <RightIcon size={iconSize} strokeWidth={2.5} />}
