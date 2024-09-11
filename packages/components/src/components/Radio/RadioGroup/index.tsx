@@ -43,7 +43,7 @@ function RadioGroup(props: RadioGroupProps) {
         readOnly
         name={name}
         ref={inputRef}
-        value={value}
+        value={forceValue || value}
       />
 
       <div className={className.trim()} {...rest} />

@@ -28,6 +28,7 @@ export * from "./components/PopoverProps";
 export * from "./components/RadioProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
+export * from "./components/SwitchProps";
 export * from "./components/TableProps";
 export * from "./components/TabProps";
 export * from "./components/TextareaProps";

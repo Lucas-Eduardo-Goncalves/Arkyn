@@ -13,6 +13,7 @@ export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
 export { RadioBox, RadioGroup } from "./components/Radio";
 export { Select } from "./components/Select";
+export { Switch } from "./components/Switch";
 export { Textarea } from "./components/Textarea";
 // Navigation
 export { BreadcrumbContainer, BreadcrumbLink } from "./components/Breadcrumb";
