@@ -12,7 +12,6 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
         label: string;
         value: string;
     }) => void;
-    children?: import("react").ReactNode | undefined;
     defaultChecked?: boolean | undefined;
     suppressContentEditableWarning?: boolean | undefined;
     suppressHydrationWarning?: boolean | undefined;
@@ -109,6 +108,7 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     "aria-valuemin"?: number | undefined;
     "aria-valuenow"?: number | undefined;
     "aria-valuetext"?: string | undefined;
+    children?: import("react").ReactNode | undefined;
     dangerouslySetInnerHTML?: {
         __html: string | TrustedHTML;
     } | undefined;

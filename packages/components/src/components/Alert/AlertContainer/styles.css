@@ -8,6 +8,10 @@
   border-radius: var(--rounded-cards);
 }
 
+.arkynAlertContainer.nonExistsAlertTitle {
+  align-items: center;
+}
+
 .arkynAlertContainer.danger {
   background: rgba(var(--spotlight-danger), 0.1);
   border-color: rgba(var(--spotlight-danger), 0.4);

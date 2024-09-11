@@ -1,8 +1,6 @@
 import type { MaskedInputProps } from "@arkyn/types";
 declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     name: string;
-    value?: string | readonly string[] | number | undefined;
-    children?: import("react").ReactNode | undefined;
     defaultChecked?: boolean | undefined;
     defaultValue?: string | number | readonly string[] | undefined;
     suppressContentEditableWarning?: boolean | undefined;
@@ -100,6 +98,7 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     "aria-valuemin"?: number | undefined;
     "aria-valuenow"?: number | undefined;
     "aria-valuetext"?: string | undefined;
+    children?: import("react").ReactNode | undefined;
     dangerouslySetInnerHTML?: {
         __html: string | TrustedHTML;
     } | undefined;
@@ -262,6 +261,7 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLInputElement>;
     form?: string | undefined;
     list?: string | undefined;
+    value?: string | readonly string[] | number | undefined;
     height?: number | string | undefined;
     max?: number | string | undefined;
     min?: number | string | undefined;

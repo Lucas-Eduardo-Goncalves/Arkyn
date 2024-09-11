@@ -1,6 +1,5 @@
 import type { CurrencyInputProps } from "@arkyn/types";
 declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
-    children?: import("react").ReactNode | undefined;
     defaultChecked?: boolean | undefined;
     suppressContentEditableWarning?: boolean | undefined;
     suppressHydrationWarning?: boolean | undefined;
@@ -97,6 +96,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     "aria-valuemin"?: number | undefined;
     "aria-valuenow"?: number | undefined;
     "aria-valuetext"?: string | undefined;
+    children?: import("react").ReactNode | undefined;
     dangerouslySetInnerHTML?: {
         __html: string | TrustedHTML;
     } | undefined;
@@ -259,10 +259,10 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLInputElement>;
     form?: string | undefined;
     list?: string | undefined;
+    type: "currency";
     height?: number | string | undefined;
     min?: number | string | undefined;
     name: string;
-    type: "currency";
     width?: number | string | undefined;
     step?: number | string | undefined;
     formAction?: string | import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS[keyof import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS] | undefined;
