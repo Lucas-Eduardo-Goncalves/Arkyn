@@ -28,8 +28,8 @@ function AlertContainer(props) {
     };
     const shouldAlignCenter = !hasAlertTitle(children);
     const finalClassName = shouldAlignCenter
-        ? "existsAlertTitle"
-        : "nonExistsAlertTitle";
+        ? "nonExistsAlertTitle"
+        : "existsAlertTitle";
     const className = `arkynAlertContainer ${schema} ${finalClassName} ${baseClassName}`;
     return (_jsx(AlertContainerContext.Provider, { value: props, children: _jsx("div", { className: className.trim(), ...rest, children: children }) }));
 }

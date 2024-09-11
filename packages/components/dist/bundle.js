@@ -657,7 +657,7 @@ function ha(e) {
       Array.isArray(o) ? o.forEach(v) : o && typeof o == "object" && "type" in o && (o.type === pn ? m = !0 : o.props && o.props.children && v(o.props.children));
     };
     return v(h), m;
-  })(a) ? "existsAlertTitle" : "nonExistsAlertTitle", u = `arkynAlertContainer ${t} ${c} ${s}`;
+  })(a) ? "nonExistsAlertTitle" : "existsAlertTitle", u = `arkynAlertContainer ${t} ${c} ${s}`;
   return /* @__PURE__ */ r.jsx(Ft.Provider, { value: e, children: /* @__PURE__ */ r.jsx("div", { className: u.trim(), ...i, children: a }) });
 }
 function pa(e) {

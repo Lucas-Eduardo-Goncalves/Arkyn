@@ -32,8 +32,8 @@ function AlertContainer(props: AlertContainerProps) {
 
   const shouldAlignCenter = !hasAlertTitle(children);
   const finalClassName = shouldAlignCenter
-    ? "existsAlertTitle"
-    : "nonExistsAlertTitle";
+    ? "nonExistsAlertTitle"
+    : "existsAlertTitle";
 
   const className = `arkynAlertContainer ${schema} ${finalClassName} ${baseClassName}`;
 
