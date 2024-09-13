@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/components",
-  "version": "1.3.87",
+  "version": "1.3.89",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
@@ -11,6 +11,7 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
     "@react-input/mask": "^1.2.5",
     "framer-motion": "^11.3.21",
     "lucide-react": "^0.424.0",

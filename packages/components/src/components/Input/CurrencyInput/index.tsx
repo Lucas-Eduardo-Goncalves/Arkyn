@@ -93,7 +93,7 @@ function CurrencyInput(props: CurrencyInputProps) {
     onKeyPress && onKeyPress(event, event.key, event.key);
 
   useEffect(() => {
-    const currentValue = value || +defaultValue * 100 || undefined;
+    const currentValue = value || +defaultValue || undefined;
     const [, maskedValue] = maskValues(locale, currentValue, currency);
 
     setMaskedValue(maskedValue);

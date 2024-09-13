@@ -1,4 +1,5 @@
 // Formats
+export { formatDateHour } from "./formats/formatDateWithHour";
 export { formatToBRL } from "./formats/formatToBRL";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 // Generators

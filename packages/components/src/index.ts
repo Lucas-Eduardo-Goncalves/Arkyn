@@ -9,6 +9,7 @@ export {
 export { Badge } from "./components/Badge";
 export { Card } from "./components/Card";
 export { Divider } from "./components/Divider";
+export { GoogleMap } from "./components/GoogleMap";
 export { Skeleton } from "./components/Skeleton";
 export {
   TableBody,

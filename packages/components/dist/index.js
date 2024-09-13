@@ -3,6 +3,7 @@ export { AlertContainer, AlertContent, AlertDescription, AlertIcon, AlertTitle, 
 export { Badge } from "./components/Badge";
 export { Card } from "./components/Card";
 export { Divider } from "./components/Divider";
+export { GoogleMap } from "./components/GoogleMap";
 export { Skeleton } from "./components/Skeleton";
 export { TableBody, TableCaption, TableContainer, TableFooter, TableHeader, } from "./components/Table";
 // Form

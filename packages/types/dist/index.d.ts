@@ -17,6 +17,7 @@ export * from "./components/CheckboxProps";
 export * from "./components/DividerProps";
 export * from "./components/DrawerProps";
 export * from "./components/FormProps";
+export * from "./components/GoogleMapProps";
 export * from "./components/IconButtonProps";
 export * from "./components/InputProps";
 export * from "./components/ModalProps";

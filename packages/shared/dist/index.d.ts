@@ -1,3 +1,4 @@
+export { formatDateHour } from "./formats/formatDateWithHour";
 export { formatToBRL } from "./formats/formatToBRL";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 export { generateColorByString } from "./generators/generateColorByString";
