@@ -48,7 +48,7 @@ type CurrencyInputProps = Omit<
   BaseInputProps<"currency">,
   "max" | "defaultValue" | "value" | "onChange"
 > & {
-  defaultValue?: string;
+  defaultValue?: string | number | null;
   onChangeValue?: (
     event: ChangeEvent<HTMLInputElement>,
     originalValue: string,
@@ -76,7 +76,7 @@ type CpfCnpjInputProps = Omit<
   BaseInputProps<"cpf-cnpj">,
   "value" | "defaultValue"
 > & {
-  defaultValue?: string;
+  defaultValue?: string | null;
   value?: string;
 };
 

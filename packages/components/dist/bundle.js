@@ -1120,7 +1120,7 @@ function jn(e) {
     te(G, String(re), String(ke));
   }, he = (G) => E && E(G, G.key, G.key);
   return Ze(() => {
-    const G = J || Q || void 0, [, re] = Nt(M, G, U);
+    const G = J || +Q * 100 || void 0, [, re] = Nt(M, G, U);
     i(re);
   }, [U, Q, J]), /* @__PURE__ */ r.jsxs(
     "section",

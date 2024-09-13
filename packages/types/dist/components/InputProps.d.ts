@@ -15,7 +15,7 @@ type BaseInputProps<T extends string> = {
     name: string;
 } & Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "prefix" | "type" | "name">;
 type CurrencyInputProps = Omit<BaseInputProps<"currency">, "max" | "defaultValue" | "value" | "onChange"> & {
-    defaultValue?: string;
+    defaultValue?: string | number | null;
     onChangeValue?: (event: ChangeEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
     onKeyPress?: (event: KeyboardEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
     value?: string;
@@ -30,7 +30,7 @@ type MaskedInputProps = BaseInputProps<"masked"> & {
     showMask?: boolean;
 };
 type CpfCnpjInputProps = Omit<BaseInputProps<"cpf-cnpj">, "value" | "defaultValue"> & {
-    defaultValue?: string;
+    defaultValue?: string | null;
     value?: string;
 };
 type SimpleInputProps = BaseInputProps<InputBaseTypes>;

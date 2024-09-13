@@ -283,7 +283,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     placeholder?: string | undefined;
     required?: boolean | undefined;
     src?: string | undefined;
-    defaultValue?: string;
+    defaultValue?: string | number | null;
     onChangeValue?: (event: import("react").ChangeEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
     value?: string;
     isLoading: boolean;
