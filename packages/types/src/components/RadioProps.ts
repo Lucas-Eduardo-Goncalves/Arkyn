@@ -6,7 +6,7 @@ type RadioGroupProps = {
   defaultValue?: string;
   onChange?: (value: string) => void;
   size?: "sm" | "md" | "lg";
-} & HTMLAttributes<HTMLDivElement>;
+} & Omit<HTMLAttributes<HTMLDivElement>, "onChange">;
 
 type RadioGroupContextType = {
   value: string;
