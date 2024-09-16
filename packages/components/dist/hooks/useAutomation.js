@@ -1,5 +1,6 @@
 import { useActionData } from "@remix-run/react";
 import { useContext, useEffect } from "react";
+import { animateScroll } from "react-scroll";
 import { ModalContext } from "../context/ModalContext";
 import { useToast } from "./useToast";
 function isToastProps(obj) {
@@ -32,6 +33,12 @@ function useAutomation() {
                 title: "Atenção!",
                 type: "warning",
             });
+        }
+    }, [actionData]);
+    useEffect(() => {
+        if (typeof actionData?.data?.scrollTo === "string") {
+            const element = document.getElementById(actionData?.data?.scrollTo);
+            element && animateScroll.scrollTo(element.offsetTop - 200);
         }
     }, [actionData]);
 }
