@@ -19,13 +19,13 @@ function Switch(props: SwitchProps) {
   const [isChecked, setIsChecked] = useState(defaultChecked);
   const { id, inputRef } = useFormController();
 
-  function handleCheck() {
-    setIsChecked(!isChecked);
-    onCheck && onCheck(!defaultChecked ? value || "checked" : "");
-  }
-
   const currentChecked =
     typeof baseChecked === "boolean" ? baseChecked : isChecked;
+
+  function handleCheck() {
+    setIsChecked(!isChecked);
+    onCheck && onCheck(!currentChecked ? value || "checked" : "");
+  }
 
   const checkedClass = currentChecked ? "checkedTrue" : "checkedFalse";
   const className = `arkynSwitch ${checkedClass} ${size} ${baseClassName}`;

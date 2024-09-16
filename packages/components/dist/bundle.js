@@ -5540,17 +5540,17 @@ function td(t) {
     className: s = "",
     onCheck: a,
     ...l
-  } = t, [u, d] = M(n), { id: f, inputRef: c } = tt();
-  function p() {
-    d(!u), a && a(n ? "" : r || "checked");
+  } = t, [u, d] = M(n), { id: f, inputRef: c } = tt(), p = typeof o == "boolean" ? o : u;
+  function w() {
+    d(!u), a && a(p ? "" : r || "checked");
   }
-  const w = typeof o == "boolean" ? o : u, C = `arkynSwitch ${w ? "checkedTrue" : "checkedFalse"} ${e} ${s}`;
+  const C = `arkynSwitch ${p ? "checkedTrue" : "checkedFalse"} ${e} ${s}`;
   return /* @__PURE__ */ y.jsx(
     "button",
     {
       id: f,
       type: "button",
-      onClick: p,
+      onClick: w,
       className: C,
       ...l,
       children: /* @__PURE__ */ y.jsx(
@@ -5559,7 +5559,7 @@ function td(t) {
           type: "hidden",
           name: i,
           ref: c,
-          value: w ? r || "checked" : ""
+          value: p ? r || "checked" : ""
         }
       )
     }
