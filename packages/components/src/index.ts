@@ -29,6 +29,7 @@ export { RadioBox, RadioGroup } from "./components/Radio";
 export { Select } from "./components/Select";
 export { Switch } from "./components/Switch";
 export { Textarea } from "./components/Textarea";
+export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 
 // Navigation
 export { BreadcrumbContainer, BreadcrumbLink } from "./components/Breadcrumb";
