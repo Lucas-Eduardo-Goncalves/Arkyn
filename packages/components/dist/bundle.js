@@ -4738,9 +4738,22 @@ function Vc(t) {
 }
 const mi = st({});
 function Zc(t) {
-  var d, f;
-  const e = Qr(), { children: n, className: o, ...r } = t, i = Je(null), s = ((d = i.current) == null ? void 0 : d.name) || "", a = ((f = e == null ? void 0 : e.fieldErrors) == null ? void 0 : f[s]) || null, l = Gi(), u = `arkynFormController ${o}`;
-  return /* @__PURE__ */ y.jsx(mi.Provider, { value: { error: a, id: l, inputRef: i }, children: /* @__PURE__ */ y.jsx("section", { className: u.trim(), ...r, children: n }) });
+  var f, c;
+  const e = Qr(), {
+    children: n,
+    className: o,
+    id: r,
+    ...i
+  } = t, s = Je(null), a = ((f = s.current) == null ? void 0 : f.name) || "", l = ((c = e == null ? void 0 : e.fieldErrors) == null ? void 0 : c[a]) || null, u = Gi(), d = `arkynFormController ${o}`;
+  return /* @__PURE__ */ y.jsx(mi.Provider, { value: { error: l, id: u, inputRef: s }, children: /* @__PURE__ */ y.jsx(
+    "section",
+    {
+      id: r || a || void 0,
+      className: d.trim(),
+      ...i,
+      children: n
+    }
+  ) });
 }
 function tt() {
   return Pe(mi);

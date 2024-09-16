@@ -8,7 +8,12 @@ const FormControllerContext = createContext({} as FormControllerContextProps);
 
 function FormController(props: FormControllerProps) {
   const actionData = useActionData<any>();
-  const { children, className: baseClassName, ...rest } = props;
+  const {
+    children,
+    className: baseClassName,
+    id: formControllerId,
+    ...rest
+  } = props;
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -16,12 +21,15 @@ function FormController(props: FormControllerProps) {
   const error = actionData?.fieldErrors?.[name] || null;
 
   const id = useId();
-
   const className = `arkynFormController ${baseClassName}`;
 
   return (
     <FormControllerContext.Provider value={{ error, id, inputRef }}>
-      <section className={className.trim()} {...rest}>
+      <section
+        id={formControllerId || name || undefined}
+        className={className.trim()}
+        {...rest}
+      >
         {children}
       </section>
     </FormControllerContext.Provider>
