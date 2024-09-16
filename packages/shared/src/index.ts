@@ -1,4 +1,5 @@
 // Formats
+export { formatBrazilianDateToDate } from "./formats/formatBrazilianDateToDate";
 export { formatDateHour } from "./formats/formatDateWithHour";
 export { formatToBRL } from "./formats/formatToBRL";
 export { formatToCep } from "./formats/formatToCep";
