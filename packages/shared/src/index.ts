@@ -1,7 +1,12 @@
 // Formats
 export { formatDateHour } from "./formats/formatDateWithHour";
 export { formatToBRL } from "./formats/formatToBRL";
+export { formatToCep } from "./formats/formatToCep";
+export { formatToCNPJ } from "./formats/formatToCNPJ";
+export { formatToCPF } from "./formats/formatToCPF";
+export { formatToCpfCnpj } from "./formats/formatToCpfCnpj";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
+export { formatToPhone } from "./formats/formatToPhone";
 
 // Generators
 export { generateColorByString } from "./generators/generateColorByString";
