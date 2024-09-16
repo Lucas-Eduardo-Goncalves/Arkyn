@@ -6,6 +6,6 @@ function formatDateHour(date, hour) {
     const [hours, minutes] = hour.split(":").map(Number);
     dateHour.setUTCHours(hours);
     dateHour.setUTCMinutes(minutes);
-    return dateHour.toISOString();
+    return dateHour;
 }
 export { formatDateHour };

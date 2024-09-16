@@ -9,7 +9,7 @@ function formatDateHour(date: string, hour: string) {
   dateHour.setUTCHours(hours);
   dateHour.setUTCMinutes(minutes);
 
-  return dateHour.toISOString();
+  return dateHour;
 }
 
 export { formatDateHour };
