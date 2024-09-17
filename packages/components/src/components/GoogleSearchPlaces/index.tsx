@@ -1,5 +1,5 @@
 import { GoogleSearchPlacesProps } from "@arkyn/types";
-import { LoadScript, StandaloneSearchBox } from "@react-google-maps/api";
+import { StandaloneSearchBox } from "@react-google-maps/api";
 import { useState } from "react";
 
 import { Input } from "../Input";
@@ -11,7 +11,6 @@ type AddressComponentsType = {
 }[];
 
 function GoogleSearchPlaces({
-  googleMapsApiKey,
   onChange,
   options,
   ...rest
@@ -56,19 +55,13 @@ function GoogleSearchPlaces({
   };
 
   return (
-    <LoadScript
-      libraries={["places"]}
-      googleMapsApiKey={googleMapsApiKey}
-      loadingElement={<Input type="text" {...rest} />}
+    <StandaloneSearchBox
+      onLoad={handleLoad}
+      onPlacesChanged={handlePlacesChanged}
+      options={options}
     >
-      <StandaloneSearchBox
-        onLoad={handleLoad}
-        onPlacesChanged={handlePlacesChanged}
-        options={options}
-      >
-        <Input type="text" {...rest} />
-      </StandaloneSearchBox>
-    </LoadScript>
+      <Input type="text" {...rest} />
+    </StandaloneSearchBox>
   );
 }
 

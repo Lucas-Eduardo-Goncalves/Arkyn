@@ -34,6 +34,7 @@ export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 export { useToast } from "./hooks/useToast";
 // Providers
+export { GoogleProvider } from "./provider/GoogleProvider";
 export { DrawerProvider } from "./provider/DrawerProvider";
 export { ModalProvider } from "./provider/ModalProvider";
 export { ToastProvider } from "./provider/ToastProvider";

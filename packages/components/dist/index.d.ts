@@ -28,6 +28,7 @@ export { useDrawer } from "./hooks/useDrawer";
 export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 export { useToast } from "./hooks/useToast";
+export { GoogleProvider } from "./provider/GoogleProvider";
 export { DrawerProvider } from "./provider/DrawerProvider";
 export { ModalProvider } from "./provider/ModalProvider";
 export { ToastProvider } from "./provider/ToastProvider";

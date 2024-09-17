@@ -1,8 +1,8 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import { LoadScript, StandaloneSearchBox } from "@react-google-maps/api";
+import { StandaloneSearchBox } from "@react-google-maps/api";
 import { useState } from "react";
 import { Input } from "../Input";
-function GoogleSearchPlaces({ googleMapsApiKey, onChange, options, ...rest }) {
+function GoogleSearchPlaces({ onChange, options, ...rest }) {
     const [searchBox, setSearchBox] = useState(null);
     const handleLoad = (ref) => setSearchBox(ref);
     const handlePlacesChanged = () => {
@@ -34,6 +34,6 @@ function GoogleSearchPlaces({ googleMapsApiKey, onChange, options, ...rest }) {
             onChange && onChange(sendPlace);
         }
     };
-    return (_jsx(LoadScript, { libraries: ["places"], googleMapsApiKey: googleMapsApiKey, loadingElement: _jsx(Input, { type: "text", ...rest }), children: _jsx(StandaloneSearchBox, { onLoad: handleLoad, onPlacesChanged: handlePlacesChanged, options: options, children: _jsx(Input, { type: "text", ...rest }) }) }));
+    return (_jsx(StandaloneSearchBox, { onLoad: handleLoad, onPlacesChanged: handlePlacesChanged, options: options, children: _jsx(Input, { type: "text", ...rest }) }));
 }
 export { GoogleSearchPlaces };
