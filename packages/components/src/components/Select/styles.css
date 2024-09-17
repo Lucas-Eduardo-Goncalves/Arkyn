@@ -221,6 +221,7 @@
   border: 1px solid var(--border);
   background-color: var(--card);
 
+  max-height: 300px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 

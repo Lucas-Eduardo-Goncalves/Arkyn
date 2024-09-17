@@ -21,7 +21,16 @@ function GoogleSearchPlaces({ googleMapsApiKey, onChange, options, ...rest }) {
             const city = findData("administrative_area_level_2");
             const state = findData("administrative_area_level_1");
             const cep = findData("postal_code");
-            const sendPlace = { street, city, state, district, cep };
+            const lat = place.geometry?.location?.lat();
+            const lng = place.geometry?.location?.lng();
+            const sendPlace = {
+                street,
+                city,
+                state,
+                district,
+                cep,
+                coordinates: { lat, lng },
+            };
             onChange && onChange(sendPlace);
         }
     };

@@ -9,6 +9,7 @@ type GoogleSearchPlacesProps = {
     state: string;
     district: string;
     cep: string;
+    coordinates: { lat: number; lng: number };
   }) => void;
   options?: StandaloneSearchBoxProps["options"];
 } & Omit<SimpleInputProps, "onLoad" | "onChange" | "type">;
