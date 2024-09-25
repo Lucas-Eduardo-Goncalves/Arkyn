@@ -43,7 +43,7 @@
   background-color: rgba(var(--input-background), 1);
 }
 
-.arkynTextarea.solid.errored {
+.arkynTextarea.solid.errorTrue {
   border-color: rgba(var(--spotlight-danger), 1);
   outline-color: rgba(var(--spotlight-danger), 1);
 }

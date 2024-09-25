@@ -1,10 +1,19 @@
 import { GoogleProviderProps } from "@arkyn/types";
 import { LoadScript } from "@react-google-maps/api";
 
-function GoogleProvider(props: GoogleProviderProps) {
-  const googleKey = props.googleMapsApiKey + "&loading=async&callback=initMap";
+function GoogleProvider({
+  googleMapsApiKey,
+  children,
+  ...props
+}: GoogleProviderProps) {
   return (
-    <LoadScript googleMapsApiKey={googleKey} version="weekly" {...props} />
+    <LoadScript
+      libraries={["places", "marker", "maps"]}
+      googleMapsApiKey={googleMapsApiKey}
+      {...props}
+    >
+      {children}
+    </LoadScript>
   );
 }
 

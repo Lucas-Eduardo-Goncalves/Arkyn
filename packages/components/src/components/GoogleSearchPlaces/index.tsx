@@ -12,6 +12,7 @@ type AddressComponentsType = {
 
 function GoogleSearchPlaces({
   onChange,
+  onPlaceChanged,
   options,
   ...rest
 }: GoogleSearchPlacesProps) {
@@ -31,11 +32,19 @@ function GoogleSearchPlaces({
       return "";
     }
 
+    function findDataShort(key: string) {
+      const data = address_components.find((item) => item.types[0] === key);
+      if (data) return data.short_name;
+      return "";
+    }
+
     if (place) {
       const street = findData("route");
+      const streetNumber = findData("street_number");
       const district = findData("sublocality_level_1");
       const city = findData("administrative_area_level_2");
       const state = findData("administrative_area_level_1");
+      const stateShortName = findDataShort("administrative_area_level_1");
       const cep = findData("postal_code");
 
       const lat = place.geometry?.location?.lat();
@@ -47,10 +56,12 @@ function GoogleSearchPlaces({
         state,
         district,
         cep,
+        streetNumber,
+        stateShortName,
         coordinates: { lat, lng },
       };
 
-      onChange && onChange(sendPlace);
+      onPlaceChanged && onPlaceChanged(sendPlace);
     }
   };
 
@@ -60,7 +71,7 @@ function GoogleSearchPlaces({
       onPlacesChanged={handlePlacesChanged}
       options={options}
     >
-      <Input type="text" {...rest} />
+      <Input type="text" onChange={(e) => onChange(e.target.value)} {...rest} />
     </StandaloneSearchBox>
   );
 }

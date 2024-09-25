@@ -8,13 +8,14 @@ export { TableBody, TableCaption, TableContainer, TableFooter, TableHeader, } fr
 export { Button } from "./components/Button";
 export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
+export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { IconButton } from "./components/IconButton";
 export { Input } from "./components/Input";
 export { RadioBox, RadioGroup } from "./components/Radio";
+export { RichText } from "./components/RichText";
 export { Select } from "./components/Select";
 export { Switch } from "./components/Switch";
 export { Textarea } from "./components/Textarea";
-export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { BreadcrumbContainer, BreadcrumbLink } from "./components/Breadcrumb";
 export { Pagination } from "./components/Pagination";
 export { TabButton, TabContainer } from "./components/Tabs";
@@ -28,8 +29,8 @@ export { useDrawer } from "./hooks/useDrawer";
 export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 export { useToast } from "./hooks/useToast";
-export { GoogleProvider } from "./provider/GoogleProvider";
 export { DrawerProvider } from "./provider/DrawerProvider";
+export { GoogleProvider } from "./provider/GoogleProvider";
 export { ModalProvider } from "./provider/ModalProvider";
 export { ToastProvider } from "./provider/ToastProvider";
 //# sourceMappingURL=index.d.ts.map

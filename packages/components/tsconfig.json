@@ -1,4 +1,12 @@
 {
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/.server/**/*.ts",
+    "**/.server/**/*.tsx",
+    "**/.client/**/*.ts",
+    "**/.client/**/*.tsx"
+  ],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "outDir": "./dist",

@@ -1,6 +1,6 @@
 import { GoogleMapProps } from "@arkyn/types";
-import { LoadScript, GoogleMap as Map, Marker } from "@react-google-maps/api";
-import { LoaderIcon, MapPinned } from "lucide-react";
+import { GoogleMap as Map, Marker } from "@react-google-maps/api";
+import { MapPinned } from "lucide-react";
 
 import "./styles.css";
 

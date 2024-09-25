@@ -10,6 +10,7 @@ function Switch(props: SwitchProps) {
     defaultChecked = false,
     checked: baseChecked = null,
     value,
+    unCheckedValue = "",
     name,
     className: baseClassName = "",
     onCheck,
@@ -24,25 +25,21 @@ function Switch(props: SwitchProps) {
 
   function handleCheck() {
     setIsChecked(!isChecked);
-    onCheck && onCheck(!currentChecked ? value || "checked" : "");
+    onCheck && onCheck(!currentChecked ? value || "checked" : unCheckedValue);
   }
 
   const checkedClass = currentChecked ? "checkedTrue" : "checkedFalse";
   const className = `arkynSwitch ${checkedClass} ${size} ${baseClassName}`;
 
   return (
-    <button
-      id={id}
-      type="button"
-      onClick={handleCheck}
-      className={className}
-      {...rest}
-    >
+    <button type="button" onClick={handleCheck} className={className} {...rest}>
       <input
+        id={id}
         type="hidden"
         name={name}
         ref={inputRef}
-        value={currentChecked ? value || "checked" : ""}
+        onClick={handleCheck}
+        value={currentChecked ? value || "checked" : unCheckedValue}
       />
     </button>
   );

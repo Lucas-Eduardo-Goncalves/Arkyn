@@ -4,6 +4,7 @@ type SwitchProps = {
     defaultChecked?: boolean;
     checked?: boolean;
     value?: string;
+    unCheckedValue?: string;
     name: string;
     onCheck?: (value: string) => void;
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "onChange" | "defaultValue" | "onCheck" | "value">;
