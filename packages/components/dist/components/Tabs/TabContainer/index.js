@@ -34,7 +34,7 @@ function TabContainer(props) {
         if (!tabContainer)
             return;
         let activeButton = null;
-        activeButton = tabContainer.querySelector("button.active");
+        activeButton = tabContainer.querySelector("button.activeTrue");
         if (activeButton)
             updateActiveLine(activeButton);
     }, []);
@@ -42,7 +42,7 @@ function TabContainer(props) {
         const target = event.target;
         if (target) {
             setValue(target.value);
-            target.classList.add("active");
+            target.classList.add("activeTrue");
             updateActiveLine(target, true);
             onClick && onClick(target.value);
         }

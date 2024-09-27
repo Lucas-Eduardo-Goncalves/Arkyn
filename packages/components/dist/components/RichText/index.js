@@ -16,7 +16,7 @@ import { INITIAL_VALUE } from "./template/INITIAL_VALUE";
 import "./styles.css";
 import { useFormController } from "../Form/FormController";
 function RichText({ name, defaultValue, onValueChange, onChange, isError: baseIsError, }) {
-    const [editorValue, setEditorValue] = useState([]);
+    const [editorValue, setEditorValue] = useState(defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE);
     const [onFocus, setOnFocus] = useState(false);
     const { id, inputRef, error } = useFormController();
     const baseRef = useRef(null);
@@ -33,7 +33,7 @@ function RichText({ name, defaultValue, onValueChange, onChange, isError: baseIs
     const errorClass = isError ? "errorTrue" : "errorFalse";
     const focusClass = onFocus ? "focusTrue" : "focusFalse";
     const className = `arkynRichText ${errorClass} ${focusClass}`;
-    return (_jsxs(Slate, { editor: editor, initialValue: defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE, onChange: handleChange, onValueChange: handleChange, children: [_jsxs("div", { className: className, children: [_jsxs(Toolbar, { children: [_jsx(BlockButton, { format: "headingOne", icon: Heading1 }), _jsx(BlockButton, { format: "headingTwo", icon: Heading2 }), _jsx(BlockButton, { format: "blockQuote", icon: Quote }), _jsx(MarkButton, { format: "bold", icon: Bold }), _jsx(MarkButton, { format: "italic", icon: Italic }), _jsx(MarkButton, { format: "underline", icon: Underline }), _jsx(MarkButton, { format: "code", icon: Code }), _jsx(BlockButton, { format: "left", icon: AlignLeft }), _jsx(BlockButton, { format: "right", icon: AlignRight }), _jsx(BlockButton, { format: "center", icon: AlignCenter }), _jsx(BlockButton, { format: "justify", icon: AlignJustify })] }), _jsx(Editable, { className: "editorContainer", renderElement: renderElement, renderLeaf: renderLeaf, spellCheck: true, autoFocus: true, id: id, onFocus: () => setOnFocus(true), onBlur: () => setOnFocus(false), onKeyDown: (event) => {
+    return (_jsxs(Slate, { editor: editor, initialValue: defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE, onChange: handleChange, onValueChange: handleChange, children: [_jsxs("div", { className: className, children: [_jsxs(Toolbar, { children: [_jsx(BlockButton, { format: "headingOne", icon: Heading1 }), _jsx(BlockButton, { format: "headingTwo", icon: Heading2 }), _jsx(BlockButton, { format: "blockQuote", icon: Quote }), _jsx(MarkButton, { format: "bold", icon: Bold }), _jsx(MarkButton, { format: "italic", icon: Italic }), _jsx(MarkButton, { format: "underline", icon: Underline }), _jsx(MarkButton, { format: "code", icon: Code }), _jsx(BlockButton, { format: "left", icon: AlignLeft }), _jsx(BlockButton, { format: "right", icon: AlignRight }), _jsx(BlockButton, { format: "center", icon: AlignCenter }), _jsx(BlockButton, { format: "justify", icon: AlignJustify })] }), _jsx(Editable, { className: "editorContainer", renderElement: renderElement, renderLeaf: renderLeaf, spellCheck: true, id: id, onFocus: () => setOnFocus(true), onBlur: () => setOnFocus(false), onKeyDown: (event) => {
                             for (const hotkey in HOTKEYS) {
                                 if (isHotkey(hotkey, event)) {
                                     event.preventDefault();

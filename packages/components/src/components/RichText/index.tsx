@@ -44,7 +44,9 @@ function RichText({
   onChange,
   isError: baseIsError,
 }: RichTextProps) {
-  const [editorValue, setEditorValue] = useState<Descendant[]>([]);
+  const [editorValue, setEditorValue] = useState<Descendant[]>(
+    defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE
+  );
   const [onFocus, setOnFocus] = useState(false);
 
   const { id, inputRef, error } = useFormController();
@@ -102,7 +104,6 @@ function RichText({
           renderElement={renderElement}
           renderLeaf={renderLeaf}
           spellCheck
-          autoFocus
           id={id}
           onFocus={() => setOnFocus(true)}
           onBlur={() => setOnFocus(false)}
