@@ -2,7 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import isHotkey from "is-hotkey";
 import { AlignCenter, AlignJustify, AlignLeft, AlignRight, Bold, Code, Heading1, Heading2, Italic, Quote, Underline, } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
-import { createEditor } from "slate";
+import { createEditor, Transforms, Node } from "slate";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";
 import { BlockButton } from "./components/BlockButton/intex";
@@ -15,7 +15,8 @@ import { HOTKEYS } from "./template/HOTKEYS";
 import { INITIAL_VALUE } from "./template/INITIAL_VALUE";
 import "./styles.css";
 import { useFormController } from "../Form/FormController";
-function RichText({ name, defaultValue, onValueChange, onChange, isError: baseIsError, }) {
+function RichText({ name, defaultValue, enforceCharacterLimit = false, onChangeCharactersCount, maxLimit = 2000, onValueChange, onChange, isError: baseIsError, }) {
+    const [charactersCount, setCharactersCount] = useState(0);
     const [editorValue, setEditorValue] = useState(defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE);
     const [onFocus, setOnFocus] = useState(false);
     const { id, inputRef, error } = useFormController();
@@ -25,14 +26,32 @@ function RichText({ name, defaultValue, onValueChange, onChange, isError: baseIs
     const editor = useMemo(() => withHistory(withReact(createEditor())), []);
     const renderLeaf = useCallback(Leaf, []);
     const renderElement = useCallback(Element, []);
-    function handleChange(e) {
-        setEditorValue(e);
-        onChange && onChange(e);
-        onValueChange && onValueChange(JSON.stringify(e));
+    function extractText(nodes) {
+        return nodes.map((n) => Node.string(n)).join("");
     }
-    const errorClass = isError ? "errorTrue" : "errorFalse";
+    function handleChange(value) {
+        const text = extractText(value);
+        setCharactersCount(text.length);
+        onChangeCharactersCount && onChangeCharactersCount(text.length);
+        if (enforceCharacterLimit && text.length >= maxLimit) {
+            return;
+        }
+        else {
+            setEditorValue(value);
+            onChange && onChange(value);
+            onValueChange && onValueChange(text);
+            editor.children = value;
+            Transforms.setNodes(editor, { children: value });
+        }
+    }
     const focusClass = onFocus ? "focusTrue" : "focusFalse";
+    const errorClass = isError
+        ? "errorTrue"
+        : maxLimit === charactersCount
+            ? "errorTrue"
+            : "errorFalse";
     const className = `arkynRichText ${errorClass} ${focusClass}`;
+    const restatesCharacters = maxLimit - charactersCount;
     return (_jsxs(Slate, { editor: editor, initialValue: defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE, onChange: handleChange, onValueChange: handleChange, children: [_jsxs("div", { className: className, children: [_jsxs(Toolbar, { children: [_jsx(BlockButton, { format: "headingOne", icon: Heading1 }), _jsx(BlockButton, { format: "headingTwo", icon: Heading2 }), _jsx(BlockButton, { format: "blockQuote", icon: Quote }), _jsx(MarkButton, { format: "bold", icon: Bold }), _jsx(MarkButton, { format: "italic", icon: Italic }), _jsx(MarkButton, { format: "underline", icon: Underline }), _jsx(MarkButton, { format: "code", icon: Code }), _jsx(BlockButton, { format: "left", icon: AlignLeft }), _jsx(BlockButton, { format: "right", icon: AlignRight }), _jsx(BlockButton, { format: "center", icon: AlignCenter }), _jsx(BlockButton, { format: "justify", icon: AlignJustify })] }), _jsx(Editable, { className: "editorContainer", renderElement: renderElement, renderLeaf: renderLeaf, spellCheck: true, id: id, onFocus: () => setOnFocus(true), onBlur: () => setOnFocus(false), onKeyDown: (event) => {
                             for (const hotkey in HOTKEYS) {
                                 if (isHotkey(hotkey, event)) {
@@ -41,6 +60,6 @@ function RichText({ name, defaultValue, onValueChange, onChange, isError: baseIs
                                     toggleMark(editor, mark);
                                 }
                             }
-                        } })] }), _jsx("input", { ref: ref, type: "hidden", name: name, value: JSON.stringify(editorValue) })] }));
+                        } }), restatesCharacters < 0 && (_jsx("div", { className: "restatesCharacters", children: restatesCharacters }))] }), _jsx("input", { ref: ref, type: "hidden", name: name, value: JSON.stringify(editorValue) }), _jsx("input", { type: "hidden", name: `${name}Count`, value: charactersCount })] }));
 }
 export { RichText };

@@ -13,7 +13,7 @@ import {
   Underline,
 } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
-import { createEditor, Descendant } from "slate";
+import { createEditor, Descendant, Transforms, Node } from "slate";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";
 
@@ -31,8 +31,11 @@ import { useFormController } from "../Form/FormController";
 
 type RichTextProps = {
   name: string;
+  maxLimit?: number;
+  enforceCharacterLimit?: boolean;
   defaultValue?: string;
   isError?: boolean;
+  onChangeCharactersCount: (e: number) => void;
   onChange?: (value: Descendant[]) => void;
   onValueChange?: (value: string) => void;
 };
@@ -40,10 +43,14 @@ type RichTextProps = {
 function RichText({
   name,
   defaultValue,
+  enforceCharacterLimit = false,
+  onChangeCharactersCount,
+  maxLimit = 2000,
   onValueChange,
   onChange,
   isError: baseIsError,
 }: RichTextProps) {
+  const [charactersCount, setCharactersCount] = useState(0);
   const [editorValue, setEditorValue] = useState<Descendant[]>(
     defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE
   );
@@ -61,16 +68,39 @@ function RichText({
   const renderLeaf = useCallback(Leaf, []);
   const renderElement = useCallback(Element, []);
 
-  function handleChange(e: Descendant[]) {
-    setEditorValue(e);
-    onChange && onChange(e);
-    onValueChange && onValueChange(JSON.stringify(e));
+  function extractText(nodes: Descendant[]) {
+    return nodes.map((n) => Node.string(n)).join("");
   }
 
-  const errorClass = isError ? "errorTrue" : "errorFalse";
+  function handleChange(value: Descendant[]) {
+    const text = extractText(value);
+    setCharactersCount(text.length);
+
+    onChangeCharactersCount && onChangeCharactersCount(text.length);
+
+    if (enforceCharacterLimit && text.length >= maxLimit) {
+      return;
+    } else {
+      setEditorValue(value);
+
+      onChange && onChange(value);
+      onValueChange && onValueChange(text);
+
+      editor.children = value;
+      Transforms.setNodes(editor, { children: value });
+    }
+  }
+
   const focusClass = onFocus ? "focusTrue" : "focusFalse";
+  const errorClass = isError
+    ? "errorTrue"
+    : maxLimit === charactersCount
+    ? "errorTrue"
+    : "errorFalse";
 
   const className = `arkynRichText ${errorClass} ${focusClass}`;
+
+  const restatesCharacters = maxLimit - charactersCount;
 
   return (
     <Slate
@@ -117,6 +147,10 @@ function RichText({
             }
           }}
         />
+
+        {restatesCharacters < 0 && (
+          <div className="restatesCharacters">{restatesCharacters}</div>
+        )}
       </div>
 
       <input
@@ -125,6 +159,8 @@ function RichText({
         name={name}
         value={JSON.stringify(editorValue)}
       />
+
+      <input type="hidden" name={`${name}Count`} value={charactersCount} />
     </Slate>
   );
 }
