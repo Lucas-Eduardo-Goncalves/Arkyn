@@ -35,7 +35,7 @@ type RichTextProps = {
   enforceCharacterLimit?: boolean;
   defaultValue?: string;
   isError?: boolean;
-  onChangeCharactersCount: (e: number) => void;
+  onChangeCharactersCount?: (e: number) => void;
   onChange?: (value: Descendant[]) => void;
   onValueChange?: (value: string) => void;
 };
