@@ -16,8 +16,12 @@ import { INITIAL_VALUE } from "./template/INITIAL_VALUE";
 import "./styles.css";
 import { useFormController } from "../Form/FormController";
 function RichText({ name, defaultValue, enforceCharacterLimit = false, onChangeCharactersCount, maxLimit = 2000, onValueChange, onChange, isError: baseIsError, }) {
-    const [charactersCount, setCharactersCount] = useState(0);
-    const [editorValue, setEditorValue] = useState(defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE);
+    function extractText(nodes) {
+        return nodes.map((n) => Node.string(n)).join("");
+    }
+    const defaultNodes = defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE;
+    const [charactersCount, setCharactersCount] = useState(extractText(defaultNodes).length);
+    const [editorValue, setEditorValue] = useState(defaultNodes);
     const [onFocus, setOnFocus] = useState(false);
     const { id, inputRef, error } = useFormController();
     const baseRef = useRef(null);
@@ -26,9 +30,6 @@ function RichText({ name, defaultValue, enforceCharacterLimit = false, onChangeC
     const editor = useMemo(() => withHistory(withReact(createEditor())), []);
     const renderLeaf = useCallback(Leaf, []);
     const renderElement = useCallback(Element, []);
-    function extractText(nodes) {
-        return nodes.map((n) => Node.string(n)).join("");
-    }
     function handleChange(value) {
         const text = extractText(value);
         setCharactersCount(text.length);
@@ -47,7 +48,7 @@ function RichText({ name, defaultValue, enforceCharacterLimit = false, onChangeC
     const focusClass = onFocus ? "focusTrue" : "focusFalse";
     const errorClass = isError
         ? "errorTrue"
-        : maxLimit === charactersCount
+        : maxLimit < charactersCount
             ? "errorTrue"
             : "errorFalse";
     const className = `arkynRichText ${errorClass} ${focusClass}`;

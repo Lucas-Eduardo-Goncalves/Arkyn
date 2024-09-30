@@ -50,10 +50,17 @@ function RichText({
   onChange,
   isError: baseIsError,
 }: RichTextProps) {
-  const [charactersCount, setCharactersCount] = useState(0);
-  const [editorValue, setEditorValue] = useState<Descendant[]>(
-    defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE
+  function extractText(nodes: Descendant[]) {
+    return nodes.map((n) => Node.string(n)).join("");
+  }
+
+  const defaultNodes = defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE;
+
+  const [charactersCount, setCharactersCount] = useState(
+    extractText(defaultNodes).length
   );
+
+  const [editorValue, setEditorValue] = useState<Descendant[]>(defaultNodes);
   const [onFocus, setOnFocus] = useState(false);
 
   const { id, inputRef, error } = useFormController();
@@ -67,10 +74,6 @@ function RichText({
 
   const renderLeaf = useCallback(Leaf, []);
   const renderElement = useCallback(Element, []);
-
-  function extractText(nodes: Descendant[]) {
-    return nodes.map((n) => Node.string(n)).join("");
-  }
 
   function handleChange(value: Descendant[]) {
     const text = extractText(value);
@@ -94,7 +97,7 @@ function RichText({
   const focusClass = onFocus ? "focusTrue" : "focusFalse";
   const errorClass = isError
     ? "errorTrue"
-    : maxLimit === charactersCount
+    : maxLimit < charactersCount
     ? "errorTrue"
     : "errorFalse";
 
