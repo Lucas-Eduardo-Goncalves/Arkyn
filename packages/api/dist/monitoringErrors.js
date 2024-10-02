@@ -3,8 +3,8 @@ const monitoringErrors = async (error, config) => {
     const { inbox_flow, request } = config;
     if (inbox_flow) {
         sendInboxFlow({
-            channel_id: inbox_flow.channel_id,
-            user_token: inbox_flow.user_token,
+            channelId: inbox_flow.channelId,
+            userToken: inbox_flow.userToken,
             method: "REMIX-ERROR",
             request: JSON.stringify(request),
             response: JSON.stringify(error),

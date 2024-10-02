@@ -1,7 +1,7 @@
 import { sendInboxFlow } from "../sendInboxFlow";
 import { standardizeResponseMessage } from "../standardizeResponseMessage";
 const deleteF = async (url, config) => {
-    const { headers, inbox_flow, token } = config;
+    const { headers, inbox_flow: inboxFlow, token } = config;
     let responseConfig = {};
     let responseData = {
         success: false,
@@ -49,10 +49,10 @@ const deleteF = async (url, config) => {
             message: err?.message || "Api Internal Error",
         };
     });
-    if (inbox_flow) {
+    if (inboxFlow) {
         sendInboxFlow({
-            channel_id: inbox_flow.channel_id,
-            user_token: inbox_flow.user_token,
+            channelId: inboxFlow.channelId,
+            userToken: inboxFlow.userToken,
             method: "DELETE",
             request: JSON.stringify({ ...responseConfig, ...fetchHeaders, url }),
             response: JSON.stringify(responseData.response),

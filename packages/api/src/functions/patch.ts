@@ -4,7 +4,7 @@ import { sendInboxFlow } from "../sendInboxFlow";
 import { standardizeResponseMessage } from "../standardizeResponseMessage";
 
 const patch: PatchDTO = async (url, data, config) => {
-  const { headers, inbox_flow, token } = config;
+  const { headers, inbox_flow: inboxFlow, token } = config;
 
   let responseConfig: Response | Object = {};
 
@@ -67,10 +67,10 @@ const patch: PatchDTO = async (url, data, config) => {
       };
     });
 
-  if (inbox_flow) {
+  if (inboxFlow) {
     sendInboxFlow({
-      channel_id: inbox_flow.channel_id,
-      user_token: inbox_flow.user_token,
+      channelId: inboxFlow.channelId,
+      userToken: inboxFlow.userToken,
       method: "PATCH",
       request: JSON.stringify({ ...responseConfig, ...fetchHeaders, url }),
       response: JSON.stringify(responseData.response),

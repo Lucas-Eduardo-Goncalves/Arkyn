@@ -1,6 +1,6 @@
 type InboxFlowDTO = {
-    channel_id: string;
-    user_token: string;
+    channelId: string;
+    userToken: string;
 };
 export type { InboxFlowDTO };
 //# sourceMappingURL=InboxFlowDTO.d.ts.map
