@@ -1,5 +1,5 @@
 import { ToastProps, ToastProviderProps } from "@arkyn/types";
-import { Toaster, toast } from "sonner";
+import { Toaster, toast } from "react-hot-toast";
 
 import { ToastContext } from "../context/ToastContext";
 import { Toast } from "../components/Toast";

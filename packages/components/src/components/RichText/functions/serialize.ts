@@ -1,12 +1,22 @@
-// import { Node, Element as SlateElement } from "slate";
-import { Element as SlateElement } from "slate";
+import { Editor, Element as SlateElement, Text } from "slate";
 
 const serialize = (node: any): string => {
-  // function exportHtml() {
-  //   const content = editor.children;
-  //   const html = content.map((node) => serialize(node)).join("");
-  //   setHtml(html);
-  // }
+  if (Text.isText(node)) {
+    let text = node.text;
+    if (node.bold) {
+      text = `<strong>${text}</strong>`;
+    }
+    if (node.code) {
+      text = `<code>${text}</code>`;
+    }
+    if (node.italic) {
+      text = `<em>${text}</em>`;
+    }
+    if (node.underline) {
+      text = `<u>${text}</u>`;
+    }
+    return text;
+  }
 
   if (SlateElement.isElement(node)) {
     const children = node.children.map((n: any) => serialize(n)).join("");
@@ -31,24 +41,11 @@ const serialize = (node: any): string => {
     }
   }
 
-  if (node.text) {
-    let text = node.text;
-    if (node.bold) {
-      text = `<strong>${text}</strong>`;
-    }
-    if (node.code) {
-      text = `<code>${text}</code>`;
-    }
-    if (node.italic) {
-      text = `<em>${text}</em>`;
-    }
-    if (node.underline) {
-      text = `<u>${text}</u>`;
-    }
-    return text;
-  }
-
   return "";
 };
 
-export { serialize };
+const getHtmlFromSlate = (editor: Editor): string => {
+  return editor.children.map((node) => serialize(node)).join("");
+};
+
+export { getHtmlFromSlate };

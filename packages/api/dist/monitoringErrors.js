@@ -5,7 +5,7 @@ const monitoringErrors = async (error, config) => {
         sendInboxFlow({
             channelId: inbox_flow.channelId,
             userToken: inbox_flow.userToken,
-            method: "REMIX-ERROR",
+            method: "ERROR",
             request: JSON.stringify(request),
             response: JSON.stringify(error),
             token: "User token not found",

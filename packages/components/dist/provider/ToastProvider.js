@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Toaster, toast } from "sonner";
+import { Toaster, toast } from "react-hot-toast";
 import { ToastContext } from "../context/ToastContext";
 import { Toast } from "../components/Toast";
 function ToastProvider({ children }) {

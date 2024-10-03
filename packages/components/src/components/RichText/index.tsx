@@ -13,7 +13,7 @@ import {
   Underline,
 } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
-import { createEditor, Descendant, Transforms, Node } from "slate";
+import { createEditor, Descendant, Transforms } from "slate";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";
 
@@ -26,8 +26,13 @@ import { toggleMark } from "./functions/toggleMark";
 import { HOTKEYS } from "./template/HOTKEYS";
 import { INITIAL_VALUE } from "./template/INITIAL_VALUE";
 
-import "./styles.css";
 import { useFormController } from "../Form/FormController";
+import "./styles.css";
+
+import { getSlateFromHtml } from "./functions/deserialize";
+import { extractText } from "./functions/extractText";
+import { getHtmlFromSlate } from "./functions/serialize";
+import { isHtml } from "./functions/isHtml";
 
 type RichTextProps = {
   name: string;
@@ -50,44 +55,43 @@ function RichText({
   onChange,
   isError: baseIsError,
 }: RichTextProps) {
-  function extractText(nodes: Descendant[]) {
-    return nodes.map((n) => Node.string(n)).join("");
-  }
-
-  const defaultNodes = defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE;
-
-  const [charactersCount, setCharactersCount] = useState(
-    extractText(defaultNodes).length
-  );
-
-  const [editorValue, setEditorValue] = useState<Descendant[]>(defaultNodes);
-  const [onFocus, setOnFocus] = useState(false);
-
+  const editor = useMemo(() => withHistory(withReact(createEditor())), []);
   const { id, inputRef, error } = useFormController();
 
   const baseRef = useRef<HTMLInputElement>(null);
 
+  const defaultNodes = isHtml(defaultValue)
+    ? getSlateFromHtml(defaultValue)
+    : INITIAL_VALUE;
+
+  const textFromNodes = extractText(defaultNodes);
+
+  const [charactersCount, setCharactersCount] = useState(textFromNodes.length);
+  const [inputValue, setInputValue] = useState(
+    isHtml(defaultValue) ? defaultValue : ""
+  );
+
+  const [onFocus, setOnFocus] = useState(false);
+
   const ref = inputRef || baseRef;
   const isError = baseIsError || !!error;
-
-  const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
   const renderLeaf = useCallback(Leaf, []);
   const renderElement = useCallback(Element, []);
 
   function handleChange(value: Descendant[]) {
     const text = extractText(value);
-    setCharactersCount(text.length);
 
+    setCharactersCount(text.length);
     onChangeCharactersCount && onChangeCharactersCount(text.length);
 
     if (enforceCharacterLimit && text.length >= maxLimit) {
       return;
     } else {
-      setEditorValue(value);
+      setInputValue(getHtmlFromSlate(editor));
 
       onChange && onChange(value);
-      onValueChange && onValueChange(text);
+      onValueChange && onValueChange(getHtmlFromSlate(editor));
 
       editor.children = value;
       Transforms.setNodes(editor, { children: value });
@@ -108,7 +112,7 @@ function RichText({
   return (
     <Slate
       editor={editor}
-      initialValue={defaultValue ? JSON.parse(defaultValue) : INITIAL_VALUE}
+      initialValue={defaultNodes}
       onChange={handleChange}
       onValueChange={handleChange}
     >
@@ -117,9 +121,6 @@ function RichText({
           <BlockButton format="headingOne" icon={Heading1} />
           <BlockButton format="headingTwo" icon={Heading2} />
           <BlockButton format="blockQuote" icon={Quote} />
-          {/* <BlockButton format="bulletedList" icon={ListVideo} /> */}
-          {/* <BlockButton format="listItem" icon={List} /> */}
-          {/* <BlockButton format="numberedList" icon={ListOrdered} /> */}
 
           <MarkButton format="bold" icon={Bold} />
           <MarkButton format="italic" icon={Italic} />
@@ -156,13 +157,7 @@ function RichText({
         )}
       </div>
 
-      <input
-        ref={ref}
-        type="hidden"
-        name={name}
-        value={JSON.stringify(editorValue)}
-      />
-
+      <input ref={ref} type="hidden" name={name} value={inputValue} />
       <input type="hidden" name={`${name}Count`} value={charactersCount} />
     </Slate>
   );

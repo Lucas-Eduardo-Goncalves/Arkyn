@@ -24,6 +24,7 @@ type CustomElement = {
 
 type CustomText = {
   bold?: boolean;
+  text: string;
   italic?: boolean;
   code?: boolean;
   underline?: boolean;
