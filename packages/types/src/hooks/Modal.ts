@@ -5,6 +5,7 @@ type ModalContextProps<T = any> = {
   modalData(key: string): T;
   openModal(key: string, data?: T): void;
   closeModal(key: string): void;
+  closeAll(): void;
 };
 
 type OpenedModals = {

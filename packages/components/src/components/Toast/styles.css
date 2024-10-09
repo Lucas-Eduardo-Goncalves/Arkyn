@@ -2,12 +2,13 @@
   display: flex;
   align-items: start;
 
-  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
   padding: 16px;
   gap: 12px;
-  flex: 1;
 
   border-radius: var(--rounded-cards);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .arkynToast > div {

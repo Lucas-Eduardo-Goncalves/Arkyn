@@ -24,7 +24,7 @@ function Toast(props: ToastProps) {
   }
 
   return (
-    <aside className={className}>
+    <div className={className}>
       <div>
         <div className="bg" />
         <Icon />
@@ -33,7 +33,7 @@ function Toast(props: ToastProps) {
         <strong title={title}>{title}</strong>
         <span>{message}</span>
       </p>
-    </aside>
+    </div>
   );
 }
 

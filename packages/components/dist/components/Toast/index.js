@@ -18,6 +18,6 @@ function Toast(props) {
                 return _jsx(Info, {});
         }
     }
-    return (_jsxs("aside", { className: className, children: [_jsxs("div", { children: [_jsx("div", { className: "bg" }), _jsx(Icon, {})] }), _jsxs("p", { children: [_jsx("strong", { title: title, children: title }), _jsx("span", { children: message })] })] }));
+    return (_jsxs("div", { className: className, children: [_jsxs("div", { children: [_jsx("div", { className: "bg" }), _jsx(Icon, {})] }), _jsxs("p", { children: [_jsx("strong", { title: title, children: title }), _jsx("span", { children: message })] })] }));
 }
 export { Toast };

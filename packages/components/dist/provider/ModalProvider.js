@@ -24,6 +24,9 @@ function ModalProvider(args) {
     function closeModal(key) {
         setOpenedModals(openedModals.filter((modal) => modal.key !== key));
     }
-    return (_jsx(ModalContext.Provider, { value: { modalIsOpen, modalData, openModal, closeModal }, children: children }));
+    function closeAll() {
+        setOpenedModals([]);
+    }
+    return (_jsx(ModalContext.Provider, { value: { modalIsOpen, modalData, openModal, closeModal, closeAll }, children: children }));
 }
 export { ModalProvider };

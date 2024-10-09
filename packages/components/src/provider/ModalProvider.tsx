@@ -29,9 +29,13 @@ function ModalProvider(args: ModalProviderProps) {
     setOpenedModals(openedModals.filter((modal) => modal.key !== key));
   }
 
+  function closeAll() {
+    setOpenedModals([]);
+  }
+
   return (
     <ModalContext.Provider
-      value={{ modalIsOpen, modalData, openModal, closeModal }}
+      value={{ modalIsOpen, modalData, openModal, closeModal, closeAll }}
     >
       {children}
     </ModalContext.Provider>
