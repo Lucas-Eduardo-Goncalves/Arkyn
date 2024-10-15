@@ -9,10 +9,7 @@ function isToastProps(obj) {
         typeof obj.title === "string" &&
         typeof obj.message === "string" &&
         (obj.size === undefined || obj.size === "md" || obj.size === "lg") &&
-        (obj.type === "info" ||
-            obj.type === "success" ||
-            obj.type === "danger" ||
-            obj.type === "warning"));
+        (obj.type === "success" || obj.type === "danger"));
 }
 function useAutomation() {
     const actionData = useActionData();
@@ -39,11 +36,7 @@ function useAutomation() {
         if (isToastProps(existsToast))
             showToast(existsToast);
         if (!isToastProps(existsToast) && existsMessage) {
-            showToast({
-                message: existsMessage,
-                title: "Atenção!",
-                type: "warning",
-            });
+            showToast({ message: existsMessage, type: "danger" });
         }
     }, [actionData]);
     useEffect(() => {

@@ -1,8 +1,6 @@
 type ToastProps = {
-    title: string;
     message: string;
-    size?: "md" | "lg";
-    type: "info" | "success" | "danger" | "warning";
+    type: "success" | "danger";
 };
 export type { ToastProps };
 //# sourceMappingURL=ToastProps.d.ts.map
