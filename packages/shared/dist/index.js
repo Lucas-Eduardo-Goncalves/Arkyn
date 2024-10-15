@@ -1,4 +1,4 @@
-// Formats
+// formats
 export { formatBrazilianDateToDate } from "./formats/formatBrazilianDateToDate";
 export { formatDateHour } from "./formats/formatDateHour";
 export { formatToBRL } from "./formats/formatToBRL";
@@ -8,15 +8,17 @@ export { formatToCPF } from "./formats/formatToCPF";
 export { formatToCpfCnpj } from "./formats/formatToCpfCnpj";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 export { formatToPhone } from "./formats/formatToPhone";
-// Generators
+// generators
 export { generateColorByString } from "./generators/generateColorByString";
 export { generateId } from "./generators/generateId";
 export { generateSlug } from "./generators/generateSlug";
-// Parsers
+// parsers
 export { parseToCharacters } from "./parsers/parseToCharacters";
-// Services
+// services
 export { calculateCardInstallment } from "./services/calculateCardInstallment";
+export { maskSensitiveData } from "./services/maskSensitiveData";
 export { normalizeRange, within } from "./services/range";
-// Validations
+export { truncateLargeFields } from "./services/truncateLargeFields";
+// validations
 export { regex } from "./validations/regex";
 export { validateCPF } from "./validations/validateCPF";

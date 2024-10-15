@@ -12,7 +12,9 @@ export { generateId } from "./generators/generateId";
 export { generateSlug } from "./generators/generateSlug";
 export { parseToCharacters } from "./parsers/parseToCharacters";
 export { calculateCardInstallment } from "./services/calculateCardInstallment";
+export { maskSensitiveData } from "./services/maskSensitiveData";
 export { normalizeRange, within } from "./services/range";
+export { truncateLargeFields } from "./services/truncateLargeFields";
 export { regex } from "./validations/regex";
 export { validateCPF } from "./validations/validateCPF";
 //# sourceMappingURL=index.d.ts.map
