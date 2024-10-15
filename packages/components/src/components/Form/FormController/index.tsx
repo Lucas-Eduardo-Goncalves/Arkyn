@@ -1,13 +1,20 @@
 import { FormControllerContextProps, FormControllerProps } from "@arkyn/types";
-import { useActionData } from "@remix-run/react";
-import { createContext, useContext, useId, useRef } from "react";
+import { useActionData, useFetchers } from "@remix-run/react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react";
 
 import "./styles.css";
+import { useFieldErrors } from "../../../hooks/useFieldErrors";
 
 const FormControllerContext = createContext({} as FormControllerContextProps);
 
 function FormController(props: FormControllerProps) {
-  const actionData = useActionData<any>();
   const {
     children,
     className: baseClassName,
@@ -15,10 +22,11 @@ function FormController(props: FormControllerProps) {
     ...rest
   } = props;
 
+  const fieldErrors = useFieldErrors();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const name = inputRef.current?.name || "";
-  const error = actionData?.fieldErrors?.[name] || null;
+  const error = fieldErrors?.[name] || null;
 
   const id = useId();
   const className = `arkynFormController ${baseClassName}`;

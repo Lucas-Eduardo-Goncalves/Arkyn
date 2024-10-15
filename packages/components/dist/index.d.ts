@@ -26,6 +26,7 @@ export { Toast } from "./components/Toast";
 export { Tooltip } from "./components/Tooltip";
 export { useAutomation } from "./hooks/useAutomation";
 export { useDrawer } from "./hooks/useDrawer";
+export { useFieldErrors } from "./hooks/useFieldErrors";
 export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 export { useToast } from "./hooks/useToast";

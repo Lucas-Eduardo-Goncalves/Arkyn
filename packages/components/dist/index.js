@@ -31,6 +31,7 @@ export { Tooltip } from "./components/Tooltip";
 // Hooks
 export { useAutomation } from "./hooks/useAutomation";
 export { useDrawer } from "./hooks/useDrawer";
+export { useFieldErrors } from "./hooks/useFieldErrors";
 export { useModal } from "./hooks/useModal";
 export { useScopedParams } from "./hooks/useScopedParams";
 export { useToast } from "./hooks/useToast";
