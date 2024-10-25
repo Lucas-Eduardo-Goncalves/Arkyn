@@ -61,6 +61,7 @@ const put = async (url, data, config) => {
     });
     if (inboxFlow) {
         sendInboxFlow({
+            status: responseData.status,
             channelId: inboxFlow.channelId,
             userToken: inboxFlow.userToken,
             method: "PUT",

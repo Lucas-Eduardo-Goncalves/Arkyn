@@ -3,6 +3,7 @@ const monitoringErrors = async (error, config) => {
     const { inbox_flow, request } = config;
     if (inbox_flow) {
         sendInboxFlow({
+            status: 400,
             channelId: inbox_flow.channelId,
             userToken: inbox_flow.userToken,
             method: "ERROR",

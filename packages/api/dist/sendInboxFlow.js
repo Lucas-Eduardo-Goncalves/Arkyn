@@ -1,7 +1,8 @@
 async function sendInboxFlow(config) {
-    const { channelId, userToken, method, request, response, token } = config;
+    const { channelId, userToken, status, method, request, response, token } = config;
     try {
         const body = JSON.stringify({
+            status,
             channelId,
             method,
             token,

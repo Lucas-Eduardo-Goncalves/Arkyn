@@ -1,1 +1,1 @@
-{"version":3,"file":"monitoringErrors.d.ts","sourceRoot":"","sources":["../src/monitoringErrors.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,mBAAmB,EAAE,MAAM,cAAc,CAAC;AAGxD,QAAA,MAAM,gBAAgB,EAAE,mBAevB,CAAC;AAEF,OAAO,EAAE,gBAAgB,EAAE,CAAC"}
+{"version":3,"file":"monitoringErrors.d.ts","sourceRoot":"","sources":["../src/monitoringErrors.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,mBAAmB,EAAE,MAAM,cAAc,CAAC;AAGxD,QAAA,MAAM,gBAAgB,EAAE,mBAgBvB,CAAC;AAEF,OAAO,EAAE,gBAAgB,EAAE,CAAC"}
