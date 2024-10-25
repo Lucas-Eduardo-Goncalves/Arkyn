@@ -6,6 +6,7 @@ const monitoringErrors: MonitoringErrorsDTO = async (error, config) => {
 
   if (inbox_flow) {
     sendInboxFlow({
+      status: 400,
       channelId: inbox_flow.channelId,
       userToken: inbox_flow.userToken,
       method: "ERROR",

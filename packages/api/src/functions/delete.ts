@@ -59,6 +59,7 @@ const deleteF: DeleteDTO = async (url, config) => {
 
   if (inboxFlow) {
     sendInboxFlow({
+      status: responseData.status,
       channelId: inboxFlow.channelId,
       userToken: inboxFlow.userToken,
       method: "DELETE",

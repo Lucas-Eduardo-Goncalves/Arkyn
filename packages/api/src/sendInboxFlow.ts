@@ -1,6 +1,7 @@
 import type { InboxFlowDTO } from "@arkyn/types";
 
 type ConfigProps = {
+  status: number;
   method: "POST" | "GET" | "PUT" | "DELETE" | "PATCH" | "ERROR";
   request: string;
   response: string;
@@ -8,10 +9,12 @@ type ConfigProps = {
 } & InboxFlowDTO;
 
 async function sendInboxFlow(config: ConfigProps) {
-  const { channelId, userToken, method, request, response, token } = config;
+  const { channelId, userToken, status, method, request, response, token } =
+    config;
 
   try {
     const body = JSON.stringify({
+      status,
       channelId,
       method,
       token,
