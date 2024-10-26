@@ -1,5 +1,7 @@
 import { SelectProps } from "@arkyn/types";
 declare function getConfig(props: SelectProps, isFocused: boolean): {
+    isSearchable?: boolean;
+    onSearch?: (value: string) => void;
     name: string;
     value?: string;
     defaultValue?: string;

@@ -15,6 +15,6 @@ function HasFileContent(props) {
         };
         input.click();
     }
-    return (_jsxs("div", { className: "arkynImageUploadHasFileContent", style: { backgroundImage: `url(${filePath})` }, children: [reSendImage && (_jsx(Tooltip, { orientation: "bottom", text: "Reenviar imagem", children: _jsx(IconButton, { type: "button", "aria-label": "resend image", variant: "outline", scheme: "danger", size: "sm", isLoading: isLoading, onClick: reSendImage, icon: RefreshCw }) })), _jsx(Button, { isLoading: isLoading, onClick: handleClick, variant: "outline", size: "sm", type: "button", children: changeImageButtonText })] }));
+    return (_jsxs("div", { className: "arkynImageUploadHasFileContent", style: { backgroundImage: `url("${filePath}")` }, children: [reSendImage && (_jsx(Tooltip, { orientation: "bottom", text: "Reenviar imagem", children: _jsx(IconButton, { type: "button", "aria-label": "resend image", variant: "outline", scheme: "danger", size: "sm", isLoading: isLoading, onClick: reSendImage, icon: RefreshCw }) })), _jsx(Button, { isLoading: isLoading, onClick: handleClick, variant: "outline", size: "sm", type: "button", children: changeImageButtonText })] }));
 }
 export { HasFileContent };

@@ -1,15 +1,17 @@
 import type { SelectProps } from "@arkyn/types";
 import type { FocusEvent } from "react";
 
-import { Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, Search } from "lucide-react";
 import { useRef, useState } from "react";
 
 import { getConfig } from "./getConfig";
 
-import "./styles.css";
 import { useFormController } from "../../components/Form/FormController";
+import { Input } from "../Input";
+import "./styles.css";
 
 function Select(props: SelectProps) {
+  const [search, setSearch] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const { inputRef, id, error } = useFormController();
 
@@ -38,7 +40,8 @@ function Select(props: SelectProps) {
     options,
     optionMaxHeight,
     closeOnSelect,
-
+    isSearchable,
+    onSearch,
     ...rest
   } = getConfig({ ...props, id, isError }, isFocused);
 
@@ -116,19 +119,37 @@ function Select(props: SelectProps) {
             className="arkyn_select_content"
             style={{ overflow: "auto", maxHeight: optionMaxHeight }}
           >
-            {options.map(({ label, value }) => (
-              <div
-                key={value}
-                onClick={() => handleChangeValue({ label, value })}
-                className={
-                  currentValue === value
-                    ? "arkyn_select_option active"
-                    : "arkyn_select_option"
-                }
-              >
-                {label} <Check />
-              </div>
-            ))}
+            {isSearchable && (
+              <Input
+                type="search"
+                name="search-select"
+                variant="underline"
+                leftIcon={Search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            )}
+
+            {options
+              .filter((option) => {
+                if (props.onSearch) return true;
+                if (!props.isSearchable) return true;
+                if (option.label.toLowerCase().includes(search.toLowerCase()))
+                  return true;
+                return false;
+              })
+              .map(({ label, value }) => (
+                <div
+                  key={value}
+                  onClick={() => handleChangeValue({ label, value })}
+                  className={
+                    currentValue === value
+                      ? "arkyn_select_option active"
+                      : "arkyn_select_option"
+                  }
+                >
+                  {label} <Check />
+                </div>
+              ))}
 
             {options.length <= 0 && <p>Sem opções disponíveis</p>}
           </div>

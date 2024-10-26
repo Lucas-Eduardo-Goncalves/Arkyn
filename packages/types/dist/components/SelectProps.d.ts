@@ -3,6 +3,8 @@ import type { InputHTMLAttributes } from "react";
 type SelectProps = {
     isLoading?: boolean;
     isError?: boolean;
+    isSearchable?: boolean;
+    onSearch?: (value: string) => void;
     closeOnSelect?: boolean;
     size?: "md" | "lg";
     variant?: "solid" | "outline" | "underline";

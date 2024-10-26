@@ -16,7 +16,6 @@ function getConfig(props: SelectProps, isFocused: boolean) {
     readOnly,
     onFocus,
     onBlur,
-
     title,
     style,
     closeOnSelect = true,
