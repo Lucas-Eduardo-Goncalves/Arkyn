@@ -31,7 +31,7 @@ function HasFileContent(props: HasFileContentProps) {
   return (
     <div
       className="arkynImageUploadHasFileContent"
-      style={{ backgroundImage: `url(${filePath})` }}
+      style={{ backgroundImage: `url("${filePath}")` }}
     >
       {reSendImage && (
         <Tooltip orientation="bottom" text="Reenviar imagem">
