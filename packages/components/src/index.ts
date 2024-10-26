@@ -25,6 +25,7 @@ export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { IconButton } from "./components/IconButton";
+export { ImageUpload } from "./components/ImageUpload";
 export { Input } from "./components/Input";
 export { RadioBox, RadioGroup } from "./components/Radio";
 export { RichText } from "./components/RichText";

@@ -21,6 +21,7 @@ export * from "./components/GoogleMapProps";
 export * from "./components/GoogleProviderProps";
 export * from "./components/GoogleSearchPlacesProps";
 export * from "./components/IconButtonProps";
+export * from "./components/ImageUploadProps";
 export * from "./components/InputProps";
 export * from "./components/ModalProps";
 export * from "./components/PaginationProps";

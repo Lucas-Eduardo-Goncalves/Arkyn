@@ -1,0 +1,29 @@
+.arkynImageUploadContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.arkynImageUpload {
+  border-width: 2px;
+  border-color: var(--border);
+  border-radius: var(--rounded-inputs);
+
+  width: 100%;
+  height: 174px;
+  max-width: 475px;
+
+  background: rgba(var(--input-background), 1);
+}
+
+.arkynImageUpload.hasImage {
+  border-style: solid;
+}
+
+.arkynImageUpload.noHasImage {
+  border-style: dashed;
+}
+
+.arkynImageUpload.hasError {
+  border-color: rgb(var(--spotlight-danger));
+}
