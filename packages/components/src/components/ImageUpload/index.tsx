@@ -38,6 +38,7 @@ function ImageUpload(props: ImageUploadProps) {
   async function handleUploadImage(file: File) {
     setIsLoading(true);
     setFile(file);
+    setError("");
 
     const formData = new FormData();
     formData.append(fileName, file);

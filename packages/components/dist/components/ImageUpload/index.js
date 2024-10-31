@@ -18,6 +18,7 @@ function ImageUpload(props) {
     async function handleUploadImage(file) {
         setIsLoading(true);
         setFile(file);
+        setError("");
         const formData = new FormData();
         formData.append(fileName, file);
         await fetch(action, { method: method, body: formData })
