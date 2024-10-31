@@ -3,9 +3,16 @@ import { useNavigate } from "@remix-run/react";
 import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
 
 import { useScopedParams } from "../../hooks/useScopedParams";
-import { getNextPages, getPreviousPages } from "../../services";
 
 import "./styles.css";
+
+function generatePagesArray(from: number, to: number) {
+  return [...new Array(to - from)]
+    .map((_, index) => {
+      return from + index + 1;
+    })
+    .filter((page) => page > 0);
+}
 
 function Pagination(props: PaginationProps) {
   const {
@@ -14,19 +21,31 @@ function Pagination(props: PaginationProps) {
     perPageKey = "per_page",
     pageKey = "page",
     siblingsCount = 2,
+    currentPage: baseCurrentPage = 1,
+    registerPerPage: baseRegisterPerPage = 20,
     ...rest
   } = props;
 
   const navigate = useNavigate();
   const { getParam, getScopedSearch } = useScopedParams(scope);
 
-  const currentPage = Number(getParam(pageKey)) || 1;
-  const registerPerPage = Number(getParam(perPageKey)) || 20;
+  const currentPage = Number(getParam("page")) || baseCurrentPage;
+  const registerPerPage = Number(getParam("per_page")) || baseRegisterPerPage;
 
   const lastPage = Math.ceil(totalCountRegisters / registerPerPage);
 
-  const previosPages = getPreviousPages(currentPage, siblingsCount);
-  const nextPages = getNextPages(currentPage, siblingsCount, lastPage);
+  const previosPages =
+    currentPage > 1
+      ? generatePagesArray(currentPage - 1 - siblingsCount, currentPage - 1)
+      : [];
+
+  const nextPages =
+    currentPage < lastPage
+      ? generatePagesArray(
+          currentPage,
+          Math.min(currentPage + siblingsCount, lastPage)
+        )
+      : [];
 
   function handlePageChange(page: number) {
     navigate(getScopedSearch({ page }));
@@ -59,29 +78,31 @@ function Pagination(props: PaginationProps) {
         </>
       )}
 
-      {previosPages.map((page, index) => (
-        <button
-          key={index}
-          onClick={() => handlePageChange(page)}
-          className="arkynPaginationPageButton"
-        >
-          {page}
-        </button>
-      ))}
+      {previosPages.length > 0 &&
+        previosPages.map((page, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageChange(page)}
+            className="arkynPaginationPageButton"
+          >
+            {page}
+          </button>
+        ))}
 
       <button className="arkynPaginationCurrent" disabled>
         {currentPage}
       </button>
 
-      {nextPages.map((page, index) => (
-        <button
-          key={index}
-          onClick={() => handlePageChange(page)}
-          className="arkynPaginationPageButton"
-        >
-          {page}
-        </button>
-      ))}
+      {nextPages.length > 0 &&
+        nextPages.map((page, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageChange(page)}
+            className="arkynPaginationPageButton"
+          >
+            {page}
+          </button>
+        ))}
 
       {currentPage + siblingsCount < lastPage && (
         <>

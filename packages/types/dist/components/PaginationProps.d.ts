@@ -5,6 +5,8 @@ type PaginationProps = {
     perPageKey?: string;
     siblingsCount?: number;
     totalCountRegisters: number;
+    currentPage?: number;
+    registerPerPage?: number;
 } & HTMLAttributes<HTMLDivElement>;
 export type { PaginationProps };
 //# sourceMappingURL=PaginationProps.d.ts.map
