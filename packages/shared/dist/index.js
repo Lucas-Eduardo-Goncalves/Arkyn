@@ -6,6 +6,7 @@ export { formatToCep } from "./formats/formatToCep";
 export { formatToCNPJ } from "./formats/formatToCNPJ";
 export { formatToCPF } from "./formats/formatToCPF";
 export { formatToCpfCnpj } from "./formats/formatToCpfCnpj";
+export { formatToEllipsis } from "./formats/formatToEllipsis";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 export { formatToPhone } from "./formats/formatToPhone";
 // generators
