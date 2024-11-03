@@ -1,6 +1,8 @@
 // formats
 export { formatBrazilianDateToDate } from "./formats/formatBrazilianDateToDate";
 export { formatDateHour } from "./formats/formatDateHour";
+export { formatJsonObject } from "./formats/formatJsonObject";
+export { formatJsonString } from "./formats/formatJsonString";
 export { formatToBRL } from "./formats/formatToBRL";
 export { formatToCep } from "./formats/formatToCep";
 export { formatToCNPJ } from "./formats/formatToCNPJ";
