@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/components",
-  "version": "1.3.149",
+  "version": "1.3.150",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
