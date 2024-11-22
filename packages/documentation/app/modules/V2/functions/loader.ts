@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
+import { LoaderFunctionArgs, redirect } from "@remix-run/node";
 import { authStorage } from "~/services";
 import { UserProps } from "~/types/AuthTypes";
 
@@ -9,8 +9,6 @@ async function loader({ request }: LoaderFunctionArgs) {
   if (!user) {
     return redirect("/auth/sign-in?redirectURL=/v2/channels");
   }
-
-  return json({ user });
 }
 
 export { loader };

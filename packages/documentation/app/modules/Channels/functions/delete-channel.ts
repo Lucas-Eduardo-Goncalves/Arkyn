@@ -1,5 +1,3 @@
-import { badRequest } from "@arkyn/server";
-import { json } from "@remix-run/node";
 import { api, authStorage } from "~/services";
 
 type DeleteChannelProps = {
@@ -17,17 +15,8 @@ async function deleteChannel({ request }: DeleteChannelProps) {
   const formData = Object.fromEntries(await request.formData());
   const errors = { id: formData?.id ? null : "ID is required" };
 
-  if (Object.values(errors).some(Boolean)) {
-    return badRequest({ success: false, fieldErrors: errors });
-  }
-
   const { response } = await api.DELETE(`/channels/${formData.id}`, { token });
   console.log(response);
-
-  return json({
-    success: true,
-    message: "Channel created successfully",
-  });
 }
 
 export { deleteChannel };

@@ -1,5 +1,4 @@
-import { badRequest } from "@arkyn/server";
-import { json } from "@remix-run/node";
+import {} from "@remix-run/node";
 import { api, authStorage } from "~/services";
 
 type CreateChannelProps = {
@@ -20,20 +19,8 @@ async function createChannel({ request }: CreateChannelProps) {
     name: formData?.name ? null : "Name is required",
   };
 
-  if (Object.values(errors).some(Boolean)) {
-    return badRequest({
-      success: false,
-      fieldErrors: errors,
-    });
-  }
-
   const { response } = await api.POST("/channels", formData, { token });
   console.log(response);
-
-  return json({
-    success: true,
-    message: "Channel created successfully",
-  });
 }
 
 export { createChannel };
