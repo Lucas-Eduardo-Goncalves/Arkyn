@@ -6,11 +6,13 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     suppressContentEditableWarning?: boolean | undefined;
     suppressHydrationWarning?: boolean | undefined;
     accessKey?: string | undefined;
+    autoCapitalize?: "off" | "none" | "on" | "sentences" | "words" | "characters" | undefined | (string & {});
     autoFocus?: boolean | undefined;
     contentEditable?: (boolean | "true" | "false") | "inherit" | "plaintext-only" | undefined;
     contextMenu?: string | undefined;
     dir?: string | undefined;
     draggable?: (boolean | "true" | "false") | undefined;
+    enterKeyHint?: "enter" | "done" | "go" | "next" | "previous" | "search" | "send" | undefined;
     hidden?: boolean | undefined;
     id?: string | undefined;
     lang?: string | undefined;
@@ -31,7 +33,6 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     rev?: string | undefined;
     typeof?: string | undefined;
     vocab?: string | undefined;
-    autoCapitalize?: string | undefined;
     autoCorrect?: string | undefined;
     autoSave?: string | undefined;
     color?: string | undefined;
@@ -277,7 +278,6 @@ declare function getConfig(props: MaskedInputProps, isFocused: boolean): {
     alt?: string | undefined;
     autoComplete?: import("react").HTMLInputAutoCompleteAttribute | undefined;
     capture?: boolean | "user" | "environment" | undefined;
-    enterKeyHint?: "enter" | "done" | "go" | "next" | "previous" | "search" | "send" | undefined;
     maxLength?: number | undefined;
     minLength?: number | undefined;
     multiple?: boolean | undefined;

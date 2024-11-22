@@ -1,4 +1,3 @@
-import { json } from "@remix-run/node";
 import { badRequest, BadRequestError } from "../httpBadResponses/badRequest";
 import { conflict, ConflictError } from "../httpBadResponses/conflict";
 import { forbidden, ForbiddenError } from "../httpBadResponses/forbidden";
@@ -9,23 +8,23 @@ import { unauthorized, UnauthorizedError, } from "../httpBadResponses/unauthoriz
 const globalErrorHandler = (error) => {
     switch (true) {
         case error instanceof BadRequestError:
-            return json(badRequest(error));
+            return badRequest(error);
         case error instanceof ForbiddenError:
-            return json(forbidden(error));
+            return forbidden(error);
         case error instanceof ConflictError:
-            return json(conflict(error));
+            return conflict(error);
         case error instanceof UnauthorizedError:
-            return json(unauthorized(error));
+            return unauthorized(error);
         case error instanceof NotFoundError:
-            return json(notFound(error));
+            return notFound(error);
         case error instanceof UnprocessableEntityError:
-            return json(unprocessableEntity(error));
+            return unprocessableEntity(error);
         default:
-            return json(serverError({
+            return serverError({
                 message: error?.message || "Server error | Message not found",
                 name: "Server Error",
                 cause: error,
-            }));
+            });
     }
 };
 export { globalErrorHandler };
