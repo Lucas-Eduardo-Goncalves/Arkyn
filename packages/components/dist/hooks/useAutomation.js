@@ -31,6 +31,11 @@ function useAutomation() {
             closeModal(closeModalKey);
     }, [actionData]);
     useEffect(() => {
+        const closeAllModals = actionData?.closeAllModals;
+        if (typeof closeAllModals === "boolean" && closeAllModals)
+            closeAll();
+    }, [actionData]);
+    useEffect(() => {
         const existsToast = actionData?.toast;
         const existsMessage = actionData?.message;
         if (isToastProps(existsToast))

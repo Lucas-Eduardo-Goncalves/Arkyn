@@ -43,7 +43,8 @@ function CurrencyInput(props) {
     const handleChange = (event) => {
         event.preventDefault();
         const [originalValue, maskedValue] = updateValues(event.target.value);
-        onChangeValue(event, String(originalValue), String(maskedValue));
+        onChangeValue &&
+            onChangeValue(event, String(originalValue), String(maskedValue));
     };
     const handleKeyUp = (event) => onKeyPress && onKeyPress(event, event.key, event.key);
     useEffect(() => {

@@ -86,7 +86,9 @@ function CurrencyInput(props: CurrencyInputProps) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const [originalValue, maskedValue] = updateValues(event.target.value);
-    onChangeValue(event, String(originalValue), String(maskedValue));
+
+    onChangeValue &&
+      onChangeValue(event, String(originalValue), String(maskedValue));
   };
 
   const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>) =>

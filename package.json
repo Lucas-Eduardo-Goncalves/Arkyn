@@ -31,7 +31,8 @@
     "prod:documentation": "cd packages/documentation && bun run build && bun run start",
     "prod:server": "cd packages/server && npm publish",
     "prod:shared": "cd packages/shared && npm publish",
-    "prod:types": "cd packages/types && npm publish"
+    "prod:types": "cd packages/types && npm publish",
+    "ccm": "./auto_commit.sh"
   },
   "workspaces": [
     "packages/*"
