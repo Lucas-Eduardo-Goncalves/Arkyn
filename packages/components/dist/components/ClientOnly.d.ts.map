@@ -1,0 +1,1 @@
+{"version":3,"file":"ClientOnly.d.ts","sourceRoot":"","sources":["../../src/components/ClientOnly.tsx"],"names":[],"mappings":"AAEA,KAAK,KAAK,GAAG;IACX,QAAQ,IAAI,KAAK,CAAC,SAAS,CAAC;IAC5B,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;CAC5B,CAAC;AAEF,wBAAgB,UAAU,CAAC,EAAE,QAAQ,EAAE,QAAe,EAAE,EAAE,KAAK,2CAE9D"}

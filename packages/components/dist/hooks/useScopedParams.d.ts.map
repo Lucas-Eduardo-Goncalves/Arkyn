@@ -1,0 +1,1 @@
+{"version":3,"file":"useScopedParams.d.ts","sourceRoot":"","sources":["../../src/hooks/useScopedParams.ts"],"names":[],"mappings":"AAEA,KAAK,UAAU,GAAG,MAAM,CAAC,MAAM,EAAE,MAAM,GAAG,MAAM,GAAG,OAAO,GAAG,SAAS,CAAC,CAAC;AAExE,iBAAS,eAAe,CAAC,KAAK,GAAE,MAAW;oBAgBvB,MAAM;8BACI,UAAU;EAOvC;AAED,OAAO,EAAE,eAAe,EAAE,CAAC"}
