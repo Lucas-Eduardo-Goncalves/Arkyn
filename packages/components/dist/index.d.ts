@@ -23,6 +23,7 @@ export { ModalContainer, ModalFooter, ModalHeader } from "./components/Modal";
 export { Popover } from "./components/Popover";
 export { Toast } from "./components/Toast";
 export { Tooltip } from "./components/Tooltip";
+export { useFormController } from "./components/Form/FormController";
 export { useAutomation } from "./hooks/useAutomation";
 export { useDrawer } from "./hooks/useDrawer";
 export { useFieldErrors } from "./hooks/useFieldErrors";
