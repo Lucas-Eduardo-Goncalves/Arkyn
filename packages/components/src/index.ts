@@ -22,7 +22,6 @@ export {
 export { Button } from "./components/Button";
 export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
-export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { IconButton } from "./components/IconButton";
 export { ImageUpload } from "./components/ImageUpload";
 export { Input } from "./components/Input";
@@ -62,4 +61,5 @@ export { ToastProvider } from "./provider/ToastProvider";
 // Others
 export { ClientOnly } from "./components/ClientOnly";
 export { GoogleMap } from "./components/GoogleMap";
+export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { GoogleTagManager } from "./components/GoogleTagManager";

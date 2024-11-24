@@ -1,1 +1,0 @@
-{"version":3,"file":"unauthorized.d.ts","sourceRoot":"","sources":["../../src/httpBadResponses/unauthorized.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,cAAc,CAAC;AAEjD,iBAAS,YAAY,CAAC,KAAK,EAAE,KAAK,GAAG,YAAY,CAQhD;AAED,cAAM,iBAAkB,SAAQ,KAAK;gBACvB,OAAO,EAAE,MAAM;CAI5B;AAED,OAAO,EAAE,YAAY,EAAE,iBAAiB,EAAE,CAAC"}

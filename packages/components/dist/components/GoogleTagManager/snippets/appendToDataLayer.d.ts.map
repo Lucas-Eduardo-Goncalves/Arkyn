@@ -1,1 +1,0 @@
-{"version":3,"file":"appendToDataLayer.d.ts","sourceRoot":"","sources":["../../../../src/components/GoogleTagManager/snippets/appendToDataLayer.ts"],"names":[],"mappings":"AAAA,KAAK,iBAAiB,GAAG;IACvB,SAAS,EAAE,MAAM,CAAC,MAAM,EAAE,MAAM,CAAC,CAAC;IAClC,aAAa,EAAE,MAAM,CAAC;CACvB,CAAC;AAEF,iBAAS,iBAAiB,CAAC,KAAK,EAAE,iBAAiB,UAMlD;AAED,OAAO,EAAE,iBAAiB,EAAE,CAAC"}
