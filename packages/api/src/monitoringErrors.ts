@@ -21,14 +21,17 @@ const monitoringErrors: MonitoringErrorsDTO = async (error, config) => {
     }),
   };
 
-  await fetch("https://inbox-flow-api.fly.dev/api/error-log", {
-    body: JSON.stringify(sendData),
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${inbox_flow.userToken}`,
-    },
-  });
+  await fetch(
+    "https://logs-inbox-flow-logs.vw6wo7.easypanel.host/api/error-log",
+    {
+      body: JSON.stringify(sendData),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${inbox_flow.userToken}`,
+      },
+    }
+  );
 };
 
 export { monitoringErrors };
