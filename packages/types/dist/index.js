@@ -26,6 +26,7 @@ export * from "./components/IconButtonProps";
 export * from "./components/ImageUploadProps";
 export * from "./components/InputProps";
 export * from "./components/ModalProps";
+export * from "./components/MultiSelectProps";
 export * from "./components/PaginationProps";
 export * from "./components/PopoverProps";
 export * from "./components/RadioProps";
