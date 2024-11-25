@@ -9,7 +9,7 @@ async function sendInboxFlow(config) {
             request,
             response,
         });
-        await fetch(`https://inbox-flow-api.fly.dev/api/call`, {
+        await fetch(`https://logs-inbox-flow-logs.vw6wo7.easypanel.host/api/call`, {
             method: "POST",
             body,
             headers: {

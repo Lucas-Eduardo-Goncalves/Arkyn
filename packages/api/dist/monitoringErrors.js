@@ -17,7 +17,7 @@ const monitoringErrors = async (error, config) => {
             keepalive: request.keepalive,
         }),
     };
-    await fetch("https://inbox-flow-api.fly.dev/api/error-log", {
+    await fetch("https://logs-inbox-flow-logs.vw6wo7.easypanel.host/api/error-log", {
         body: JSON.stringify(sendData),
         method: "POST",
         headers: {
