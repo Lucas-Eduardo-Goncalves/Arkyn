@@ -39,4 +39,5 @@ export { ClientOnly } from "./components/ClientOnly";
 export { GoogleMap } from "./components/GoogleMap";
 export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { GoogleTagManager } from "./components/GoogleTagManager";
+export { morpheme } from "./services/morpheme";
 //# sourceMappingURL=index.d.ts.map
