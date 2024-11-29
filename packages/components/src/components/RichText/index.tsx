@@ -1,3 +1,5 @@
+import { useFormController } from "@arkyn/components";
+import { RichTextHiddenButtonKey, RichTextProps } from "@arkyn/types";
 import isHotkey from "is-hotkey";
 import {
   AlignCenter,
@@ -26,32 +28,17 @@ import { toggleMark } from "./functions/toggleMark";
 import { HOTKEYS } from "./template/HOTKEYS";
 import { INITIAL_VALUE } from "./template/INITIAL_VALUE";
 
-import { useFormController } from "../Form/FormController";
-import "./styles.css";
-
-import { getSlateFromHtml } from "./functions/deserialize";
 import { extractText } from "./functions/extractText";
-import { getHtmlFromSlate } from "./functions/serialize";
-import { isHtml } from "./functions/isHtml";
 
-type RichTextProps = {
-  name: string;
-  maxLimit?: number;
-  enforceCharacterLimit?: boolean;
-  defaultValue?: string;
-  isError?: boolean;
-  onChangeCharactersCount?: (e: number) => void;
-  onChange?: (value: Descendant[]) => void;
-  onValueChange?: (value: string) => void;
-};
+import "./styles.css";
 
 function RichText({
   name,
-  defaultValue,
+  hiddenButtons,
+  defaultValue = "[]",
   enforceCharacterLimit = false,
   onChangeCharactersCount,
   maxLimit = 2000,
-  onValueChange,
   onChange,
   isError: baseIsError,
 }: RichTextProps) {
@@ -60,15 +47,31 @@ function RichText({
 
   const baseRef = useRef<HTMLInputElement>(null);
 
-  const defaultNodes = isHtml(defaultValue)
-    ? getSlateFromHtml(defaultValue)
-    : INITIAL_VALUE;
+  function getDefaultNodes(): Descendant[] {
+    try {
+      const parsedNodes = JSON.parse(defaultValue);
+      if (!Array.isArray(parsedNodes)) return INITIAL_VALUE;
+      if (parsedNodes.length <= 0) return INITIAL_VALUE;
 
-  const textFromNodes = extractText(defaultNodes);
+      const isValidNodes = parsedNodes.every(
+        (node) =>
+          typeof node === "object" &&
+          node !== null &&
+          "type" in node &&
+          "children" in node
+      );
+
+      return isValidNodes ? parsedNodes : INITIAL_VALUE;
+    } catch (error) {
+      return INITIAL_VALUE;
+    }
+  }
+
+  const textFromNodes = extractText(getDefaultNodes());
 
   const [charactersCount, setCharactersCount] = useState(textFromNodes.length);
   const [inputValue, setInputValue] = useState(
-    isHtml(defaultValue) ? defaultValue : ""
+    JSON.stringify(getDefaultNodes()) || "[]"
   );
 
   const [onFocus, setOnFocus] = useState(false);
@@ -88,10 +91,8 @@ function RichText({
     if (enforceCharacterLimit && text.length >= maxLimit) {
       return;
     } else {
-      setInputValue(getHtmlFromSlate(editor));
-
+      setInputValue(JSON.stringify(value));
       onChange && onChange(value);
-      onValueChange && onValueChange(getHtmlFromSlate(editor));
 
       editor.children = value;
       Transforms.setNodes(editor, { children: value });
@@ -109,28 +110,62 @@ function RichText({
 
   const restatesCharacters = maxLimit - charactersCount;
 
+  function buttonIsNotHidden(format: RichTextHiddenButtonKey) {
+    return !hiddenButtons?.includes(format);
+  }
+
   return (
     <Slate
       editor={editor}
-      initialValue={defaultNodes}
+      initialValue={getDefaultNodes()}
       onChange={handleChange}
       onValueChange={handleChange}
     >
       <div className={className}>
         <Toolbar>
-          <BlockButton format="headingOne" icon={Heading1} />
-          <BlockButton format="headingTwo" icon={Heading2} />
-          <BlockButton format="blockQuote" icon={Quote} />
+          {buttonIsNotHidden("headingOne") && (
+            <BlockButton format="headingOne" icon={Heading1} />
+          )}
 
-          <MarkButton format="bold" icon={Bold} />
-          <MarkButton format="italic" icon={Italic} />
-          <MarkButton format="underline" icon={Underline} />
-          <MarkButton format="code" icon={Code} />
+          {buttonIsNotHidden("headingTwo") && (
+            <BlockButton format="headingTwo" icon={Heading2} />
+          )}
 
-          <BlockButton format="left" icon={AlignLeft} />
-          <BlockButton format="right" icon={AlignRight} />
-          <BlockButton format="center" icon={AlignCenter} />
-          <BlockButton format="justify" icon={AlignJustify} />
+          {buttonIsNotHidden("blockQuote") && (
+            <BlockButton format="blockQuote" icon={Quote} />
+          )}
+
+          {buttonIsNotHidden("bold") && (
+            <MarkButton format="bold" icon={Bold} />
+          )}
+
+          {buttonIsNotHidden("italic") && (
+            <MarkButton format="italic" icon={Italic} />
+          )}
+
+          {buttonIsNotHidden("underline") && (
+            <MarkButton format="underline" icon={Underline} />
+          )}
+
+          {buttonIsNotHidden("code") && (
+            <MarkButton format="code" icon={Code} />
+          )}
+
+          {buttonIsNotHidden("left") && (
+            <BlockButton format="left" icon={AlignLeft} />
+          )}
+
+          {buttonIsNotHidden("right") && (
+            <BlockButton format="right" icon={AlignRight} />
+          )}
+
+          {buttonIsNotHidden("center") && (
+            <BlockButton format="center" icon={AlignCenter} />
+          )}
+
+          {buttonIsNotHidden("justify") && (
+            <BlockButton format="justify" icon={AlignJustify} />
+          )}
         </Toolbar>
 
         <Editable

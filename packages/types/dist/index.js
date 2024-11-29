@@ -30,6 +30,7 @@ export * from "./components/MultiSelectProps";
 export * from "./components/PaginationProps";
 export * from "./components/PopoverProps";
 export * from "./components/RadioProps";
+export * from "./components/RichTextProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
 export * from "./components/SwitchProps";
