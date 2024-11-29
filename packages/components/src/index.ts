@@ -68,3 +68,5 @@ export { GoogleTagManager } from "./components/GoogleTagManager";
 
 // Services
 export { morpheme } from "./services/morpheme";
+export { getHtmlFromRichTextValue } from "./services/getHtmlFromRichTextValue";
+export { getRichTextValueFromHtml } from "./services/getRichTextValueFromHtml";
