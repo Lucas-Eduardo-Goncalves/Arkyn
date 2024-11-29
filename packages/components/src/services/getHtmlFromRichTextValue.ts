@@ -1,5 +1,5 @@
+import { RichTextValue } from "@arkyn/types";
 import { Element as SlateElement, Text } from "slate";
-import { RichTextValue } from "~/client/components/RichText";
 
 const serialize = (node: any): string => {
   if (Text.isText(node)) {

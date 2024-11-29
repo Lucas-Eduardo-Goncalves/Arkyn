@@ -1,4 +1,4 @@
-import { RichTextValue } from "~/client/components/RichText";
+import { RichTextValue } from "@arkyn/types";
 import parse from "html-react-parser";
 
 type ParseElement = {
