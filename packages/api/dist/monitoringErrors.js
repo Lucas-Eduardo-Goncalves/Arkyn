@@ -1,5 +1,7 @@
 const monitoringErrors = async (error, config) => {
     const { inbox_flow, request, params } = config;
+    if (process.env.NODE_ENV === "development")
+        return;
     const sendData = {
         channelId: inbox_flow.channelId,
         method: request.method,

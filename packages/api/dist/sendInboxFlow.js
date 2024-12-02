@@ -1,5 +1,7 @@
 async function sendInboxFlow(config) {
     const { channelId, userToken, status, method, request, response, token } = config;
+    if (process.env.NODE_ENV === "development")
+        return;
     try {
         const body = JSON.stringify({
             status,
