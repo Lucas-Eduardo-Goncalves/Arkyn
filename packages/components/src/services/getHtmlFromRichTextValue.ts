@@ -1,5 +1,5 @@
-import { RichTextValue } from "@arkyn/types";
 import { Element as SlateElement, Text } from "slate";
+import { RichTextValue } from "@arkyn/types";
 
 const serialize = (node: any): string => {
   if (Text.isText(node)) {
@@ -21,10 +21,11 @@ const serialize = (node: any): string => {
 
   if (SlateElement.isElement(node)) {
     const children = node.children.map((n: any) => serialize(n)).join("");
-
     const alignStyle = node.align || "left";
 
     switch (node.type) {
+      case "image":
+        return `<img src="${node.src}" class="align_${alignStyle}" />`;
       case "paragraph":
         return `<p class="align_${alignStyle}">${children}</p>`;
       case "blockQuote":

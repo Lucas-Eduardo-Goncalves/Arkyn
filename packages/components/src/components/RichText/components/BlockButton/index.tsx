@@ -1,8 +1,11 @@
+import {
+  RichTextAlignFormatType,
+  RichTextElementFormatType,
+} from "@arkyn/types";
 import { LucideIcon } from "lucide-react";
 import { MouseEvent } from "react";
 import { useSlate } from "slate-react";
 
-import { AlignFormatType, ElementFormatType } from "../../defineType";
 import { toggleBlock } from "../../functions/toggleBlock";
 import { isBlockActive } from "../../helpers/isBlockActive";
 import { TEXT_ALIGN_TYPES } from "../../template/TEXT_ALIGN_TYPES";
@@ -10,7 +13,7 @@ import { TEXT_ALIGN_TYPES } from "../../template/TEXT_ALIGN_TYPES";
 import "./styles.css";
 
 type BlockButtonProps = {
-  format: ElementFormatType | AlignFormatType;
+  format: RichTextElementFormatType | RichTextAlignFormatType;
   icon: LucideIcon;
 };
 

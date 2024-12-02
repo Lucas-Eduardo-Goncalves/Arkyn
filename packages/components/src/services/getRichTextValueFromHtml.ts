@@ -4,6 +4,7 @@ import parse from "html-react-parser";
 type ParseElement = {
   type: string;
   props: {
+    src?: string;
     children: ParseElement[] | string;
     className?: string;
   };
@@ -25,6 +26,13 @@ const deserialize = (el: ParseElement): any => {
     | "justify";
 
   switch (el.type) {
+    case "img":
+      return {
+        type: "image",
+        align,
+        src: el.props.src,
+        children: [{ text: "" }],
+      };
     case "p":
       return { type: "paragraph", align, children };
     case "blockquote":

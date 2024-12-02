@@ -1,13 +1,16 @@
-import { Editor, Transforms, Element as SlateElement } from "slate";
+import {
+  RichTextAlignFormatType,
+  RichTextElementFormatType,
+} from "@arkyn/types";
+import { Editor, Element as SlateElement, Transforms } from "slate";
 
-import { AlignFormatType, ElementFormatType } from "../defineType";
 import { isBlockActive } from "../helpers/isBlockActive";
 import { LIST_TYPES } from "../template/LIST_TYPES";
 import { TEXT_ALIGN_TYPES } from "../template/TEXT_ALIGN_TYPES";
 
 function toggleBlock(
   editor: Editor,
-  format: ElementFormatType | AlignFormatType
+  format: RichTextElementFormatType | RichTextAlignFormatType
 ) {
   const blockType = TEXT_ALIGN_TYPES.includes(format) ? "align" : "type";
   const isActive = isBlockActive(editor, format, blockType);
@@ -26,10 +29,10 @@ function toggleBlock(
   let newProperties: Partial<SlateElement>;
 
   if (TEXT_ALIGN_TYPES.includes(format)) {
-    const formatType = format as AlignFormatType;
+    const formatType = format as RichTextAlignFormatType;
     newProperties = { align: isActive ? undefined : formatType };
   } else {
-    const formatType = format as ElementFormatType;
+    const formatType = format as RichTextElementFormatType;
     newProperties = {
       type: isActive ? "paragraph" : isList ? "listItem" : formatType,
     };
@@ -38,7 +41,7 @@ function toggleBlock(
   Transforms.setNodes<SlateElement>(editor, newProperties);
 
   if (!isActive && isList) {
-    const block = { type: format as ElementFormatType, children: [] };
+    const block = { type: format as RichTextElementFormatType, children: [] };
     Transforms.wrapNodes(editor, block);
   }
 }

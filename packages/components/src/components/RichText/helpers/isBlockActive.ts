@@ -1,11 +1,12 @@
-import { Editor } from "slate";
-import { Element as SlateElement } from "slate";
-
-import { AlignFormatType, ElementFormatType } from "../defineType";
+import {
+  RichTextAlignFormatType,
+  RichTextElementFormatType,
+} from "@arkyn/types";
+import { Editor, Element as SlateElement } from "slate";
 
 function isBlockActive(
   editor: Editor,
-  format: ElementFormatType | AlignFormatType,
+  format: RichTextElementFormatType | RichTextAlignFormatType,
   blockType: "type" | "align" = "type"
 ) {
   const { selection } = editor;

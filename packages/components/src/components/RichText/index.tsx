@@ -19,29 +19,34 @@ import { createEditor, Descendant, Transforms } from "slate";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";
 
-import { BlockButton } from "./components/BlockButton/intex";
+import { BlockButton } from "./components/BlockButton";
 import { Element } from "./components/Element";
+import { InsertImage } from "./components/InsertImage";
 import { Leaf } from "./components/Leaf";
 import { MarkButton } from "./components/MarkButton";
 import { Toolbar } from "./components/Toolbar";
+
+import { extractText } from "./functions/extractText";
 import { toggleMark } from "./functions/toggleMark";
+
 import { HOTKEYS } from "./template/HOTKEYS";
 import { INITIAL_VALUE } from "./template/INITIAL_VALUE";
 
-import { extractText } from "./functions/extractText";
-
 import "./styles.css";
 
-function RichText({
-  name,
-  hiddenButtons,
-  defaultValue = "[]",
-  enforceCharacterLimit = false,
-  onChangeCharactersCount,
-  maxLimit = 2000,
-  onChange,
-  isError: baseIsError,
-}: RichTextProps) {
+function RichText(props: RichTextProps) {
+  const {
+    name,
+    hiddenButtons,
+    imageConfig,
+    defaultValue = "[]",
+    enforceCharacterLimit = false,
+    onChangeCharactersCount,
+    maxLimit = 2000,
+    onChange,
+    isError: baseIsError,
+  } = props;
+
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
   const { id, inputRef, error } = useFormController();
 
@@ -166,6 +171,8 @@ function RichText({
           {buttonIsNotHidden("justify") && (
             <BlockButton format="justify" icon={AlignJustify} />
           )}
+
+          {imageConfig && <InsertImage {...imageConfig} />}
         </Toolbar>
 
         <Editable

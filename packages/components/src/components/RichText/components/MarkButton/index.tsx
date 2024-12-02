@@ -1,15 +1,15 @@
+import { RichTextMarkFormatType } from "@arkyn/types";
 import { LucideIcon } from "lucide-react";
 import { MouseEvent } from "react";
 import { useSlate } from "slate-react";
 
-import { MarkFormatType } from "../../defineType";
 import { toggleMark } from "../../functions/toggleMark";
 import { isMarkActive } from "../../helpers/isMarkActive";
 
 import "./styles.css";
 
 type MarkButtonProps = {
-  format: MarkFormatType;
+  format: RichTextMarkFormatType;
   icon: LucideIcon;
 };
 

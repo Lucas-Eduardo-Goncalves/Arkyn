@@ -45,6 +45,19 @@ function Element({ attributes, children, element }: RenderElementProps) {
           {children}
         </ol>
       );
+    case "image":
+      return (
+        <div style={style} {...attributes}>
+          <img
+            className="arkynElementImage"
+            alt="arkynElementImage"
+            src={element?.src || ""}
+          />
+
+          {children}
+        </div>
+      );
+
     default:
       return (
         <p className="arkynElementParagraph" style={style} {...attributes}>

@@ -11,24 +11,38 @@ type RichTextHiddenButtonKey =
   | "center"
   | "justify";
 
-type ElementFormatType =
+type RichTextElementFormatType =
   | "blockQuote"
   | "bulletedList"
   | "headingOne"
   | "headingTwo"
   | "listItem"
   | "numberedList"
-  | "paragraph";
+  | "paragraph"
+  | "image";
 
-type AlignFormatType = "center" | "left" | "right" | "justify";
+type RichTextAlignFormatType = "center" | "left" | "right" | "justify";
 
-type CustomElement = {
-  type: ElementFormatType;
-  align?: AlignFormatType;
+type RichTextMarkFormatType = "bold" | "italic" | "underline" | "code";
+
+type RichTextInsertImageProps = {
+  action: string;
+  tabLabels?: [string, string];
+  modalTitle?: string;
+  modalInputUrlLabel?: string;
+  modalInputImageLabel?: string;
+  modalCancelButton?: string;
+  modalConfirmButton?: string;
+};
+
+type RichTextCustomElement = {
+  type: RichTextElementFormatType;
+  align?: RichTextAlignFormatType;
+  src?: string;
   children?: any;
 };
 
-type CustomText = {
+type RichTextCustomText = {
   bold?: boolean;
   text: string;
   italic?: boolean;
@@ -36,7 +50,7 @@ type CustomText = {
   underline?: boolean;
 };
 
-type Descendant = CustomElement | CustomText;
+type Descendant = RichTextCustomElement | RichTextCustomText;
 
 type RichTextProps = {
   name: string;
@@ -45,10 +59,22 @@ type RichTextProps = {
   enforceCharacterLimit?: boolean;
   defaultValue?: string;
   isError?: boolean;
+  imageConfig?: RichTextInsertImageProps;
   onChangeCharactersCount?: (e: number) => void;
   onChange?: (value: Descendant[]) => void;
 };
 
 type RichTextValue = Descendant[];
 
-export type { RichTextProps, RichTextHiddenButtonKey, RichTextValue };
+export type {
+  Descendant,
+  RichTextAlignFormatType,
+  RichTextCustomElement,
+  RichTextCustomText,
+  RichTextElementFormatType,
+  RichTextHiddenButtonKey,
+  RichTextInsertImageProps,
+  RichTextMarkFormatType,
+  RichTextProps,
+  RichTextValue,
+};
