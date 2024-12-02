@@ -1,4 +1,4 @@
-import { Editor, Transforms, Element as SlateElement } from "slate";
+import { Editor, Element as SlateElement, Transforms } from "slate";
 import { isBlockActive } from "../helpers/isBlockActive";
 import { LIST_TYPES } from "../template/LIST_TYPES";
 import { TEXT_ALIGN_TYPES } from "../template/TEXT_ALIGN_TYPES";

@@ -8,6 +8,13 @@ const deserialize = (el) => {
         : [{ text: el.props.children || "" }];
     const align = el.props.className?.replace("align_", "");
     switch (el.type) {
+        case "img":
+            return {
+                type: "image",
+                align,
+                src: el.props.src,
+                children: [{ text: "" }],
+            };
         case "p":
             return { type: "paragraph", align, children };
         case "blockquote":

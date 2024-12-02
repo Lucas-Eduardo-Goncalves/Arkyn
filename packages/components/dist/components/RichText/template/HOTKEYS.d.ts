@@ -1,6 +1,6 @@
-import { MarkFormatType } from "../defineType";
+import { RichTextMarkFormatType } from "@arkyn/types";
 type HotKeys = {
-    [key: string]: MarkFormatType;
+    [key: string]: RichTextMarkFormatType;
 };
 declare const HOTKEYS: HotKeys;
 export { HOTKEYS };

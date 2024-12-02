@@ -16,6 +16,6 @@
     "types": ["bun-types"],
     "verbatimModuleSyntax": true
   },
-  "exclude": ["dist", "node_modules"],
+  "exclude": ["node_modules", "dist"],
   "include": ["src/**/*.ts"]
 }

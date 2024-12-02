@@ -1,5 +1,4 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-// import { RenderLeafProps } from "slate-react";
 function Leaf({ attributes, children, leaf }) {
     if (leaf.bold)
         children = _jsx("strong", { children: children });

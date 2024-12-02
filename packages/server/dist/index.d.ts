@@ -9,4 +9,5 @@ export { globalErrorHandler } from "./helpers/globalErrorHandler";
 export { extractJsonFromRequest } from "./services/extractJsonFromRequest";
 export { formParse } from "./services/formParse";
 export { getScopedParams } from "./services/getScopedParams";
+export { sendImageToS3 } from "./services/sendImageToS3";
 //# sourceMappingURL=index.d.ts.map

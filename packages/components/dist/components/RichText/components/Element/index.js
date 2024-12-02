@@ -1,4 +1,4 @@
-import { jsx as _jsx } from "react/jsx-runtime";
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import "./styles.css";
 function Element({ attributes, children, element }) {
     const style = { textAlign: element.align };
@@ -15,6 +15,8 @@ function Element({ attributes, children, element }) {
             return (_jsx("li", { className: "arkynElementListItem", style: style, ...attributes, children: children }));
         case "numberedList":
             return (_jsx("ol", { className: "arkynElementNumberedList", style: style, ...attributes, children: children }));
+        case "image":
+            return (_jsxs("div", { style: style, ...attributes, children: [_jsx("img", { className: "arkynElementImage", alt: "arkynElementImage", src: element?.src || "" }), children] }));
         default:
             return (_jsx("p", { className: "arkynElementParagraph", style: style, ...attributes, children: children }));
     }

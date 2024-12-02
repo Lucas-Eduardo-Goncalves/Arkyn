@@ -1,4 +1,3 @@
-import { BadRequestError, getScopedParams } from "@arkyn/server";
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import {
   unstable_composeUploadHandlers as composeUploadHandlers,
@@ -10,6 +9,8 @@ import {
 import { randomUUID } from "crypto";
 import fs from "fs";
 import sharp from "sharp";
+import { BadRequestError } from "../httpBadResponses/badRequest";
+import { getScopedParams } from "./getScopedParams";
 
 type AWSConfig = {
   AWS_REGION: string;

@@ -1,5 +1,5 @@
+import { RichTextMarkFormatType } from "@arkyn/types";
 import { Editor } from "slate";
-import { MarkFormatType } from "../defineType";
-declare function toggleMark(editor: Editor, format: MarkFormatType): void;
+declare function toggleMark(editor: Editor, format: RichTextMarkFormatType): void;
 export { toggleMark };
 //# sourceMappingURL=toggleMark.d.ts.map

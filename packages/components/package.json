@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/components",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
@@ -13,7 +13,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.3",
     "@react-input/mask": "^1.2.15",
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^11.12.0",
     "html-react-parser": "^5.1.18",
     "is-hotkey": "^0.2.0",
     "lucide-react": "^0.424.0",
@@ -24,7 +24,7 @@
     "slate-react": "^0.110.3"
   },
   "peerDependencies": {
-    "@remix-run/react": "^2.11.0",
+    "@remix-run/react": "^2.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -32,7 +32,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "bun-types": "latest",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "vite": "^5.4.11"
   }
 }

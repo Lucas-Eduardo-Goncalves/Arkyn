@@ -1,21 +1,22 @@
 {
   "name": "@arkyn/server",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "bunx tsc --project tsconfig.json",
+    "build": "rm -rf ./dist && bunx tsc --project tsconfig.json",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@arkyn/server": "*",
     "@aws-sdk/client-s3": "^3.703.0",
     "@remix-run/node": "^2.15.0",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
     "bun-types": "latest",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   }
 }

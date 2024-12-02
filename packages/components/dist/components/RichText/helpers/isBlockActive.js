@@ -1,5 +1,4 @@
-import { Editor } from "slate";
-import { Element as SlateElement } from "slate";
+import { Editor, Element as SlateElement } from "slate";
 function isBlockActive(editor, format, blockType = "type") {
     const { selection } = editor;
     if (!selection)

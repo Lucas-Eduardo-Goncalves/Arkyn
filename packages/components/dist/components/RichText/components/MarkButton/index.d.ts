@@ -1,8 +1,8 @@
+import { RichTextMarkFormatType } from "@arkyn/types";
 import { LucideIcon } from "lucide-react";
-import { MarkFormatType } from "../../defineType";
 import "./styles.css";
 type MarkButtonProps = {
-    format: MarkFormatType;
+    format: RichTextMarkFormatType;
     icon: LucideIcon;
 };
 declare function MarkButton({ format, icon: Icon }: MarkButtonProps): import("react/jsx-runtime").JSX.Element;
