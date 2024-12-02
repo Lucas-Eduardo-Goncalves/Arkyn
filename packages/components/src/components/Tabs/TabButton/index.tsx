@@ -5,7 +5,13 @@ import { useTabContext } from "../TabContainer";
 import "./styles.css";
 
 function TabButton(props: TabButtonProps) {
-  const { children, className: baseClassName = "", onClick, ...rest } = props;
+  const {
+    children,
+    type = "button",
+    className: baseClassName = "",
+    onClick,
+    ...rest
+  } = props;
   const { value, showInitialTab, handleTabClick } = useTabContext();
 
   const activeClass =
@@ -21,7 +27,12 @@ function TabButton(props: TabButtonProps) {
   }
 
   return (
-    <button onClick={handleClick} className={className.trim()} {...rest}>
+    <button
+      type={type}
+      onClick={handleClick}
+      className={className.trim()}
+      {...rest}
+    >
       {children}
     </button>
   );
