@@ -3,6 +3,8 @@ import type { MonitoringErrorsDTO } from "@arkyn/types";
 const monitoringErrors: MonitoringErrorsDTO = async (error, config) => {
   const { inbox_flow, request, params } = config;
 
+  if (process.env.NODE_ENV === "development") return;
+
   const sendData = {
     channelId: inbox_flow.channelId,
     method: request.method,
