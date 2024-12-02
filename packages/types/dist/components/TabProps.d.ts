@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
 type TabButtonProps = {
     children: ReactNode;
     value: string;
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "value">;
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "value" | "type">;
 type TabContainerProps = {
     children: ReactNode;
     defaultActive?: string;
