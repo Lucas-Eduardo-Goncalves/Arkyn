@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useFieldErrors } from "@arkyn/components";
 import { useState } from "react";
+import { useFieldErrors } from "../../hooks/useFieldErrors";
 import { HasFileContent } from "./HasFileContent";
 import { ImageUploadError } from "./ImageUploadError";
 import { ImageUploadLabel } from "./ImageUploadLabel";

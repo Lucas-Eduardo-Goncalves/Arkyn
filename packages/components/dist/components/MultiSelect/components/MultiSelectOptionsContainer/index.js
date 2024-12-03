@@ -1,6 +1,6 @@
 import { Fragment as _Fragment, jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Input } from "@arkyn/components";
 import { Search } from "lucide-react";
+import { Input } from "../../../Input";
 import "./styles.css";
 function MultiSelectOptionsContainer(props) {
     const { children, isFocused, isSearchable, onSearch } = props;

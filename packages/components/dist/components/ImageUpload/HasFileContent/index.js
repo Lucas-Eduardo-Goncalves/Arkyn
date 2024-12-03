@@ -1,6 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Button, IconButton, Tooltip } from "@arkyn/components";
 import { RefreshCw } from "lucide-react";
+import { Button } from "../../Button";
+import { IconButton } from "../../IconButton";
+import { Tooltip } from "../../Tooltip";
 import "./styles.css";
 function HasFileContent(props) {
     const { filePath, isLoading, acceptImage, changeImageButtonText, handleSelectFile, reSendImage, } = props;

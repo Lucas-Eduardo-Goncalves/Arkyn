@@ -1,11 +1,11 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useFormController } from "@arkyn/components";
 import isHotkey from "is-hotkey";
 import { AlignCenter, AlignJustify, AlignLeft, AlignRight, Bold, Code, Heading1, Heading2, Italic, Quote, Underline, } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { createEditor, Transforms } from "slate";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";
+import { useFormController } from "../Form/FormController";
 import { BlockButton } from "./components/BlockButton";
 import { Element } from "./components/Element";
 import { InsertImage } from "./components/InsertImage";
@@ -80,6 +80,6 @@ function RichText(props) {
                                     toggleMark(editor, mark);
                                 }
                             }
-                        } }), restatesCharacters < 0 && (_jsx("div", { className: "restatesCharacters", children: restatesCharacters }))] }), _jsx("input", { ref: ref, type: "hidden", name: name, value: inputValue }), _jsx("input", { type: "hidden", name: `${name}Count`, value: charactersCount })] }));
+                        } }), restatesCharacters < 0 && (_jsx("div", { className: "restatesCharacters", children: restatesCharacters }))] }), _jsx("input", { type: "hidden", ref: ref, name: name, value: inputValue }), _jsx("input", { type: "hidden", name: `${name}Count`, value: charactersCount })] }));
 }
 export { RichText };

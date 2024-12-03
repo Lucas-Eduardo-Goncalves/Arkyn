@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { InputMask } from "@react-input/mask";
-import { forwardRef, useRef, useState } from "react";
+import { forwardRef, useRef, useState, } from "react";
 import { useFormController } from "../../../components/Form/FormController";
 import { getConfig } from "./getConfig";
 const BaseInput = forwardRef((props, ref) => {

@@ -1,8 +1,13 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Button, FormController, FormLabel, ImageUpload, Input, ModalContainer, ModalFooter, ModalHeader, TabButton, TabContainer, } from "@arkyn/components";
 import { Image } from "lucide-react";
 import { useState } from "react";
 import { useSlate } from "slate-react";
+import { Button } from "../../../Button";
+import { FormController, FormLabel } from "../../../Form";
+import { ImageUpload } from "../../../ImageUpload";
+import { Input } from "../../../Input";
+import { ModalContainer, ModalFooter, ModalHeader } from "../../../Modal";
+import { TabButton, TabContainer } from "../../../Tabs";
 import "./styles.css";
 function InsertImage(props) {
     const { action, tabLabels = ["Adicionar URL", "Upload de arquivo"], modalCancelButton = "Cancelar", modalConfirmButton = "Confirmar", modalInputImageLabel = "Imagem:", modalInputUrlLabel = "URL da imagem:", modalTitle = "Inserir imagem", } = props;
