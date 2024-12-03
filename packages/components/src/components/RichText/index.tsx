@@ -173,7 +173,9 @@ function RichText(props: RichTextProps) {
             <BlockButton format="justify" icon={AlignJustify} />
           )}
 
-          {imageConfig && <InsertImage {...imageConfig} />}
+          {imageConfig && buttonIsNotHidden("image") && (
+            <InsertImage {...imageConfig} />
+          )}
         </Toolbar>
 
         <Editable

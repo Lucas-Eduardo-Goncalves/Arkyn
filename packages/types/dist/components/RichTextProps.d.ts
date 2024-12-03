@@ -1,4 +1,4 @@
-type RichTextHiddenButtonKey = "headingOne" | "headingTwo" | "blockQuote" | "bold" | "italic" | "underline" | "code" | "left" | "right" | "center" | "justify";
+type RichTextHiddenButtonKey = "headingOne" | "headingTwo" | "blockQuote" | "bold" | "italic" | "underline" | "code" | "left" | "right" | "center" | "justify" | "image";
 type RichTextElementFormatType = "blockQuote" | "bulletedList" | "headingOne" | "headingTwo" | "listItem" | "numberedList" | "paragraph" | "image";
 type RichTextAlignFormatType = "center" | "left" | "right" | "justify";
 type RichTextMarkFormatType = "bold" | "italic" | "underline" | "code";

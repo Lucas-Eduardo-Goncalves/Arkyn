@@ -9,7 +9,8 @@ type RichTextHiddenButtonKey =
   | "left"
   | "right"
   | "center"
-  | "justify";
+  | "justify"
+  | "image";
 
 type RichTextElementFormatType =
   | "blockQuote"
