@@ -1,4 +1,3 @@
-import { useFormController } from "@arkyn/components";
 import { RichTextHiddenButtonKey, RichTextProps } from "@arkyn/types";
 import isHotkey from "is-hotkey";
 import {
@@ -18,6 +17,8 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import { createEditor, Descendant, Transforms } from "slate";
 import { withHistory } from "slate-history";
 import { Editable, Slate, withReact } from "slate-react";
+
+import { useFormController } from "../Form/FormController";
 
 import { BlockButton } from "./components/BlockButton";
 import { Element } from "./components/Element";

@@ -1,7 +1,10 @@
-import { Button, IconButton, Tooltip } from "@arkyn/components";
 import { HasFileContentProps } from "@arkyn/types";
-
 import { RefreshCw } from "lucide-react";
+
+import { Button } from "../../Button";
+import { IconButton } from "../../IconButton";
+import { Tooltip } from "../../Tooltip";
+
 import "./styles.css";
 
 function HasFileContent(props: HasFileContentProps) {

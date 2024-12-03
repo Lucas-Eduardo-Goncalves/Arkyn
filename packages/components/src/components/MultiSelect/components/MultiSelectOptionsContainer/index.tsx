@@ -1,6 +1,7 @@
-import { Input } from "@arkyn/components";
 import { Search } from "lucide-react";
 import { ChangeEvent, ReactNode } from "react";
+
+import { Input } from "../../../Input";
 
 import "./styles.css";
 

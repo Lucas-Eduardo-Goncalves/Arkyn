@@ -1,19 +1,14 @@
-import {
-  Button,
-  FormController,
-  FormLabel,
-  ImageUpload,
-  Input,
-  ModalContainer,
-  ModalFooter,
-  ModalHeader,
-  TabButton,
-  TabContainer,
-} from "@arkyn/components";
 import { RichTextInsertImageProps } from "@arkyn/types";
 import { Image } from "lucide-react";
 import { MouseEvent, useState } from "react";
 import { useSlate } from "slate-react";
+
+import { Button } from "../../../Button";
+import { FormController, FormLabel } from "../../../Form";
+import { ImageUpload } from "../../../ImageUpload";
+import { Input } from "../../../Input";
+import { ModalContainer, ModalFooter, ModalHeader } from "../../../Modal";
+import { TabButton, TabContainer } from "../../../Tabs";
 
 import "./styles.css";
 

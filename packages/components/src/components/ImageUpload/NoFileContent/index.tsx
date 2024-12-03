@@ -1,6 +1,7 @@
-import { Button } from "@arkyn/components";
 import { NoFileContentProps } from "@arkyn/types";
 import { DragEvent } from "react";
+
+import { Button } from "../../Button";
 
 import "./styles.css";
 

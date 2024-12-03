@@ -1,6 +1,7 @@
-import { useFieldErrors } from "@arkyn/components";
 import { ImageUploadProps } from "@arkyn/types";
 import { useState } from "react";
+
+import { useFieldErrors } from "../../hooks/useFieldErrors";
 
 import { HasFileContent } from "./HasFileContent";
 import { ImageUploadError } from "./ImageUploadError";
