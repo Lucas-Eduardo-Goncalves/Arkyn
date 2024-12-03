@@ -200,7 +200,7 @@ function RichText(props: RichTextProps) {
         )}
       </div>
 
-      <input ref={ref} type="hidden" name={name} value={inputValue} />
+      <input type="hidden" ref={ref} name={name} value={inputValue} />
       <input type="hidden" name={`${name}Count`} value={charactersCount} />
     </Slate>
   );

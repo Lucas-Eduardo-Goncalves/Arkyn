@@ -1,8 +1,12 @@
-import type { MaskedInputProps } from "@arkyn/types";
-import type { FocusEvent, InputHTMLAttributes } from "react";
-
+import { MaskedInputProps } from "@arkyn/types";
 import { InputMask } from "@react-input/mask";
-import { forwardRef, useRef, useState } from "react";
+import {
+  FocusEvent,
+  forwardRef,
+  InputHTMLAttributes,
+  useRef,
+  useState,
+} from "react";
 
 import { useFormController } from "../../../components/Form/FormController";
 import { getConfig } from "./getConfig";
