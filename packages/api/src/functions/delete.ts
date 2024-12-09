@@ -4,7 +4,7 @@ import { sendInboxFlow } from "../sendInboxFlow";
 import { standardizeResponseMessage } from "../standardizeResponseMessage";
 
 const deleteF: DeleteDTO = async (url, config) => {
-  const { headers, inbox_flow: inboxFlow, token } = config;
+  const { headers, inbox_flow: inboxFlow, token, body } = config;
 
   let responseConfig: Response | Object = {};
 
@@ -15,15 +15,25 @@ const deleteF: DeleteDTO = async (url, config) => {
     message: "",
   };
 
-  let fetchHeaders: FetchRequestInit = { method: "DELETE" };
+  let fetchHeaders: FetchRequestInit = {
+    method: "DELETE",
+    body: JSON.stringify(body),
+  };
 
   if (token) {
     fetchHeaders = {
       ...fetchHeaders,
-      headers: { ...headers, Authorization: `Bearer ${token}` },
+      headers: {
+        ...headers,
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     };
   } else {
-    fetchHeaders = { ...fetchHeaders, headers };
+    fetchHeaders = {
+      ...fetchHeaders,
+      headers: { ...headers, "Content-Type": "application/json" },
+    };
   }
 
   await fetch(url, fetchHeaders)
