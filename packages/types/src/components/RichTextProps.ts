@@ -40,7 +40,7 @@ type RichTextCustomElement = {
   type: RichTextElementFormatType;
   align?: RichTextAlignFormatType;
   src?: string;
-  children?: any;
+  children?: RichTextValue;
 };
 
 type RichTextCustomText = {
