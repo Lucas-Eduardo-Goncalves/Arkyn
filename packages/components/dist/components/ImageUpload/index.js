@@ -7,7 +7,7 @@ import { ImageUploadLabel } from "./ImageUploadLabel";
 import { NoFileContent } from "./NoFileContent";
 import "./styles.css";
 function ImageUpload(props) {
-    const { name, defaultValue = "", label, showAsterisk = false, action, fileName = "file", method = "POST", acceptImage = "image/*", fileResponseName = "url", changeImageButtonText = "Alterar imagem", selectImageButtonText = "Selecionar imagem", dropImageText = "Ou arraste e solte a imagem aqui", onUpload, } = props;
+    const { name, defaultValue = "", label, showAsterisk = false, action, fileName = "file", method = "POST", acceptImage = "image/*", fileResponseName = "url", changeImageButtonText = "Alterar imagem", selectImageButtonText = "Selecionar imagem", dropImageText = "Ou arraste e solte a imagem aqui", onUpload, disabled = false, } = props;
     const fieldErrors = useFieldErrors();
     const fieldError = fieldErrors[name];
     const [value, setValue] = useState(defaultValue);
@@ -16,6 +16,8 @@ function ImageUpload(props) {
     const [filePath, setFilePath] = useState(defaultValue);
     const [isLoading, setIsLoading] = useState(false);
     async function handleUploadImage(file) {
+        if (disabled)
+            return;
         setIsLoading(true);
         setFile(file);
         setError("");
@@ -37,6 +39,8 @@ function ImageUpload(props) {
             .finally(() => setIsLoading(false));
     }
     function handleSelectFile(file) {
+        if (disabled)
+            return;
         setFilePath(URL.createObjectURL(file));
         handleUploadImage(file);
     }
@@ -44,6 +48,6 @@ function ImageUpload(props) {
     const hasErrorClassName = errorMessage ? "hasError" : "noHasError";
     const hasImageClassName = filePath ? "hasImage" : "noHasImage";
     const className = `arkynImageUpload ${hasErrorClassName} ${hasImageClassName}`;
-    return (_jsxs("div", { className: "arkynImageUploadContainer", children: [label && _jsx(ImageUploadLabel, { label: label, showAsterisk: showAsterisk }), _jsxs("div", { className: className, children: [_jsx("input", { type: "hidden", name: name, value: value || "" }), !filePath && (_jsx(NoFileContent, { isLoading: isLoading, acceptImage: acceptImage, dropImageText: dropImageText, handleSelectFile: handleSelectFile, selectImageButtonText: selectImageButtonText })), filePath && (_jsx(HasFileContent, { isLoading: isLoading, acceptImage: acceptImage, filePath: filePath, handleSelectFile: handleSelectFile, changeImageButtonText: changeImageButtonText, reSendImage: !!errorMessage && file ? () => handleUploadImage(file) : undefined }))] }), errorMessage && _jsx(ImageUploadError, { error: errorMessage })] }));
+    return (_jsxs("div", { className: "arkynImageUploadContainer", children: [label && _jsx(ImageUploadLabel, { label: label, showAsterisk: showAsterisk }), _jsxs("div", { className: className, children: [_jsx("input", { type: "hidden", name: name, value: value || "" }), !filePath && (_jsx(NoFileContent, { disabled: disabled, isLoading: isLoading, acceptImage: acceptImage, dropImageText: dropImageText, handleSelectFile: handleSelectFile, selectImageButtonText: selectImageButtonText })), filePath && (_jsx(HasFileContent, { disabled: disabled, isLoading: isLoading, acceptImage: acceptImage, filePath: filePath, handleSelectFile: handleSelectFile, changeImageButtonText: changeImageButtonText, reSendImage: !!errorMessage && file ? () => handleUploadImage(file) : undefined }))] }), errorMessage && _jsx(ImageUploadError, { error: errorMessage })] }));
 }
 export { ImageUpload };

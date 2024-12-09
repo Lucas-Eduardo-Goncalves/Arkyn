@@ -1,7 +1,7 @@
 import { sendInboxFlow } from "../sendInboxFlow";
 import { standardizeResponseMessage } from "../standardizeResponseMessage";
 const deleteF = async (url, config) => {
-    const { headers, inbox_flow: inboxFlow, token } = config;
+    const { headers, inbox_flow: inboxFlow, token, body } = config;
     let responseConfig = {};
     let responseData = {
         success: false,
@@ -9,15 +9,25 @@ const deleteF = async (url, config) => {
         response: {},
         message: "",
     };
-    let fetchHeaders = { method: "DELETE" };
+    let fetchHeaders = {
+        method: "DELETE",
+        body: JSON.stringify(body),
+    };
     if (token) {
         fetchHeaders = {
             ...fetchHeaders,
-            headers: { ...headers, Authorization: `Bearer ${token}` },
+            headers: {
+                ...headers,
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
         };
     }
     else {
-        fetchHeaders = { ...fetchHeaders, headers };
+        fetchHeaders = {
+            ...fetchHeaders,
+            headers: { ...headers, "Content-Type": "application/json" },
+        };
     }
     await fetch(url, fetchHeaders)
         .then(async (response) => {

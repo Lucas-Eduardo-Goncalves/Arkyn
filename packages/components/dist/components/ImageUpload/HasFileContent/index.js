@@ -5,8 +5,10 @@ import { IconButton } from "../../IconButton";
 import { Tooltip } from "../../Tooltip";
 import "./styles.css";
 function HasFileContent(props) {
-    const { filePath, isLoading, acceptImage, changeImageButtonText, handleSelectFile, reSendImage, } = props;
+    const { disabled, filePath, isLoading, acceptImage, changeImageButtonText, handleSelectFile, reSendImage, } = props;
     function handleClick() {
+        if (disabled)
+            return;
         const input = document.createElement("input");
         input.type = "file";
         input.accept = acceptImage;
@@ -17,6 +19,6 @@ function HasFileContent(props) {
         };
         input.click();
     }
-    return (_jsxs("div", { className: "arkynImageUploadHasFileContent", style: { backgroundImage: `url("${filePath}")` }, children: [reSendImage && (_jsx(Tooltip, { orientation: "bottom", text: "Reenviar imagem", children: _jsx(IconButton, { type: "button", "aria-label": "resend image", variant: "outline", scheme: "danger", size: "sm", isLoading: isLoading, onClick: reSendImage, icon: RefreshCw }) })), _jsx(Button, { isLoading: isLoading, onClick: handleClick, variant: "outline", size: "sm", type: "button", children: changeImageButtonText })] }));
+    return (_jsxs("div", { className: "arkynImageUploadHasFileContent", style: { backgroundImage: `url("${filePath}")` }, children: [reSendImage && (_jsx(Tooltip, { orientation: "bottom", text: "Reenviar imagem", children: _jsx(IconButton, { type: "button", "aria-label": "resend image", variant: "outline", scheme: "danger", size: "sm", isLoading: isLoading, onClick: reSendImage, icon: RefreshCw, disabled: disabled }) })), _jsx(Button, { isLoading: isLoading, onClick: handleClick, variant: "outline", size: "sm", type: "button", disabled: disabled, children: changeImageButtonText })] }));
 }
 export { HasFileContent };
