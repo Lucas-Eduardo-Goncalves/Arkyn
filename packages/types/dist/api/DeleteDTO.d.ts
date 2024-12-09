@@ -2,6 +2,7 @@ import type { InboxFlowDTO } from "./config/InboxFlowDTO";
 import type { ResponseDTO } from "./config/ResponseDTO";
 type ConfigProps = {
     headers?: RequestInit["headers"];
+    body?: any;
     inbox_flow?: InboxFlowDTO;
     token?: string;
 };
