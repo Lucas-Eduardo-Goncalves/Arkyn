@@ -12,15 +12,20 @@ function NoFileContent(props: NoFileContentProps) {
     acceptImage,
     handleSelectFile,
     selectImageButtonText,
+    disabled,
   } = props;
 
   function handleDrop(event: DragEvent<HTMLDivElement>) {
+    if (disabled) return;
+
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file) handleSelectFile(file);
   }
 
   function handleClick() {
+    if (disabled) return;
+
     const input = document.createElement("input");
 
     input.type = "file";
@@ -42,6 +47,7 @@ function NoFileContent(props: NoFileContentProps) {
         variant="ghost"
         size="sm"
         type="button"
+        disabled={disabled}
       >
         {selectImageButtonText}
       </Button>

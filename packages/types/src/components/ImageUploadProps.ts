@@ -2,6 +2,8 @@ type ImageUploadProps = {
   name: string;
   defaultValue?: string | null;
 
+  disabled?: boolean;
+
   label?: string;
   showAsterisk?: boolean;
 
@@ -19,6 +21,7 @@ type ImageUploadProps = {
 };
 
 type NoFileContentProps = {
+  disabled: boolean;
   acceptImage: string;
   isLoading: boolean;
   selectImageButtonText: string;
@@ -36,6 +39,7 @@ type ImageUploadErrorProps = {
 };
 
 type HasFileContentProps = {
+  disabled: boolean;
   acceptImage: string;
   isLoading: boolean;
   changeImageButtonText: string;

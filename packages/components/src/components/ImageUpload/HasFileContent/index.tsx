@@ -9,6 +9,7 @@ import "./styles.css";
 
 function HasFileContent(props: HasFileContentProps) {
   const {
+    disabled,
     filePath,
     isLoading,
     acceptImage,
@@ -18,6 +19,8 @@ function HasFileContent(props: HasFileContentProps) {
   } = props;
 
   function handleClick() {
+    if (disabled) return;
+
     const input = document.createElement("input");
 
     input.type = "file";
@@ -47,6 +50,7 @@ function HasFileContent(props: HasFileContentProps) {
             isLoading={isLoading}
             onClick={reSendImage}
             icon={RefreshCw}
+            disabled={disabled}
           />
         </Tooltip>
       )}
@@ -57,6 +61,7 @@ function HasFileContent(props: HasFileContentProps) {
         variant="outline"
         size="sm"
         type="button"
+        disabled={disabled}
       >
         {changeImageButtonText}
       </Button>

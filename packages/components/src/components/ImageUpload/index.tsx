@@ -25,6 +25,7 @@ function ImageUpload(props: ImageUploadProps) {
     selectImageButtonText = "Selecionar imagem",
     dropImageText = "Ou arraste e solte a imagem aqui",
     onUpload,
+    disabled = false,
   } = props;
 
   const fieldErrors = useFieldErrors();
@@ -37,6 +38,8 @@ function ImageUpload(props: ImageUploadProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   async function handleUploadImage(file: File) {
+    if (disabled) return;
+
     setIsLoading(true);
     setFile(file);
     setError("");
@@ -59,6 +62,8 @@ function ImageUpload(props: ImageUploadProps) {
   }
 
   function handleSelectFile(file: File) {
+    if (disabled) return;
+
     setFilePath(URL.createObjectURL(file));
     handleUploadImage(file);
   }
@@ -78,6 +83,7 @@ function ImageUpload(props: ImageUploadProps) {
 
         {!filePath && (
           <NoFileContent
+            disabled={disabled}
             isLoading={isLoading}
             acceptImage={acceptImage}
             dropImageText={dropImageText}
@@ -88,6 +94,7 @@ function ImageUpload(props: ImageUploadProps) {
 
         {filePath && (
           <HasFileContent
+            disabled={disabled}
             isLoading={isLoading}
             acceptImage={acceptImage}
             filePath={filePath}
