@@ -20,7 +20,7 @@ type ImageUploadProps = {
   onUpload?: (url?: string) => void;
 };
 
-type NoFileContentProps = {
+type ImageUploadNoFileContentProps = {
   disabled: boolean;
   acceptImage: string;
   isLoading: boolean;
@@ -38,7 +38,7 @@ type ImageUploadErrorProps = {
   error: string;
 };
 
-type HasFileContentProps = {
+type ImageUploadHasFileContentProps = {
   disabled: boolean;
   acceptImage: string;
   isLoading: boolean;
@@ -49,9 +49,9 @@ type HasFileContentProps = {
 };
 
 export type {
-  HasFileContentProps,
+  ImageUploadHasFileContentProps,
   ImageUploadErrorProps,
   ImageUploadLabelProps,
   ImageUploadProps,
-  NoFileContentProps,
+  ImageUploadNoFileContentProps,
 };

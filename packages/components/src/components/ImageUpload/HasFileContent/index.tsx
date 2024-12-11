@@ -1,4 +1,4 @@
-import { HasFileContentProps } from "@arkyn/types";
+import { ImageUploadHasFileContentProps } from "@arkyn/types";
 import { RefreshCw } from "lucide-react";
 
 import { Button } from "../../Button";
@@ -7,7 +7,7 @@ import { Tooltip } from "../../Tooltip";
 
 import "./styles.css";
 
-function HasFileContent(props: HasFileContentProps) {
+function HasFileContent(props: ImageUploadHasFileContentProps) {
   const {
     disabled,
     filePath,

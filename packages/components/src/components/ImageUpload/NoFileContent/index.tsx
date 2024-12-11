@@ -1,11 +1,11 @@
-import { NoFileContentProps } from "@arkyn/types";
+import { ImageUploadNoFileContentProps } from "@arkyn/types";
 import { DragEvent } from "react";
 
 import { Button } from "../../Button";
 
 import "./styles.css";
 
-function NoFileContent(props: NoFileContentProps) {
+function NoFileContent(props: ImageUploadNoFileContentProps) {
   const {
     dropImageText,
     isLoading,

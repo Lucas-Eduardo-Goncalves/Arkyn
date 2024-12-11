@@ -14,7 +14,7 @@ type ImageUploadProps = {
     acceptImage?: string;
     onUpload?: (url?: string) => void;
 };
-type NoFileContentProps = {
+type ImageUploadNoFileContentProps = {
     disabled: boolean;
     acceptImage: string;
     isLoading: boolean;
@@ -29,7 +29,7 @@ type ImageUploadLabelProps = {
 type ImageUploadErrorProps = {
     error: string;
 };
-type HasFileContentProps = {
+type ImageUploadHasFileContentProps = {
     disabled: boolean;
     acceptImage: string;
     isLoading: boolean;
@@ -38,5 +38,5 @@ type HasFileContentProps = {
     reSendImage?: () => void;
     handleSelectFile: (file: File) => void;
 };
-export type { HasFileContentProps, ImageUploadErrorProps, ImageUploadLabelProps, ImageUploadProps, NoFileContentProps, };
+export type { ImageUploadHasFileContentProps, ImageUploadErrorProps, ImageUploadLabelProps, ImageUploadProps, ImageUploadNoFileContentProps, };
 //# sourceMappingURL=ImageUploadProps.d.ts.map
