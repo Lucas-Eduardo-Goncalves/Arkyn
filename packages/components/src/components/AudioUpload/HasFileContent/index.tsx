@@ -5,11 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { Slider } from "../../Slider";
 
-import {
-  AudioPlayer,
-  ButtonsContainer,
-  HasFileContentContainer,
-} from "./styles";
+import "./styles.css";
 
 function HasFileContent(props: AudioUploadHasFileContentProps) {
   const {
@@ -110,10 +106,10 @@ function HasFileContent(props: AudioUploadHasFileContentProps) {
   }
 
   return (
-    <HasFileContentContainer>
+    <div className="arkynAudioUploadHasFileContentContainer">
       <audio ref={audioReference} src={filePath} onEnded={handlePauseAudio} />
 
-      <AudioPlayer>
+      <div className="arkynAudioUploadAudioPlayer">
         <button type="button" onClick={handleToggleAudio}>
           {isPlaying && <Pause />}
           {!isPlaying && <Play />}
@@ -128,11 +124,11 @@ function HasFileContent(props: AudioUploadHasFileContentProps) {
         />
 
         <p>{formatTime(totalTime)}</p>
-      </AudioPlayer>
+      </div>
 
       <Divider />
 
-      <ButtonsContainer>
+      <div className="arkynAudioUploadButtonsContainer">
         {!!reSendAudio && (
           <Tooltip orientation="bottom" text="Reenviar imagem">
             <IconButton
@@ -159,8 +155,8 @@ function HasFileContent(props: AudioUploadHasFileContentProps) {
         >
           {changeAudioButtonText}
         </Button>
-      </ButtonsContainer>
-    </HasFileContentContainer>
+      </div>
+    </div>
   );
 }
 
