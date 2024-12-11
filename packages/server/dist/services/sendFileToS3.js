@@ -39,20 +39,25 @@ async function s3_upload(fileStream, contentType, awsS3Config) {
         location: `https://${AWS_S3_BUCKET}.s3.amazonaws.com/${uploadParams.Key}`,
     };
 }
-async function sendFileToS3(props, awsS3Config) {
+async function sendFileToS3(props, awsS3Config, config = {
+    maxPartSize: 5_000_000,
+    fileName: "file",
+}) {
+    const { fileName = "file", maxPartSize = 5_000_000 } = config;
     const { request } = props;
     const uploadHandler = composeUploadHandlers(createFileUploadHandler({
-        maxPartSize: 5_000_000,
+        maxPartSize,
         file: ({ filename }) => filename,
     }));
     const formData = await parseMultipartFormData(request, uploadHandler);
-    const file = formData.get("file");
+    const file = formData.get(fileName);
     if (!file)
         throw new BadRequestError("No file uploaded");
     const filterParams = getScopedParams(request);
     const width = filterParams.get("w");
     const height = filterParams.get("h");
-    if (width && height) {
+    const isImage = file.type.startsWith("image");
+    if (isImage && width && height) {
         const image = sharp(file.getFilePath());
         const metadata = await image.metadata();
         if (metadata.width && metadata.height) {

@@ -5,7 +5,11 @@ type AWSConfig = {
     AWS_SECRET_ACCESS_KEY: string;
     AWS_S3_BUCKET: string;
 };
-declare function sendFileToS3(props: ActionFunctionArgs, awsS3Config: AWSConfig): Promise<{
+type Config = {
+    maxPartSize?: number;
+    fileName?: string;
+};
+declare function sendFileToS3(props: ActionFunctionArgs, awsS3Config: AWSConfig, config?: Config): Promise<{
     error: string;
     url?: undefined;
 } | {
