@@ -68,10 +68,7 @@ async function s3_upload(
   };
 }
 
-async function sendImageToS3(
-  props: ActionFunctionArgs,
-  awsS3Config: AWSConfig
-) {
+async function sendFileToS3(props: ActionFunctionArgs, awsS3Config: AWSConfig) {
   const { request } = props;
 
   const uploadHandler = composeUploadHandlers(
@@ -112,4 +109,4 @@ async function sendImageToS3(
   return { url: apiResponse.location };
 }
 
-export { sendImageToS3 };
+export { sendFileToS3 };
