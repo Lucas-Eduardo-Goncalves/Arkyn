@@ -9,6 +9,7 @@ export * from "./api/PatchDTO";
 export * from "./api/PostDTO";
 export * from "./api/PutDTO";
 export * from "./components/AlertProps";
+export * from "./components/AudioUploadProps";
 export * from "./components/BadgeProps";
 export * from "./components/BreadcrumbProps";
 export * from "./components/ButtonProps";

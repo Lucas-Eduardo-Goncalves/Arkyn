@@ -19,6 +19,7 @@ export {
 } from "./components/Table";
 
 // Form
+export { AudioUpload } from "./components/AudioUpload";
 export { Button } from "./components/Button";
 export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
