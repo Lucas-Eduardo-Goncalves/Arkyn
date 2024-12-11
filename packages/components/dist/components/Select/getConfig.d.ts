@@ -278,6 +278,7 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     min?: number | string | undefined;
     width?: number | string | undefined;
     step?: number | string | undefined;
+    src?: string | undefined;
     formAction?: string | import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS[keyof import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS] | undefined;
     formEncType?: string | undefined;
     formMethod?: string | undefined;
@@ -294,7 +295,6 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     pattern?: string | undefined;
     placeholder?: string | undefined;
     required?: boolean | undefined;
-    src?: string | undefined;
     isLoading: boolean;
     className: string;
     prefix: import("react/jsx-runtime").JSX.Element;

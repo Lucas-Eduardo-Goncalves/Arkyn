@@ -1,6 +1,6 @@
 import type { SimpleInputProps } from "@arkyn/types";
 declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
-    type: "number" | "hidden" | "color" | "search" | "button" | "text" | "tel" | "url" | "email" | "date" | "time" | "image" | "submit" | "reset" | "datetime-local" | "file" | "month" | "password" | "range" | "week";
+    type: "number" | "hidden" | "color" | "search" | "button" | "text" | "tel" | "url" | "email" | "date" | "time" | "image" | "reset" | "submit" | "file" | "datetime-local" | "month" | "password" | "range" | "week";
     name: string;
     defaultChecked?: boolean | undefined;
     defaultValue?: string | number | readonly string[] | undefined;
@@ -269,6 +269,7 @@ declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     min?: number | string | undefined;
     width?: number | string | undefined;
     step?: number | string | undefined;
+    src?: string | undefined;
     formAction?: string | import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS[keyof import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS] | undefined;
     formEncType?: string | undefined;
     formMethod?: string | undefined;
@@ -285,7 +286,6 @@ declare function getConfig(props: SimpleInputProps, isFocused: boolean): {
     pattern?: string | undefined;
     placeholder?: string | undefined;
     required?: boolean | undefined;
-    src?: string | undefined;
     isLoading: boolean;
     className: string;
     prefix: import("react/jsx-runtime").JSX.Element;

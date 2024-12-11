@@ -266,6 +266,7 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     name: string;
     width?: number | string | undefined;
     step?: number | string | undefined;
+    src?: string | undefined;
     formAction?: string | import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS[keyof import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS] | undefined;
     formEncType?: string | undefined;
     formMethod?: string | undefined;
@@ -282,7 +283,6 @@ declare function getConfig(props: CurrencyInputProps, isFocused: boolean): {
     pattern?: string | undefined;
     placeholder?: string | undefined;
     required?: boolean | undefined;
-    src?: string | undefined;
     defaultValue?: string | number | null;
     onChangeValue?: (event: import("react").ChangeEvent<HTMLInputElement>, originalValue: string, maskedValue: string) => void;
     value?: string;

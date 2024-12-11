@@ -6,6 +6,7 @@ export { Divider } from "./components/Divider";
 export { Skeleton } from "./components/Skeleton";
 export { TableBody, TableCaption, TableContainer, TableFooter, TableHeader, } from "./components/Table";
 // Form
+export { AudioUpload } from "./components/AudioUpload";
 export { Button } from "./components/Button";
 export { Checkbox } from "./components/Checkbox";
 export { FormController, FormError, FormLabel } from "./components/Form";
@@ -16,6 +17,7 @@ export { MultiSelect } from "./components/MultiSelect";
 export { RadioBox, RadioGroup } from "./components/Radio";
 export { RichText } from "./components/RichText";
 export { Select } from "./components/Select";
+export { Slider } from "./components/Slider";
 export { Switch } from "./components/Switch";
 export { Textarea } from "./components/Textarea";
 // Navigation
