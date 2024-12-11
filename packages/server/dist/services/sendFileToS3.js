@@ -39,7 +39,7 @@ async function s3_upload(fileStream, contentType, awsS3Config) {
         location: `https://${AWS_S3_BUCKET}.s3.amazonaws.com/${uploadParams.Key}`,
     };
 }
-async function sendImageToS3(props, awsS3Config) {
+async function sendFileToS3(props, awsS3Config) {
     const { request } = props;
     const uploadHandler = composeUploadHandlers(createFileUploadHandler({
         maxPartSize: 5_000_000,
@@ -69,4 +69,4 @@ async function sendImageToS3(props, awsS3Config) {
     const apiResponse = await s3_upload(streamFile, file.type, awsS3Config);
     return { url: apiResponse.location };
 }
-export { sendImageToS3 };
+export { sendFileToS3 };
