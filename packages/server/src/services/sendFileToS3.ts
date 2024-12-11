@@ -19,6 +19,11 @@ type AWSConfig = {
   AWS_S3_BUCKET: string;
 };
 
+type Config = {
+  maxPartSize?: number;
+  fileName?: string;
+};
+
 async function s3_upload(
   fileStream: fs.ReadStream,
   contentType: string,
@@ -68,18 +73,26 @@ async function s3_upload(
   };
 }
 
-async function sendFileToS3(props: ActionFunctionArgs, awsS3Config: AWSConfig) {
+async function sendFileToS3(
+  props: ActionFunctionArgs,
+  awsS3Config: AWSConfig,
+  config: Config = {
+    maxPartSize: 5_000_000,
+    fileName: "file",
+  }
+) {
+  const { fileName = "file", maxPartSize = 5_000_000 } = config;
   const { request } = props;
 
   const uploadHandler = composeUploadHandlers(
     createFileUploadHandler({
-      maxPartSize: 5_000_000,
+      maxPartSize,
       file: ({ filename }) => filename,
     })
   );
 
   const formData = await parseMultipartFormData(request, uploadHandler);
-  const file = formData.get("file") as unknown as NodeOnDiskFile;
+  const file = formData.get(fileName) as unknown as NodeOnDiskFile;
 
   if (!file) throw new BadRequestError("No file uploaded");
 
@@ -87,7 +100,9 @@ async function sendFileToS3(props: ActionFunctionArgs, awsS3Config: AWSConfig) {
   const width = filterParams.get("w");
   const height = filterParams.get("h");
 
-  if (width && height) {
+  const isImage = file.type.startsWith("image");
+
+  if (isImage && width && height) {
     const image = sharp(file.getFilePath());
     const metadata = await image.metadata();
 
