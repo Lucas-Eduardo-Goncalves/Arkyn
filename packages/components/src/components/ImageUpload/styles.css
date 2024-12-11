@@ -5,7 +5,7 @@
 }
 
 .arkynImageUpload {
-  border-width: 2px;
+  border-width: 1px;
   border-color: var(--border);
   border-radius: var(--rounded-inputs);
 
