@@ -29,6 +29,7 @@ export { MultiSelect } from "./components/MultiSelect";
 export { RadioBox, RadioGroup } from "./components/Radio";
 export { RichText } from "./components/RichText";
 export { Select } from "./components/Select";
+export { Slider } from "./components/Slider";
 export { Switch } from "./components/Switch";
 export { Textarea } from "./components/Textarea";
 

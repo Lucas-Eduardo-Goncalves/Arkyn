@@ -31,6 +31,7 @@ export * from "./components/RadioProps";
 export * from "./components/RichTextProps";
 export * from "./components/SelectProps";
 export * from "./components/SkeletonProps";
+export * from "./components/SliderProps";
 export * from "./components/SwitchProps";
 export * from "./components/TableProps";
 export * from "./components/TabProps";

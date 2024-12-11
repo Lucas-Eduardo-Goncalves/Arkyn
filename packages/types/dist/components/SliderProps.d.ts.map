@@ -1,0 +1,1 @@
+{"version":3,"file":"SliderProps.d.ts","sourceRoot":"","sources":["../../src/components/SliderProps.ts"],"names":[],"mappings":"AAAA,KAAK,WAAW,GAAG;IACjB,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,EAAE,CAAC,KAAK,EAAE,MAAM,KAAK,IAAI,CAAC;IAClC,WAAW,CAAC,EAAE,OAAO,CAAC;IACtB,UAAU,CAAC,EAAE,CAAC,KAAK,EAAE,OAAO,KAAK,IAAI,CAAC;CACvC,CAAC;AAEF,YAAY,EAAE,WAAW,EAAE,CAAC"}
