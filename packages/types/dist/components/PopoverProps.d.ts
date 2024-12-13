@@ -5,6 +5,7 @@ type PopoverProps = {
     button: ReactNode;
     closeOnClick?: boolean;
     orientation?: OrientationProps;
+    className?: string;
 };
 export type { PopoverProps };
 //# sourceMappingURL=PopoverProps.d.ts.map
