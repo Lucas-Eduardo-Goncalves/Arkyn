@@ -11,6 +11,7 @@ class ForbiddenError extends Error {
     constructor(message) {
         super(message);
         this.name = "ForbiddenError";
+        this.message = message;
     }
 }
 export { forbidden, ForbiddenError };
