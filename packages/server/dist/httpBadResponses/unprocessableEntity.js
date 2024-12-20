@@ -19,7 +19,6 @@ class UnprocessableEntityError extends Error {
         this.fieldErrors = data?.fieldErrors || null;
         this.fields = data?.fields || null;
         this.name = "UnprocessableEntity";
-        this.message = data.message || "not-message";
     }
 }
 export { unprocessableEntity, UnprocessableEntityError };
