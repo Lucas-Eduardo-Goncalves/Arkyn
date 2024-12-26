@@ -24,7 +24,7 @@ function Badge(args: BadgeProps) {
     <div className={className.trim()} {...rest}>
       {GenerateIcon(iconSize, leftIcon)}
       {children}
-      {GenerateIcon(iconSize, leftIcon)}
+      {GenerateIcon(iconSize, rightIcon)}
     </div>
   );
 }
