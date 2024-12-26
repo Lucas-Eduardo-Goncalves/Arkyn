@@ -6,6 +6,6 @@ function Badge(args) {
     const iconSizes = { md: 12, lg: 14 };
     const iconSize = iconSizes[size];
     const className = `arkynBadge ${variant} ${scheme} ${size} ${baseClassName}`;
-    return (_jsxs("div", { className: className.trim(), ...rest, children: [GenerateIcon(iconSize, leftIcon), children, GenerateIcon(iconSize, leftIcon)] }));
+    return (_jsxs("div", { className: className.trim(), ...rest, children: [GenerateIcon(iconSize, leftIcon), children, GenerateIcon(iconSize, rightIcon)] }));
 }
 export { Badge };
