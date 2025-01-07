@@ -9,6 +9,7 @@ export { TableBody, TableCaption, TableContainer, TableFooter, TableHeader, } fr
 export { AudioUpload } from "./components/AudioUpload";
 export { Button } from "./components/Button";
 export { Checkbox } from "./components/Checkbox";
+export { FileUpload } from "./components/FileUpload";
 export { FormController, FormError, FormLabel } from "./components/Form";
 export { IconButton } from "./components/IconButton";
 export { ImageUpload } from "./components/ImageUpload";
