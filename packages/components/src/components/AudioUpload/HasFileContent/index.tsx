@@ -130,7 +130,7 @@ function HasFileContent(props: AudioUploadHasFileContentProps) {
 
       <div className="arkynAudioUploadButtonsContainer">
         {!!reSendAudio && (
-          <Tooltip orientation="bottom" text="Reenviar imagem">
+          <Tooltip orientation="bottom" text="Reenviar áudio">
             <IconButton
               type="button"
               aria-label="resend image"
