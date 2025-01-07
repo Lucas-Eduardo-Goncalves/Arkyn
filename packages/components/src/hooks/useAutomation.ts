@@ -1,5 +1,10 @@
 import { ToastProps } from "@arkyn/types";
-import { useActionData, useLocation, useNavigate } from "@remix-run/react";
+import {
+  useActionData,
+  useFetchers,
+  useLocation,
+  useNavigate,
+} from "@remix-run/react";
 import { useContext, useEffect } from "react";
 import { animateScroll } from "react-scroll";
 
@@ -19,7 +24,7 @@ function isToastProps(obj: any): obj is ToastProps {
 
 function useAutomation() {
   const actionData = useActionData<any>();
-  const { closeModal, closeAll } = useContext(ModalContext);
+  const { closeModal, closeAll, modalIsOpen } = useContext(ModalContext);
   const { showToast } = useToast();
 
   const { getParam } = useScopedParams();
@@ -27,6 +32,15 @@ function useAutomation() {
   const navigate = useNavigate();
 
   const closeAllModals = getParam("closeAllModals");
+
+  const fetchers = useFetchers();
+
+  useEffect(() => {
+    const modalKey = fetchers[0]?.data?.closeModalKey || "";
+    const isOpen = modalIsOpen(modalKey);
+
+    if (modalKey && isOpen) closeModal(modalKey);
+  }, [fetchers]);
 
   useEffect(() => {
     if (closeAllModals === "true") {
