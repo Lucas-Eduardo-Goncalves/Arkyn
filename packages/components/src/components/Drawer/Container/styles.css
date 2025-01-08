@@ -30,6 +30,11 @@
   bottom: 0;
   width: max-content;
   background: var(--card);
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
 }
 
 .arkynDrawerContainer.left > .arkynDrawerContainerContent {
