@@ -53,6 +53,15 @@ function Select(props: SelectProps) {
     ref.current.focus();
   }
 
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
+    if (onSearch) {
+      setSearch("");
+      onSearch(e.target.value);
+    }
+
+    if (!onSearch) setSearch(e.target.value);
+  }
+
   function handleFocus(e: FocusEvent<HTMLInputElement>) {
     if (isFocused) return;
     setIsFocused(true);
@@ -125,7 +134,7 @@ function Select(props: SelectProps) {
                 name="search-select"
                 variant="underline"
                 leftIcon={Search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={handleSearch}
               />
             )}
 
