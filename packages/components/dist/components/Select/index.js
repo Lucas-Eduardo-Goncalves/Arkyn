@@ -20,6 +20,14 @@ function Select(props) {
         setIsFocused(true);
         ref.current.focus();
     }
+    function handleSearch(e) {
+        if (onSearch) {
+            setSearch("");
+            onSearch(e.target.value);
+        }
+        if (!onSearch)
+            setSearch(e.target.value);
+    }
     function handleFocus(e) {
         if (isFocused)
             return;
@@ -55,7 +63,7 @@ function Select(props) {
         if (isFocused && !currentLabel)
             return false;
     };
-    return (_jsxs(_Fragment, { children: [_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: `${className} placeholder_dark_${placeholderDark()}`, children: [prefix, LeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled, readOnly: true, placeholder: currentLabel || placeholder, onFocus: handleFocus, ...rest }), _jsx("input", { type: "hidden", ref: ref, name: name, value: currentValue || "", readOnly: true }), isFocused && (_jsxs("div", { className: "arkyn_select_content", style: { overflow: "auto", maxHeight: optionMaxHeight }, children: [isSearchable && (_jsx(Input, { type: "search", name: "search-select", variant: "underline", leftIcon: Search, onChange: (e) => setSearch(e.target.value) })), options
+    return (_jsxs(_Fragment, { children: [_jsxs("section", { title: title, style: style, onClick: handleSectionClick, className: `${className} placeholder_dark_${placeholderDark()}`, children: [prefix, LeftIcon && _jsx(LeftIcon, { size: iconSize, strokeWidth: 2.5 }), _jsx("input", { disabled: disabled, readOnly: true, placeholder: currentLabel || placeholder, onFocus: handleFocus, ...rest }), _jsx("input", { type: "hidden", ref: ref, name: name, value: currentValue || "", readOnly: true }), isFocused && (_jsxs("div", { className: "arkyn_select_content", style: { overflow: "auto", maxHeight: optionMaxHeight }, children: [isSearchable && (_jsx(Input, { type: "search", name: "search-select", variant: "underline", leftIcon: Search, onChange: handleSearch })), options
                                 .filter((option) => {
                                 if (props.onSearch)
                                     return true;
