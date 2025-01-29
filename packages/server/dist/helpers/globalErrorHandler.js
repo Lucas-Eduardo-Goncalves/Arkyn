@@ -6,6 +6,8 @@ import { serverError } from "../httpBadResponses/serverError";
 import { UnprocessableEntityError, unprocessableEntity, } from "../httpBadResponses/unprocessableEntity";
 import { unauthorized, UnauthorizedError, } from "../httpBadResponses/unauthorized";
 const globalErrorHandler = (error) => {
+    if (error instanceof Response)
+        throw error;
     switch (true) {
         case error instanceof BadRequestError:
             return badRequest(error);
