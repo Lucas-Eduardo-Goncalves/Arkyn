@@ -13,6 +13,8 @@ import {
 } from "../httpBadResponses/unauthorized";
 
 const globalErrorHandler = (error: any) => {
+  if (error instanceof Response) throw error;
+
   switch (true) {
     case error instanceof BadRequestError:
       return badRequest(error);
