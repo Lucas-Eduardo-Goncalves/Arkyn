@@ -47,6 +47,7 @@ export { ModalProvider } from "./provider/ModalProvider";
 export { ToastProvider } from "./provider/ToastProvider";
 // Others
 export { ClientOnly } from "./components/ClientOnly";
+export { FacebookPixel } from "./components/FacebookPixel";
 export { GoogleMap } from "./components/GoogleMap";
 export { GoogleSearchPlaces } from "./components/GoogleSearchPlaces";
 export { GoogleTagManager } from "./components/GoogleTagManager";
