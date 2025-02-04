@@ -8,6 +8,7 @@ type GoogleTagManagerProps = {
   dataLayerName?: string;
   auth?: string;
   preview?: string;
+  showInDevMode?: boolean;
 };
 
 function GoogleTagManager(props: GoogleTagManagerProps) {
@@ -18,7 +19,12 @@ function GoogleTagManager(props: GoogleTagManagerProps) {
     dataLayerName = "dataLayer",
     events = {},
     dataLayer = {},
+    showInDevMode = false,
   } = props;
+
+  if (process.env.NODE_ENV !== "production" && !showInDevMode) {
+    return <></>;
+  }
 
   return (
     <ClientOnly>

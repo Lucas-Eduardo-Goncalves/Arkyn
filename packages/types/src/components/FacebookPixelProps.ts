@@ -1,5 +1,6 @@
 type FacebookPixelProps = {
   pixelId: string;
+  showInDevMode?: boolean;
   options?: {
     autoConfig?: boolean;
     debug?: boolean;
