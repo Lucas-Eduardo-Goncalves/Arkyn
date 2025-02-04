@@ -5,6 +5,7 @@ type GoogleTagManagerProps = {
     dataLayerName?: string;
     auth?: string;
     preview?: string;
+    showInDevMode?: boolean;
 };
 declare function GoogleTagManager(props: GoogleTagManagerProps): import("react/jsx-runtime").JSX.Element;
 export { GoogleTagManager };
