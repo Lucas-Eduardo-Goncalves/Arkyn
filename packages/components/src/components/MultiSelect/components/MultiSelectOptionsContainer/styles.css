@@ -1,7 +1,7 @@
 /* BASE CSS */
 .arkynMultiSelectOptionsContainer {
   position: absolute;
-  z-index: 6;
+  z-index: 7;
 
   top: calc(100% + 5px);
   left: -2px;
