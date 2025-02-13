@@ -47,7 +47,7 @@ async function s3_upload(
 
   const uploadParams = {
     Bucket: AWS_S3_BUCKET,
-    Key: `uploads/${Date.now()}-${fileName}`,
+    Key: `uploads/${Date.now()}-${fileName.split(" ").join("-")}`,
     Body: fileStream,
     ContentType: contentType,
   };
