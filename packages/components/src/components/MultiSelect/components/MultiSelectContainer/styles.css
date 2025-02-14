@@ -110,7 +110,7 @@
 /* SIZE */
 .arkynMultiSelectContainer.md {
   min-height: 40px;
-  max-height: 40px;
+  /* max-height: 40px; */
 }
 .arkynMultiSelectContainer.md.hasPrefix {
   padding-left: 60px;
@@ -122,7 +122,7 @@
 }
 .arkynMultiSelectContainer.lg {
   min-height: 44px;
-  max-height: 44px;
+  /* max-height: 44px; */
 }
 .arkynMultiSelectContainer.lg .prefix {
   height: 44px;
