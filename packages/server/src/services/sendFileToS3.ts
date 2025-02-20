@@ -100,6 +100,9 @@ async function sendFileToS3(
   const width = filterParams.get("w");
   const height = filterParams.get("h");
 
+  const reduceQuality = filterParams.get("reduceQuality");
+  const quality = reduceQuality ? +reduceQuality : 100;
+
   const isImage = file.type.startsWith("image");
 
   if (isImage && width && height) {
@@ -116,6 +119,32 @@ async function sendFileToS3(
         };
       }
     }
+  }
+
+  if (isImage) {
+    let image = sharp(file.getFilePath());
+
+    if (file.type === "image/jpeg") {
+      image = image.jpeg({ quality });
+    } else if (file.type === "image/png") {
+      image = image.png({ quality });
+    } else if (file.type === "image/webp") {
+      image = image.webp({ quality });
+    }
+
+    const compressedFilePath = file.getFilePath() + "_compressed";
+    await image.toFile(compressedFilePath);
+
+    file.getFilePath = () => compressedFilePath;
+
+    const streamFile = fs.createReadStream(file.getFilePath());
+    const apiResponse = await s3_upload(streamFile, file.type, awsS3Config);
+
+    fs.unlink(compressedFilePath, (err) => {
+      if (err) console.error(`Delete image error: ${err}`);
+    });
+
+    return { url: apiResponse.location };
   }
 
   const streamFile = fs.createReadStream(file.getFilePath());
