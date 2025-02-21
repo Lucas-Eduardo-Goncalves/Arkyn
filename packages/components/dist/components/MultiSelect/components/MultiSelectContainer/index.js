@@ -6,6 +6,6 @@ function MultiSelectContainer(props) {
     const errored = isError ? "errored" : "";
     const opacity = disabled || readOnly || isLoading ? "opacity" : "";
     const focused = isFocused ? "focused" : "";
-    return (_jsx("section", { onClick: handleContainerFocus, id: id, className: `arkynMultiSelectContainer ${hasPrefix} ${variant} ${size} ${opacity} ${errored} ${focused} ${className}`, children: children }));
+    return (_jsx("section", { id: id, className: `arkynMultiSelectContainer ${hasPrefix} ${variant} ${size} ${opacity} ${errored} ${focused} ${className}`, onClick: handleContainerFocus, children: children }));
 }
 export { MultiSelectContainer };
