@@ -39,9 +39,9 @@ function MultiSelectContainer(props: MultiSelectContainerProps) {
 
   return (
     <section
-      onClick={handleContainerFocus}
       id={id}
       className={`arkynMultiSelectContainer ${hasPrefix} ${variant} ${size} ${opacity} ${errored} ${focused} ${className}`}
+      onClick={handleContainerFocus}
     >
       {children}
     </section>
