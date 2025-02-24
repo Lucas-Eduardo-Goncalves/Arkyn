@@ -1,7 +1,13 @@
 class Success extends Response {
     constructor(body, init) {
-        super(body, { ...init, status: 200 });
-        this.headers.set("Content-Type", "application/json");
+        super(body, {
+            ...init,
+            status: 200,
+            headers: {
+                "Content-Type": "application/json",
+                ...init?.headers,
+            },
+        });
     }
 }
 export { Success };

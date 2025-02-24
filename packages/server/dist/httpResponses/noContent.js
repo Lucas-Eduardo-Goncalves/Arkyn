@@ -1,6 +1,6 @@
 class NoContent extends Response {
-    constructor(body, init) {
-        super(body, init);
+    constructor(init) {
+        super(null, init);
     }
 }
 export { NoContent };

@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/server",
-  "version": "1.4.29",
+  "version": "1.4.30",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
