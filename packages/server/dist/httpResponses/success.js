@@ -1,6 +1,6 @@
 class Success extends Response {
     constructor(body, init) {
-        super(body, {
+        super(JSON.stringify(body), {
             ...init,
             status: 200,
             headers: {

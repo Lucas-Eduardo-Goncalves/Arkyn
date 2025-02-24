@@ -1,6 +1,6 @@
 class Created extends Response {
     constructor(body, init) {
-        super(body, {
+        super(JSON.stringify(body), {
             ...init,
             status: 201,
             headers: {
