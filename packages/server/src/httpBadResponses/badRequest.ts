@@ -1,11 +1,10 @@
-function badRequest(error: Error) {
+function badRequest(error: BadRequestError) {
   return Response.json(
     {
       status: 400,
       success: false,
       name: error.name,
       message: error.message,
-      cause: error.cause,
     },
     { status: 400 }
   );

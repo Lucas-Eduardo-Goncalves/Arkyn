@@ -1,11 +1,10 @@
-function unauthorized(error: Error) {
+function unauthorized(error: UnauthorizedError) {
   return Response.json(
     {
       status: 401,
       success: false,
       name: error.name,
       message: error.message,
-      cause: error.cause,
     },
     { status: 401 }
   );

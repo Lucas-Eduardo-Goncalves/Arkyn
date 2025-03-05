@@ -1,11 +1,10 @@
-function forbidden(error: Error) {
+function forbidden(error: ForbiddenError) {
   return Response.json(
     {
       status: 403,
       success: false,
       name: error.name,
       message: error.message,
-      cause: error.cause,
     },
     { status: 403 }
   );

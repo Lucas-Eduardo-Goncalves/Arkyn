@@ -1,7 +1,13 @@
-class NoContent extends Response {
+function noContent(init?: ResponseInit): Response {
+  return new Response(null, { ...init, status: 200 });
+}
+
+class NoContent {
+  init: ResponseInit;
+
   constructor(init?: ResponseInit) {
-    super(null, init);
+    this.init = init || {};
   }
 }
 
-export { NoContent };
+export { noContent, NoContent };

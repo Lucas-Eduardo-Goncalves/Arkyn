@@ -1,11 +1,10 @@
-function conflict(error: Error) {
+function conflict(error: ConflictError) {
   return Response.json(
     {
       status: 409,
       success: false,
       name: error.name,
       message: error.message,
-      cause: error.cause,
     },
     { status: 409 }
   );
