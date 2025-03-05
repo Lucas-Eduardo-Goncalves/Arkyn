@@ -13,6 +13,12 @@ import {
 } from "../httpBadResponses/unauthorized";
 
 const globalErrorHandler = (error: any) => {
+  const showConsoleError =
+    process.env.NODE_ENV === "development" ||
+    process.env?.SHOW_ERRORS_IN_CONSOLE === "true";
+
+  if (showConsoleError) console.error(error);
+
   if (error instanceof Response) throw error;
 
   switch (true) {
