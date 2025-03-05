@@ -1,15 +1,16 @@
 function unauthorized(error) {
-    return {
+    return Response.json({
         status: 401,
         success: false,
         name: error.name,
         message: error.message,
         cause: error.cause,
-    };
+    }, { status: 401 });
 }
-class UnauthorizedError extends Error {
+class UnauthorizedError {
+    name;
+    message;
     constructor(message) {
-        super(message);
         this.name = "UnauthorizedError";
         this.message = message;
     }

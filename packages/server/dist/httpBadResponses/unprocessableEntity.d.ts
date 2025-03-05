@@ -1,12 +1,13 @@
-import type { HttpDataResponse } from "@arkyn/types";
 type UnprocessableEntityErrorProps = {
     data?: any;
     fieldErrors?: Record<string, string>;
     fields?: Record<string, string>;
     message?: string;
 };
-declare function unprocessableEntity(error: UnprocessableEntityError): HttpDataResponse;
-declare class UnprocessableEntityError extends Error {
+declare function unprocessableEntity(error: UnprocessableEntityError): import("undici-types").Response;
+declare class UnprocessableEntityError {
+    name: string;
+    message?: string;
     fieldErrors: any;
     fields: any;
     data: any;

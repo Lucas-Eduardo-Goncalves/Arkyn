@@ -1,15 +1,16 @@
 function serverError(error) {
-    return {
+    return Response.json({
         status: 500,
         success: false,
         name: error.name,
         message: error.message,
         cause: error.cause,
-    };
+    }, { status: 500 });
 }
-class ServerError extends Error {
+class ServerError {
+    name;
+    message;
     constructor(message) {
-        super(message);
         this.name = "ServerError";
         this.message = message;
     }

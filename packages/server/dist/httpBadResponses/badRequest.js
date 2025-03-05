@@ -1,15 +1,16 @@
 function badRequest(error) {
-    return {
+    return Response.json({
         status: 400,
         success: false,
         name: error.name,
         message: error.message,
         cause: error.cause,
-    };
+    }, { status: 400 });
 }
-class BadRequestError extends Error {
+class BadRequestError {
+    name;
+    message;
     constructor(message) {
-        super(message);
         this.name = "BadRequestError";
         this.message = message;
     }

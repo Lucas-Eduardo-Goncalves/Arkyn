@@ -1,3 +1,3 @@
-declare const globalErrorHandler: (error: any) => import("@arkyn/types").HttpResponse | import("@arkyn/types").HttpDataResponse;
+declare const globalErrorHandler: (error: any) => import("undici-types").Response;
 export { globalErrorHandler };
 //# sourceMappingURL=globalErrorHandler.d.ts.map

@@ -1,6 +1,7 @@
-import type { HttpResponse } from "@arkyn/types";
-declare function badRequest(error: Error): HttpResponse;
-declare class BadRequestError extends Error {
+declare function badRequest(error: Error): import("undici-types").Response;
+declare class BadRequestError {
+    name: string;
+    message: string;
     constructor(message: string);
 }
 export { badRequest, BadRequestError };

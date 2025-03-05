@@ -1,15 +1,16 @@
 function forbidden(error) {
-    return {
+    return Response.json({
         status: 403,
         success: false,
         name: error.name,
         message: error.message,
         cause: error.cause,
-    };
+    }, { status: 403 });
 }
-class ForbiddenError extends Error {
+class ForbiddenError {
+    name;
+    message;
     constructor(message) {
-        super(message);
         this.name = "ForbiddenError";
         this.message = message;
     }

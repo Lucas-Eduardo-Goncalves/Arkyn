@@ -1,6 +1,7 @@
-import type { HttpResponse } from "@arkyn/types";
-declare function forbidden(error: Error): HttpResponse;
-declare class ForbiddenError extends Error {
+declare function forbidden(error: Error): import("undici-types").Response;
+declare class ForbiddenError {
+    name: string;
+    message: string;
     constructor(message: string);
 }
 export { forbidden, ForbiddenError };

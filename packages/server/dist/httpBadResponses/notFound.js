@@ -1,15 +1,16 @@
 function notFound(error) {
-    return {
+    return Response.json({
         status: 404,
         success: false,
         name: error.name,
         message: error.message,
         cause: error.cause,
-    };
+    }, { status: 404 });
 }
-class NotFoundError extends Error {
+class NotFoundError {
+    name;
+    message;
     constructor(message) {
-        super(message);
         this.name = "NotFoundError";
         this.message = message;
     }
