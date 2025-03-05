@@ -1,5 +1,3 @@
-import type { HttpDataResponse } from "@arkyn/types";
-
 type UnprocessableEntityErrorProps = {
   data?: any;
   fieldErrors?: Record<string, string>;
@@ -7,31 +5,34 @@ type UnprocessableEntityErrorProps = {
   message?: string;
 };
 
-function unprocessableEntity(
-  error: UnprocessableEntityError
-): HttpDataResponse {
-  return {
-    status: 400,
-    success: false,
-    name: error.name,
-    message: error.message,
-    data: error.data || null,
-    fieldErrors: error.fieldErrors || null,
-    fields: error.fields || null,
-  };
+function unprocessableEntity(error: UnprocessableEntityError) {
+  return Response.json(
+    {
+      status: 400,
+      success: false,
+      name: error.name,
+      message: error.message,
+      data: error.data || null,
+      fieldErrors: error.fieldErrors || null,
+      fields: error.fields || null,
+    },
+    { status: 400 }
+  );
 }
 
-class UnprocessableEntityError extends Error {
+class UnprocessableEntityError {
+  name: string;
+  message?: string;
   fieldErrors: any;
   fields: any;
   data: any;
 
   constructor(data: UnprocessableEntityErrorProps) {
-    super(data.message);
     this.data = data?.data || null;
     this.fieldErrors = data?.fieldErrors || null;
     this.fields = data?.fields || null;
     this.name = "UnprocessableEntity";
+    this.message = data?.message;
   }
 }
 

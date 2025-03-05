@@ -1,18 +1,21 @@
-import type { HttpResponse } from "@arkyn/types";
-
-function notFound(error: Error): HttpResponse {
-  return {
-    status: 404,
-    success: false,
-    name: error.name,
-    message: error.message,
-    cause: error.cause,
-  };
+function notFound(error: Error) {
+  return Response.json(
+    {
+      status: 404,
+      success: false,
+      name: error.name,
+      message: error.message,
+      cause: error.cause,
+    },
+    { status: 404 }
+  );
 }
 
-class NotFoundError extends Error {
+class NotFoundError {
+  name: string;
+  message: string;
+
   constructor(message: string) {
-    super(message);
     this.name = "NotFoundError";
     this.message = message;
   }

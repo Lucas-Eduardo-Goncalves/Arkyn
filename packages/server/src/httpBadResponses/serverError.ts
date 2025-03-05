@@ -1,18 +1,21 @@
-import type { HttpResponse } from "@arkyn/types";
-
-function serverError(error: Error): HttpResponse {
-  return {
-    status: 500,
-    success: false,
-    name: error.name,
-    message: error.message,
-    cause: error.cause,
-  };
+function serverError(error: Error) {
+  return Response.json(
+    {
+      status: 500,
+      success: false,
+      name: error.name,
+      message: error.message,
+      cause: error.cause,
+    },
+    { status: 500 }
+  );
 }
 
-class ServerError extends Error {
+class ServerError {
+  name: string;
+  message: string;
+
   constructor(message: string) {
-    super(message);
     this.name = "ServerError";
     this.message = message;
   }
