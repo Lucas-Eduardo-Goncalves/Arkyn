@@ -1,4 +1,4 @@
-declare function forbidden(error: Error): import("undici-types").Response;
+declare function forbidden(error: ForbiddenError): import("undici-types").Response;
 declare class ForbiddenError {
     name: string;
     message: string;

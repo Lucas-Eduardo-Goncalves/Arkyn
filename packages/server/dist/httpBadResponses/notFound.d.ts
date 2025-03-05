@@ -1,4 +1,4 @@
-declare function notFound(error: Error): import("undici-types").Response;
+declare function notFound(error: NotFoundError): import("undici-types").Response;
 declare class NotFoundError {
     name: string;
     message: string;

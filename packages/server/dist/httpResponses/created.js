@@ -1,13 +1,12 @@
-class Created extends Response {
+function created(body, init) {
+    return Response.json(body, { ...init, status: 201 });
+}
+class Created {
+    body;
+    init;
     constructor(body, init) {
-        super(JSON.stringify(body), {
-            ...init,
-            status: 201,
-            headers: {
-                "Content-Type": "application/json",
-                ...init?.headers,
-            },
-        });
+        this.body = body;
+        this.init = init || {};
     }
 }
-export { Created };
+export { created, Created };

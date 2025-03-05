@@ -1,4 +1,4 @@
-declare function conflict(error: Error): import("undici-types").Response;
+declare function conflict(error: ConflictError): import("undici-types").Response;
 declare class ConflictError {
     name: string;
     message: string;

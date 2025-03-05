@@ -4,7 +4,6 @@ function badRequest(error) {
         success: false,
         name: error.name,
         message: error.message,
-        cause: error.cause,
     }, { status: 400 });
 }
 class BadRequestError {

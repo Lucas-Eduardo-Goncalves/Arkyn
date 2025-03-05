@@ -1,13 +1,12 @@
-class Success extends Response {
+function success(body, init) {
+    return Response.json(body, { ...init, status: 200 });
+}
+class Success {
+    body;
+    init;
     constructor(body, init) {
-        super(JSON.stringify(body), {
-            ...init,
-            status: 200,
-            headers: {
-                "Content-Type": "application/json",
-                ...init?.headers,
-            },
-        });
+        this.body = body;
+        this.init = init || {};
     }
 }
-export { Success };
+export { success, Success };

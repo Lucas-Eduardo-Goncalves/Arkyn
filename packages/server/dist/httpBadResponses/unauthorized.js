@@ -4,7 +4,6 @@ function unauthorized(error) {
         success: false,
         name: error.name,
         message: error.message,
-        cause: error.cause,
     }, { status: 401 });
 }
 class UnauthorizedError {

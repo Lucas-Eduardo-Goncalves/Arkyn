@@ -4,7 +4,6 @@ function conflict(error) {
         success: false,
         name: error.name,
         message: error.message,
-        cause: error.cause,
     }, { status: 409 });
 }
 class ConflictError {

@@ -4,7 +4,6 @@ function forbidden(error) {
         success: false,
         name: error.name,
         message: error.message,
-        cause: error.cause,
     }, { status: 403 });
 }
 class ForbiddenError {

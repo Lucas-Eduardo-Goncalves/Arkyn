@@ -1,5 +1,8 @@
-declare class Created extends Response {
+declare function created(body: any, init?: ResponseInit): Response;
+declare class Created {
+    body: any;
+    init: ResponseInit;
     constructor(body: any, init?: ResponseInit);
 }
-export { Created };
+export { created, Created };
 //# sourceMappingURL=created.d.ts.map

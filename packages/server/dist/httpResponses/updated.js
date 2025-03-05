@@ -1,13 +1,12 @@
-class Updated extends Response {
+function updated(body, init) {
+    return Response.json(body, { ...init, status: 200 });
+}
+class Updated {
+    body;
+    init;
     constructor(body, init) {
-        super(JSON.stringify(body), {
-            ...init,
-            status: 200,
-            headers: {
-                "Content-Type": "application/json",
-                ...init?.headers,
-            },
-        });
+        this.body = body;
+        this.init = init || {};
     }
 }
-export { Updated };
+export { updated, Updated };

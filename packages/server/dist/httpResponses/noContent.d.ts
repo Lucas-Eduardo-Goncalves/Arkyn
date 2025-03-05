@@ -1,5 +1,7 @@
-declare class NoContent extends Response {
+declare function noContent(init?: ResponseInit): Response;
+declare class NoContent {
+    init: ResponseInit;
     constructor(init?: ResponseInit);
 }
-export { NoContent };
+export { noContent, NoContent };
 //# sourceMappingURL=noContent.d.ts.map
