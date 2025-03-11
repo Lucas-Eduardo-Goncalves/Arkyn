@@ -1,12 +1,16 @@
 function unauthorized(error: UnauthorizedError) {
-  return Response.json(
-    {
+  return new Response(
+    JSON.stringify({
       status: 401,
       success: false,
       name: error.name,
       message: error.message,
-    },
-    { status: 401 }
+    }),
+    {
+      status: 401,
+      statusText: "Bad Request",
+      headers: { "Content-Type": "application/json" },
+    }
   );
 }
 

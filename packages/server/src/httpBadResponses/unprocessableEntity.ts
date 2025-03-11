@@ -6,17 +6,18 @@ type UnprocessableEntityErrorProps = {
 };
 
 function unprocessableEntity(error: UnprocessableEntityError) {
-  return Response.json(
-    {
-      status: 400,
+  return new Response(
+    JSON.stringify({
+      status: 422,
       success: false,
       name: error.name,
       message: error.message,
-      data: error.data || null,
-      fieldErrors: error.fieldErrors || null,
-      fields: error.fields || null,
-    },
-    { status: 400 }
+    }),
+    {
+      status: 422,
+      statusText: "Bad Request",
+      headers: { "Content-Type": "application/json" },
+    }
   );
 }
 

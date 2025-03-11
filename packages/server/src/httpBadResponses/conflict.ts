@@ -1,12 +1,16 @@
 function conflict(error: ConflictError) {
-  return Response.json(
-    {
+  return new Response(
+    JSON.stringify({
       status: 409,
       success: false,
       name: error.name,
       message: error.message,
-    },
-    { status: 409 }
+    }),
+    {
+      status: 409,
+      statusText: "Bad Request",
+      headers: { "Content-Type": "application/json" },
+    }
   );
 }
 
