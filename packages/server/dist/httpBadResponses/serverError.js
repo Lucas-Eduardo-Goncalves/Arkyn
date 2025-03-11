@@ -1,11 +1,14 @@
 function serverError(error) {
-    return Response.json({
+    return new Response(JSON.stringify({
         status: 500,
         success: false,
         name: error.name,
         message: error.message,
-        cause: error.cause,
-    }, { status: 500 });
+    }), {
+        status: 500,
+        statusText: "Bad Request",
+        headers: { "Content-Type": "application/json" },
+    });
 }
 class ServerError {
     name;

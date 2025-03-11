@@ -1,13 +1,17 @@
 function unprocessableEntity(error) {
-    return Response.json({
-        status: 400,
+    return new Response(JSON.stringify({
+        status: 433,
         success: false,
         name: error.name,
         message: error.message,
         data: error.data || null,
         fieldErrors: error.fieldErrors || null,
         fields: error.fields || null,
-    }, { status: 400 });
+    }), {
+        status: 433,
+        statusText: "Bad Request",
+        headers: { "Content-Type": "application/json" },
+    });
 }
 class UnprocessableEntityError {
     name;
