@@ -13,9 +13,11 @@ function serverError(error) {
 class ServerError {
     name;
     message;
-    constructor(message) {
+    cause;
+    constructor(message, cause) {
         this.name = "ServerError";
         this.message = message;
+        this.cause = cause;
     }
 }
 export { serverError, ServerError };

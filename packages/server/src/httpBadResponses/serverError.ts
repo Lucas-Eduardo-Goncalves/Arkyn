@@ -14,13 +14,15 @@ function serverError(error: ServerError) {
   );
 }
 
-class ServerError implements Error {
+class ServerError {
   name: string;
   message: string;
+  cause: any;
 
-  constructor(message: string) {
+  constructor(message: string, cause?: any) {
     this.name = "ServerError";
     this.message = message;
+    this.cause = cause;
   }
 }
 

@@ -46,7 +46,7 @@ const globalErrorHandler = (error) => {
             return serverError({
                 message: error?.message || "Server error | Message not found",
                 name: "Server Error",
-                cause: error,
+                cause: error.cause || "Unknown",
             });
     }
 };
