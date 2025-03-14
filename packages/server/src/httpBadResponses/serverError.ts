@@ -1,4 +1,4 @@
-function serverError(error: Error) {
+function serverError(error: ServerError) {
   return new Response(
     JSON.stringify({
       status: 500,
@@ -14,7 +14,7 @@ function serverError(error: Error) {
   );
 }
 
-class ServerError {
+class ServerError implements Error {
   name: string;
   message: string;
 
