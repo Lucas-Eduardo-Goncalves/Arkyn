@@ -19,6 +19,7 @@ export { calculateCardInstallment } from "./services/calculateCardInstallment";
 export { maskSensitiveData } from "./services/maskSensitiveData";
 export { normalizeRange, within } from "./services/range";
 export { truncateLargeFields } from "./services/truncateLargeFields";
+export { countries } from "./templates/countries";
 export { regex } from "./validations/regex";
 export { validateCPF } from "./validations/validateCPF";
 //# sourceMappingURL=index.d.ts.map

@@ -23,6 +23,8 @@ export { calculateCardInstallment } from "./services/calculateCardInstallment";
 export { maskSensitiveData } from "./services/maskSensitiveData";
 export { normalizeRange, within } from "./services/range";
 export { truncateLargeFields } from "./services/truncateLargeFields";
+// templates
+export { countries } from "./templates/countries";
 // validations
 export { regex } from "./validations/regex";
 export { validateCPF } from "./validations/validateCPF";

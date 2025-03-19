@@ -31,6 +31,7 @@ export * from "./components/InputProps";
 export * from "./components/ModalProps";
 export * from "./components/MultiSelectProps";
 export * from "./components/PaginationProps";
+export * from "./components/PhoneInputProps";
 export * from "./components/PopoverProps";
 export * from "./components/RadioProps";
 export * from "./components/RichTextProps";

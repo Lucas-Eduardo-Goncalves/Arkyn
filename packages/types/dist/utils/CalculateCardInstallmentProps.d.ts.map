@@ -1,1 +1,0 @@
-{"version":3,"file":"CalculateCardInstallmentProps.d.ts","sourceRoot":"","sources":["../../src/utils/CalculateCardInstallmentProps.ts"],"names":[],"mappings":"AAAA,KAAK,6BAA6B,GAAG;IACnC,UAAU,EAAE,MAAM,CAAC;IACnB,mBAAmB,EAAE,MAAM,CAAC;IAC5B,IAAI,CAAC,EAAE,MAAM,CAAC;CACf,CAAC;AAEF,YAAY,EAAE,6BAA6B,EAAE,CAAC"}
