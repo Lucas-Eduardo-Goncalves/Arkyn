@@ -13,6 +13,7 @@ export { IconButton } from "./components/IconButton";
 export { ImageUpload } from "./components/ImageUpload";
 export { Input } from "./components/Input";
 export { MultiSelect } from "./components/MultiSelect";
+export { PhoneInput } from "./components/PhoneInput";
 export { RadioBox, RadioGroup } from "./components/Radio";
 export { RichText } from "./components/RichText";
 export { Select } from "./components/Select";

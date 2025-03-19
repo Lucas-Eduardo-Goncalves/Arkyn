@@ -1,5 +1,5 @@
-import { countries } from "../templates/countries";
-import { CountryType } from "../types";
+import { countries } from "@arkyn/shared";
+import { CountryType } from "@arkyn/types";
 import { applyMask, clear, getMask, MAX_LENGTH, TYPES } from "./utils";
 
 function formatPhoneNumber(phoneNumber: string, country: CountryType) {

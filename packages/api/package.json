@@ -1,12 +1,13 @@
 {
   "name": "@arkyn/api",
-  "version": "1.4.37",
+  "version": "1.4.38",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "bunx tsc --project tsconfig.json",
+    "clean": "rm -rf dist",
+    "build": "bun run clean && bunx tsc --project tsconfig.json",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
