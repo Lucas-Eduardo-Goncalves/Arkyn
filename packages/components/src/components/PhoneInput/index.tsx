@@ -25,6 +25,7 @@ function PhoneInput(props: PhoneInputProps) {
     name,
     searchCountryPlaceholder = "Pesquisar país",
     notFoundCountryText = "Nenhum país encontrado",
+    ...rest
   } = props;
 
   const defaultData = getDefaultFormatPhoneNumber(defaultValue);
@@ -157,7 +158,10 @@ function PhoneInput(props: PhoneInputProps) {
         ref={inputPhoneMaskRef}
         currentCountry={currentCountry}
         value={value}
-        onChange={setValue}
+        onChange={(e) => {
+          setValue(e);
+          rest.onChange && rest.onChange(e);
+        }}
         disabled={disabled}
         onBlur={handleInputBlur}
         onFocus={handleInputFocus}

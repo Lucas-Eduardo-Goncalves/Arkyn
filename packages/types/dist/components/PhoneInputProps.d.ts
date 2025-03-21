@@ -65,6 +65,7 @@ type PhoneInputProps = {
     name: string;
     searchCountryPlaceholder?: string;
     defaultCountry?: (typeof countries)[number]["iso"];
+    onChange?: (e: string) => void;
 };
 export type { CountryType, PhoneInputContainerProps, PhoneInputCountriesOverlayProps, PhoneInputCountryOptionProps, PhoneInputCountryOptionsContainerProps, PhoneInputCountrySelectorProps, PhoneInputMaskProps, PhoneInputProps, };
 //# sourceMappingURL=PhoneInputProps.d.ts.map

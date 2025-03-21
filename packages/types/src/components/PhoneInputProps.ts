@@ -1,5 +1,5 @@
 import { countries } from "@arkyn/shared";
-import type { ReactNode } from "react";
+import type { InputHTMLAttributes, ReactNode } from "react";
 
 type CountryType = {
   name: string;
@@ -73,6 +73,7 @@ type PhoneInputProps = {
   name: string;
   searchCountryPlaceholder?: string;
   defaultCountry?: (typeof countries)[number]["iso"];
+  onChange?: (e: string) => void;
 };
 
 export type {
