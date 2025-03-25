@@ -21,7 +21,7 @@ function PhoneInput(props: PhoneInputProps) {
     readOnly = false,
     size = "md",
     defaultValue = "",
-    variant = "outline",
+    variant = "solid",
     name,
     searchCountryPlaceholder = "Pesquisar país",
     notFoundCountryText = "Nenhum país encontrado",

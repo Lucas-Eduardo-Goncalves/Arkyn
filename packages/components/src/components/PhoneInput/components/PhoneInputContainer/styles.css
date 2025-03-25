@@ -12,6 +12,9 @@
 
   border: 1px solid transparent;
   outline: 1px solid transparent;
+
+  min-height: 40px;
+  max-height: 40px;
 }
 .arkynPhoneInputContainer:hover {
   cursor: text;
@@ -47,10 +50,10 @@
 
 /* SIZE */
 .arkynPhoneInputContainer.md {
-  min-height: 40px;
-  max-height: 40px;
+  min-height: 42px;
+  max-height: 42px;
 }
 .arkynPhoneInputContainer.lg {
-  min-height: 44px;
-  max-height: 44px;
+  min-height: 46px;
+  max-height: 46px;
 }
