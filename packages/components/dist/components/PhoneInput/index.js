@@ -10,7 +10,7 @@ import { PhoneInputCountrySelector } from "./components/PhoneInputCountrySelecto
 import { PhoneInputMask } from "./components/PhoneInputMask";
 import { getDefaultFormatPhoneNumber } from "./services/getDefaultFormatPhoneNumber";
 function PhoneInput(props) {
-    const { defaultCountry, className = "", disabled = false, isError: baseIsError = false, isLoading = false, readOnly = false, size = "md", defaultValue = "", variant = "outline", name, searchCountryPlaceholder = "Pesquisar país", notFoundCountryText = "Nenhum país encontrado", ...rest } = props;
+    const { defaultCountry, className = "", disabled = false, isError: baseIsError = false, isLoading = false, readOnly = false, size = "md", defaultValue = "", variant = "solid", name, searchCountryPlaceholder = "Pesquisar país", notFoundCountryText = "Nenhum país encontrado", ...rest } = props;
     const defaultData = getDefaultFormatPhoneNumber(defaultValue);
     const [isFocused, setIsFocused] = useState(false);
     const [search, setSearch] = useState("");
