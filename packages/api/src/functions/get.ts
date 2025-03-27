@@ -15,7 +15,7 @@ const get: GetDTO = async (url, config) => {
     message: "",
   };
 
-  let fetchHeaders: FetchRequestInit = { method: "GET" };
+  let fetchHeaders: BunFetchRequestInit = { method: "GET" };
 
   if (token) {
     fetchHeaders = {

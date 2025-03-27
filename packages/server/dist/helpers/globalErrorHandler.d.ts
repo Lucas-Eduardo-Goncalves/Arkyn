@@ -1,3 +1,3 @@
-declare const globalErrorHandler: (error: any) => import("undici-types").Response;
+declare const globalErrorHandler: (error: any) => Response;
 export { globalErrorHandler };
 //# sourceMappingURL=globalErrorHandler.d.ts.map

@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { countries } from "@arkyn/shared";
+import { countries } from "@arkyn/templates";
 import { useRef, useState } from "react";
 import { useFormController } from "../Form/FormController";
 import { PhoneInputContainer } from "./components/PhoneInputContainer";

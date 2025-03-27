@@ -1,0 +1,19 @@
+{
+  "name": "@arkyn/templates",
+  "version": "1.4.40",
+  "main": "./dist/bundle.js",
+  "module": "./src/index.ts",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "bun run clean && bunx tsc --project tsconfig.json",
+    "typecheck": "bunx tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/uuid": "^10.0.0",
+    "bun-types": "latest",
+    "typescript": "^5.8.2"
+  }
+}

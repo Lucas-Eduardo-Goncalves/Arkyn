@@ -1,5 +1,5 @@
-import { countries } from "@arkyn/shared";
-import type { InputHTMLAttributes, ReactNode } from "react";
+import { countries } from "@arkyn/templates";
+import type { ReactNode } from "react";
 
 type CountryType = {
   name: string;

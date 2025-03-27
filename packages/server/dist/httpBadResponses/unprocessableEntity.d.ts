@@ -4,7 +4,7 @@ type UnprocessableEntityErrorProps = {
     fields?: Record<string, string>;
     message?: string;
 };
-declare function unprocessableEntity(error: UnprocessableEntityError): import("undici-types").Response;
+declare function unprocessableEntity(error: UnprocessableEntityError): Response;
 declare class UnprocessableEntityError {
     name: string;
     message?: string;

@@ -1,4 +1,4 @@
-declare function serverError(error: ServerError): import("undici-types").Response;
+declare function serverError(error: ServerError): Response;
 declare class ServerError {
     name: string;
     message: string;

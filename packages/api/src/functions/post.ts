@@ -15,7 +15,7 @@ const post: PostDTO = async (url, data, config) => {
     message: "",
   };
 
-  let fetchHeaders: FetchRequestInit = {
+  let fetchHeaders: BunFetchRequestInit = {
     method: "POST",
     body: JSON.stringify(data),
   };

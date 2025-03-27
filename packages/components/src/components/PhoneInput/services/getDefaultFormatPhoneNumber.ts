@@ -1,4 +1,4 @@
-import { countries } from "@arkyn/shared";
+import { countries } from "@arkyn/templates";
 import { CountryType } from "@arkyn/types";
 import { applyMask, clear, getMask, MAX_LENGTH, TYPES } from "./utils";
 

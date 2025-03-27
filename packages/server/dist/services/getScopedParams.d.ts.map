@@ -1,1 +1,1 @@
-{"version":3,"file":"getScopedParams.d.ts","sourceRoot":"","sources":["../../src/services/getScopedParams.ts"],"names":[],"mappings":"AAAA,iBAAS,eAAe,CAAC,OAAO,EAAE,OAAO,EAAE,KAAK,GAAE,MAAW,iCAW5D;AAED,OAAO,EAAE,eAAe,EAAE,CAAC"}
+{"version":3,"file":"getScopedParams.d.ts","sourceRoot":"","sources":["../../src/services/getScopedParams.ts"],"names":[],"mappings":"AAAA,iBAAS,eAAe,CAAC,OAAO,EAAE,OAAO,EAAE,KAAK,GAAE,MAAW,mBAW5D;AAED,OAAO,EAAE,eAAe,EAAE,CAAC"}

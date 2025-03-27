@@ -1,4 +1,4 @@
-declare function unauthorized(error: UnauthorizedError): import("undici-types").Response;
+declare function unauthorized(error: UnauthorizedError): Response;
 declare class UnauthorizedError {
     name: string;
     message: string;

@@ -15,7 +15,7 @@ const patch: PatchDTO = async (url, data, config) => {
     message: "",
   };
 
-  let fetchHeaders: FetchRequestInit = {
+  let fetchHeaders: BunFetchRequestInit = {
     method: "PATCH",
     body: JSON.stringify(data),
   };

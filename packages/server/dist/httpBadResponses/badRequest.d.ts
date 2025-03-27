@@ -1,4 +1,4 @@
-declare function badRequest(error: BadRequestError): import("undici-types").Response;
+declare function badRequest(error: BadRequestError): Response;
 declare class BadRequestError {
     name: string;
     message: string;

@@ -15,7 +15,7 @@ const deleteF: DeleteDTO = async (url, config) => {
     message: "",
   };
 
-  let fetchHeaders: FetchRequestInit = {
+  let fetchHeaders: BunFetchRequestInit = {
     method: "DELETE",
     body: JSON.stringify(body),
   };

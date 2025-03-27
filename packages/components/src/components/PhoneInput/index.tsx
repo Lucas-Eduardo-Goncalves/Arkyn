@@ -1,4 +1,4 @@
-import { countries } from "@arkyn/shared";
+import { countries } from "@arkyn/templates";
 import { CountryType, PhoneInputProps } from "@arkyn/types";
 import { useRef, useState } from "react";
 

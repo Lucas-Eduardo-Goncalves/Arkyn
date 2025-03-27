@@ -15,7 +15,7 @@ const put: PutDTO = async (url, data, config) => {
     message: "",
   };
 
-  let fetchHeaders: FetchRequestInit = {
+  let fetchHeaders: BunFetchRequestInit = {
     method: "PUT",
     body: JSON.stringify(data),
   };

@@ -1,4 +1,4 @@
-import { countries } from "@arkyn/shared";
+import { countries } from "@arkyn/templates";
 import { applyMask, clear, getMask, MAX_LENGTH, TYPES } from "./utils";
 function formatPhoneNumber(phoneNumber, country) {
     if (country.code === "+55") {

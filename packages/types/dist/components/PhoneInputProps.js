@@ -1,1 +1,1 @@
-import { countries } from "@arkyn/shared";
+import { countries } from "@arkyn/templates";

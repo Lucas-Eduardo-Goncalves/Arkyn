@@ -24,7 +24,7 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "module": "ESNext",
     "target": "ESNext"
   }

@@ -58,6 +58,8 @@ declare function getConfig(props: SelectProps, isFocused: boolean): {
     unselectable?: "on" | "off" | undefined;
     inputMode?: "none" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | "search" | undefined;
     is?: string | undefined;
+    exportparts?: string | undefined;
+    part?: string | undefined;
     "aria-activedescendant"?: string | undefined;
     "aria-atomic"?: (boolean | "true" | "false") | undefined;
     "aria-autocomplete"?: "none" | "inline" | "list" | "both" | undefined;

@@ -11,14 +11,14 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.20.3",
+    "@react-google-maps/api": "^2.20.6",
     "@react-input/mask": "^1.2.15",
-    "framer-motion": "^11.12.0",
-    "html-react-parser": "^5.1.18",
+    "framer-motion": "^11.18.2",
+    "html-react-parser": "^5.2.2",
     "is-hotkey": "^0.2.0",
     "lucide-react": "^0.424.0",
-    "react-hot-toast": "^2.4.1",
-    "react-scroll": "^1.9.0",
+    "react-hot-toast": "^2.5.2",
+    "react-scroll": "^1.9.3",
     "slate": "^0.103.0",
     "slate-history": "^0.109.0",
     "slate-react": "^0.110.3"
@@ -30,10 +30,10 @@
   },
   "devDependencies": {
     "@types/is-hotkey": "^0.1.10",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.5",
     "bun-types": "latest",
-    "typescript": "^5.7.2",
-    "vite": "^5.4.11"
+    "typescript": "^5.8.2",
+    "vite": "^5.4.15"
   }
 }
