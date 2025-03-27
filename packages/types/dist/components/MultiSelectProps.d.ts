@@ -25,6 +25,7 @@ type MultiSelectProps = {
     variant?: "solid" | "outline" | "underline";
     prefix?: string | LucideIcon;
     leftIcon?: LucideIcon;
+    optionMaxHeight?: number;
 };
 export type { MultiSelectProps };
 //# sourceMappingURL=MultiSelectProps.d.ts.map

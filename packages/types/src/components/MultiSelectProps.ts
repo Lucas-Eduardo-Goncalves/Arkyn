@@ -32,6 +32,8 @@ type MultiSelectProps = {
 
   prefix?: string | LucideIcon;
   leftIcon?: LucideIcon;
+
+  optionMaxHeight?: number;
 };
 
 export type { MultiSelectProps };
