@@ -23,6 +23,7 @@ function PhoneInput(props: PhoneInputProps) {
     defaultValue = "",
     variant = "solid",
     name,
+    onChange,
     searchCountryPlaceholder = "Pesquisar país",
     notFoundCountryText = "Nenhum país encontrado",
     ...rest
@@ -160,7 +161,7 @@ function PhoneInput(props: PhoneInputProps) {
         value={value}
         onChange={(e) => {
           setValue(e);
-          rest.onChange && rest.onChange(e);
+          onChange && onChange(inputValue());
         }}
         disabled={disabled}
         onBlur={handleInputBlur}
