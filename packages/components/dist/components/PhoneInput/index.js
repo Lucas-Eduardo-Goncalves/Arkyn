@@ -10,7 +10,7 @@ import { PhoneInputCountrySelector } from "./components/PhoneInputCountrySelecto
 import { PhoneInputMask } from "./components/PhoneInputMask";
 import { getDefaultFormatPhoneNumber } from "./services/getDefaultFormatPhoneNumber";
 function PhoneInput(props) {
-    const { defaultCountry, className = "", disabled = false, isError: baseIsError = false, isLoading = false, readOnly = false, size = "md", defaultValue = "", variant = "solid", name, searchCountryPlaceholder = "Pesquisar país", notFoundCountryText = "Nenhum país encontrado", ...rest } = props;
+    const { defaultCountry, className = "", disabled = false, isError: baseIsError = false, isLoading = false, readOnly = false, size = "md", defaultValue = "", variant = "solid", name, onChange, searchCountryPlaceholder = "Pesquisar país", notFoundCountryText = "Nenhum país encontrado", ...rest } = props;
     const defaultData = getDefaultFormatPhoneNumber(defaultValue);
     const [isFocused, setIsFocused] = useState(false);
     const [search, setSearch] = useState("");
@@ -68,12 +68,12 @@ function PhoneInput(props) {
             .replaceAll(")", "")
             .trim();
     }
-    function inputValue() {
+    function inputValue(props) {
         let returnValue = currentCountry.code;
         if (currentCountry.prefix)
             returnValue += `-${currentCountry.prefix}`;
         returnValue += " ";
-        returnValue += removeNumberMasks(value);
+        returnValue += removeNumberMasks(props || value);
         return returnValue;
     }
     return (_jsxs(PhoneInputContainer, { id: id, disabled: disabled, isError: isError, isLoading: isLoading, isFocused: isFocused, readOnly: readOnly, size: size, variant: variant, className: className, onFocus: handleContainerFocus, children: [_jsx(PhoneInputCountrySelector, { currentCountry: currentCountry, onClick: handleOpenCountryOptions, size: size }), _jsxs(PhoneInputCountryOptionsContainer, { isOpen: showCountryOptions, search: search, placeholder: searchCountryPlaceholder, onSearch: setSearch, children: [countries
@@ -85,7 +85,7 @@ function PhoneInput(props) {
                         }, isActive: country.iso === currentCountry.iso, size: size }, country.iso))), countries.filter((country) => filterCountryFunction(country))
                         .length === 0 && _jsx("p", { children: notFoundCountryText })] }), _jsx(PhoneInputCountriesOverlay, { isOpen: showCountryOptions, onClick: handleCloseCountryOptions }), _jsx(PhoneInputMask, { ref: inputPhoneMaskRef, currentCountry: currentCountry, value: value, onChange: (e) => {
                     setValue(e);
-                    rest.onChange && rest.onChange(e);
+                    onChange && onChange(inputValue(e));
                 }, disabled: disabled, onBlur: handleInputBlur, onFocus: handleInputFocus, size: size }), _jsx("input", { ref: inputRef, type: "hidden", name: name, value: inputValue() })] }));
 }
 export { PhoneInput };

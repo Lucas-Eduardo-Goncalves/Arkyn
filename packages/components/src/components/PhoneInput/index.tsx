@@ -97,11 +97,11 @@ function PhoneInput(props: PhoneInputProps) {
       .trim();
   }
 
-  function inputValue() {
+  function inputValue(props?: string) {
     let returnValue = currentCountry.code;
     if (currentCountry.prefix) returnValue += `-${currentCountry.prefix}`;
     returnValue += " ";
-    returnValue += removeNumberMasks(value);
+    returnValue += removeNumberMasks(props || value);
     return returnValue;
   }
 
@@ -161,7 +161,7 @@ function PhoneInput(props: PhoneInputProps) {
         value={value}
         onChange={(e) => {
           setValue(e);
-          onChange && onChange(inputValue());
+          onChange && onChange(inputValue(e));
         }}
         disabled={disabled}
         onBlur={handleInputBlur}
