@@ -17,10 +17,12 @@ function badRequest(error: BadRequestError) {
 class BadRequestError {
   name: string;
   message: string;
+  cause?: any;
 
-  constructor(message: string) {
+  constructor(message: string, cause?: any) {
     this.name = "BadRequestError";
     this.message = message;
+    this.cause = cause;
   }
 }
 

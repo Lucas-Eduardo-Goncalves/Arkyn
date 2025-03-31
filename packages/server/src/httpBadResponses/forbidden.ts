@@ -17,10 +17,12 @@ function forbidden(error: ForbiddenError) {
 class ForbiddenError {
   name: string;
   message: string;
+  cause?: any;
 
-  constructor(message: string) {
+  constructor(message: string, cause?: any) {
     this.name = "ForbiddenError";
     this.message = message;
+    this.cause = cause;
   }
 }
 

@@ -17,7 +17,7 @@ function serverError(error: ServerError) {
 class ServerError {
   name: string;
   message: string;
-  cause: any;
+  cause?: any;
 
   constructor(message: string, cause?: any) {
     this.name = "ServerError";

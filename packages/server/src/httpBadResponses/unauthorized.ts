@@ -17,10 +17,12 @@ function unauthorized(error: UnauthorizedError) {
 class UnauthorizedError {
   name: string;
   message: string;
+  cause?: any;
 
-  constructor(message: string) {
+  constructor(message: string, cause?: any) {
     this.name = "UnauthorizedError";
     this.message = message;
+    this.cause = cause;
   }
 }
 
