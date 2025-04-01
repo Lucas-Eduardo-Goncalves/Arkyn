@@ -22,7 +22,7 @@ class NotFoundError {
   constructor(message: string, cause?: any) {
     this.name = "NotFoundError";
     this.message = message;
-    this.cause = cause;
+    this.cause = cause ? JSON.stringify(cause) : undefined;
   }
 }
 

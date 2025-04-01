@@ -22,7 +22,7 @@ class BadRequestError {
   constructor(message: string, cause?: any) {
     this.name = "BadRequestError";
     this.message = message;
-    this.cause = cause;
+    this.cause = cause ? JSON.stringify(cause) : undefined;
   }
 }
 

@@ -22,7 +22,7 @@ class ServerError {
   constructor(message: string, cause?: any) {
     this.name = "ServerError";
     this.message = message;
-    this.cause = cause;
+    this.cause = cause ? JSON.stringify(cause) : undefined;
   }
 }
 
