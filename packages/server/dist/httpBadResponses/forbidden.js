@@ -17,7 +17,7 @@ class ForbiddenError {
     constructor(message, cause) {
         this.name = "ForbiddenError";
         this.message = message;
-        this.cause = cause;
+        this.cause = cause ? JSON.stringify(cause) : undefined;
     }
 }
 export { forbidden, ForbiddenError };

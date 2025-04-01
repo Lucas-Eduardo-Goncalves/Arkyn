@@ -17,7 +17,7 @@ class NotFoundError {
     constructor(message, cause) {
         this.name = "NotFoundError";
         this.message = message;
-        this.cause = cause;
+        this.cause = cause ? JSON.stringify(cause) : undefined;
     }
 }
 export { notFound, NotFoundError };

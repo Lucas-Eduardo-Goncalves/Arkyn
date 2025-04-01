@@ -17,7 +17,7 @@ class ConflictError {
     constructor(message, cause) {
         this.name = "ConflictError";
         this.message = message;
-        this.cause = cause;
+        this.cause = cause ? JSON.stringify(cause) : undefined;
     }
 }
 export { conflict, ConflictError };

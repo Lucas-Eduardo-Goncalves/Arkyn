@@ -17,7 +17,7 @@ class BadRequestError {
     constructor(message, cause) {
         this.name = "BadRequestError";
         this.message = message;
-        this.cause = cause;
+        this.cause = cause ? JSON.stringify(cause) : undefined;
     }
 }
 export { badRequest, BadRequestError };

@@ -17,7 +17,7 @@ class UnauthorizedError {
     constructor(message, cause) {
         this.name = "UnauthorizedError";
         this.message = message;
-        this.cause = cause;
+        this.cause = cause ? JSON.stringify(cause) : undefined;
     }
 }
 export { unauthorized, UnauthorizedError };
