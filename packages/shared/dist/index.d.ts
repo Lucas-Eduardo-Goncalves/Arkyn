@@ -21,5 +21,6 @@ export { normalizeRange, within } from "./services/range";
 export { truncateLargeFields } from "./services/truncateLargeFields";
 export { regex } from "./validations/regex";
 export { validateCPF } from "./validations/validateCPF";
+export { validateDate } from "./validations/validateDate";
 export { validatePhone } from "./validations/validatePhone";
 //# sourceMappingURL=index.d.ts.map
