@@ -1,5 +1,7 @@
-function validateDate(date, format) {
+function validateDate(date, format, config) {
     let day, month, year;
+    const minYear = config?.minYear || 0;
+    const maxYear = config?.maxYear || 3000;
     if (format === "DD/MM/YYYY") {
         const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
         if (!dateRegex.test(date))
@@ -37,6 +39,8 @@ function validateDate(date, format) {
     else if (dayNum > daysInMonth[monthNum - 1]) {
         return false;
     }
+    if (yearNum < minYear || yearNum > maxYear)
+        return false;
     const isValidDate = new Date(yearNum, monthNum - 1, dayNum).getDate() === dayNum;
     return isValidDate;
 }
