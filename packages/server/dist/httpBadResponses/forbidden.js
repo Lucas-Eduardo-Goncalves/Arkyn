@@ -13,9 +13,11 @@ function forbidden(error) {
 class ForbiddenError {
     name;
     message;
-    constructor(message) {
+    cause;
+    constructor(message, cause) {
         this.name = "ForbiddenError";
         this.message = message;
+        this.cause = cause;
     }
 }
 export { forbidden, ForbiddenError };

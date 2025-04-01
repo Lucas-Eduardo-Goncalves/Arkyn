@@ -13,9 +13,11 @@ function badRequest(error) {
 class BadRequestError {
     name;
     message;
-    constructor(message) {
+    cause;
+    constructor(message, cause) {
         this.name = "BadRequestError";
         this.message = message;
+        this.cause = cause;
     }
 }
 export { badRequest, BadRequestError };

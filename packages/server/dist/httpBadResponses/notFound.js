@@ -13,9 +13,11 @@ function notFound(error) {
 class NotFoundError {
     name;
     message;
-    constructor(message) {
+    cause;
+    constructor(message, cause) {
         this.name = "NotFoundError";
         this.message = message;
+        this.cause = cause;
     }
 }
 export { notFound, NotFoundError };

@@ -13,9 +13,11 @@ function conflict(error) {
 class ConflictError {
     name;
     message;
-    constructor(message) {
+    cause;
+    constructor(message, cause) {
         this.name = "ConflictError";
         this.message = message;
+        this.cause = cause;
     }
 }
 export { conflict, ConflictError };

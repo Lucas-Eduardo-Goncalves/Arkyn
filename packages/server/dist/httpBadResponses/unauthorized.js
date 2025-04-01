@@ -13,9 +13,11 @@ function unauthorized(error) {
 class UnauthorizedError {
     name;
     message;
-    constructor(message) {
+    cause;
+    constructor(message, cause) {
         this.name = "UnauthorizedError";
         this.message = message;
+        this.cause = cause;
     }
 }
 export { unauthorized, UnauthorizedError };
