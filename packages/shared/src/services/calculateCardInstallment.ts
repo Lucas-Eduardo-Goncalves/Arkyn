@@ -1,21 +1,45 @@
-import type { CalculateCardInstallmentProps } from "@arkyn/types";
+import type { CalculateCardInstallmentFunction } from "@arkyn/types";
 
-function calculateCardInstallment(args: CalculateCardInstallmentProps) {
-  const { cash_price, number_installments, fees = 0.0349 } = args;
+/**
+ * Calculates the installment price and total price for a card payment plan.
+ *
+ * @param props - The input parameters for the calculation.
+ * @param props.cashPrice - The total cash price of the product or service.
+ * @param props.numberInstallments - The number of installments for the payment plan.
+ * @param props.fees - The interest rate per installment (default is 0.0349).
+ *
+ * @returns An object containing:
+ * - `totalPrice`: The total price to be paid, rounded to two decimal places.
+ * - `installmentPrice`: The price of each installment, rounded to two decimal places.
+ *
+ * @example
+ * ```typescript
+ * const result = calculateCardInstallment({
+ *   cashPrice: 1000,
+ *   numberInstallments: 12,
+ *   fees: 0.02,
+ * });
+ * console.log(result);
+ * // Output: { totalPrice: 1124.62, installmentPrice: 93.72 }
+ * ```
+ */
 
-  let installment_price = 0;
-  let total_price = 0;
+const calculateCardInstallment: CalculateCardInstallmentFunction = (props) => {
+  const { cashPrice, numberInstallments, fees = 0.0349 } = props;
 
-  let numerator = Math.pow(1 + fees, number_installments) * fees;
-  let denominator = Math.pow(1 + fees, number_installments) - 1;
+  let installmentPrice = 0;
+  let totalPrice = 0;
 
-  installment_price = cash_price * (numerator / denominator);
-  total_price = number_installments * installment_price;
+  let numerator = Math.pow(1 + fees, numberInstallments) * fees;
+  let denominator = Math.pow(1 + fees, numberInstallments) - 1;
+
+  installmentPrice = cashPrice * (numerator / denominator);
+  totalPrice = numberInstallments * installmentPrice;
 
   return {
-    total_price: +total_price.toFixed(2),
-    installment_price: +installment_price.toFixed(2),
+    totalPrice: +totalPrice.toFixed(2),
+    installmentPrice: +installmentPrice.toFixed(2),
   };
-}
+};
 
 export { calculateCardInstallment };

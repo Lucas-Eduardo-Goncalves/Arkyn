@@ -56,12 +56,14 @@ export * from "./server/formParseProps";
 export * from "./server/httpResponse";
 
 // Shared any
-export * from "./shared/CalculateCardInstallmentProps";
 export * from "./shared/FomartToHiddenDigitsOptions";
 
 ////////////////////////////////
+// Shared - Generators
+export * from "./shared/generators/generateColorByString";
 
 // Shared - Services
+export * from "./shared/services/calculateCardInstallment";
 export * from "./shared/services/maskSensitiveData";
 export * from "./shared/services/truncateLargeFields";
 

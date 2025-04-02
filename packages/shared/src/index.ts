@@ -18,17 +18,15 @@ export { generateColorByString } from "./generators/generateColorByString";
 export { generateId } from "./generators/generateId";
 export { generateSlug } from "./generators/generateSlug";
 
-// parsers
-export { parseToCharacters } from "./parsers/parseToCharacters";
+// regex
+export { regex } from "./regex";
 
 // services
 export { calculateCardInstallment } from "./services/calculateCardInstallment";
 export { maskSensitiveData } from "./services/maskSensitiveData";
-export { normalizeRange, within } from "./services/range";
 export { truncateLargeFields } from "./services/truncateLargeFields";
 
 // validations
-export { regex } from "./validations/regex";
 export { validateCpf } from "./validations/validateCpf";
 export { validateDate } from "./validations/validateDate";
 export { validatePhone } from "./validations/validatePhone";
