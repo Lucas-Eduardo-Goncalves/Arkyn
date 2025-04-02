@@ -6,11 +6,11 @@ function success(body: any, init?: ResponseInit): Response {
   });
 }
 
-class Success {
-  body: any;
+class Success<T> {
+  body: T;
   init: ResponseInit;
 
-  constructor(body: any, init?: ResponseInit) {
+  constructor(body: T, init?: ResponseInit) {
     this.body = body;
     this.init = init || {};
   }

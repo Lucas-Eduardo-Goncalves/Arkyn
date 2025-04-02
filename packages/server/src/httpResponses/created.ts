@@ -6,11 +6,11 @@ function created(body: any, init?: ResponseInit): Response {
   });
 }
 
-class Created {
-  body: any;
+class Created<T> {
+  body: T;
   init: ResponseInit;
 
-  constructor(body: any, init?: ResponseInit) {
+  constructor(body: T, init?: ResponseInit) {
     this.body = body;
     this.init = init || {};
   }
