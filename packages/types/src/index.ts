@@ -62,6 +62,7 @@ export * from "./shared/FomartToHiddenDigitsOptions";
 ////////////////////////////////
 
 // Shared - Services
+export * from "./shared/services/maskSensitiveData";
 export * from "./shared/services/truncateLargeFields";
 
 // Shared - Validations
