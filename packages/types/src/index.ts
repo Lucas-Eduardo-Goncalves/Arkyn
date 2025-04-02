@@ -55,10 +55,16 @@ export * from "./hooks/Toast";
 export * from "./server/formParseProps";
 export * from "./server/httpResponse";
 
-// Shared
+// Shared any
 export * from "./shared/CalculateCardInstallmentProps";
 export * from "./shared/FomartToHiddenDigitsOptions";
 
+////////////////////////////////
+
+// Shared - Services
+export * from "./shared/services/truncateLargeFields";
+
+// Shared - Validations
 export * from "./shared/validations/validateCpf";
 export * from "./shared/validations/validateDate";
 export * from "./shared/validations/validatePhone";
