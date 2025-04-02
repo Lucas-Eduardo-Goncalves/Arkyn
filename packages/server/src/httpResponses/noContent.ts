@@ -13,7 +13,7 @@ class NoContent {
     this.init = init || {};
   }
 
-  response(): Response {
+  json(): Response {
     return new Response(null, {
       ...this.init,
       status: 200,

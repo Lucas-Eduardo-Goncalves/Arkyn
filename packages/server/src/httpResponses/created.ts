@@ -15,7 +15,7 @@ class Created<T> {
     this.init = init || {};
   }
 
-  response(): Response {
+  json(): Response {
     return new Response(JSON.stringify(this.body), {
       ...this.init,
       status: 201,
