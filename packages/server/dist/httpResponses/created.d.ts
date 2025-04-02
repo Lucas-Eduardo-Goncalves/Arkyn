@@ -1,8 +1,9 @@
 declare function created(body: any, init?: ResponseInit): Response;
-declare class Created {
-    body: any;
+declare class Created<T> {
+    body: T;
     init: ResponseInit;
-    constructor(body: any, init?: ResponseInit);
+    constructor(body: T, init?: ResponseInit);
+    json(): Response;
 }
 export { created, Created };
 //# sourceMappingURL=created.d.ts.map

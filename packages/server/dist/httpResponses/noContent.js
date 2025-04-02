@@ -10,5 +10,12 @@ class NoContent {
     constructor(init) {
         this.init = init || {};
     }
+    json() {
+        return new Response(null, {
+            ...this.init,
+            status: 200,
+            headers: { "Content-Type": "application/json", ...this.init.headers },
+        });
+    }
 }
 export { noContent, NoContent };
