@@ -13,6 +13,7 @@ export default defineConfig({
         "lucide-react",
         "react",
         "react-dom",
+        "@arkyn/components",
       ],
       output: { format: "esm" },
     },
