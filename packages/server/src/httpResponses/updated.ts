@@ -15,12 +15,20 @@ class Updated<T> {
     this.init = init || {};
   }
 
-  json(): Response {
+  response() {
     return new Response(JSON.stringify(this.body), {
       ...this.init,
       status: 200,
       headers: { "Content-Type": "application/json", ...this.init.headers },
     });
+  }
+
+  json() {
+    return new Response(JSON.stringify(this.body), {
+      ...this.init,
+      status: 200,
+      headers: { "Content-Type": "application/json", ...this.init.headers },
+    }).json();
   }
 }
 

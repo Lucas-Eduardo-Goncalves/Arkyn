@@ -13,12 +13,20 @@ class NoContent {
     this.init = init || {};
   }
 
-  json(): Response {
+  response() {
     return new Response(null, {
       ...this.init,
       status: 200,
       headers: { "Content-Type": "application/json", ...this.init.headers },
     });
+  }
+
+  json() {
+    return new Response(null, {
+      ...this.init,
+      status: 200,
+      headers: { "Content-Type": "application/json", ...this.init.headers },
+    }).json();
   }
 }
 
