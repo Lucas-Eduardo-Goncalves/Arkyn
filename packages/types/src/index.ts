@@ -58,16 +58,13 @@ export * from "./server/httpResponse";
 // Shared any
 export * from "./shared/FomartToHiddenDigitsOptions";
 
-////////////////////////////////
-// Shared - Generators
+// Shared
 export * from "./shared/generators/generateColorByString";
 
-// Shared - Services
 export * from "./shared/services/calculateCardInstallment";
 export * from "./shared/services/maskSensitiveData";
 export * from "./shared/services/truncateLargeFields";
 
-// Shared - Validations
 export * from "./shared/validations/validateCpf";
 export * from "./shared/validations/validateDate";
 export * from "./shared/validations/validatePhone";
