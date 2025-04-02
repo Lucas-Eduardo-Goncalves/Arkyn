@@ -14,6 +14,14 @@ class Updated<T> {
     this.body = body;
     this.init = init || {};
   }
+
+  response(): Response {
+    return new Response(JSON.stringify(this.body), {
+      ...this.init,
+      status: 200,
+      headers: { "Content-Type": "application/json", ...this.init.headers },
+    });
+  }
 }
 
 export { updated, Updated };
