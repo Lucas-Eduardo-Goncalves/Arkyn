@@ -3,7 +3,8 @@ declare class Updated<T> {
     body: T;
     init: ResponseInit;
     constructor(body: T, init?: ResponseInit);
-    json(): Response;
+    response(): Response;
+    json(): Promise<any>;
 }
 export { updated, Updated };
 //# sourceMappingURL=updated.d.ts.map

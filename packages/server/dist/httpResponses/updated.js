@@ -12,12 +12,19 @@ class Updated {
         this.body = body;
         this.init = init || {};
     }
-    json() {
+    response() {
         return new Response(JSON.stringify(this.body), {
             ...this.init,
             status: 200,
             headers: { "Content-Type": "application/json", ...this.init.headers },
         });
+    }
+    json() {
+        return new Response(JSON.stringify(this.body), {
+            ...this.init,
+            status: 200,
+            headers: { "Content-Type": "application/json", ...this.init.headers },
+        }).json();
     }
 }
 export { updated, Updated };

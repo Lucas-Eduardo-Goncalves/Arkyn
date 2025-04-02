@@ -3,7 +3,8 @@ declare class Created<T> {
     body: T;
     init: ResponseInit;
     constructor(body: T, init?: ResponseInit);
-    json(): Response;
+    response(): Response;
+    json(): Promise<any>;
 }
 export { created, Created };
 //# sourceMappingURL=created.d.ts.map
