@@ -1,1 +1,0 @@
-{"version":3,"file":"DividerProps.d.ts","sourceRoot":"","sources":["../../src/components/DividerProps.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,OAAO,CAAC;AAE5C,KAAK,gBAAgB,GAAG,cAAc,CAAC,cAAc,CAAC,CAAC;AAEvD,KAAK,YAAY,GAAG,gBAAgB,GAAG;IACrC,WAAW,CAAC,EAAE,YAAY,GAAG,UAAU,CAAC;CACzC,CAAC;AAEF,YAAY,EAAE,YAAY,EAAE,CAAC"}

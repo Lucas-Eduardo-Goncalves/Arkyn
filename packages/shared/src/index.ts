@@ -29,6 +29,6 @@ export { truncateLargeFields } from "./services/truncateLargeFields";
 
 // validations
 export { regex } from "./validations/regex";
-export { validateCPF } from "./validations/validateCPF";
+export { validateCpf } from "./validations/validateCPF";
 export { validateDate } from "./validations/validateDate";
 export { validatePhone } from "./validations/validatePhone";

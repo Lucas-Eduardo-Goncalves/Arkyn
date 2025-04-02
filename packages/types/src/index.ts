@@ -58,3 +58,7 @@ export * from "./server/httpResponse";
 // Shared
 export * from "./shared/CalculateCardInstallmentProps";
 export * from "./shared/FomartToHiddenDigitsOptions";
+
+export * from "./shared/validations/validateCpf";
+export * from "./shared/validations/validateDate";
+export * from "./shared/validations/validatePhone";

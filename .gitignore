@@ -1,5 +1,7 @@
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
+**/dist/
+
 # Logs
 
 logs
@@ -54,6 +56,7 @@ build/Release
 
 node_modules/
 jspm_packages/
+dist/
 
 
 # Snowpack dependency directory (https://snowpack.dev/)
