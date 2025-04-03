@@ -33,7 +33,7 @@ const truncateLargeFields: TruncateLargeFieldsFunction = (
   jsonString,
   maxLength = 1000
 ) => {
-  function truncateValue(key: string, value: any): any {
+  function truncateValue(value: any): any {
     if (typeof value === "string" && value.length > maxLength) {
       return `To large information: field as ${value.length} characters`;
     }
@@ -42,16 +42,16 @@ const truncateLargeFields: TruncateLargeFieldsFunction = (
 
   function recursiveTruncate(obj: any): any {
     if (Array.isArray(obj)) {
-      return obj.map(recursiveTruncate);
+      return obj.map((item) => recursiveTruncate(item)); // Corrigido para processar elementos do array
     } else if (obj !== null && typeof obj === "object") {
       return Object.fromEntries(
         Object.entries(obj).map(([key, value]) => [
           key,
-          truncateValue(key, recursiveTruncate(value)),
+          recursiveTruncate(value), // Corrigido para aplicar recursão corretamente
         ])
       );
     }
-    return obj;
+    return truncateValue(obj); // Corrigido para truncar valores diretamente
   }
 
   try {
