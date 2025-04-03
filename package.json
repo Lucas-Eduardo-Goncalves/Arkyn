@@ -22,6 +22,7 @@
     "build:shared": "cd packages/shared && bun run build",
     "build:templates": "cd packages/templates && bun run build",
     "build:types": "cd packages/types && bun run build",
+    "test:shared": "cd packages/shared && bun run test",
     "typecheck:api": "cd packages/api && bun run typecheck",
     "typecheck:components": "cd packages/components && bun run typecheck",
     "typecheck:server": "cd packages/server && bun run typecheck",

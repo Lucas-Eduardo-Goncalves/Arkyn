@@ -8,10 +8,12 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "bun run clean && bunx tsc --project tsconfig.json",
+    "test": "vitest --config ./vitest.config.ts",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "vitest": "^3.1.1"
   },
   "devDependencies": {
     "@types/uuid": "^10.0.0",
