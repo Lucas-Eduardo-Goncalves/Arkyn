@@ -80,13 +80,23 @@ function getCountryWithPrefixCode(countryCode: string, prefix: string) {
   const country = countries.find(
     (country) => country.code === countryCode && country.prefix === prefix
   );
+
   if (!country) throw new Error("Invalid country code or prefix");
+
+  if (country.prefix !== prefix) {
+    throw new Error("Invalid country code or prefix");
+  }
+
+  if (!country.prefix) {
+    throw new Error("Invalid country code or prefix");
+  }
   return country;
 }
 
 function getCountryWithoutPrefixCode(countryCode: string) {
   const country = countries.find((country) => country.code === countryCode);
   if (!country) throw new Error("Invalid country code");
+  if (country.prefix) throw new Error("Invalid country code");
   return country;
 }
 
@@ -103,7 +113,11 @@ function getCountryWithoutPrefixCode(countryCode: string) {
  *
  * @returns The formatted phone number string based on the country's formatting rules.
  *
- * @throws {Error} If the input string is invalid or the country code/prefix is not recognized.
+ * @throws {Error} If the input phone number does not match the expected format.
+ * @throws {Error} If the country code or phone number is missing from the input string.
+ * @throws {Error} If the provided country code and prefix combination is invalid.
+ * @throws {Error} If the provided country code is invalid.
+ * @throws {Error} If the provided country code has a prefix but none is supplied in the input.
  *
  * @example
  * ```typescript
@@ -118,6 +132,14 @@ function getCountryWithoutPrefixCode(countryCode: string) {
  */
 
 const formatToPhone: FormatToPhoneFunction = (prop) => {
+  const phoneRegex = /^\+\d{1,4}(-\d{1,4})? \d+$/;
+
+  if (!phoneRegex.test(prop)) {
+    throw new Error(
+      "Invalid phone number format. Expected format: +<countryCode>-<optionalPrefix> <phoneNumber>"
+    );
+  }
+
   const countryCode = prop.split(" ")[0].split("-")[0];
   const prefixCode = prop.split(" ")[0].split("-")[1];
   const phoneNumber = prop.split(" ")[1];
