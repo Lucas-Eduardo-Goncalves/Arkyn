@@ -56,6 +56,9 @@ export * from "./server/formParseProps";
 export * from "./server/httpResponse";
 
 // shared
+export * from "./shared/formats/formatToCnpj";
+export * from "./shared/formats/formatToCpf";
+export * from "./shared/formats/formatToCpfCnpj";
 export * from "./shared/formats/formatToEllipsis";
 export * from "./shared/formats/formatToHiddenDigits";
 export * from "./shared/formats/formatToPhone";
