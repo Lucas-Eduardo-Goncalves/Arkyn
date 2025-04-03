@@ -1,6 +1,7 @@
 import { v4, v7 } from "uuid";
 
 function hexToBin(hex: string) {
+  hex = hex.replace(/-/g, "");
   const buffer = new Uint8Array(hex.length / 2);
 
   for (let i = 0; i < hex.length; i += 2) {
