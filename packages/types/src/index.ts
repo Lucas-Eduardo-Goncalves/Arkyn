@@ -55,7 +55,8 @@ export * from "./hooks/Toast";
 export * from "./server/formParseProps";
 export * from "./server/httpResponse";
 
-// Shared
+// shared
+export * from "./shared/formats/formatToEllipsis";
 export * from "./shared/formats/formatToHiddenDigits";
 export * from "./shared/formats/formatToPhone";
 
