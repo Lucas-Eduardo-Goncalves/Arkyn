@@ -34,6 +34,10 @@ const formatToCurrency: FormatToCurrency = (
   currency,
   config = { showPrefix: true }
 ) => {
+  if (!countryCurrencies[currency]) {
+    throw new Error("Unsupported currency code");
+  }
+
   const { countryCurrency, countryLanguage } = countryCurrencies[currency];
 
   const format = new Intl.NumberFormat(countryLanguage, {
@@ -41,7 +45,9 @@ const formatToCurrency: FormatToCurrency = (
     currency: countryCurrency,
   }).format(value);
 
-  return config.showPrefix ? format : removeCurrencySymbols(format);
+  return config.showPrefix
+    ? format.replace(/\s/g, " ")
+    : removeCurrencySymbols(format).replace(/\s/g, " ");
 };
 
 export { formatToCurrency };
