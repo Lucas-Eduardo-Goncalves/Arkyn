@@ -17,7 +17,9 @@
  */
 
 const removeCurrencySymbols = (formattedValue: string): string => {
-  return formattedValue.replace(/[\p{Sc}]/gu, "").trim();
+  return formattedValue
+    .replace(/(?:R\$|\p{Sc}|[$€¥£])/gu, "") // Inclui "R$" e outros símbolos comuns
+    .trim();
 };
 
 export { removeCurrencySymbols };
