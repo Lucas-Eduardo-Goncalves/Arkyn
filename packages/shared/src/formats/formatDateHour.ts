@@ -1,4 +1,4 @@
-import { regex } from "../validations/regex";
+import { regex } from "../regex";
 
 function formatDateHour(date: string, hour: string) {
   if (regex.HOUR.test(hour) === false) throw new Error("Invalid hour format");

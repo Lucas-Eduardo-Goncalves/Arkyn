@@ -17,7 +17,7 @@ import type { MaskSensitiveDataFunction } from "@arkyn/types";
  *   },
  * });
  *
- * const result = maskSensitiveData(jsonString);
+ * const result = maskSensitiveData(jsonString, ["password", "creditCard"]);
  * console.log(result);
  * // Output: '{"username":"user123","password":"****","profile":{"creditCard":"****"}}'
  * ```

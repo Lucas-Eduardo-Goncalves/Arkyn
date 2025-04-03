@@ -1,4 +1,4 @@
-import { regex } from "../validations/regex";
+import { regex } from "../regex";
 
 function formatBrazilianDateToDate(brazilianData: string) {
   if (regex.DATE.test(brazilianData) === false)
