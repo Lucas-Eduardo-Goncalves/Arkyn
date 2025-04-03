@@ -14,7 +14,12 @@ import type { FormatToEllipsisFunction } from "@arkyn/types";
  */
 
 const formatToEllipsis: FormatToEllipsisFunction = (text, maxLength) => {
-  return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
+  if (text.length > maxLength) {
+    let trimmedText = text.substring(0, maxLength).trimEnd();
+    trimmedText = trimmedText.replace(/[.,!?;:]$/, "");
+    return `${trimmedText}...`;
+  }
+  return text;
 };
 
 export { formatToEllipsis };
