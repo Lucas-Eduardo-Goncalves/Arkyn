@@ -2,6 +2,11 @@ import { countries } from "@arkyn/templates";
 import { CountryType } from "@arkyn/types";
 import { applyMask, clear, getMask, MAX_LENGTH, TYPES } from "./utils";
 
+function getMask(value: string): "NINE" | "EIGTH" {
+  const mask = value.length > 10 ? "NINE" : "EIGTH";
+  return mask;
+}
+
 function formatPhoneNumber(phoneNumber: string, country: CountryType) {
   if (country.code === "+55") {
     let value = clear(phoneNumber);

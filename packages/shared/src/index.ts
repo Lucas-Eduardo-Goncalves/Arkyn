@@ -24,6 +24,7 @@ export { regex } from "./regex";
 // services
 export { calculateCardInstallment } from "./services/calculateCardInstallment";
 export { maskSensitiveData } from "./services/maskSensitiveData";
+export { removeNonNumeric } from "./services/removeNonNumeric";
 export { truncateLargeFields } from "./services/truncateLargeFields";
 
 // validations
