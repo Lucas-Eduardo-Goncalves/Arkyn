@@ -1,6 +1,6 @@
 import { regex } from "../validations/regex";
 
-function formatDateHour(date: string, hour: string) {
+function formatDateHour(date: string, hour: string = "00:00") {
   if (regex.HOUR.test(hour) === false) throw new Error("Invalid hour format");
 
   const dateHour = new Date(date);
