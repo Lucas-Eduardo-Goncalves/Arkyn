@@ -55,10 +55,10 @@ export * from "./hooks/Toast";
 export * from "./server/formParseProps";
 export * from "./server/httpResponse";
 
-// Shared any
-export * from "./shared/FomartToHiddenDigitsOptions";
-
 // Shared
+export * from "./shared/formats/formatToHiddenDigits";
+export * from "./shared/formats/formatToPhone";
+
 export * from "./shared/generators/generateColorByString";
 
 export * from "./shared/services/calculateCardInstallment";

@@ -1,5 +1,5 @@
 import { countries } from "@arkyn/templates";
-import type { CountryType } from "@arkyn/types";
+import type { CountryType, FormatToPhoneFunction } from "@arkyn/types";
 
 import { removeNonNumeric } from "../services/removeNonNumeric";
 
@@ -117,7 +117,7 @@ function getCountryWithoutPrefixCode(countryCode: string) {
  * ```
  */
 
-function formatToPhone(prop: string): string {
+const formatToPhone: FormatToPhoneFunction = (prop) => {
   const countryCode = prop.split(" ")[0].split("-")[0];
   const prefixCode = prop.split(" ")[0].split("-")[1];
   const phoneNumber = prop.split(" ")[1];
@@ -133,6 +133,6 @@ function formatToPhone(prop: string): string {
 
   const country = getCountryWithoutPrefixCode(countryCode);
   return formatPhoneNumber(phoneNumber, country);
-}
+};
 
 export { formatToPhone };
