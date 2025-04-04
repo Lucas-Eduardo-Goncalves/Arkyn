@@ -42,8 +42,7 @@ const formatJsonString: FormatJsonStringFunction = (jsonString) => {
     const jsonObject = JSON.parse(jsonString);
     return formatJsonObject(jsonObject, 0);
   } catch (error) {
-    console.error("Invalid JSON string:", error);
-    return "";
+    throw new Error(`Invalid JSON string \n ${error}`);
   }
 };
 
