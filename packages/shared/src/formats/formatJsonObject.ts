@@ -36,32 +36,42 @@ const formatJsonObject: FormatJsonObjectFunction = (obj, indentLevel) => {
 
   if (typeof obj === "object" && obj !== null) {
     if (Array.isArray(obj)) {
-      formattedString += "[\n";
-      obj.forEach((item, index) => {
-        formattedString +=
-          indent + "  " + formatJsonObject(item, indentLevel + 1);
-        if (index < obj.length - 1) {
-          formattedString += ",";
-        }
-        formattedString += "\n";
-      });
-      formattedString += indent + "]";
+      if (obj.length === 0) {
+        // Caso especial para arrays vazios
+        formattedString += "[]";
+      } else {
+        formattedString += "[\n";
+        obj.forEach((item, index) => {
+          formattedString +=
+            indent + "  " + formatJsonObject(item, indentLevel + 1);
+          if (index < obj.length - 1) {
+            formattedString += ",";
+          }
+          formattedString += "\n";
+        });
+        formattedString += indent + "]";
+      }
     } else {
-      formattedString += "{\n";
       const keys = Object.keys(obj);
-      keys.forEach((key, index) => {
-        formattedString +=
-          indent +
-          '  "' +
-          key +
-          '": ' +
-          formatJsonObject(obj[key], indentLevel + 1);
-        if (index < keys.length - 1) {
-          formattedString += ",";
-        }
-        formattedString += "\n";
-      });
-      formattedString += indent + "}";
+      if (keys.length === 0) {
+        // Caso especial para objetos vazios
+        formattedString += "{}";
+      } else {
+        formattedString += "{\n";
+        keys.forEach((key, index) => {
+          formattedString +=
+            indent +
+            '  "' +
+            key +
+            '": ' +
+            formatJsonObject(obj[key], indentLevel + 1);
+          if (index < keys.length - 1) {
+            formattedString += ",";
+          }
+          formattedString += "\n";
+        });
+        formattedString += indent + "}";
+      }
     }
   } else if (typeof obj === "string") {
     try {
