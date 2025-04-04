@@ -56,6 +56,7 @@ export * from "./server/formParseProps";
 export * from "./server/httpResponse";
 
 // shared
+export * from "./shared/formats/formatDate";
 export * from "./shared/formats/formatJsonObject";
 export * from "./shared/formats/formatJsonString";
 export * from "./shared/formats/formatToCep";

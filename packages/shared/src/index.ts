@@ -1,6 +1,4 @@
-export { formatBrazilianDateHour } from "./formats/formatBrazilianDateHour";
-export { formatBrazilianDateToDate } from "./formats/formatBrazilianDateToDate";
-export { formatDateHour } from "./formats/formatDateHour";
+export { formatDate } from "./formats/formatDate";
 export { formatJsonObject } from "./formats/formatJsonObject";
 export { formatJsonString } from "./formats/formatJsonString";
 export { formatToCep } from "./formats/formatToCep";
