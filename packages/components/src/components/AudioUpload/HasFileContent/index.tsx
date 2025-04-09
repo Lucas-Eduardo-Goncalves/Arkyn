@@ -1,4 +1,3 @@
-import { Button, Divider, IconButton, Tooltip } from "@arkyn/components";
 import { AudioUploadHasFileContentProps } from "@arkyn/types";
 import { Pause, Play, RefreshCw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -6,6 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import { Slider } from "../../Slider";
 
 import "./styles.css";
+import { Divider } from "../../Divider";
+import { Tooltip } from "../../Tooltip";
+import { IconButton } from "../../IconButton";
+import { Button } from "../../Button";
 
 function HasFileContent(props: AudioUploadHasFileContentProps) {
   const {

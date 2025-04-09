@@ -1,6 +1,7 @@
-import { useFieldErrors } from "@arkyn/components";
 import { AudioUploadProps } from "@arkyn/types";
 import { useState } from "react";
+
+import { useFieldErrors } from "../../hooks/useFieldErrors";
 
 import { AudioUploadError } from "./AudioUploadError";
 import { AudioUploadLabel } from "./AudioUploadLabel";

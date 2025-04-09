@@ -1,8 +1,8 @@
-import { Button } from "@arkyn/components";
 import { AudioUploadNoFileContentProps } from "@arkyn/types";
 import { DragEvent } from "react";
 
 import "./styles.css";
+import { Button } from "../../Button";
 
 function NoFileContent(props: AudioUploadNoFileContentProps) {
   const {
