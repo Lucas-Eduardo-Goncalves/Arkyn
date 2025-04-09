@@ -1,1 +1,0 @@
-{"version":3,"file":"badRequest.d.ts","sourceRoot":"","sources":["../../src/httpBadResponses/badRequest.ts"],"names":[],"mappings":"AAAA,iBAAS,UAAU,CAAC,KAAK,EAAE,eAAe,YAczC;AAED,cAAM,eAAe;IACnB,IAAI,EAAE,MAAM,CAAC;IACb,OAAO,EAAE,MAAM,CAAC;IAChB,KAAK,CAAC,EAAE,GAAG,CAAC;gBAEA,OAAO,EAAE,MAAM,EAAE,KAAK,CAAC,EAAE,GAAG;CAKzC;AAED,OAAO,EAAE,UAAU,EAAE,eAAe,EAAE,CAAC"}

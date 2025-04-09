@@ -1,0 +1,1 @@
+{"version":3,"file":"deleteRequest.d.ts","sourceRoot":"","sources":["../../src/api/deleteRequest.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,cAAc,CAAC;AAGnD;;;;;;;;GAQG;AAEH,iBAAe,aAAa,CAAC,CAAC,GAAG,GAAG,EAClC,GAAG,EAAE,MAAM,EACX,OAAO,GAAE,WAAgB,EACzB,IAAI,CAAC,EAAE,GAAG,GACT,OAAO,CAAC,cAAc,CAAC,CAAC,CAAC,CAAC,CAE5B;AAED,OAAO,EAAE,aAAa,EAAE,CAAC"}
