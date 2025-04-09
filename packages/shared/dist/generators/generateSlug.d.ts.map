@@ -1,1 +1,1 @@
-{"version":3,"file":"generateSlug.d.ts","sourceRoot":"","sources":["../../src/generators/generateSlug.ts"],"names":[],"mappings":"AAAA,iBAAS,YAAY,CAAC,MAAM,EAAE,MAAM,UAanC;AAED,OAAO,EAAE,YAAY,EAAE,CAAC"}
+{"version":3,"file":"generateSlug.d.ts","sourceRoot":"","sources":["../../src/generators/generateSlug.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;GAaG;AAEH,iBAAS,YAAY,CAAC,IAAI,EAAE,MAAM,UAajC;AAED,OAAO,EAAE,YAAY,EAAE,CAAC"}

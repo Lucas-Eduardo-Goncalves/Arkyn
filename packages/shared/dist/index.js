@@ -1,14 +1,12 @@
 // formats
-export { formatBrazilianDateHour } from "./formats/formatBrazilianDateHour";
-export { formatBrazilianDateToDate } from "./formats/formatBrazilianDateToDate";
-export { formatDateHour } from "./formats/formatDateHour";
+export { formatDate } from "./formats/formatDate";
 export { formatJsonObject } from "./formats/formatJsonObject";
 export { formatJsonString } from "./formats/formatJsonString";
-export { formatToBRL } from "./formats/formatToBRL";
 export { formatToCep } from "./formats/formatToCep";
-export { formatToCNPJ } from "./formats/formatToCNPJ";
-export { formatToCPF } from "./formats/formatToCPF";
+export { formatToCnpj } from "./formats/formatToCnpj";
+export { formatToCpf } from "./formats/formatToCpf";
 export { formatToCpfCnpj } from "./formats/formatToCpfCnpj";
+export { formatToCurrency } from "./formats/formatToCurrency";
 export { formatToEllipsis } from "./formats/formatToEllipsis";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 export { formatToPhone } from "./formats/formatToPhone";
@@ -16,15 +14,15 @@ export { formatToPhone } from "./formats/formatToPhone";
 export { generateColorByString } from "./generators/generateColorByString";
 export { generateId } from "./generators/generateId";
 export { generateSlug } from "./generators/generateSlug";
-// parsers
-export { parseToCharacters } from "./parsers/parseToCharacters";
 // services
 export { calculateCardInstallment } from "./services/calculateCardInstallment";
 export { maskSensitiveData } from "./services/maskSensitiveData";
-export { normalizeRange, within } from "./services/range";
+export { removeNonNumeric } from "./services/removeNonNumeric";
 export { truncateLargeFields } from "./services/truncateLargeFields";
-// validations
-export { regex } from "./validations/regex";
-export { validateCPF } from "./validations/validateCPF";
+// utils
+export { validateCep } from "./validations/validateCep";
+export { validateCnpj } from "./validations/validateCnpj";
+export { validateCpf } from "./validations/validateCpf";
 export { validateDate } from "./validations/validateDate";
 export { validatePhone } from "./validations/validatePhone";
+export { validateRg } from "./validations/validateRg";

@@ -1,0 +1,1 @@
+{"version":3,"file":"formatDate.d.ts","sourceRoot":"","sources":["../../../src/shared/formats/formatDate.ts"],"names":[],"mappings":"AAAA,KAAK,gBAAgB,GAAG,eAAe,GAAG,SAAS,GAAG,WAAW,CAAC;AAElE,KAAK,kBAAkB,GAAG,CACxB,IAAI,EAAE,MAAM,EACZ,IAAI,EAAE,MAAM,EACZ,WAAW,EAAE,gBAAgB,EAC7B,YAAY,EAAE,MAAM,EACpB,QAAQ,CAAC,EAAE,MAAM,KACd,MAAM,CAAC;AAEZ,YAAY,EAAE,kBAAkB,EAAE,CAAC"}

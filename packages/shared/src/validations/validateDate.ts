@@ -1,28 +1,50 @@
-type Format = "DD/MM/YYYY" | "MM-DD-YYYY" | "YYYY-MM-DD";
+import type { ValidateDateFunction } from "@arkyn/types";
 
-type Config = {
-  minYear?: number;
-  maxYear?: number;
-};
+/**
+ * Validates a date string based on the provided format and configuration.
+ *
+ * @param rawDate - The date string to validate.
+ * @param config - Optional configuration object to customize validation.
+ * @param config.inputFormat - The expected format of the input date.
+ *                            Supported formats are "DD/MM/YYYY", "MM-DD-YYYY", and "YYYY-MM-DD".
+ *                            Defaults to "DD/MM/YYYY".
+ * @param config.minYear - The minimum allowed year for the date. Defaults to 1900.
+ * @param config.maxYear - The maximum allowed year for the date. Defaults to 3000.
+ *
+ * @returns `true` if the date is valid according to the specified format and configuration, otherwise `false`.
+ *
+ * @throws {Error} If an invalid date format is provided in the configuration.
+ *
+ * @example
+ * ```typescript
+ * validateDate("31/12/2023"); // true
+ * validateDate("12-31-2023", { inputFormat: "MM-DD-YYYY" }); // true
+ * validateDate("2023-12-31", { inputFormat: "YYYY-MM-DD", minYear: 2000, maxYear: 2100 }); // true
+ * validateDate("29/02/2024", { inputFormat: "DD/MM/YYYY" }); // true (leap year)
+ * validateDate("29/02/2023", { inputFormat: "DD/MM/YYYY" }); // false (not a leap year)
+ * validateDate("31/04/2023", { inputFormat: "DD/MM/YYYY" }); // false (April has 30 days)
+ * ```
+ */
 
-function validateDate(date: string, format: Format, config?: Config): boolean {
+const validateDate: ValidateDateFunction = (rawDate, config) => {
   let day: string, month: string, year: string;
 
-  const minYear = config?.minYear || 0;
+  const inputFormat = config?.inputFormat || "DD/MM/YYYY";
+  const minYear = config?.minYear || 1900;
   const maxYear = config?.maxYear || 3000;
 
-  if (format === "DD/MM/YYYY") {
+  if (inputFormat === "DD/MM/YYYY") {
     const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-    if (!dateRegex.test(date)) return false;
-    [, day, month, year] = date.match(dateRegex) || [];
-  } else if (format === "MM-DD-YYYY") {
+    if (!dateRegex.test(rawDate)) return false;
+    [, day, month, year] = rawDate.match(dateRegex) || [];
+  } else if (inputFormat === "MM-DD-YYYY") {
     const dateRegex = /^(\d{2})-(\d{2})-(\d{4})$/;
-    if (!dateRegex.test(date)) return false;
-    [, month, day, year] = date.match(dateRegex) || [];
-  } else if (format === "YYYY-MM-DD") {
+    if (!dateRegex.test(rawDate)) return false;
+    [, month, day, year] = rawDate.match(dateRegex) || [];
+  } else if (inputFormat === "YYYY-MM-DD") {
     const dateRegex = /^(\d{4})-(\d{2})-(\d{2})$/;
-    if (!dateRegex.test(date)) return false;
-    [, year, month, day] = date.match(dateRegex) || [];
+    if (!dateRegex.test(rawDate)) return false;
+    [, year, month, day] = rawDate.match(dateRegex) || [];
   } else {
     throw new Error("Invalid date format");
   }
@@ -50,6 +72,6 @@ function validateDate(date: string, format: Format, config?: Config): boolean {
     new Date(yearNum, monthNum - 1, dayNum).getDate() === dayNum;
 
   return isValidDate;
-}
+};
 
 export { validateDate };

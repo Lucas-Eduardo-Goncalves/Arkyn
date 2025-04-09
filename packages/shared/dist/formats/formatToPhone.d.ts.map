@@ -1,1 +1,1 @@
-{"version":3,"file":"formatToPhone.d.ts","sourceRoot":"","sources":["../../src/formats/formatToPhone.ts"],"names":[],"mappings":"AAAA,iBAAS,aAAa,CAAC,KAAK,EAAE,MAAM,GAAG,MAAM,CAO5C;AAED,OAAO,EAAE,aAAa,EAAE,CAAC"}
+{"version":3,"file":"formatToPhone.d.ts","sourceRoot":"","sources":["../../src/formats/formatToPhone.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAe,qBAAqB,EAAE,MAAM,cAAc,CAAC;AAqGvE;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GA6BG;AAEH,QAAA,MAAM,aAAa,EAAE,qBAwBpB,CAAC;AAEF,OAAO,EAAE,aAAa,EAAE,CAAC"}
