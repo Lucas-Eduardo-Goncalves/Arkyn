@@ -1,0 +1,1 @@
+{"version":3,"file":"postRequest.d.ts","sourceRoot":"","sources":["../../src/api/postRequest.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,cAAc,CAAC;AAGnD;;;;;;;;GAQG;AAEH,iBAAe,WAAW,CAAC,CAAC,GAAG,GAAG,EAChC,GAAG,EAAE,MAAM,EACX,OAAO,EAAE,WAAW,YAAK,EACzB,IAAI,EAAE,GAAG,GACR,OAAO,CAAC,cAAc,CAAC,CAAC,CAAC,CAAC,CAE5B;AAED,OAAO,EAAE,WAAW,EAAE,CAAC"}
