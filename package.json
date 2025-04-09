@@ -1,6 +1,6 @@
 {
   "name": "arkyn",
-  "version": "2.0.0",
+  "version": "2.0.4",
   "devDependencies": {
     "@arkyn/api": "workspace:*",
     "@arkyn/components": "workspace:*",
@@ -37,12 +37,12 @@
     "beta:shared": "cd packages/shared && npm version prerelease --preid=beta && npm publish --tag beta",
     "beta:templates": "cd packages/templates && npm version prerelease --preid=beta && npm publish --tag beta",
     "beta:types": "cd packages/types && npm version prerelease --preid=beta && npm publish --tag beta",
-    "prod:api": "cd packages/api && npm version patch --no-git-tag-version && npm publish --tag latest",
-    "prod:components": "cd packages/components && npm version patch --no-git-tag-version && npm publish --tag latest",
-    "prod:server": "cd packages/server && npm version patch --no-git-tag-version && npm publish --tag latest",
-    "prod:shared": "cd packages/shared && npm version patch --no-git-tag-version && npm publish --tag latest",
-    "prod:templates": "cd packages/templates && npm version patch --no-git-tag-version && npm publish --tag latest",
-    "prod:types": "cd packages/types && npm version patch --no-git-tag-version && npm publish --tag latest",
+    "prod:api": "cd packages/api",
+    "prod:components": "cd packages/components",
+    "prod:server": "cd packages/server",
+    "prod:shared": "cd packages/shared",
+    "prod:templates": "cd packages/templates",
+    "prod:types": "cd packages/types",
     "ccm": "./auto_commit.sh"
   },
   "type": "module",
