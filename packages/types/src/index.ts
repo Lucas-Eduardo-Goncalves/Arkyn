@@ -52,6 +52,9 @@ export * from "./hooks/Modal";
 export * from "./hooks/Toast";
 
 // server
+
+export * from "./server/httpResponse";
+
 export * from "./server/api/ApiResponseDTO";
 
 export * from "./server/services/decodeRequestBody";
