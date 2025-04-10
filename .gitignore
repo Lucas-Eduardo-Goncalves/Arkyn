@@ -2,6 +2,7 @@
 
 # Logs
 **/dist/
+**/.DS_Store
 
 logs
 _.log
