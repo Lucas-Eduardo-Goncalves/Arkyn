@@ -1,5 +1,5 @@
 {
-  "name": "@arkyn/components",
+  "name": "@arkyn/newcomponents",
   "version": "2.1.0",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
@@ -9,6 +9,7 @@
   "author": "Arkyn | Lucas Gonçalves",
   "description": "Arkyn's component library for Remix applications.",
   "scripts": {
+    "dev": "bunx vite --config documentation/vite.config.ts",
     "build": "bunx vite build && tsc",
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
@@ -34,7 +35,9 @@
     "@types/is-hotkey": "^0.1.10",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
     "bun-types": "latest",
+    "globals": "^15.15.0",
     "typescript": "^5.8.2",
     "vite": "^5.4.15"
   }
