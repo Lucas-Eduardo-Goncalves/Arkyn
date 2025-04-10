@@ -1,16 +1,4 @@
-// Api
-export * from "./api/config/InboxFlowDTO";
-export * from "./api/config/RedisDTO";
-export * from "./api/config/ResponseDTO";
-export * from "./api/DeleteDTO";
-export * from "./api/GetDTO";
-export * from "./api/InstanceConstructorProps";
-export * from "./api/MonitoringErrorsDTO";
-export * from "./api/PatchDTO";
-export * from "./api/PostDTO";
-export * from "./api/PutDTO";
-
-// Components
+// components
 export * from "./components/AlertProps";
 export * from "./components/AudioUploadProps";
 export * from "./components/BadgeProps";
@@ -45,16 +33,11 @@ export * from "./components/TabProps";
 export * from "./components/TextareaProps";
 export * from "./components/ToastProps";
 export * from "./components/TooltipProps";
-
-// Hooks
 export * from "./hooks/Drawer";
 export * from "./hooks/Modal";
 export * from "./hooks/Toast";
 
 // server
-
-export * from "./server/httpResponse";
-
 export * from "./server/api/ApiResponseDTO";
 
 export * from "./server/services/decodeRequestBody";
@@ -86,6 +69,6 @@ export * from "./shared/validations/validateCep";
 export * from "./shared/validations/validateCnpj";
 export * from "./shared/validations/validateCpf";
 export * from "./shared/validations/validateDate";
+export * from "./shared/validations/validatePassword";
 export * from "./shared/validations/validatePhone";
 export * from "./shared/validations/validateRg";
-export * from "./shared/validations/validatePassword";
