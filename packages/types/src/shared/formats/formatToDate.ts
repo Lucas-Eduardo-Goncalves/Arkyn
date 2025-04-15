@@ -1,7 +1,7 @@
 type InputFormatTypes = "brazilianDate" | "timestamp" | "isoDate";
 
 type FormatToDateFunction = (
-  date: [date: string, time: string] | [date: string],
+  date: string[], // [date: string, time?: string]
   inputFormat: InputFormatTypes,
   timezone?: number
 ) => Date;
