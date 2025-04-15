@@ -1,8 +1,7 @@
 type InputFormatTypes = "brazilianDate" | "isoDate" | "timestamp";
 
 type FormatDateFunction = (
-  date: string,
-  time: string,
+  date: [date: string, time: string] | [date: string],
   inputFormat: InputFormatTypes,
   outputFormat: string,
   timezone?: number

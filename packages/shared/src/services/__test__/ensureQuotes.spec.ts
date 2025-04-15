@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { ensureQuotes } from "../ensureClothes";
+import { ensureQuotes } from "../ensureQuotes";
 
 describe("ensureQuotes", () => {
   it("should return the string as-is if it is already enclosed in single quotes", () => {
