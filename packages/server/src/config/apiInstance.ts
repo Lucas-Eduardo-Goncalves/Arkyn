@@ -4,7 +4,7 @@ import { patchRequest } from "../api/patchRequest";
 import { postRequest } from "../api/postRequest";
 import { putRequest } from "../api/putRequest";
 
-type ApiAinstanceContructorProps = {
+type ApiInstanceContructorProps = {
   baseUrl: string;
   baseHeaders?: HeadersInit;
   baseToken?: string | null;
@@ -38,7 +38,7 @@ class ApiInstance {
    * @param props.baseToken - Optional base token for authorization.
    */
 
-  constructor(props: ApiAinstanceContructorProps) {
+  constructor(props: ApiInstanceContructorProps) {
     this.baseUrl = props.baseUrl;
     this.baseHeaders = props.baseHeaders || undefined;
     this.baseToken = props.baseToken || undefined;
