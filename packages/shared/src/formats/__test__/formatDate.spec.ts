@@ -41,6 +41,15 @@ describe("formatDate", () => {
     expect(result).toBe("2023-01-05");
   });
 
+  it("should handle ISO date with time in ISO 8601 format", () => {
+    const date = formatDate(
+      "2025-04-25T18:00:00.000Z".split("T"),
+      "isoDate",
+      "YYYY-MM-DD hh:mm:ss"
+    );
+    expect(date).toBe("2025-04-25 18:00:00");
+  });
+
   it("should handle single-digit days and months in ISO format", () => {
     const result = formatDate(
       ["2023-1-5", "00:00:00"],

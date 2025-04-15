@@ -32,7 +32,7 @@ const formatToDate: FormatToDateFunction = (
   timezone = 0
 ) => {
   const dateParts = date.split(/[-/]/).map(Number);
-  const timeParts = time.split(":").map(Number);
+  const timeParts = time.split(".")[0].split(":").map(Number);
 
   let day, month, year;
   const [hours = 0, minutes = 0, seconds = 0] = timeParts;

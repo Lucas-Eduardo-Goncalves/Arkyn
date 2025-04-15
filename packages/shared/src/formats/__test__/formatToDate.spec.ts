@@ -26,6 +26,14 @@ describe("formatToDate", () => {
     expect(result.toISOString()).toBe("2023-12-25T00:00:00.000Z");
   });
 
+  it("should handle ISO date with time in ISO 8601 format", () => {
+    const result = formatToDate(
+      "2025-04-25T18:00:00.000Z".split("T"),
+      "isoDate"
+    );
+    expect(result.toISOString()).toBe("2025-04-25T18:00:00.000Z");
+  });
+
   it("should correctly parse a timestamp with time", () => {
     const result = formatToDate(["2023-12-25", "15:30:00"], "timestamp", 2);
     expect(result.toISOString()).toBe("2023-12-25T13:30:00.000Z");
