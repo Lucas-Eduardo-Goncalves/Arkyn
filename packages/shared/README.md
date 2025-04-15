@@ -16,7 +16,7 @@ npm install @arkyn/shared
 
 ### Formatting
 
-- **`formatDate(date: Date): string`**  
+- **`formatDate(date: dateString[], inputFormat: "brazilianDate" | "isoDate" | "timestamp", outputFormat: string, timezone?: number): string`**  
   Formats a date into a readable string.
 
 - **`formatJsonObject(obj: object): string`**  
@@ -39,6 +39,9 @@ npm install @arkyn/shared
 
 - **`formatToCurrency(value: number): string`**  
   Converts a number into a currency format.
+
+  - **`formatToDate(date: dateString[], inputFormat: "brazilianDate" | "isoDate" | "timestamp", timezone?: number): Date`**  
+    Formats a date into a Date class.
 
 - **`formatToEllipsis(value: string, maxLength: number): string`**  
   Truncates a string and appends an ellipsis if it exceeds the maximum length.
