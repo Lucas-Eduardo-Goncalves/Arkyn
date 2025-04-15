@@ -1,7 +1,7 @@
 import type { EnsureQuotesFunction } from "@arkyn/types";
 
 /**
- * Ensures that a given URL string is enclosed in quotes.
+ * Ensures that a given rawValue string is enclosed in quotes.
  *
  * This function checks if the input string is already enclosed in either single
  * quotes (`'`) or double quotes (`"`). If the string is already quoted, it is

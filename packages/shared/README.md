@@ -69,6 +69,9 @@ npm install @arkyn/shared
 - **`calculateCardInstallment(total: number, installments: number): number[]`**  
   Calculates the installment values for a given total.
 
+- **`ensureQuotes(rawValue: string): string`**  
+  Ensures that a given rawValue string is enclosed in quotes.
+
 - **`maskSensitiveData(data: string): string`**  
   Masks sensitive data in a string.
 
