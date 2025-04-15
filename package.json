@@ -1,6 +1,5 @@
 {
   "name": "arkyn",
-  "version": "2.0.4",
   "devDependencies": {
     "@arkyn/components": "workspace:*",
     "@arkyn/server": "workspace:*",
