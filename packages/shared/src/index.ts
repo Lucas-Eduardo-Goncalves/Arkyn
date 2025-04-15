@@ -10,6 +10,7 @@ export { formatToCurrency } from "./formats/formatToCurrency";
 export { formatToEllipsis } from "./formats/formatToEllipsis";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 export { formatToPhone } from "./formats/formatToPhone";
+export { formatToDate } from "./formats/formatToDate";
 
 // generators
 export { generateColorByString } from "./generators/generateColorByString";
