@@ -62,6 +62,7 @@ export * from "./shared/generators/generateColorByString";
 
 export * from "./shared/services/calculateCardInstallment";
 export * from "./shared/services/maskSensitiveData";
+export * from "./shared/services/ensureQuotes";
 export * from "./shared/services/removeCurrencySymbols";
 export * from "./shared/services/truncateLargeFields";
 
