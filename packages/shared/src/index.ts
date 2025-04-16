@@ -7,10 +7,10 @@ export { formatToCnpj } from "./formats/formatToCnpj";
 export { formatToCpf } from "./formats/formatToCpf";
 export { formatToCpfCnpj } from "./formats/formatToCpfCnpj";
 export { formatToCurrency } from "./formats/formatToCurrency";
+export { formatToDate } from "./formats/formatToDate";
 export { formatToEllipsis } from "./formats/formatToEllipsis";
 export { formatToHiddenDigits } from "./formats/formatToHiddenDigits";
 export { formatToPhone } from "./formats/formatToPhone";
-export { formatToDate } from "./formats/formatToDate";
 
 // generators
 export { generateColorByString } from "./generators/generateColorByString";
@@ -19,8 +19,11 @@ export { generateSlug } from "./generators/generateSlug";
 
 // services
 export { calculateCardInstallment } from "./services/calculateCardInstallment";
+export { ensureQuotes } from "./services/ensureQuotes";
 export { maskSensitiveData } from "./services/maskSensitiveData";
+export { removeCurrencySymbols } from "./services/removeCurrencySymbols";
 export { removeNonNumeric } from "./services/removeNonNumeric";
+export { stripHtmlTags } from "./services/stripHtmlTags";
 export { truncateLargeFields } from "./services/truncateLargeFields";
 
 // utils
@@ -28,5 +31,6 @@ export { validateCep } from "./validations/validateCep";
 export { validateCnpj } from "./validations/validateCnpj";
 export { validateCpf } from "./validations/validateCpf";
 export { validateDate } from "./validations/validateDate";
+export { validatePassword } from "./validations/validatePassword";
 export { validatePhone } from "./validations/validatePhone";
 export { validateRg } from "./validations/validateRg";
