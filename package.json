@@ -37,7 +37,7 @@
     "prod:shared": "cd packages/shared && npm publish --tag latest",
     "prod:templates": "cd packages/templates && npm publish --tag latest",
     "prod:types": "cd packages/types && npm publish --tag latest",
-    "ccm": "./auto_commit.sh",
+    "ccm": "./autocommit.sh",
     "dev:components": "cd packages/newComponents && bun run dev"
   },
   "type": "module",

@@ -65,6 +65,7 @@ export * from "./shared/services/calculateCardInstallment";
 export * from "./shared/services/ensureQuotes";
 export * from "./shared/services/maskSensitiveData";
 export * from "./shared/services/removeCurrencySymbols";
+export * from "./shared/services/stripHtmlTags";
 export * from "./shared/services/truncateLargeFields";
 
 export * from "./shared/validations/validateCep";
