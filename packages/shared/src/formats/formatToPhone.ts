@@ -108,7 +108,7 @@ function getCountryWithoutPrefixCode(countryCode: string) {
  *
  * @param prop - The phone number string to be formatted. It must include the country code and optionally a prefix.
  *               Example formats:
- *               - "+55-11 912345678"
+ *               - "+55 32912345678"
  *               - "+1 1234567890"
  *
  * @returns The formatted phone number string based on the country's formatting rules.

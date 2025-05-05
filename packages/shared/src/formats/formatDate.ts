@@ -20,54 +20,42 @@ function formatDateString(date: Date, format: string): string {
 }
 
 /**
- * Formats a date string from a given input format to a specified output format,
- * with optional timezone adjustment.
+ * Formats a date and time string based on the provided input and output formats.
  *
- * @param date - The date string to be formatted. It should match the specified `inputFormat`.
- * @param time - The time string in the format `hh:mm:ss` (e.g., `14:30:00`).
- * @param inputFormat - The format of the input date string. Supported formats:
- *   - `"brazilianDate"`: Expects the date in `DD/MM/YYYY` format.
- *   - `"isoDate"`: Expects the date in `YYYY-MM-DD` format.
- *   - `"timestamp"`: Expects the date as a numeric timestamp (e.g., `YYYY-MM-DD`).
- *
- * @param outputFormat - The desired format for the output date string. Supported tokens:
- *   - `YYYY`: Full year (e.g., 2023)
- *   - `YY`: Last two digits of the year (e.g., 23)
- *   - `MM`: Month (zero-padded, e.g., 01)
- *   - `DD`: Day of the month (zero-padded, e.g., 09)
- *   - `hh`: Hours (zero-padded, 24-hour format, e.g., 08)
- *   - `mm`: Minutes (zero-padded, e.g., 05)
- *   - `ss`: Seconds (zero-padded, e.g., 07)
- * @param timezone - (Optional) The timezone offset in hours to adjust the date. Defaults to `0`.
- *
- * @returns The formatted date string in the specified `outputFormat`.
- *
- * @throws Will throw an error if:
- *   - The `inputFormat` is invalid.
- *   - The `date` string does not match the expected `inputFormat`.
- *   - The `time` string is not in the format `hh:mm:ss`.
- *   - The resulting date is invalid.
+ * @param {[string, string]} dateTime - An array containing the date and optional time.
+ *   - The first element is the date string.
+ *   - The second element is the time string (default is "00:00:00").
+ * @param {"brazilianDate" | "isoDate" | "timestamp"} inputFormat - The format of the input date.
+ *   - "brazilianDate": Expects the date in "DD/MM/YYYY" format.
+ *   - "isoDate": Expects the date in "YYYY-MM-DD" format.
+ *   - "timestamp": Expects the date in "YYYY/MM/DD" format.
+ * @param {string} outputFormat - The desired output format for the date.
+ *   - Use placeholders like "YYYY", "MM", "DD", "hh", "mm", "ss" to define the format.
+ * @param {number} [timezone=0] - The timezone offset in hours to apply to the date.
+ *   - Defaults to 0 (UTC).
+ * @returns {string} The formatted date string based on the output format.
+ * @throws {Error} If the input format is invalid.
+ * @throws {Error} If the date is invalid.
  *
  * @example
- * ```typescript
- * import { formatDate } from "./formatDate";
+ * // Format a Brazilian date to ISO format
+ * formatDate(["25/12/2023", "15:30:00"], "brazilianDate", "YYYY-MM-DD hh:mm:ss");
+ * // Returns: "2023-12-25 15:30:00"
  *
- * const date = "25/12/2023";
- * const time = "14:30:00";
- * const formatted = formatDate(date, time, "brazilianDate", "YYYY-MM-DD hh:mm:ss", -3);
- * console.log(formatted); // Outputs: "2023-12-25 14:30:00"
- * ```
+ * @example
+ * // Format an ISO date to a custom format with timezone adjustment
+ * formatDate(["2023-12-25", "15:30:00"], "isoDate", "DD/MM/YYYY hh:mm:ss", -3);
+ * // Returns: "25/12/2023 12:30:00"
  */
 
 const formatDate: FormatDateFunction = (
-  date,
-  time,
+  [date, time = "00:00:00"],
   inputFormat,
   outputFormat,
   timezone = 0
 ) => {
   const dateParts = date.split(/[-/]/).map(Number);
-  const timeParts = time.split(":").map(Number);
+  const timeParts = time.split(".")[0].split(":").map(Number);
 
   let day, month, year;
   const [hours = 0, minutes = 0, seconds = 0] = timeParts;
