@@ -64,8 +64,6 @@ function AudioUpload(props: AudioUploadProps) {
   function handleSelectFile(file: File) {
     if (disabled) return;
 
-    console.log(file.type);
-
     if (file.type.indexOf("audio") === -1) {
       setError("O arquivo selecionado não é um arquivo de áudio");
       return;
