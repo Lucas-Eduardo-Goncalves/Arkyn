@@ -15,42 +15,32 @@ import path from "path";
 function getCaller() {
   const projectRoot = process.cwd();
 
-  const error = new Error();
-  const stackLines = error.stack?.split("\n").map((line) => line.trim()) || [];
+  const err = new Error();
+  const stack = err.stack || "";
 
-  let callerInfo = "Unknown caller";
-  let functionName = "Unknown function";
+  const stackLines = stack.split("\n").map((line) => line.trim());
 
-  const relevantLines = stackLines.filter(
-    (line) => !line.includes("@arkyn/server")
-  );
+  const callerLine = stackLines[4] || "";
 
-  let foundGetCaller = false;
-  for (const line of relevantLines) {
-    if (!foundGetCaller) {
-      if (line.includes("getCaller")) {
-        foundGetCaller = true;
-      }
-      continue;
-    }
+  let functionName = "unknown";
+  let callerInfo = "unknown location";
 
-    const match = line.match(/at (.+?) \((.+?)\)/) || line.match(/at (.+)/);
-    if (match) {
-      const rawFuncName = match[1]?.split(" ")[0] || "";
-
-      functionName =
-        rawFuncName && !rawFuncName.includes("/")
-          ? rawFuncName
-          : "Unknown function";
-
-      let fullPath = match[2] || match[1];
-      if (fullPath.startsWith(projectRoot)) {
-        fullPath = path.relative(projectRoot, fullPath);
-      }
-      callerInfo = fullPath;
-      break;
+  const functionMatch = callerLine.match(/at\s+([^\s]+)\s+\((.*)\)/);
+  if (functionMatch) {
+    functionName = functionMatch[1];
+    callerInfo = functionMatch[2];
+  } else {
+    const locationMatch = callerLine.match(/at\s+(.*)/);
+    if (locationMatch) {
+      callerInfo = locationMatch[1];
+      const pathParts = callerInfo.split("/");
+      const lastPart = pathParts[pathParts.length - 1] || "";
+      const fileParts = lastPart.split(":");
+      functionName = fileParts[0] || "unknown";
     }
   }
+
+  callerInfo = path.relative(projectRoot, callerInfo);
 
   return { functionName, callerInfo };
 }

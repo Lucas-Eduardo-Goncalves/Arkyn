@@ -57,6 +57,8 @@ function httpDebug(name: string, body: any, cause?: any) {
 
     const arkynKeys = InboxFlowInstance.getInboxConfig();
     if (arkynKeys) console.log(arkynKeys);
+
+    console.log(consoleData);
   }
 }
 
