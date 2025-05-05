@@ -55,9 +55,6 @@ function httpDebug(name: string, body: any, cause?: any) {
       consoleData += `${debugName} Cause: ${JSON.stringify(cause, null, 2)}\n`;
     }
 
-    const arkynKeys = InboxFlowInstance.getInboxConfig();
-    if (arkynKeys) console.log(arkynKeys);
-
     console.log(consoleData);
   }
 }
