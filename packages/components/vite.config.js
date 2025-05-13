@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         "@react-input/mask",
-        "@remix-run/react",
+        "react-router",
         "framer-motion",
         "lucide-react",
         "react",
