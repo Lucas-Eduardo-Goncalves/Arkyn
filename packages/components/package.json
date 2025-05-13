@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/components",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
     "@react-input/mask": "^1.2.15",
+    "@vitejs/plugin-react": "^4.4.1",
     "framer-motion": "^11.18.2",
     "html-react-parser": "^5.2.2",
     "is-hotkey": "^0.2.0",
