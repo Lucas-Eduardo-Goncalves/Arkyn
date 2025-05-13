@@ -7,6 +7,7 @@
   "dependencies": {
     "@arkyn/shared": "*",
     "@aws-sdk/client-s3": "^3.782.0",
+    "@mjackson/multipart-parser": "^0.8.2",
     "sharp": "^0.33.5",
     "zod": "^3.24.2"
   },

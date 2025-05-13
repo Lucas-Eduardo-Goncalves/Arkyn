@@ -80,7 +80,7 @@
       "dependencies": {
         "@arkyn/shared": "*",
         "@aws-sdk/client-s3": "^3.782.0",
-        "@react-router/node": "^7.6.0",
+        "@mjackson/multipart-parser": "^0.8.2",
         "sharp": "^0.33.5",
         "zod": "^3.24.2",
       },
@@ -88,6 +88,9 @@
         "bun-types": "latest",
         "typescript": "^5.8.3",
         "vitest": "^3.1.1",
+      },
+      "peerDependencies": {
+        "@react-router/node": ">=7.6.0",
       },
     },
     "packages/shared": {
@@ -118,10 +121,7 @@
       "dependencies": {
         "@react-google-maps/api": "^2.20.6",
         "@react-input/mask": "^1.2.15",
-        "@remix-run/react": "^2.16.2",
         "lucide-react": "^0.424.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
         "zod": "^3.24.2",
       },
       "devDependencies": {
@@ -129,6 +129,11 @@
         "@types/react-dom": "^18.3.5",
         "bun-types": "latest",
         "typescript": "^5.8.2",
+      },
+      "peerDependencies": {
+        "react": ">=18.3.1",
+        "react-dom": ">=18.3.1",
+        "react-router": ">=7.6.0",
       },
     },
   },
@@ -360,6 +365,10 @@
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
     "@juggle/resize-observer": ["@juggle/resize-observer@3.4.0", "", {}, "sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA=="],
+
+    "@mjackson/headers": ["@mjackson/headers@0.10.0", "", {}, "sha512-U1Eu1gF979k7ZoIBsJyD+T5l9MjtPONsZfoXfktsQHPJD0s7SokBGx+tLKDLsOY+gzVYAWS0yRFDNY8cgbQzWQ=="],
+
+    "@mjackson/multipart-parser": ["@mjackson/multipart-parser@0.8.2", "", { "dependencies": { "@mjackson/headers": "^0.10.0" } }, "sha512-KltttyypazaJ9kD1GpiOTEop9/YA5aZPwKfpbmuMYoYSyJhQc+0pqaQcZSHUJVdJBvIWgx7TTQSDJdnNqP5dxA=="],
 
     "@mjackson/node-fetch-server": ["@mjackson/node-fetch-server@0.2.0", "", {}, "sha512-EMlH1e30yzmTpGLQjlFmaDAjyOeZhng1/XCd7DExR8PNAnG/G1tyruZxEoUe11ClnwGhGrtsdnyyUx1frSzjng=="],
 
@@ -812,8 +821,6 @@
     "@arkyn/newcomponents/bun-types": ["bun-types@1.2.9", "", { "dependencies": { "@types/node": "*", "@types/ws": "*" } }, "sha512-dk/kOEfQbajENN/D6FyiSgOKEuUi9PWfqKQJEgwKrCMWbjS/S6tEXp178mWvWAcUSYm9ArDlWHZKO3T/4cLXiw=="],
 
     "@arkyn/templates/bun-types": ["bun-types@1.2.9", "", { "dependencies": { "@types/node": "*", "@types/ws": "*" } }, "sha512-dk/kOEfQbajENN/D6FyiSgOKEuUi9PWfqKQJEgwKrCMWbjS/S6tEXp178mWvWAcUSYm9ArDlWHZKO3T/4cLXiw=="],
-
-    "@arkyn/types/bun-types": ["bun-types@1.2.9", "", { "dependencies": { "@types/node": "*", "@types/ws": "*" } }, "sha512-dk/kOEfQbajENN/D6FyiSgOKEuUi9PWfqKQJEgwKrCMWbjS/S6tEXp178mWvWAcUSYm9ArDlWHZKO3T/4cLXiw=="],
 
     "@aws-crypto/sha1-browser/@smithy/util-utf8": ["@smithy/util-utf8@2.3.0", "", { "dependencies": { "@smithy/util-buffer-from": "^2.2.0", "tslib": "^2.6.2" } }, "sha512-R8Rdn8Hy72KKcebgLiv8jQcQkXoLMOGGv5uI1/k0l+snqkOzQ1R0ChUBCxWMlBsFMekWjq0wRudIweFs7sKT5A=="],
 
