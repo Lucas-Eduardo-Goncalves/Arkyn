@@ -8,11 +8,11 @@ export default defineConfig({
     rollupOptions: {
       external: [
         "@react-input/mask",
-        "@remix-run/react",
         "framer-motion",
         "lucide-react",
         "react",
         "react-dom",
+        "react-router",
       ],
       output: { format: "esm" },
     },
