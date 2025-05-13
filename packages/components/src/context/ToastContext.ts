@@ -1,6 +1,6 @@
 import { ToastContextProps } from "@arkyn/types";
-import { createContext } from "react";
+import * as React from "react";
 
-const ToastContext = createContext({} as ToastContextProps);
+const ToastContext = React.createContext({} as ToastContextProps);
 
 export { ToastContext };
