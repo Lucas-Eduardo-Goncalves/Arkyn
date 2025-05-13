@@ -3,6 +3,9 @@
   "workspaces": {
     "": {
       "name": "arkyn",
+      "dependencies": {
+        "react-router": "^7.6.0",
+      },
       "devDependencies": {
         "@arkyn/components": "workspace:*",
         "@arkyn/server": "workspace:*",
@@ -13,7 +16,7 @@
     },
     "packages/components": {
       "name": "@arkyn/components",
-      "version": "2.2.3",
+      "version": "2.2.4",
       "dependencies": {
         "@react-google-maps/api": "^2.20.6",
         "@react-input/mask": "^1.2.15",
@@ -76,7 +79,7 @@
     },
     "packages/server": {
       "name": "@arkyn/server",
-      "version": "2.2.3",
+      "version": "2.2.4",
       "dependencies": {
         "@arkyn/shared": "*",
         "@aws-sdk/client-s3": "^3.782.0",
@@ -95,7 +98,7 @@
     },
     "packages/shared": {
       "name": "@arkyn/shared",
-      "version": "2.2.3",
+      "version": "2.2.4",
       "dependencies": {
         "uuid": "^10.0.0",
       },
@@ -108,7 +111,7 @@
     },
     "packages/templates": {
       "name": "@arkyn/templates",
-      "version": "2.2.3",
+      "version": "2.2.4",
       "devDependencies": {
         "@types/uuid": "^10.0.0",
         "bun-types": "latest",
@@ -117,7 +120,7 @@
     },
     "packages/types": {
       "name": "@arkyn/types",
-      "version": "2.2.3",
+      "version": "2.2.4",
       "dependencies": {
         "@react-google-maps/api": "^2.20.6",
         "@react-input/mask": "^1.2.15",
