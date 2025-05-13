@@ -5,7 +5,6 @@ export default defineConfig({
   build: {
     minify: true,
     outDir: "./dist",
-    ssr: true,
     rollupOptions: {
       external: [
         "@react-input/mask",
