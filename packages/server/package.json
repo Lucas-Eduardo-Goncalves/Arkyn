@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/server",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "author": "Arkyn | Lucas Gonçalves",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
