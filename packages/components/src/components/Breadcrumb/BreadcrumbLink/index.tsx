@@ -1,5 +1,5 @@
 import { BreadcrumbLinkProps } from "@arkyn/types";
-import { useLocation, Link } from "@remix-run/react";
+import { useLocation, Link } from "react-router";
 import { ChevronRight } from "lucide-react";
 
 import "./styles.css";

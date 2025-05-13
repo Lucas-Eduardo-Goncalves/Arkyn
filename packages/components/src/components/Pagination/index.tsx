@@ -1,6 +1,6 @@
 import { PaginationProps } from "@arkyn/types";
-import { useNavigate } from "@remix-run/react";
 import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
+import { useNavigate } from "react-router";
 
 import { useScopedParams } from "../../hooks/useScopedParams";
 

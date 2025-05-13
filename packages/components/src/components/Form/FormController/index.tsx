@@ -1,16 +1,8 @@
 import { FormControllerContextProps, FormControllerProps } from "@arkyn/types";
-import { useActionData, useFetchers } from "@remix-run/react";
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useId,
-  useRef,
-  useState,
-} from "react";
+import { createContext, useContext, useId, useRef } from "react";
 
-import "./styles.css";
 import { useFieldErrors } from "../../../hooks/useFieldErrors";
+import "./styles.css";
 
 const FormControllerContext = createContext({} as FormControllerContextProps);
 
