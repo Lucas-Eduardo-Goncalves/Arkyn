@@ -3,7 +3,11 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxRuntime: "automatic",
+    }),
+  ],
   build: {
     minify: true,
     outDir: "./dist",
@@ -15,6 +19,7 @@ export default defineConfig({
         "lucide-react",
         "react",
         "react-dom",
+        "react/jsx-runtime",
       ],
       output: { format: "esm" },
     },

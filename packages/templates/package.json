@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/templates",
-  "version": "2.2.11",
+  "version": "2.2.12",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
