@@ -93,7 +93,7 @@ function errorHandler(error: any): Response {
       return error.toResponse();
   }
 
-  return new ServerError("Server error").toResponse();
+  return new ServerError("Server error", error).toResponse();
 }
 
 export { errorHandler };
