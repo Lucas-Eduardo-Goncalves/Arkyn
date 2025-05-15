@@ -1,11 +1,11 @@
 import { useActionData, useFetcher } from "react-router";
-import { useFetcherKey } from "./useFetcherKey";
+import { useFormKey } from "./useFormKey";
 
 function useFieldErrors() {
   const actionData = useActionData<any>();
 
-  const fetcherKey = useFetcherKey();
-  const fetcher = useFetcher({ key: fetcherKey });
+  const formKey = useFormKey();
+  const fetcher = useFetcher({ key: formKey });
 
   const responseFieldErrors =
     actionData?.fieldErrors || fetcher?.data?.fieldErrors;
