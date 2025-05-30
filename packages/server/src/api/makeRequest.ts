@@ -1,5 +1,4 @@
-import type { ApiResponseDTO } from "@arkyn/types";
-import { InboxFlowInstance } from "../config/inboxFlowInstance";
+import type { ApiResponseDTO } from "../types/ApiResponseDTO";
 import { inboxFlowRequest } from "./inboxFlowRequest";
 
 /**

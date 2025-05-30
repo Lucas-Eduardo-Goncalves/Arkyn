@@ -1,5 +1,6 @@
-import type { DecodeRequestBodyFunction } from "@arkyn/types";
 import { BadRequest } from "../http/badResponses/badRequest";
+
+type DecodeRequestBodyFunction = (request: Request) => Promise<any>;
 
 /**
  * Decodes the body of an incoming request into a JavaScript object.
