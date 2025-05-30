@@ -1,4 +1,11 @@
-import type { CalculateCardInstallmentFunction } from "@arkyn/types";
+type CalculateCardInstallmentFunction = (props: {
+  cashPrice: number;
+  numberInstallments: number;
+  fees?: number;
+}) => {
+  totalPrice: number;
+  installmentPrice: number;
+};
 
 /**
  * Calculates the installment price and total price for a card payment plan.

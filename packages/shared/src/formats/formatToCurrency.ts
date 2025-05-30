@@ -1,7 +1,17 @@
 import { countryCurrencies } from "@arkyn/templates";
-import type { FormatToCurrency } from "@arkyn/types";
-
 import { removeCurrencySymbols } from "../services/removeCurrencySymbols";
+
+type Currencies = keyof typeof countryCurrencies;
+
+type Config = {
+  showPrefix?: boolean;
+};
+
+type FormatToCurrency = (
+  value: number,
+  currency: Currencies,
+  config?: Config
+) => string;
 
 /**
  * Formats a numeric value into a currency string based on the specified currency and configuration.

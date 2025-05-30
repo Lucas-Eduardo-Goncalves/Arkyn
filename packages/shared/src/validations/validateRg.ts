@@ -1,4 +1,4 @@
-import type { ValidateRgFunction } from "@arkyn/types";
+type ValidateRgFunction = (rawRg: string) => boolean;
 
 /**
  * Validates a Brazilian RG (Registro Geral) in a generic way.

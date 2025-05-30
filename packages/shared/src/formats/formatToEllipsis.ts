@@ -1,4 +1,4 @@
-import type { FormatToEllipsisFunction } from "@arkyn/types";
+type FormatToEllipsisFunction = (value: string, maxLength: number) => string;
 
 /**
  * Truncates a given text to a specified maximum length and appends an ellipsis ("...")

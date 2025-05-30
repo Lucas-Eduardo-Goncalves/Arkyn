@@ -1,4 +1,11 @@
-import type { FormatDateFunction } from "@arkyn/types";
+type InputFormatTypes = "brazilianDate" | "isoDate" | "timestamp";
+
+type FormatDateFunction = (
+  date: string[], // [date: string, time?: string]
+  inputFormat: InputFormatTypes,
+  outputFormat: string,
+  timezone?: number
+) => string;
 
 function formatDateString(date: Date, format: string): string {
   const pad = (num: number) => num.toString().padStart(2, "0");

@@ -1,3 +1,11 @@
+type InputFormatTypes = "brazilianDate" | "timestamp" | "isoDate";
+
+type FormatToDateFunction = (
+  date: string[], // [date: string, time?: string]
+  inputFormat: InputFormatTypes,
+  timezone?: number
+) => Date;
+
 /**
  * Converts a date and time input into a JavaScript `Date` object, formatted according to the specified input format and timezone.
  *
@@ -24,7 +32,6 @@
  * console.log(date); // Outputs a Date object for "2023-12-25T18:30:00.000Z" (UTC)
  * ```
  */
-import type { FormatToDateFunction } from "@arkyn/types";
 
 const formatToDate: FormatToDateFunction = (
   [date, time = "00:00:00"],

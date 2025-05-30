@@ -1,7 +1,7 @@
-import type { FormatToCpfCnpjFunction } from "@arkyn/types";
-
 import { formatToCnpj } from "./formatToCnpj";
 import { formatToCpf } from "./formatToCpf";
+
+type FormatToCpfCnpjFunction = (value: string) => string;
 
 /**
  * Formats a given string value into either a CPF or CNPJ format based on its length.

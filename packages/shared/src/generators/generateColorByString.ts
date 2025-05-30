@@ -1,4 +1,4 @@
-import type { GenerateColorByStringFunction } from "@arkyn/types";
+type GenerateColorByStringFunction = (prop: string) => string;
 
 /**
  * Generates a hexadecimal color code based on the input string.

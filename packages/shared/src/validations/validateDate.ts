@@ -1,4 +1,13 @@
-import type { ValidateDateFunction } from "@arkyn/types";
+type ValidateDateConfig = {
+  inputFormat?: "DD/MM/YYYY" | "MM-DD-YYYY" | "YYYY-MM-DD";
+  minYear?: number;
+  maxYear?: number;
+};
+
+type ValidateDateFunction = (
+  rawDate: string,
+  config?: ValidateDateConfig
+) => boolean;
 
 /**
  * Validates a date string based on the provided format and configuration.

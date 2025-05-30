@@ -1,5 +1,6 @@
 import { countries } from "@arkyn/templates";
-import type { ValidatePhoneFunction } from "@arkyn/types";
+
+type ValidatePhoneFunction = (rawPhone: string) => boolean;
 
 /**
  * Validates a phone number against a list of country-specific formats.

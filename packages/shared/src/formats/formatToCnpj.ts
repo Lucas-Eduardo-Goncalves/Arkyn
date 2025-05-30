@@ -1,5 +1,6 @@
-import type { FormatToCnpjFunction } from "@arkyn/types";
 import { removeNonNumeric } from "../services/removeNonNumeric";
+
+type FormatToCnpjFunction = (value: string) => string;
 
 /**
  * Formats a given string or number into a CNPJ (Cadastro Nacional da Pessoa Jurídica) format.

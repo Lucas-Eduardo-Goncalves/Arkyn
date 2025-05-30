@@ -1,4 +1,4 @@
-import type { ValidatePasswordFunction } from "@arkyn/types";
+type ValidatePasswordFunction = (rawPassword: string) => boolean;
 
 /**
  * Validates a password based on the following rules:
