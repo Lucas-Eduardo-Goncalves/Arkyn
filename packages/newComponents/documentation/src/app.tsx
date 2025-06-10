@@ -1,9 +1,9 @@
-import { Badge } from "@components";
+import { Button } from "@components";
 
 function App() {
   return (
     <div>
-      <Badge scheme="secondary">Olá</Badge>
+      <Button scheme="success">Olá</Button>
     </div>
   );
 }
