@@ -1,5 +1,6 @@
-import type { FormatToCepFunction } from "@arkyn/types";
 import { removeNonNumeric } from "../services/removeNonNumeric";
+
+type FormatToCepFunction = (value: string) => string;
 
 /**
  * Formats a given string into a Brazilian postal code (CEP) format.

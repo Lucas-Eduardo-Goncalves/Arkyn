@@ -1,5 +1,3 @@
-import type { FormatToHiddenDigitsFunction } from "@arkyn/types";
-
 const DIGIT = /^\d$/;
 
 type DigitCharacterNode = {
@@ -18,6 +16,11 @@ type RootCharacterNode = {
   digits: number;
   children: (DigitCharacterNode | OtherCharacterNode)[];
 };
+
+type FormatToHiddenDigitsFunction = (
+  value: string,
+  options: { range?: number | [number, number]; hider?: string }
+) => string;
 
 const parseToCharacters = (value: string): RootCharacterNode => {
   let digits = 0;

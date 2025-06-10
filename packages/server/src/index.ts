@@ -29,4 +29,3 @@ export { getCaller } from "./services/getCaller";
 export { getScopedParams } from "./services/getScopedParams";
 export { httpDebug } from "./services/httpDebug";
 export { SchemaValidator } from "./services/schemaValidator";
-export { sendFileToS3 } from "./services/sendFileToS3";

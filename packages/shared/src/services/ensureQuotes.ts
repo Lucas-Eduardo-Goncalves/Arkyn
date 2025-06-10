@@ -1,4 +1,4 @@
-import type { EnsureQuotesFunction } from "@arkyn/types";
+type EnsureQuotesFunction = (rawValue: string) => string;
 
 /**
  * Ensures that a given rawValue string is enclosed in quotes.

@@ -1,4 +1,4 @@
-import type { FormatJsonObjectFunction } from "@arkyn/types";
+type FormatJsonObjectFunction = (jsonString: any, identLevel: number) => string;
 
 /**
  * Formats a JSON object into a human-readable string with proper indentation.

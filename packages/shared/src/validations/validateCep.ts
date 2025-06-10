@@ -1,5 +1,6 @@
-import type { ValidateCepFunction } from "@arkyn/types";
 import { removeNonNumeric } from "../services/removeNonNumeric";
+
+type ValidateCepFunction = (rawCep: string) => boolean;
 
 /**
  * Removes all non-digit characters from the CEP.

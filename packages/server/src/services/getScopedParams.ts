@@ -1,5 +1,7 @@
-import type { GetScopedParamsFunction } from "@arkyn/types";
-
+type GetScopedParamsFunction = (
+  request: Request,
+  scope?: string
+) => URLSearchParams;
 /**
  * Extracts and returns scoped query parameters from a request URL.
  *

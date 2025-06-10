@@ -1,4 +1,4 @@
-import type { StripHtmlTagsFunction } from "@arkyn/types";
+type StripHtmlTagsFunction = (rawHtml: string) => string;
 
 /**
  * Strips HTML tags from a string.

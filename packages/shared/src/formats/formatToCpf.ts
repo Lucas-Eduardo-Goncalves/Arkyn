@@ -1,5 +1,6 @@
-import type { FormatToCpfFunction } from "@arkyn/types";
 import { removeNonNumeric } from "../services/removeNonNumeric";
+
+type FormatToCpfFunction = (value: string) => string;
 
 /**
  * Formats a given string into a CPF (Cadastro de Pessoas Físicas) format.

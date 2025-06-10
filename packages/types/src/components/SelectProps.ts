@@ -18,6 +18,7 @@ type SelectProps = {
 
   value?: string;
   defaultValue?: string;
+  searchPlaceholder?: string;
 
   optionMaxHeight?: number;
 

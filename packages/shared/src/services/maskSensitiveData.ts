@@ -1,4 +1,7 @@
-import type { MaskSensitiveDataFunction } from "@arkyn/types";
+type MaskSensitiveDataFunction = (
+  jsonString: string,
+  sensitiveKeys?: string[]
+) => string;
 
 /**
  * Masks sensitive data in a JSON string by replacing the values of specified keys with "****".

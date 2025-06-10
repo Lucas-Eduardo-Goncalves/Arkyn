@@ -1,4 +1,4 @@
-import type { ApiResponseDTO } from "@arkyn/types";
+import type { ApiResponseDTO } from "../types/ApiResponseDTO";
 import { makeRequest } from "./makeRequest";
 
 /**

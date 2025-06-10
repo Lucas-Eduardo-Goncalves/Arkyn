@@ -1,5 +1,6 @@
-import type { ValidateCpfFunction } from "@arkyn/types";
 import { removeNonNumeric } from "../services/removeNonNumeric";
+
+type ValidateCpfFunction = (rawCpf: string) => boolean;
 
 function isInvalidLength(cpf: string) {
   const CPF_LENGTH = 11;

@@ -1,5 +1,6 @@
-import type { FormatJsonStringFunction } from "@arkyn/types";
 import { formatJsonObject } from "./formatJsonObject";
+
+type FormatJsonStringFunction = (jsonString: string) => string;
 
 /**
  * Formats a JSON string into a more readable format.

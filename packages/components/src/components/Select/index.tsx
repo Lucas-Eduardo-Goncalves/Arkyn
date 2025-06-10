@@ -35,6 +35,7 @@ function Select(props: SelectProps) {
     onBlur,
     Spinner,
     name,
+    searchPlaceholder = "Pesquisar",
     placeholder,
     onSelect,
     options,
@@ -134,6 +135,7 @@ function Select(props: SelectProps) {
                 name="search-select"
                 variant="underline"
                 leftIcon={Search}
+                placeholder={searchPlaceholder}
                 onChange={handleSearch}
               />
             )}

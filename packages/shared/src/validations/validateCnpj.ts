@@ -1,5 +1,6 @@
-import type { ValidateCnpjFunction } from "@arkyn/types";
 import { removeNonNumeric } from "../services/removeNonNumeric";
+
+type ValidateCnpjFunction = (rawCnpj: string) => boolean;
 
 function isInvalidLength(cnpj: string) {
   const CNPJ_LENGTH = 14;

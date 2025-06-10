@@ -1,4 +1,7 @@
-import type { TruncateLargeFieldsFunction } from "@arkyn/types";
+type TruncateLargeFieldsFunction = (
+  jsonString: string,
+  maxLength?: number
+) => string;
 
 /**
  * Truncates large string fields in a JSON string to a specified maximum length.

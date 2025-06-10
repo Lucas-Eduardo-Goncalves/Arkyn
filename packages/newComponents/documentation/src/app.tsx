@@ -1,5 +1,6 @@
-import { MultiSelect, Select } from "@arkyn/components";
+import { MultiSelect } from "@arkyn/components";
 import "@arkyn/components/dist/style.css";
+import { Button } from "@components";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           { value: "14", label: "Option 14" },
         ]}
       />
+      <Button scheme="success">Olá</Button>
     </div>
   );
 }

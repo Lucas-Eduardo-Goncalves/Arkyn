@@ -1,3 +1,5 @@
+type RemoveCurrencySymbolsFunction = (formattedValue: string) => string;
+
 /**
  * Removes currency symbols from a given formatted string.
  *
@@ -16,7 +18,9 @@
  * removeCurrencySymbols("123.45"); // "123.45" (no symbols to remove)
  */
 
-const removeCurrencySymbols = (formattedValue: string): string => {
+const removeCurrencySymbols: RemoveCurrencySymbolsFunction = (
+  formattedValue
+) => {
   return formattedValue
     .replace(/(?:R\$|\p{Sc}|[$€¥£])/gu, "") // Inclui "R$" e outros símbolos comuns
     .trim();
