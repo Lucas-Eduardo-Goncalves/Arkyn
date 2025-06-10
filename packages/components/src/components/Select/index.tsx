@@ -1,7 +1,6 @@
-import type { SelectProps } from "@arkyn/types";
-import type { FocusEvent } from "react";
+import type { FocusEvent, InputHTMLAttributes } from "react";
 
-import { Check, ChevronDown, Search } from "lucide-react";
+import { Check, ChevronDown, LucideIcon, Search } from "lucide-react";
 import { useRef, useState } from "react";
 
 import { getConfig } from "./getConfig";
@@ -9,6 +8,41 @@ import { getConfig } from "./getConfig";
 import { useFormController } from "../../components/Form/FormController";
 import { Input } from "../Input";
 import "./styles.css";
+
+export type SelectProps = {
+  isLoading?: boolean;
+  isError?: boolean;
+  isSearchable?: boolean;
+  onSearch?: (value: string) => void;
+  closeOnSelect?: boolean;
+
+  size?: "md" | "lg";
+  variant?: "solid" | "outline" | "underline";
+
+  prefix?: string | LucideIcon;
+  leftIcon?: LucideIcon;
+
+  name: string;
+
+  value?: string;
+  defaultValue?: string;
+  searchPlaceholder?: string;
+
+  optionMaxHeight?: number;
+
+  options: { label: string; value: string }[];
+  onSelect?: (value: { label: string; value: string }) => void;
+} & Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  | "size"
+  | "prefix"
+  | "type"
+  | "name"
+  | "defaultValue"
+  | "value"
+  | "onChange"
+  | "onSelect"
+>;
 
 function Select(props: SelectProps) {
   const [search, setSearch] = useState("");
@@ -35,8 +69,8 @@ function Select(props: SelectProps) {
     onBlur,
     Spinner,
     name,
-    searchPlaceholder = "Pesquisar",
     placeholder,
+    searchPlaceholder,
     onSelect,
     options,
     optionMaxHeight,
