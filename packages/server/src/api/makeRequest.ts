@@ -1,5 +1,5 @@
 import type { ApiResponseDTO } from "../types/ApiResponseDTO";
-import { inboxFlowRequest } from "./inboxFlowRequest";
+import { arkynLogRequest } from "./arkynLogRequest";
 
 /**
  * Makes an HTTP request using the Fetch API and returns a standardized response.
@@ -69,12 +69,20 @@ async function makeRequest<T = any>(
       data = null;
     }
 
-    inboxFlowRequest({
+    let sendLogQueryParams = new URL(url).searchParams;
+    let sendLogHeaders = headers;
+
+    const request = arkynLogRequest({
       method,
       status,
-      request: JSON.stringify(response.headers),
-      response: JSON.stringify(data),
-      token: (headers as any)?.Authorization || "TOKEN_NOT_FOUND",
+      elapsedTime,
+      queryParams: sendLogQueryParams,
+      rawUrl: url,
+      requestBody: body,
+      requestHeaders: sendLogHeaders,
+      responseBody,
+      responseHeaders,
+      token,
     });
 
     if (!response.ok) {
