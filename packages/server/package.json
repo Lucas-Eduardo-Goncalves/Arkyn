@@ -1,15 +1,12 @@
 {
   "name": "@arkyn/server",
-  "version": "3.0.1-beta.3",
+  "version": "3.0.1-beta.5",
   "author": "Arkyn | Lucas Gonçalves",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "dependencies": {
     "@arkyn/shared": "*",
-    "@aws-sdk/client-s3": "^3.782.0",
-    "@mjackson/multipart-parser": "^0.8.2",
-    "sharp": "^0.33.5",
-    "zod": "^3.24.2"
+    "zod": ">=3.24.2"
   },
   "devDependencies": {
     "bun-types": "latest",

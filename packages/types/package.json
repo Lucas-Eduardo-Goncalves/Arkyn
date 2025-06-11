@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/types",
-  "version": "3.0.1-beta.3",
+  "version": "3.0.1-beta.5",
   "main": "./dist/bundle.js",
   "module": "./src/index.ts",
   "type": "module",
@@ -11,10 +11,10 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.20.6",
-    "@react-input/mask": "^1.2.15",
-    "lucide-react": "^0.424.0",
-    "zod": "^3.24.2"
+    "@react-google-maps/api": ">=2.20.6",
+    "@react-input/mask": ">=1.2.15",
+    "lucide-react": ">=0.424.0",
+    "zod": ">=3.24.2"
   },
   "peerDependencies": {
     "react": ">=18.3.1",

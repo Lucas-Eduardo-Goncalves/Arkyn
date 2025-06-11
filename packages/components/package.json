@@ -1,6 +1,6 @@
 {
   "name": "@arkyn/components",
-  "version": "3.0.1-beta.3",
+  "version": "3.0.1-beta.5",
   "main": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
   "author": "Lucas Gonçalves",
@@ -11,18 +11,18 @@
     "typecheck": "bunx tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.20.6",
-    "@react-input/mask": "^1.2.15",
-    "@vitejs/plugin-react": "^4.4.1",
-    "framer-motion": "^11.18.2",
-    "html-react-parser": "^5.2.2",
-    "is-hotkey": "^0.2.0",
-    "lucide-react": "^0.424.0",
-    "react-hot-toast": "^2.5.2",
-    "react-scroll": "^1.9.3",
-    "slate": "^0.103.0",
-    "slate-history": "^0.109.0",
-    "slate-react": "^0.110.3"
+    "@react-google-maps/api": ">=2.20.6",
+    "@react-input/mask": ">=1.2.15",
+    "@vitejs/plugin-react": ">=4.4.1",
+    "framer-motion": ">=11.18.2",
+    "html-react-parser": ">=5.2.2",
+    "is-hotkey": ">=0.2.0",
+    "lucide-react": ">=0.424.0",
+    "react-hot-toast": ">=2.5.2",
+    "react-scroll": ">=1.9.3",
+    "slate": ">=0.103.0",
+    "slate-history": ">=0.109.0",
+    "slate-react": ">=0.110.3"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
