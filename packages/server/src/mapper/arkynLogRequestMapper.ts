@@ -62,10 +62,10 @@ class ArkynLogRequestMapper {
       token: null,
       elapsedTime: props.elapsedTime,
       requestHeaders: this.mapHeaders(props.requestHeaders),
-      requestBody: props.requestBody,
+      requestBody: props.requestBody || null,
       queryParams: this.mapQueryParams(props.queryParams),
       responseHeaders: this.mapHeaders(props.responseHeaders),
-      responseBody: props.responseBody,
+      responseBody: props.responseBody || null,
     };
   }
 }

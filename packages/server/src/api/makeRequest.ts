@@ -41,7 +41,7 @@ import { arkynLogRequest } from "./arkynLogRequest";
 async function makeRequest<T = any>(
   method: "POST" | "PUT" | "DELETE" | "PATCH" | "GET",
   url: string,
-  headers: HeadersInit = {},
+  rawHeaders: HeadersInit = {},
   body?: any
 ): Promise<ApiResponseDTO<T>> {
   const successMessage = {
@@ -55,12 +55,10 @@ async function makeRequest<T = any>(
   try {
     const startTime = performance.now();
 
+    const headers = { ...rawHeaders, "Content-Type": "application/json" };
     const response = await fetch(url, {
       method,
-      headers: {
-        ...headers,
-        "Content-Type": "application/json",
-      },
+      headers,
       body: body ? JSON.stringify(body) : undefined,
     });
 

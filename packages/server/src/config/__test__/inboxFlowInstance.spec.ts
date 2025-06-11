@@ -63,7 +63,6 @@ describe("ArkynLogInstance", () => {
     ArkynLogInstance.setArkynConfig(arkynConfig);
 
     const config = ArkynLogInstance.getArkynConfig();
-    console.log(config);
     expect(config).toEqual({
       ...arkynConfig,
       arkynApiUrl: defaultArkynURL,

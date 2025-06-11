@@ -40,11 +40,6 @@ class ArkynLogInstance {
     arkynLogBaseApiUrl =
       arkynLogBaseApiUrl + "/http-traffic-records/:trafficSourceId";
 
-    arkynLogBaseApiUrl.replace(
-      ":trafficSourceId",
-      arkynConfig.arkynTrafficSourceId
-    );
-
     this.arkynConfig = {
       arkynTrafficSourceId: arkynConfig.arkynTrafficSourceId,
       arkynUserToken: arkynConfig.arkynUserToken,
