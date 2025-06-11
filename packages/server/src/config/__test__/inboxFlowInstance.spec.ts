@@ -6,33 +6,43 @@ describe("ArkynLogInstance", () => {
     const arkynConfig = {
       arkynTrafficSourceId: "channel-123",
       arkynUserToken: "user-token-abc",
-      arkynApiUrl: "https://custom-arkyn-api.com",
+      arkynLogBaseApiUrl: "https://custom-arkyn-api.com",
     };
 
     ArkynLogInstance.setArkynConfig(arkynConfig);
 
     const config = ArkynLogInstance.getArkynConfig();
-    expect(config).toEqual(arkynConfig);
+    expect(config).toEqual({
+      arkynTrafficSourceId: "channel-123",
+      arkynUserToken: "user-token-abc",
+      arkynApiUrl:
+        "https://custom-arkyn-api.com/http-traffic-records/:trafficSourceId",
+    });
   });
 
   it("should not overwrite the arkyn configuration if already set", () => {
     const initialConfig = {
       arkynTrafficSourceId: "channel-123",
       arkynUserToken: "user-token-abc",
-      arkynApiUrl: "https://custom-arkyn-api.com",
+      arkynLogBaseApiUrl: "https://custom-arkyn-api.com",
     };
 
     const newConfig = {
       arkynTrafficSourceId: "channel-456",
       arkynUserToken: "user-token-def",
-      arkynApiUrl: "https://another-arkyn-api.com",
+      arkynLogBaseApiUrl: "https://another-arkyn-api.com",
     };
 
     ArkynLogInstance.setArkynConfig(initialConfig);
     ArkynLogInstance.setArkynConfig(newConfig);
 
     const config = ArkynLogInstance.getArkynConfig();
-    expect(config).toEqual(initialConfig);
+    expect(config).toEqual({
+      arkynTrafficSourceId: "channel-123",
+      arkynUserToken: "user-token-abc",
+      arkynApiUrl:
+        "https://custom-arkyn-api.com/http-traffic-records/:trafficSourceId",
+    });
   });
 
   it("should return undefined if no configuration is set", () => {
@@ -53,6 +63,7 @@ describe("ArkynLogInstance", () => {
     ArkynLogInstance.setArkynConfig(arkynConfig);
 
     const config = ArkynLogInstance.getArkynConfig();
+    console.log(config);
     expect(config).toEqual({
       ...arkynConfig,
       arkynApiUrl: defaultArkynURL,

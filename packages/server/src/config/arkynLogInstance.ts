@@ -7,7 +7,7 @@ type ArkynConfigProps = {
 type SetArkynConfigProps = {
   arkynTrafficSourceId: string;
   arkynUserToken: string;
-  arkynApiUrl?: string;
+  arkynLogBaseApiUrl?: string;
 };
 
 /**
@@ -27,21 +27,28 @@ class ArkynLogInstance {
    * @param arkynConfig - An object containing the arkyn configuration properties.
    * @param arkynConfig.arkynTrafficSourceId - The key used to identify the arkyn.
    * @param arkynConfig.arkynUserToken - The user token for authenticating with the arkyn.
-   * @param arkynConfig.arkynApiUrl - (Optional) The API URL for the arkyn. If not provided,
+   * @param arkynConfig.arkynLogBaseApiUrl - (Optional) The API URL for the arkyn. If not provided,
    * a default URL will be used.
    */
 
   static setArkynConfig(arkynConfig: SetArkynConfigProps) {
     if (!!this.arkynConfig) return;
 
-    let defaultArkynURL = `https://logs-arkyn-flow-logs.vw6wo7.easypanel.host/http-traffic-records/:trafficSourceId`;
-    let arkynApiUrl = arkynConfig.arkynApiUrl || defaultArkynURL;
-    arkynApiUrl.replace(":trafficSourceId", arkynConfig.arkynTrafficSourceId);
+    let defaultArkynURL = `https://logs-arkyn-flow-logs.vw6wo7.easypanel.host`;
+    let arkynLogBaseApiUrl = arkynConfig.arkynLogBaseApiUrl || defaultArkynURL;
+
+    arkynLogBaseApiUrl =
+      arkynLogBaseApiUrl + "/http-traffic-records/:trafficSourceId";
+
+    arkynLogBaseApiUrl.replace(
+      ":trafficSourceId",
+      arkynConfig.arkynTrafficSourceId
+    );
 
     this.arkynConfig = {
       arkynTrafficSourceId: arkynConfig.arkynTrafficSourceId,
       arkynUserToken: arkynConfig.arkynUserToken,
-      arkynApiUrl: arkynConfig.arkynApiUrl || defaultArkynURL,
+      arkynApiUrl: arkynLogBaseApiUrl,
     };
   }
 
