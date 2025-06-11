@@ -19,7 +19,7 @@ npm install @arkyn/server
 - **`ApiInstance`**  
   Pre-configured instance for API calls.
 
-- **`InboxFlowInstance`**  
+- **`ArkynLogInstance`**  
   Pre-configured instance for integration with Inbox Flow.
 
 ---

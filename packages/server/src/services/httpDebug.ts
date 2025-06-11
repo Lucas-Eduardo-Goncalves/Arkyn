@@ -1,4 +1,3 @@
-import { InboxFlowInstance } from "../config/inboxFlowInstance";
 import { getCaller } from "../services/getCaller";
 
 /**

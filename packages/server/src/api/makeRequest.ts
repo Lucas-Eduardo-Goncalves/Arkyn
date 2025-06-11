@@ -1,3 +1,5 @@
+import { ArkynLogRequestMapper } from "../mapper/arkynLogRequestMapper";
+import { httpDebug } from "../services/httpDebug";
 import type { ApiResponseDTO } from "../types/ApiResponseDTO";
 import { arkynLogRequest } from "./arkynLogRequest";
 
@@ -51,6 +53,8 @@ async function makeRequest<T = any>(
   };
 
   try {
+    const startTime = performance.now();
+
     const response = await fetch(url, {
       method,
       headers: {
@@ -60,6 +64,7 @@ async function makeRequest<T = any>(
       body: body ? JSON.stringify(body) : undefined,
     });
 
+    const elapsedTime = performance.now() - startTime;
     const status = response.status;
 
     let data: any = null;
@@ -69,21 +74,19 @@ async function makeRequest<T = any>(
       data = null;
     }
 
-    let sendLogQueryParams = new URL(url).searchParams;
-    let sendLogHeaders = headers;
-
-    const request = arkynLogRequest({
-      method,
-      status,
+    const logData = ArkynLogRequestMapper.handle({
       elapsedTime,
-      queryParams: sendLogQueryParams,
-      rawUrl: url,
+      method,
+      queryParams: new URL(url).searchParams,
+      requestHeaders: headers,
       requestBody: body,
-      requestHeaders: sendLogHeaders,
-      responseBody,
-      responseHeaders,
-      token,
+      responseBody: data,
+      responseHeaders: response.headers,
+      status,
+      url,
     });
+
+    arkynLogRequest(logData);
 
     if (!response.ok) {
       return {
@@ -103,14 +106,7 @@ async function makeRequest<T = any>(
       cause: null,
     };
   } catch (err) {
-    inboxFlowRequest({
-      method,
-      request: JSON.stringify(headers),
-      response: String(err),
-      status: 500,
-      token: "TOKEN_NOT_FOUND",
-    });
-
+    httpDebug("Network error or request failed", null, err);
     return {
       success: false,
       status: 0,

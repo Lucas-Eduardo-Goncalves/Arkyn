@@ -1,61 +1,61 @@
 import { describe, it, expect } from "vitest";
-import { InboxFlowInstance } from "../inboxFlowInstance";
+import { ArkynLogInstance } from "../arkynLogInstance";
 
-describe("InboxFlowInstance", () => {
-  it("should set the inbox configuration if not already set", () => {
-    const inboxConfig = {
-      inboxChannelId: "channel-123",
-      inboxUserToken: "user-token-abc",
-      inboxApiUrl: "https://custom-inbox-api.com",
+describe("ArkynLogInstance", () => {
+  it("should set the arkyn configuration if not already set", () => {
+    const arkynConfig = {
+      arkynTrafficSourceId: "channel-123",
+      arkynUserToken: "user-token-abc",
+      arkynApiUrl: "https://custom-arkyn-api.com",
     };
 
-    InboxFlowInstance.setInboxConfig(inboxConfig);
+    ArkynLogInstance.setArkynConfig(arkynConfig);
 
-    const config = InboxFlowInstance.getInboxConfig();
-    expect(config).toEqual(inboxConfig);
+    const config = ArkynLogInstance.getArkynConfig();
+    expect(config).toEqual(arkynConfig);
   });
 
-  it("should not overwrite the inbox configuration if already set", () => {
+  it("should not overwrite the arkyn configuration if already set", () => {
     const initialConfig = {
-      inboxChannelId: "channel-123",
-      inboxUserToken: "user-token-abc",
-      inboxApiUrl: "https://custom-inbox-api.com",
+      arkynTrafficSourceId: "channel-123",
+      arkynUserToken: "user-token-abc",
+      arkynApiUrl: "https://custom-arkyn-api.com",
     };
 
     const newConfig = {
-      inboxChannelId: "channel-456",
-      inboxUserToken: "user-token-def",
-      inboxApiUrl: "https://another-inbox-api.com",
+      arkynTrafficSourceId: "channel-456",
+      arkynUserToken: "user-token-def",
+      arkynApiUrl: "https://another-arkyn-api.com",
     };
 
-    InboxFlowInstance.setInboxConfig(initialConfig);
-    InboxFlowInstance.setInboxConfig(newConfig);
+    ArkynLogInstance.setArkynConfig(initialConfig);
+    ArkynLogInstance.setArkynConfig(newConfig);
 
-    const config = InboxFlowInstance.getInboxConfig();
+    const config = ArkynLogInstance.getArkynConfig();
     expect(config).toEqual(initialConfig);
   });
 
   it("should return undefined if no configuration is set", () => {
-    InboxFlowInstance.resetInboxConfig();
+    ArkynLogInstance.resetArkynConfig();
 
-    const config = InboxFlowInstance.getInboxConfig();
+    const config = ArkynLogInstance.getArkynConfig();
     expect(config).toBeUndefined();
   });
 
   it("should use the default API URL if none is provided", () => {
-    const inboxConfig = {
-      inboxChannelId: "channel-123",
-      inboxUserToken: "user-token-abc",
+    const arkynConfig = {
+      arkynTrafficSourceId: "channel-123",
+      arkynUserToken: "user-token-abc",
     };
 
-    const defaultInboxURL = `https://logs-inbox-flow-logs.vw6wo7.easypanel.host/api/call`;
+    const defaultArkynURL = `https://logs-arkyn-flow-logs.vw6wo7.easypanel.host/http-traffic-records/:trafficSourceId`;
 
-    InboxFlowInstance.setInboxConfig(inboxConfig);
+    ArkynLogInstance.setArkynConfig(arkynConfig);
 
-    const config = InboxFlowInstance.getInboxConfig();
+    const config = ArkynLogInstance.getArkynConfig();
     expect(config).toEqual({
-      ...inboxConfig,
-      inboxApiUrl: defaultInboxURL,
+      ...arkynConfig,
+      arkynApiUrl: defaultArkynURL,
     });
   });
 });

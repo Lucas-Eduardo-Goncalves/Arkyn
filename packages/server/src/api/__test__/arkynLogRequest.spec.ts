@@ -18,7 +18,7 @@ describe("arkynLogRequest", () => {
       status: 200,
       method: "GET" as any,
       token: "auth-token-123",
-      elapsedTime: "150ms",
+      elapsedTime: 150,
       requestHeaders: {
         Accept: "application/json",
         Authorization: "Bearer token123",
@@ -30,9 +30,9 @@ describe("arkynLogRequest", () => {
     };
 
     const mockInboxConfig = {
-      inboxChannelId: "channel-id",
-      inboxUserToken: "user-token",
-      inboxApiUrl: "https://api.example.com/inbox",
+      arkynTrafficSourceId: "channel-id",
+      arkynUserToken: "user-token",
+      arkynApiUrl: "https://api.example.com/arkyn",
     };
 
     (ArkynLogInstance.getArkynConfig as any).mockReturnValue(mockInboxConfig);
@@ -44,17 +44,33 @@ describe("arkynLogRequest", () => {
 
     await arkynLogRequest(mockConfig);
 
-    expect(fetch).toHaveBeenCalledWith(mockInboxConfig.inboxApiUrl, {
+    expect(fetch).toHaveBeenCalledWith(mockInboxConfig.arkynApiUrl, {
       method: "POST",
-      body: JSON.stringify({}),
+      body: JSON.stringify({
+        domainUrl: "https://example.com",
+        pathnameUrl: "/api/data",
+        status: 200,
+        protocol: "HTTPS",
+        method: "GET",
+        trafficUserId: null,
+        elapsedTime: 150,
+        requestHeaders: {
+          Accept: "application/json",
+          Authorization: "Bearer token123",
+        },
+        requestBody: {},
+        queryParams: { page: "1", limit: "10" },
+        responseHeaders: { "Content-Type": "application/json" },
+        responseBody: { data: "example response" },
+      }),
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${mockInboxConfig.inboxUserToken}`,
+        Authorization: `Bearer ${mockInboxConfig.arkynUserToken}`,
       },
     });
   });
 
-  it("should not send a request if inbox configuration is not set", async () => {
+  it("should not send a request if arkyn configuration is not set", async () => {
     (ArkynLogInstance.getArkynConfig as any).mockReturnValue(undefined);
 
     await arkynLogRequest({
@@ -62,7 +78,7 @@ describe("arkynLogRequest", () => {
       rawUrl: "https://example.com/api/data",
       method: "GET" as any,
       token: "auth-token-123",
-      elapsedTime: "150ms",
+      elapsedTime: 150,
       requestHeaders: {
         Accept: "application/json",
         Authorization: "Bearer token123",
@@ -85,7 +101,7 @@ describe("arkynLogRequest", () => {
       rawUrl: "https://example.com/api/data",
       method: "POST" as any,
       token: "auth-token-123",
-      elapsedTime: "150ms",
+      elapsedTime: 150,
       requestHeaders: {
         Accept: "application/json",
         Authorization: "Bearer token123",
@@ -97,9 +113,9 @@ describe("arkynLogRequest", () => {
     };
 
     const mockInboxConfig = {
-      inboxChannelId: "channel-id",
-      inboxUserToken: "user-token",
-      inboxApiUrl: "https://api.example.com/inbox",
+      arkynTrafficSourceId: "channel-id",
+      arkynUserToken: "user-token",
+      arkynApiUrl: "https://api.example.com/arkyn",
     };
 
     (ArkynLogInstance.getArkynConfig as any).mockReturnValue(mockInboxConfig);

@@ -5,8 +5,8 @@ type ConfigProps = {
   rawUrl: string;
   status: number;
   method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
-  token: string;
-  elapsedTime: string;
+  token: string | null;
+  elapsedTime: number;
   requestHeaders: Record<string, string>;
   requestBody: Record<string, string>;
   queryParams: Record<string, string>;
@@ -78,11 +78,14 @@ async function arkynLogRequest(config: ConfigProps) {
 
   try {
     const url = new URL(rawUrl);
+    let protocol: "HTTPS" | "HTTP" = "HTTPS";
+    if (url.protocol === "http:") protocol = "HTTP";
+
     const body = JSON.stringify({
       domainUrl: url.protocol + "//" + url.host,
       pathnameUrl: url.pathname,
       status,
-      protocol: url.protocol,
+      protocol,
       method,
       trafficUserId: null,
       elapsedTime,

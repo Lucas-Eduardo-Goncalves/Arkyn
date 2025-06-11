@@ -1,6 +1,6 @@
 // config
 export { ApiInstance } from "./config/apiInstance";
-export { InboxFlowInstance } from "./config/inboxFlowInstance";
+export { ArkynLogInstance } from "./config/arkynLogInstance";
 
 // http bad responses
 export { BadGateway } from "./http/badResponses/badGateway";
